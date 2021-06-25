@@ -1,0 +1,22 @@
+{
+  "name": "gadjet-v2-types",
+  "version": "0.0.1",
+  "description": "gadjet v2 models, types, ...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-labs-dev/gadjet-v2-types.git"
+  },
+  "author": "kangbyungseon <rkdqudtjs1@naver.com> (https://github.com/rkdqudtjs1)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-labs-dev/gadjet-v2-types/issues"
+  },
+  "homepage": "https://github.com/g-labs-dev/gadjet-v2-types#readme",
+  "dependencies": {
+    "typescript": "^4.3.4"
+  }
+}

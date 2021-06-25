@@ -1,6 +1,4 @@
-export {};
-
-declare global {
+declare module "gadjet-types" {
   type ImageCategory =
     | "hq"
     | "branch"

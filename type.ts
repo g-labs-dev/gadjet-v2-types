@@ -125,10 +125,15 @@ export type CreditUsage =
   | "service" // 서비스
   | "event"; // 이벤트
 
-export type usedCreditAmount = {
+export type UsedCreditAmount = {
   [K in CreditType]?: number;
 };
 
 export type ReceiptType =
   | "tax-invoice" // 세금계산서
   | "cash-receipt"; // 현금영수증
+
+// 일 | 월 | 화 | 수 | 목 | 금 | 토
+export type DayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
+export type BillPrice = { name: string; price: number };

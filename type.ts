@@ -47,7 +47,8 @@ export type ContractLateFeeType =
 export type ContractStatus =
   | "before-started" // 시작전
   | "started" // 시작됨
-  | "suspended" // 종료됨
+  | "expired" // 만료됨
+  | "suspended" // 강제종료됨
   | "extended"; // 연장됨
 
 export type ContractSignatureStatus =

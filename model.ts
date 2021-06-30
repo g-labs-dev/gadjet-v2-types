@@ -237,7 +237,7 @@ export type BranchRoles = {
   receipt: Role;
   space: Role;
   rental: Role;
-  contractOption: Role;
+  addition: Role;
   event: Role;
   tenant: Role;
   notice: Role;
@@ -259,6 +259,13 @@ export type TenantRoles = {
 
   tenant: Tenants;
   user: Users;
+};
+
+export type RoleCodes = {
+  code: string;
+  hqId: number | null;
+  branchId: number | null;
+  to: string;
 };
 
 export type Notices = {
@@ -295,8 +302,8 @@ export type Spaces = {
   image?: Images;
 };
 
-export type ContractOptions = {
-  contractOptionId: number;
+export type Addtions = {
+  additionId: number;
   branchId: number;
   name: string;
   price: number;
@@ -328,11 +335,27 @@ export type Contracts = {
   tenant: Tenants;
   director: ContractDirector;
   contractor: ContractContractor;
-  spaces: Spaces[];
-  options: ContractOptions[];
 
+  spaces: ContractSpaces[];
+  additions: ContractAdditions[];
   signatureImage?: Images;
   documentFile?: Files;
+};
+
+export type ContractSpaces = {
+  contractSpaceId: number;
+  contractId: number;
+  spaceId: number;
+  name: string;
+  price: number;
+};
+
+export type ContractAdditions = {
+  contractAdditionId: number;
+  contractId: number;
+  additionId: number;
+  name: string;
+  price: number;
 };
 
 export type ContractQuries = {
@@ -357,13 +380,14 @@ export type Bills = {
   tenantId: number;
   type: BillType;
   price: number;
+  unpaidPrice: number;
   openDate: string;
   startDate: string;
   endDate: string;
   paymentStartDate: string;
   paymentEndDate: string;
   spaces: BillPrice[];
-  contractOptions: BillPrice[];
+  additions: BillPrice[];
   surcharges: BillPrice[];
   memo: string;
   receiptStatus: ReceiptStatus;
@@ -544,7 +568,7 @@ export type Services = {
   image: Images;
 };
 
-export type ServiceSlaes = {
+export type ServiceSales = {
   serviceSaleId: number;
   branchId: number;
   serviceId: number;

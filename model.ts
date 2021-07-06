@@ -575,7 +575,7 @@ export type ServiceSales = {
   tenantId: number;
   userId: number;
   name: string;
-  priceLnumber;
+  price: number;
   usedCreditAmount: UsedCreditAmount;
   refundFlag: boolean;
 

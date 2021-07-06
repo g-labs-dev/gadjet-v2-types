@@ -227,6 +227,7 @@ export type HqRoles = {
 
 export type BranchRoles = {
   branchRoleId: number;
+  hqId: number;
   branchId: number;
   managerId: number;
   adminFlag: boolean;

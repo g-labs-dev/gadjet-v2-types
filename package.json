@@ -1,6 +1,6 @@
 {
   "name": "gadjet-v2-types",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "gadjet v2 models, types, ...",
   "main": "index.js",
   "scripts": {

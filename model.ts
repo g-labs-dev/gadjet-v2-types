@@ -242,6 +242,8 @@ export type BranchRoles = {
   tenant: Role;
   notice: Role;
   expenditure: Role;
+  product: Role;
+  service: Role;
   cash: Role;
   payment: Role;
   accessLog: Role;

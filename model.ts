@@ -219,6 +219,7 @@ export type HqRoles = {
   dashboard: Role;
   graph: Role;
   notice: Role;
+  role: Role;
   config: Role;
 
   hq: Hqs;

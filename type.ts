@@ -138,3 +138,7 @@ export type ReceiptType =
 export type DayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
 export type BillPrice = { name: string; price: number };
+
+export type Pagination = { current: number; pageSize: number };
+
+export type Relation<T> = T | null | undefined;

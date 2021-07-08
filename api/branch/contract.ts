@@ -56,6 +56,12 @@ export type UPDATE_BODY = { contract: Partial<Contracts> };
 export type UPDATE_RESPONSE = [number];
 // ===========================
 
+// 계약 제거
+// DEL /hqs/0/branches/0/contracts/0
+export type DELETE_PARAMS = PARAMS & { contractId: number };
+export type DELETE_RESPONSE = [number];
+// ===========================
+
 // 계약 내보내기
 // GET /hqs/0/branches/0/contracts/export
 export type EXPORT_PARAMS = PARAMS;

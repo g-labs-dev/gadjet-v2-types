@@ -317,7 +317,7 @@ export type Addtions = {
 export type Contracts = {
   contractId: number;
   branchId: number;
-  tenantId: number;
+  tenantId: number | null;
   startDate: string;
   endDate: string;
   suspendDate: string;
@@ -330,7 +330,7 @@ export type Contracts = {
   lateFeeType: ContractLateFeeType;
   lateFee: number;
   publicMemo: string;
-  privateMeme: string;
+  privateMemo: string;
   status: ContractStatus;
   signatureStatus: ContractSignatureStatus;
   signatureImageId: number | null;

@@ -397,6 +397,8 @@ export type Bills = {
   receiptStatus: ReceiptStatus;
   gadjetPayFlag: boolean;
   manualFlag: boolean;
+
+  tenant?: Tenants;
 };
 
 export type ContractDeposit = {

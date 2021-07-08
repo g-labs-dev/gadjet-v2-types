@@ -141,4 +141,4 @@ export type BillPrice = { name: string; price: number };
 
 export type Pagination = { current: number; pageSize: number };
 
-export type Relation<T> = T | null | undefined;
+export type Relation<T> = T | null;

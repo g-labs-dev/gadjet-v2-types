@@ -79,8 +79,8 @@ export type Hqs = {
   email: string;
   logoImageId: number | null;
 
-  image: Relation<Images>;
-  branches: Relation<Branches[]>;
+  image?: Relation<Images>;
+  branches?: Relation<Branches[]>;
 };
 
 export type Branches = {
@@ -94,12 +94,12 @@ export type Branches = {
   addressDetail: string;
   popbillId: string | null;
 
-  hq: Relation<Hqs>;
-  business: Relation<BranchBusiness>;
-  settlement: Relation<BranchSettlement>;
-  contractDocument: Relation<BranchContractDocument>;
-  sublet: Relation<BranchSublet>;
-  rentee: Relation<BranchRentee>;
+  hq?: Relation<Hqs>;
+  business?: Relation<BranchBusiness>;
+  settlement?: Relation<BranchSettlement>;
+  contractDocument?: Relation<BranchContractDocument>;
+  sublet?: Relation<BranchSublet>;
+  rentee?: Relation<BranchRentee>;
 };
 
 export type BranchBusiness = {
@@ -121,7 +121,7 @@ export type BranchSettlement = {
   account: string;
   holder: string;
 
-  bank: Relation<Banks>;
+  bank?: Relation<Banks>;
 };
 
 export type BranchContractDocument = {
@@ -139,10 +139,10 @@ export type BranchContractDocument = {
   policyFileId: number | null;
   etcFileId: number | null;
 
-  signatureImage: Relation<Images>;
-  termsFile: Relation<Files>;
-  policyFile: Relation<Files>;
-  etcFile: Relation<Files>;
+  signatureImage?: Relation<Images>;
+  termsFile?: Relation<Files>;
+  policyFile?: Relation<Files>;
+  etcFile?: Relation<Files>;
 };
 
 export type BranchSublet = {
@@ -156,8 +156,8 @@ export type BranchSublet = {
   signatureImageId: number | null;
   consentFileId: number | null;
 
-  signatureImage: Relation<Images>;
-  consentFile: Relation<Files>;
+  signatureImage?: Relation<Images>;
+  consentFile?: Relation<Files>;
 };
 
 export type BranchRentee = {
@@ -170,7 +170,7 @@ export type BranchRentee = {
   contact: string;
   signatureImageId: number | null;
 
-  signatureImage: Relation<Images>;
+  signatureImage?: Relation<Images>;
 };
 
 export type Tenants = {
@@ -185,7 +185,7 @@ export type Tenants = {
   type: TenantType;
   availableCreditUsage: CreditUsage[];
 
-  gics: Relation<Gics>;
+  gics?: Relation<Gics>;
 };
 
 export type Managers = {
@@ -197,7 +197,7 @@ export type Managers = {
   socialId: string;
   profileImageId: number | null;
 
-  profile: Relation<Images>;
+  profile?: Relation<Images>;
 };
 
 export type Users = {
@@ -208,7 +208,7 @@ export type Users = {
   name: string;
   profileImageId: number | null;
 
-  profile: Relation<Images>;
+  profile?: Relation<Images>;
 };
 
 export type HqRoles = {
@@ -223,8 +223,8 @@ export type HqRoles = {
   role: Role;
   config: Role;
 
-  hq: Relation<Hqs>;
-  manager: Relation<Managers>;
+  hq?: Relation<Hqs>;
+  manager?: Relation<Managers>;
 };
 
 export type BranchRoles = {
@@ -252,8 +252,8 @@ export type BranchRoles = {
   accessLog: Role;
   config: Role;
 
-  branch: Relation<Branches>;
-  manager: Relation<Managers>;
+  branch?: Relation<Branches>;
+  manager?: Relation<Managers>;
 };
 
 export type TenantRoles = {
@@ -262,8 +262,8 @@ export type TenantRoles = {
   userId: number;
   // ... 앱 메뉴들 들어감
 
-  tenant: Relation<Tenants>;
-  user: Relation<Users>;
+  tenant?: Relation<Tenants>;
+  user?: Relation<Users>;
 };
 
 export type RoleCodes = {
@@ -303,8 +303,8 @@ export type Spaces = {
   capacity: number;
   imageId: number | null;
 
-  spaceType: Relation<SpaceTypes>;
-  image: Relation<Images>;
+  spaceType?: Relation<SpaceTypes>;
+  image?: Relation<Images>;
 };
 
 export type Addtions = {
@@ -341,10 +341,10 @@ export type Contracts = {
   director: ContractDirector;
   contractor: ContractContractor;
 
-  spaces: Relation<ContractSpaces[]>;
-  additions: Relation<ContractAdditions[]>;
-  signatureImage: Relation<Images>;
-  documentFile: Relation<Files>;
+  spaces?: Relation<ContractSpaces[]>;
+  additions?: Relation<ContractAdditions[]>;
+  signatureImage?: Relation<Images>;
+  documentFile?: Relation<Files>;
 };
 
 export type ContractSpaces = {
@@ -376,7 +376,7 @@ export type ContractInviteCodes = {
   to: string;
   receivedFlag: boolean;
 
-  manager: Relation<Managers>;
+  manager?: Relation<Managers>;
 };
 
 export type Bills = {
@@ -399,7 +399,7 @@ export type Bills = {
   gadjetPayFlag: boolean;
   manualFlag: boolean;
 
-  tenant: Relation<Tenants>;
+  tenant?: Relation<Tenants>;
 };
 
 export type ContractDeposit = {
@@ -488,7 +488,7 @@ export type Events = {
   onlineFlag: boolean;
   bannerImageId: number | null;
 
-  bannerImage: Relation<Images>;
+  bannerImage?: Relation<Images>;
 };
 
 export type EventAttendees = {
@@ -498,7 +498,7 @@ export type EventAttendees = {
   applyDatetime: string;
   usedCreditAmount: UsedCreditAmount;
 
-  user: Relation<Users>;
+  user?: Relation<Users>;
 };
 
 export type Rentals = {
@@ -514,7 +514,7 @@ export type Rentals = {
   shareFlag: boolean;
   imageId: number | null;
 
-  image: Relation<Images>;
+  image?: Relation<Images>;
 };
 
 export type RentalReservations = {
@@ -542,7 +542,7 @@ export type Products = {
   availableCreditType: CreditType[];
   imageId: number | null;
 
-  image: Relation<Images>;
+  image?: Relation<Images>;
 };
 
 export type ProductSales = {
@@ -557,8 +557,8 @@ export type ProductSales = {
   usedCreditAmount: UsedCreditAmount;
   refundFlag: boolean;
 
-  tenant: Relation<Tenants>;
-  user: Relation<Users>;
+  tenant?: Relation<Tenants>;
+  user?: Relation<Users>;
 };
 
 export type Services = {
@@ -572,7 +572,7 @@ export type Services = {
   availableCreditType: CreditType[];
   imageId: number | null;
 
-  image: Relation<Images>;
+  image?: Relation<Images>;
 };
 
 export type ServiceSales = {
@@ -586,8 +586,8 @@ export type ServiceSales = {
   usedCreditAmount: UsedCreditAmount;
   refundFlag: boolean;
 
-  tenant: Relation<Tenants>;
-  user: Relation<Users>;
+  tenant?: Relation<Tenants>;
+  user?: Relation<Users>;
 };
 
 export type Receipts = {

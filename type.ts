@@ -148,3 +148,8 @@ export type ReceiptSummary = {
   taxInvoice: number; // 세금계산서 금액
   cashReceipt: number; // 현금영수증 금액
 };
+
+export type SpaceSummary = {
+  total: number; // space.virtualFlag = false 애들 공실률
+  [key: string]: number; // 지점 spaceType 별 공실률
+};

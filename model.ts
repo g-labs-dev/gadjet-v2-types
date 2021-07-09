@@ -189,6 +189,7 @@ export type Tenants = {
   availableCreditUsage: CreditUsage[];
 
   gics?: Relation<Gics>;
+  users?: Relation<Users[]>;
 };
 
 export type Managers = {

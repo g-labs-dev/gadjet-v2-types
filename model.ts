@@ -289,6 +289,7 @@ export type Floors = {
 
 export type SpaceTypes = {
   spaceTypeId: number;
+  branchId: number;
   name: string;
   virtualFlag: boolean;
 };

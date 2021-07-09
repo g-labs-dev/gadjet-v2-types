@@ -64,6 +64,9 @@ export type Dates = {
   date: number;
   dateString: string;
   dayIndex: DayIndex;
+  weekendFlag: boolean;
+  holidayFlag: boolean;
+  nextBusinessDate: string;
 };
 
 export type Months = {

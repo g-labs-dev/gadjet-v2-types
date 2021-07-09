@@ -7,7 +7,7 @@ type PARAMS = { hqId: number; branchId: number };
 // GET /hqs/0/branches/0/spaces
 export type GET_LIST_PARAMS = PARAMS;
 export type GET_LIST_QUERY = Pagination & { query: string; usingFlag: boolean }; // usingFlag = 공실인지 아닌지 계약으로 판단
-export type GET_LIST_RESPONSE = Spaces[];
+export type GET_LIST_RESPONSE = { total: number; spaces: Spaces[] };
 // ===========================
 
 // 공간 요약

@@ -7,7 +7,7 @@ type PARAMS = { hqId: number; branchId: number };
 // GET /hqs/0/branches/0/receipts
 export type GET_LIST_PARAMS = PARAMS;
 export type GET_LIST_QUERY = Pagination & { query: string; requestDatetime: [string, string] }; // requestDatetime 조회 시 시간 처리 필요 (requestDatetime 포맷은 YYYY-MM-DD HH:mm:ss / query는 YYYY-MM-DD 로)
-export type GET_LIST_RESPONSE = Receipts[];
+export type GET_LIST_RESPONSE = { total: number; receipts: Receipts[] };
 // ===========================
 
 // 증빙 요약

@@ -1,13 +1,4 @@
-export type ImageCategory =
-  | "hq"
-  | "branch"
-  | "rental"
-  | "room"
-  | "tenant"
-  | "user"
-  | "manager"
-  | "event"
-  | "signature";
+export type ImageCategory = "hq" | "branch" | "rental" | "room" | "tenant" | "user" | "manager" | "event" | "signature";
 
 export type FileCategory =
   | "branch-terms" // 지점 이용약관
@@ -142,3 +133,12 @@ export type BillPrice = { name: string; price: number };
 export type Pagination = { current: number; pageSize: number };
 
 export type Relation<T> = T | null;
+
+export type BillSummary = {
+  expectedSales: number; // 예상매출 (bill.price)
+  sales: number; // 매출 (bill.payments)
+  space: number; // 공간 이용료
+  addition: number; // 부가 서비스 이용료
+  etc: number; // 기타
+  unpaid: number; // 미납 (bill.unpaid)
+};

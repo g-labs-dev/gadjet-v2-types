@@ -1,5 +1,5 @@
 import { Bills } from "../../model";
-import { Pagination } from "../../type";
+import { BillSummary, Pagination } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
 
@@ -14,14 +14,7 @@ export type GET_LIST_RESPONSE = { total: number; bills: Bills[] };
 // GET /hqs/0/branches/0/bills/summary
 export type GET_SUMMARY_PARAMS = PARAMS;
 export type GET_SUMMARY_QUERY = { query: string; startDate: [string, string]; spaceTypes: number[] }; // startDate: ['YYYY-MM-DD', 'YYYY-MM-DD']
-export type GET_SUMMARY_RESPONSE = {
-  expectedSales: number; // 예상매출 (bill.price)
-  sales: number; // 매출 (bill.payments)
-  space: number; // 공간 이용료
-  addition: number; // 부가 서비스 이용료
-  etc: number; // 기타
-  unpaid: number; // 미납 (bill.unpaid)
-};
+export type GET_SUMMARY_RESPONSE = BillSummary;
 // ===========================
 
 // 청구서 추가

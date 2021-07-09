@@ -17,6 +17,20 @@ export type GET_SUMMARY_QUERY = { query: string; usingFlag: boolean };
 export type GET_SUMMARY_RESPONSE = SpaceSummary;
 // ===========================
 
+// 공간 내보내기
+// GET /hqs/0/branches/0/spaces/export
+export type EXPORT_PARAMS = PARAMS;
+export type EXPORT_QUERY = { query: string; usingFlag: boolean };
+export type EXPORT_RESPONSE = any; // @@@@ xlsx
+// ===========================
+
+// 공간 업로드
+// POST /hqs/0/branches/0/spaces/upload
+export type UPLOAD_PARAMS = PARAMS;
+export type UPLOAD_BODY = { spaces: Partial<Spaces> }; // @@@@ front 파싱 기준
+export type UPLOAD_RESPONSE = [number];
+// ===========================
+
 // 공간 추가
 // POST /hqs/0/branches/0/spaces
 export type ADD_PARAMS = PARAMS;

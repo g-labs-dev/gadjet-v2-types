@@ -559,8 +559,10 @@ export type ProductSales = {
   amount: number;
   price: number;
   usedCreditAmount: UsedCreditAmount;
+  datetime: string;
   refundFlag: boolean;
 
+  product?: Relation<Products>;
   tenant?: Relation<Tenants>;
   user?: Relation<Users>;
 };

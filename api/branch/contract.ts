@@ -65,7 +65,7 @@ export type DELETE_RESPONSE = [number];
 // 계약 내보내기
 // GET /hqs/0/branches/0/contracts/export
 export type EXPORT_PARAMS = PARAMS;
-export type EXPORT_QUERY = { from: string; to: string; type: "startDate" | "suspendDate" }; // from, to YYYY-MM-DD
+export type EXPORT_QUERY = { startDate: [string, string]; suspendDate: [string, string] }; // ['YYYY-MM-DD', 'YYYY-MM-DD']
 export type EXPORT_RESPONSE = any; // xlsx
 // ===========================
 

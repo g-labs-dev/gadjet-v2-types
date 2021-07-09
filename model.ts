@@ -13,6 +13,7 @@ import {
   CreditType,
   CreditUsage,
   DayIndex,
+  ExpenditureType,
   FileCategory,
   ImageCategory,
   ManagerJoinType,
@@ -670,4 +671,30 @@ export type UserCards = {
   corporationFlag: boolean;
   lastUsedFlag: boolean;
   billingFlag: boolean;
+};
+
+export type Expenditure = {
+  expenditureId: number;
+  branchId: number;
+  managerId: number | null;
+  managerName: string;
+  date: string;
+  type: ExpenditureType;
+  price: number;
+  memo: string;
+
+  manager?: Relation<Managers>;
+};
+
+export type Cash = {
+  cashId: number;
+  branchId: number;
+  managerId: number | null;
+  managerName: string;
+  date: string;
+  price: number;
+  memo: string;
+  reserve: number;
+
+  manager?: Relation<Managers>;
 };

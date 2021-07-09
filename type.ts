@@ -163,8 +163,13 @@ export type ProductSalesSummary = {
 export type ExpenditureSummary = {
   total: number; // 총 지출
   commission: number; // 결제 수수료
-} & Record<ExpenditureType, number>;
+} & Record<ExpenditureType, number>; // 지출 타입별 금액
 
 export type CashSummary = {
   amount: number; // 현재 잔액
 };
+
+export type PaymentSummary = {
+  total: number; // 전체 금액
+  refund: number; // 환불 금액
+} & Record<PaymentType, number>; // 결제타입 별 금액

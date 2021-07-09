@@ -307,7 +307,7 @@ export type Spaces = {
   image?: Relation<Images>;
 };
 
-export type Addtions = {
+export type Additions = {
   additionId: number;
   branchId: number;
   name: string;

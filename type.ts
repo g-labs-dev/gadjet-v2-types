@@ -142,3 +142,9 @@ export type BillSummary = {
   etc: number; // 기타
   unpaid: number; // 미납 (bill.unpaid)
 };
+
+export type ReceiptSummary = {
+  total: number; // 총 합계
+  taxInvoice: number; // 세금계산서 금액
+  cashReceipt: number; // 현금영수증 금액
+};

@@ -6,8 +6,22 @@ type PARAMS = { hqId: number; branchId: number };
 // 청구서 목록 검색
 // GET /hqs/0/branches/0/bills
 export type GET_LIST_PARAMS = PARAMS;
-export type GET_LIST_QUERY = Pagination & { query: string; from: string; to: string; spaceTypes: number[] }; // startDate 기준 검색
+export type GET_LIST_QUERY = Pagination & { query: string; startDate: [string, string]; spaceTypes: number[] }; // startDate: ['YYYY-MM-DD', 'YYYY-MM-DD']
 export type GET_LIST_RESPONSE = { total: number; bills: Bills[] };
+// ===========================
+
+// 청구서 요약
+// GET /hqs/0/branches/0/bills/summary
+export type GET_SUMMARY_PARAMS = PARAMS;
+export type GET_SUMMARY_QUERY = { query: string; startDate: [string, string]; spaceTypes: number[] }; // startDate: ['YYYY-MM-DD', 'YYYY-MM-DD']
+export type GET_SUMMARY_RESPONSE = {
+  expectedSales: number; // 예상매출 (bill.price)
+  sales: number; // 매출 (bill.payments)
+  space: number; // 공간 이용료
+  addition: number; // 부가 서비스 이용료
+  etc: number; // 기타
+  unpaid: number; // 미납 (bill.unpaid)
+};
 // ===========================
 
 // 청구서 추가

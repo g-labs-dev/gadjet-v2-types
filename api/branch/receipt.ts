@@ -27,7 +27,7 @@ export type ADD_TAX_INVOICE_RESPONSE = Receipts;
 // ===========================
 
 // 세금계산서 수정발행
-// UPDATE /hqs/0/branches/0/receipts/0/tax-invoice
+// PUT /hqs/0/branches/0/receipts/0/tax-invoice
 export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & { receiptId: number };
 export type UPDATE_TAX_INOVICE_BODY = {
   taxInvoice: {}; // @@@@ 팝빌 데이터 연동 필요

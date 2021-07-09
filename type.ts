@@ -130,6 +130,8 @@ export type DayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
 export type BillPrice = { name: string; price: number };
 
+export type ExpenditureType = "card" | "transfer" | "cash";
+
 export type Pagination = { current: number; pageSize: number };
 
 export type Relation<T> = T | null;
@@ -152,4 +154,17 @@ export type ReceiptSummary = {
 export type SpaceSummary = {
   total: number; // space.virtualFlag = false 애들 공실률
   [key: string]: number; // 지점 spaceType 별 공실률
+};
+
+export type ProductSalesSummary = {
+  [key: string]: number; // 상품 별 판매금액 합계
+};
+
+export type ExpenditureSummary = {
+  total: number; // 총 지출
+  commission: number; // 결제 수수료
+} & Record<ExpenditureType, number>;
+
+export type CashSummary = {
+  amount: number; // 현재 잔액
 };

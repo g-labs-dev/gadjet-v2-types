@@ -698,3 +698,16 @@ export type Cash = {
 
   manager?: Relation<Managers>;
 };
+
+export type AccessLogs = {
+  accessLogId: number;
+  hqId: number;
+  branchId: number;
+  managerId: number;
+  managerName: string;
+  title: number;
+  url: string;
+  ip: string;
+  ua: string;
+  successFlag: boolean;
+};

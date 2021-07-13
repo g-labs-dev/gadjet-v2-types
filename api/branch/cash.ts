@@ -13,7 +13,7 @@ export type GET_LIST_RESPONSE = { total: number; cash: Cash[] };
 // 현금 요약
 // GET /hqs/0/branches/0/cash/summary
 export type GET_SUMMARY_PARAMS = PARAMS;
-export type GET_SUMMARY_QUERY = { query: string };
+export type GET_SUMMARY_QUERY = {};
 export type GET_SUMMARY_RESPONSE = CashSummary;
 // ===========================
 

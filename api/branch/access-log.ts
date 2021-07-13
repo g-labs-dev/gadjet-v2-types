@@ -1,11 +1,12 @@
 import { AccessLogs } from "../../model";
-import {} from "../../type";
+import { Pagination } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
 
 // 접근기록 조회
 // GET /hqs/0/branches/0/access-logs
 export type GET_LIST_PARAMS = PARAMS;
+export type GET_LIST_QUERY = Pagination & {};
 export type GET_LIST_RESPONSE = { total: number; accessLogs: AccessLogs[] };
 // ===========================
 

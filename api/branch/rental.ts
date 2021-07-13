@@ -35,9 +35,9 @@ export type DELETE_RESPONSE = [number];
 // ===========================
 
 // 대관대여 내역 조회
-// GET /hqs/0/branches/0/rentals/0/rental-resevations
-export type GET_RESERVATIONS_PARAMS = PARAMS & { rentalId: number };
-export type GET_RESERVATIONS_QUERY = Pagination & { date: [string, string] };
+// GET /hqs/0/branches/0/rental-resevations
+export type GET_RESERVATIONS_PARAMS = PARAMS;
+export type GET_RESERVATIONS_QUERY = Pagination & { date: [string, string]; rentalIds: number[] };
 export type GET_RESERVATIONS_RESPONSE = { total: number; rentalReservations: RentalReservations[] };
 // ===========================
 
@@ -67,7 +67,7 @@ export type DELETE_RESERVATION_RESPONSE = [number];
 
 // 대관대여 내역 내보내기
 // GET /hqs/0/branches/0/rental-reservations
-export type EXPORT_RESERVATION_PARAMS = PARAMS;
-export type EXPORT_RESERVATION_QUERY = { date: [string, string] };
-export type EXPORT_RESERVATION_RESPONSE = any; // @@@@ xlsx
+export type EXPORT_RESERVATIONS_PARAMS = PARAMS;
+export type EXPORT_RESERVATIONS_QUERY = { date: [string, string] };
+export type EXPORT_RESERVATIONS_RESPONSE = any; // @@@@ xlsx
 // ===========================

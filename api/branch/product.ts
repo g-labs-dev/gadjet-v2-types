@@ -42,7 +42,7 @@ export type GET_SALES_RESPONSE = { total: number; productSales: ProductSales[] }
 // ===========================
 
 // 상품 판매내역 요약
-// GET /hqs/0/branches/0/products/summary
+// GET /hqs/0/branches/0/product-sales/summary
 export type GET_SALES_SUMMARY_PARAMS = PARAMS;
 export type GET_SALES_SUMMARY_QUERY = Pagination & { datetime: [string, string]; productIds: number[] };
 export type GET_SALES_SUMMARY_RESPONSE = ProductSalesSummary;

@@ -705,7 +705,7 @@ export type AccessLogs = {
   branchId: number;
   managerId: number;
   managerName: string;
-  title: number;
+  title: string;
   url: string;
   ip: string;
   ua: string;

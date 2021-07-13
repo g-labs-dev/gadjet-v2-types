@@ -30,7 +30,7 @@ export type CONFIRM_PARAMS = PARAMS & { paymentId: number };
 export type CONFIRM_RESPONSE = [number];
 // ===========================
 
-// 결제내역 매출확정
+// 결제내역 환불
 // PUT /hqs/0/branches/0/payments/0/refund
 export type REFUND_PARAMS = PARAMS & { paymentId: number };
 export type REFUND_RESPONSE = [number];

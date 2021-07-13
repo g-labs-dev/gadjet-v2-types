@@ -13,7 +13,7 @@ export type GET_LIST_RESPONSE = { total: number; contracts: Contracts[] };
 // 계약 상세 조회
 // GET /hqs/0/branches/0/contracts/0
 export type GET_DETAIL_PARAMS = PARAMS & { contractId: number };
-export type GET_DETAIL_RESPONSE = Required<Contracts>;
+export type GET_DETAIL_RESPONSE = Contracts;
 // ===========================
 
 // 계약 추가

@@ -13,7 +13,7 @@ export type GET_LIST_RESPONSE = { total: number; events: Omit<Events, "content">
 // 이벤트 상세조회
 // GET /hqs/0/branches/0/events/0
 export type GET_DETAIL_PARAMS = PARAMS & { eventId: number };
-export type GET_DETAIL_RESPONSE = Required<Events>;
+export type GET_DETAIL_RESPONSE = Events;
 // ===========================
 
 // 이벤트 추가
@@ -81,7 +81,7 @@ export type DELETE_RESPONSE = [number];
 // 이벤트 참가자 조회
 // GET /hqs/0/branches/0/events/0/event-attendees
 export type GET_ATTENDEES_PARAMS = PARAMS & { eventId: number };
-export type GET_ATTENDEES_RESPONSE = Required<EventAttendees>[];
+export type GET_ATTENDEES_RESPONSE = EventAttendees[];
 // ===========================
 
 // 이벤트 참가자 제거

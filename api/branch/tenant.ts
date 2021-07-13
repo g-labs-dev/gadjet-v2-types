@@ -7,7 +7,7 @@ type PARAMS = { hqId: number; branchId: number };
 // GET /hqs/0/branches/0/tenants
 export type GET_LIST_PARAMS = PARAMS;
 export type GET_LIST_QUERY = Pagination & { query: string; contractStatus: ContractStatus[] }; // @@@@ query : name, email, user.name
-export type GET_LIST_RESPONSE = { total: number; tenants: Required<Tenants>[] };
+export type GET_LIST_RESPONSE = { total: number; tenants: Tenants[] };
 // ===========================
 
 // 입주사 입주원 조회

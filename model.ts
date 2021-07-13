@@ -600,7 +600,7 @@ export type ServiceSales = {
 
 export type Receipts = {
   receiptId: number;
-  parentReceiptId: number;
+  parentReceiptId: number | null;
   branchId: string;
   billId: string;
   type: ReceiptType;

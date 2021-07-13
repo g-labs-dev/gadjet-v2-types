@@ -157,6 +157,7 @@ export type SpaceSummary = {
 };
 
 export type ProductSalesSummary = {
+  total: number;
   [key: string]: number; // 상품 별 판매금액 합계
 };
 
@@ -173,3 +174,8 @@ export type PaymentSummary = {
   total: number; // 전체 금액
   refund: number; // 환불 금액
 } & Record<PaymentType, number>; // 결제타입 별 금액
+
+export type ServiceSalesSummary = {
+  total: number;
+  [key: string]: number; // 서비스 별 판매금액 합계
+};

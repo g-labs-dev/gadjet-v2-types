@@ -20,6 +20,7 @@ export type GET_USERS_RESPONSE = { total: number; users: Omit<Users, "password">
 // 입주사 계약 조회
 // GET /hqs/0/branches/0/tenants/0/contracts
 export type GET_CONTRACTS_PARAMS = PARAMS & { tenantId: number };
+export type GET_CONTRACTS_QUERY = Pagination & { query: string };
 export type GET_CONTRACTS_RESPONSE = Pick<Contracts, "contractId" | "startDate" | "suspendDate" | "director" | "status" | "extendStatus">[];
 // ===========================
 

@@ -12,8 +12,8 @@ export type GET_LIST_RESPONSE = { total: number; notices: Omit<Notices, "content
 
 // 공지사항 상세 조회
 // GET /hqs/0/branches/0/notices/0
-export type GET_PARAMS = PARAMS & { noticeId: number };
-export type GET_RESPONSE = Notices;
+export type GET_DETAIL_PARAMS = PARAMS & { noticeId: number };
+export type GET_DETAIL_RESPONSE = Notices;
 // ===========================
 
 // 공지사항 추가

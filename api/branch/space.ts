@@ -6,21 +6,21 @@ type PARAMS = { hqId: number; branchId: number };
 // 공간 조회
 // GET /hqs/0/branches/0/spaces
 export type GET_LIST_PARAMS = PARAMS;
-export type GET_LIST_QUERY = Pagination & { query: string; usingFlag: boolean }; // usingFlag = 공실인지 아닌지 계약으로 판단
+export type GET_LIST_QUERY = Pagination & { query: string; emptyFlag: boolean }; // emptyFlag = 공실인지 아닌지 계약으로 판단
 export type GET_LIST_RESPONSE = { total: number; spaces: Spaces[] };
 // ===========================
 
 // 공간 요약
 // GET /hqs/0/branches/0/spaces/summary
 export type GET_SUMMARY_PARAMS = PARAMS;
-export type GET_SUMMARY_QUERY = { query: string; usingFlag: boolean };
+export type GET_SUMMARY_QUERY = { query: string; emptyFlag: boolean };
 export type GET_SUMMARY_RESPONSE = SpaceSummary;
 // ===========================
 
 // 공간 내보내기
 // GET /hqs/0/branches/0/spaces/export
 export type EXPORT_PARAMS = PARAMS;
-export type EXPORT_QUERY = { query: string; usingFlag: boolean };
+export type EXPORT_QUERY = { query: string; emptyFlag: boolean };
 export type EXPORT_RESPONSE = any; // @@@@ xlsx
 // ===========================
 

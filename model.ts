@@ -592,6 +592,7 @@ export type ServiceSales = {
   name: string;
   price: number;
   usedCreditAmount: UsedCreditAmount;
+  datetime: string;
   refundFlag: boolean;
 
   tenant?: Relation<Tenants>;

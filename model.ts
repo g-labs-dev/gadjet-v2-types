@@ -85,6 +85,7 @@ export type Hqs = {
 
   image?: Relation<Images>;
   branches?: Relation<Branches[]>;
+  roles?: Relation<HqRoles[]>;
 };
 
 export type Branches = {
@@ -104,6 +105,7 @@ export type Branches = {
   contractDocument?: Relation<BranchContractDocument>;
   sublet?: Relation<BranchSublet>;
   rentee?: Relation<BranchRentee>;
+  roles?: Relation<BranchRoles[]>;
 };
 
 export type BranchBusiness = {

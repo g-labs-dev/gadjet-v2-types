@@ -603,6 +603,7 @@ export type ServiceSales = {
   tenantId: number;
   userId: number;
   name: string;
+  amount: number;
   price: number;
   usedCreditAmount: UsedCreditAmount;
   datetime: string;

@@ -721,4 +721,6 @@ export type AccessLogs = {
   ua: string;
   successFlag: boolean;
   datetime: string;
+
+  manager?: Relation<Managers>;
 };

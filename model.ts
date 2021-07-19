@@ -286,6 +286,10 @@ export type Notices = {
   branchId: number;
   title: string;
   content: string;
+  writeDate: string;
+
+  hq?: Relation<Hqs>;
+  branch?: Relation<Branches>;
 };
 
 export type Floors = {

@@ -561,7 +561,7 @@ export type Products = {
 };
 
 export type ProductSales = {
-  productSalesId: number;
+  productSaleId: number;
   branchId: number;
   productId: number;
   tenantId: number;

@@ -720,4 +720,5 @@ export type AccessLogs = {
   ip: string;
   ua: string;
   successFlag: boolean;
+  date: string;
 };

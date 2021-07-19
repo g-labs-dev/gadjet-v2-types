@@ -544,6 +544,10 @@ export type RentalReservations = {
   memo: string;
   usedCreditAmount: UsedCreditAmount;
   managerFlag: boolean;
+
+  rental?: Relation<Rentals>;
+  tenant?: Relation<Tenants>;
+  user?: Relation<Users>;
 };
 
 export type Products = {
@@ -604,6 +608,7 @@ export type ServiceSales = {
   datetime: string;
   refundFlag: boolean;
 
+  service?: Relation<Services>;
   tenant?: Relation<Tenants>;
   user?: Relation<Users>;
 };

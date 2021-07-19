@@ -445,6 +445,9 @@ export type Payments = {
   settlementPrice: number;
   confirmFlag: boolean;
   settlementFlag: boolean;
+
+  bill?: Relation<Bills>;
+  user?: Relation<Users>;
 };
 
 export type Settlements = {

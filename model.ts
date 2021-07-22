@@ -394,9 +394,9 @@ export type ContractInviteCodes = {
 export type Bills = {
   billId: number;
   branchId: number;
-  contractId: number;
-  tenantId: number;
-  userId: number;
+  contractId: number | null;
+  tenantId: number | null;
+  userId: number | null;
   type: BillType;
   price: number;
   unpaidPrice: number;

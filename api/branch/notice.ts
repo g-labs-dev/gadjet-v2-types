@@ -6,7 +6,7 @@ type PARAMS = { hqId: number; branchId: number };
 // 공지사항 조회
 // GET /hqs/0/branches/0/notices
 export type GET_LIST_PARAMS = PARAMS;
-export type GET_LIST_QUERY = Pagination & { query: string }; // @@@@ query: title, content 도 할지?
+export type GET_LIST_QUERY = Pagination & { query: string; writeDate: [string, string] }; // @@@@ query: title, content 도 할지?
 export type GET_LIST_RESPONSE = { total: number; notices: Omit<Notices, "content">[] };
 // ===========================
 

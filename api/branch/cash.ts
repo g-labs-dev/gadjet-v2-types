@@ -6,7 +6,7 @@ type PARAMS = { hqId: number; branchId: number };
 // 현금 조회
 // GET /hqs/0/branches/0/cash
 export type GET_LIST_PARAMS = PARAMS;
-export type GET_LIST_QUERY = Pagination & { query: string }; // query: memo
+export type GET_LIST_QUERY = Pagination & { query: string; date: [string, string] }; // query: memo
 export type GET_LIST_RESPONSE = { total: number; cash: Cash[] };
 // ===========================
 

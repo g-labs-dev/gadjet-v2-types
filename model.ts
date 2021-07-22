@@ -393,8 +393,10 @@ export type ContractInviteCodes = {
 
 export type Bills = {
   billId: number;
+  branchId: number;
   contractId: number;
   tenantId: number;
+  userId: number;
   type: BillType;
   price: number;
   unpaidPrice: number;
@@ -412,6 +414,7 @@ export type Bills = {
   manualFlag: boolean;
 
   tenant?: Relation<Tenants>;
+  user?: Relation<Users>;
 };
 
 export type ContractDeposit = {
@@ -465,11 +468,12 @@ export type Settlements = {
 export type Credits = {
   creditId: number;
   hqId: number;
-  tenantId: number;
+  tenantId: number | null;
   contractId: number | null;
+  userId: number | null;
   type: CreditType;
   availableStartDate: string;
-  availableendDate: string;
+  availableEndDate: string;
   availableFlag: boolean;
 };
 

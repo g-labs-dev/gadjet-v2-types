@@ -105,6 +105,7 @@ export type Branches = {
   contractDocument?: Relation<BranchContractDocument>;
   sublet?: Relation<BranchSublet>;
   rentee?: Relation<BranchRentee>;
+  automation?: Relation<BranchAutomations>;
   roles?: Relation<BranchRoles[]>;
   floors?: Relation<Floors[]>;
   spaceTypes?: Relation<SpaceTypes[]>;

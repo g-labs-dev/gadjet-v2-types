@@ -179,6 +179,13 @@ export type BranchRentee = {
   signatureImage?: Relation<Images>;
 };
 
+export type BranchAutomations = {
+  branchAutomationId: number;
+  branchId: number;
+  extendCheckFlag: boolean;
+  extendCheckValue: number;
+};
+
 export type Tenants = {
   tenantId: number;
   name: string;

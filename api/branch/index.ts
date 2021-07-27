@@ -67,7 +67,7 @@ export type UPDATE_RENTEE_RESPONSE = [number];
 // PUT /hqs/0/branches/0/automation
 export type UPDATE_AUTOMATION_PARAMS = PARAMS;
 export type UPDATE_AUTOMATION_BODY = {
-  rentee: Partial<BranchAutomations>;
+  automation: Partial<BranchAutomations>;
 };
 export type UPDATE_AUTOMATION_RESPONSE = [number];
 // ===========================

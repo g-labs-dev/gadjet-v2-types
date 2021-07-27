@@ -54,7 +54,7 @@ export type UPDATE_SUBLET_BODY = {
 export type UPDATE_SUBLET_RESPONSE = [number];
 // ===========================
 
-// 지점 dla대차 수정
+// 지점 임대차 수정
 // PUT /hqs/0/branches/0/rentee
 export type UPDATE_RENTEE_PARAMS = PARAMS;
 export type UPDATE_RENTEE_BODY = {

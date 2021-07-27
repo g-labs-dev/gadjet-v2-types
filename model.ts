@@ -106,6 +106,8 @@ export type Branches = {
   sublet?: Relation<BranchSublet>;
   rentee?: Relation<BranchRentee>;
   roles?: Relation<BranchRoles[]>;
+  floors?: Relation<Floors[]>;
+  spaceTypes?: Relation<SpaceTypes[]>;
 };
 
 export type BranchBusiness = {

@@ -15,5 +15,5 @@ export type UPDATE_PARAMS = PARAMS;
 export type UPDATE_BODY = {
   hq: Pick<Hqs, "email" | "name" | "logoImageId">;
 };
-export type UPDATE_REPONSE = [number];
+export type UPDATE_RESPONSE = [number];
 // ===========================

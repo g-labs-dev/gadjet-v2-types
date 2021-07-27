@@ -42,6 +42,6 @@ export type DELETE_RESPONSE = [number];
 // 청구서 내보내기
 // GET /hqs/0/branches/0/bills/export
 export type EXPORT_PARAMS = PARAMS;
-export type EXPORT_QUERY = { from: string; to: string }; // YYYY-MM-DD
+export type EXPORT_QUERY = { startDate: [string, string] }; // YYYY-MM-DD
 export type EXPORT_RESPONSE = any; // xlsx
 // ===========================

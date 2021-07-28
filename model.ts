@@ -57,6 +57,8 @@ export type Gics = {
   depth: number;
   ko: string;
   en: string;
+
+  children?: Relation<Gics[]>;
 };
 
 export type Dates = {

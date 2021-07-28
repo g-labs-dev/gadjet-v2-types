@@ -53,7 +53,7 @@ export type Banks = {
 
 export type Gics = {
   code: number;
-  parentCode: number;
+  parentCode: number | null;
   depth: number;
   ko: string;
   en: string;

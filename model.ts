@@ -10,6 +10,7 @@ import {
   ContractLateFeeType,
   ContractSignatureStatus,
   ContractStatus,
+  ContractTenant,
   CreditType,
   CreditUsage,
   DayIndex,
@@ -359,7 +360,7 @@ export type Contracts = {
   documentFileId: number | null;
   extendStatus: ContractExtendStatus;
   extendContractId: number | null;
-  tenant: Tenants;
+  tenant: ContractTenant;
   director: ContractDirector;
   contractor: ContractContractor;
 

@@ -53,6 +53,17 @@ export type ContractExtendStatus =
   | "approval" // 연장한다고 대답함
   | "refusal"; // 연장거절
 
+export type ContractTenant = {
+  name: string;
+  contact: string;
+  email: string;
+  businessNumber: string;
+  corporationNumber: string;
+  foreignerNumber: string;
+  gicsCode: number;
+  type: TenantType;
+};
+
 export type ContractDirector = {
   name: string;
   contact: string;

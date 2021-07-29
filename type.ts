@@ -119,7 +119,8 @@ export type PaymentType =
 export type PaymentStatus =
   | "ready" // 결제준비
   | "approve" // 결제완료
-  | "cancel"; // 결제취소(=환불)
+  | "refund" // 환불
+  | "cancel"; // 결제취소
 
 export type CreditType =
   | "contract" // 계약크레딧 (=무료크레딧)

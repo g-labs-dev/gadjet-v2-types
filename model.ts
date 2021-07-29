@@ -366,8 +366,8 @@ export type Contracts = {
   tenant: ContractTenant;
   director: ContractDirector;
   contractor: ContractContractor;
-  deposit: ContractDeposit;
 
+  deposit?: Relation<ContractDeposit>;
   spaces?: Relation<ContractSpaces[]>;
   additions?: Relation<ContractAdditions[]>;
   signatureImage?: Relation<Images>;

@@ -354,6 +354,7 @@ export type Contracts = {
   paymentDueDate: number;
   lateFeeType: ContractLateFeeType;
   lateFee: number;
+  creditAmount: number;
   publicMemo: string;
   privateMemo: string;
   status: ContractStatus;

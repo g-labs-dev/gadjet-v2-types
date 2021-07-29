@@ -362,9 +362,11 @@ export type Contracts = {
   documentFileId: number | null;
   extendStatus: ContractExtendStatus;
   extendContractId: number | null;
+
   tenant: ContractTenant;
   director: ContractDirector;
   contractor: ContractContractor;
+  deposit: ContractDeposit;
 
   spaces?: Relation<ContractSpaces[]>;
   additions?: Relation<ContractAdditions[]>;

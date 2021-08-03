@@ -21,7 +21,7 @@ export type ADD_RESPONSE = Services;
 
 // 서비스 수정
 // PUT /hqs/0/branches/0/services/0
-export type UPDATE_PARAMS = PARAMS;
+export type UPDATE_PARAMS = PARAMS & { serviceId: number };;
 export type UPDATE_BODY = {
   service: Pick<Services, "name" | "description" | "guide" | "price" | "imageId">;
 };

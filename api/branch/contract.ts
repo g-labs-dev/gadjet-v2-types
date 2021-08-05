@@ -72,6 +72,6 @@ export type EXPORT_RESPONSE = any; // @@@@ xlsx
 // 계약 데이터 업로드
 // POST /hqs/0/branches/0/contracts/upload
 export type UPLOAD_PARAMS = PARAMS;
-export type UPLOAD_BODY = { contracts: Partial<Contracts> }; // @@@@ front 파싱 기준
+export type UPLOAD_BODY = { contracts: Partial<Contracts>[] }; // @@@@ front 파싱 기준
 export type UPLOAD_RESPONSE = [number]; // create 된 계약 수
 // ===========================

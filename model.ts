@@ -431,6 +431,7 @@ export type Bills = {
 
   tenant?: Relation<Tenants>;
   user?: Relation<Users>;
+  payments?: Relation<Payments[]>;
 };
 
 export type ContractDeposit = {

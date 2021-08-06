@@ -10,6 +10,12 @@ export type GET_LIST_QUERY = Pagination & { query: string; startDate: [string, s
 export type GET_LIST_RESPONSE = { total: number; bills: Bills[] };
 // ===========================
 
+// 청구서 상세 검색
+// GET /hqs/0/branches/0/bills/0
+export type GET_DETAIL_PARAMS = PARAMS & { billId: number };
+export type GET_DETAIL_RESPONSE = Bills;
+// ===========================
+
 // 청구서 요약
 // GET /hqs/0/branches/0/bills/summary
 export type GET_SUMMARY_PARAMS = PARAMS;

@@ -196,6 +196,6 @@ export type ServiceSalesSummary = {
 };
 
 export type ContractReceiver = {
-  bill: { type: "email" | "phone"; value: string }[]; // 청구서 문자 또는 이메일 받을사람
+  bill: { type: "email" | "sms"; value: string }[]; // 청구서 문자 또는 이메일 받을사람
   invoice: { name: string; email: string }[]; // 세금계산서, 현금영수증 메일 받을사람
 };

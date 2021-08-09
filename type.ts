@@ -120,7 +120,6 @@ export type PaymentStatus =
   | "ready" // 결제준비
   | "approve" // 결제완료
   | "refund"; // 환불
-  
 
 export type CreditType =
   | "contract" // 계약크레딧 (=무료크레딧)
@@ -194,4 +193,9 @@ export type PaymentSummary = {
 export type ServiceSalesSummary = {
   total: number;
   [key: string]: number; // 서비스 별 판매금액 합계
+};
+
+export type ContractReceiver = {
+  bill: { type: "email" | "phone"; value: string }[]; // 청구서 문자 또는 이메일 받을사람
+  invoice: { name: string; email: string }[]; // 세금계산서, 현금영수증 메일 받을사람
 };

@@ -1,4 +1,6 @@
 import { Receipts } from "../../model";
+import { Cashbill, CashbillCancel } from "../../popbill/cashbill";
+import { Taxinvoice, TaxinvoiceModify } from "../../popbill/taxinvoice";
 import { Pagination, ReceiptSummary } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
@@ -21,7 +23,47 @@ export type GET_SUMMARY_RESPONSE = ReceiptSummary;
 // POST /hqs/0/branches/0/receipts/tax-invoice
 export type ADD_TAX_INVOICE_PARAMS = PARAMS;
 export type ADD_TAX_INVOICE_BODY = {
-  taxInvoice: {}; // @@@@ 팝빌 데이터 연동 필요
+  taxInvoice: Pick<
+    Taxinvoice,
+    | "writeDate"
+    | "purposeType"
+    | "supplyCostTotal"
+    | "taxTotal"
+    | "totalAmount"
+    | "remark1"
+    | "invoicerMgtKey"
+    | "invoicerCorpNum"
+    | "invoicerTaxRegID"
+    | "invoicerCorpName"
+    | "invoicerCEOName"
+    | "invoicerAddr"
+    | "invoicerBizType"
+    | "invoicerBizClass"
+    | "invoicerContactName"
+    | "invoicerDeptName"
+    | "invoicerTEL"
+    | "invoicerHP"
+    | "invoicerEmail"
+    | "invoiceeType"
+    | "invoiceeCorpNum"
+    | "invoiceeTaxRegID"
+    | "invoiceeCorpName"
+    | "invoiceeCEOName"
+    | "invoiceeAddr"
+    | "invoiceeBizType"
+    | "invoiceeBizClass"
+    | "invoiceeContactName1"
+    | "invoiceeDeptName1"
+    | "invoiceeTEL1"
+    | "invoiceeHP1"
+    | "invoiceeEmail1"
+    | "invoiceeContactName2"
+    | "invoiceeDeptName2"
+    | "invoiceeTEL2"
+    | "invoiceeHP2"
+    | "invoiceeEmail2"
+    | "detailList"
+  >;
 };
 export type ADD_TAX_INVOICE_RESPONSE = Receipts;
 // ===========================
@@ -30,7 +72,49 @@ export type ADD_TAX_INVOICE_RESPONSE = Receipts;
 // PUT /hqs/0/branches/0/receipts/0/tax-invoice
 export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & { receiptId: number };
 export type UPDATE_TAX_INOVICE_BODY = {
-  taxInvoice: {}; // @@@@ 팝빌 데이터 연동 필요
+  taxInvoice: Pick<
+    TaxinvoiceModify,
+    | "writeDate"
+    | "purposeType"
+    | "supplyCostTotal"
+    | "taxTotal"
+    | "totalAmount"
+    | "remark1"
+    | "invoicerMgtKey"
+    | "invoicerCorpNum"
+    | "invoicerTaxRegID"
+    | "invoicerCorpName"
+    | "invoicerCEOName"
+    | "invoicerAddr"
+    | "invoicerBizType"
+    | "invoicerBizClass"
+    | "invoicerContactName"
+    | "invoicerDeptName"
+    | "invoicerTEL"
+    | "invoicerHP"
+    | "invoicerEmail"
+    | "invoiceeType"
+    | "invoiceeCorpNum"
+    | "invoiceeTaxRegID"
+    | "invoiceeCorpName"
+    | "invoiceeCEOName"
+    | "invoiceeAddr"
+    | "invoiceeBizType"
+    | "invoiceeBizClass"
+    | "invoiceeContactName1"
+    | "invoiceeDeptName1"
+    | "invoiceeTEL1"
+    | "invoiceeHP1"
+    | "invoiceeEmail1"
+    | "invoiceeContactName2"
+    | "invoiceeDeptName2"
+    | "invoiceeTEL2"
+    | "invoiceeHP2"
+    | "invoiceeEmail2"
+    | "detailList"
+    | "modifyCode"
+    | "orgNTSConfirmNum"
+  >;
 };
 export type UPDATE_TAX_INVOICE_RESPONSE = Receipts;
 // ===========================
@@ -39,7 +123,25 @@ export type UPDATE_TAX_INVOICE_RESPONSE = Receipts;
 // POST /hqs/0/branches/0/receipts/cash-receipt
 export type ADD_CASH_RECEIPT_PARAMS = PARAMS;
 export type ADD_CASH_RECEIPT_BODY = {
-  cashReceipt: {}; // @@@@ 팝빌 데이터 연동 필요
+  cashReceipt: Pick<
+    Cashbill,
+    | "tardeUsage"
+    | "identityNum"
+    | "totalAmount"
+    | "supplyCost"
+    | "tax"
+    | "serviceFee"
+    | "franchiseCorpNum"
+    | "franchiseCorpName"
+    | "franchiseCEOName"
+    | "franchiseAddr"
+    | "franchiseTEL"
+    | "customerName"
+    | "itemName"
+    | "orderNumber"
+    | "email"
+    | "hp"
+  >;
 };
 export type ADD_CASH_RECEIPT_RESPONSE = Receipts;
 // ===========================
@@ -47,5 +149,8 @@ export type ADD_CASH_RECEIPT_RESPONSE = Receipts;
 // 현금영수증 취소
 // DEL /hqs/0/branches/0/receipts/0/cash-receipt
 export type DELETE_CASH_RECEIPT_PARAMS = PARAMS & { receiptId: number };
+export type DELETE_CASH_RECEIPT_BODY = {
+  cashReceipt: Pick<CashbillCancel, "cancelType">;
+};
 export type DELETE_CASH_RECEIPT_RESPONSE = [number];
 // ===========================

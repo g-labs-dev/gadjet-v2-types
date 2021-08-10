@@ -2,7 +2,6 @@
 
 export type Cashbill = {
   mgtKey: string;
-  tradeDate?;
   tradeType: "승인거래" | "취소거래";
   tardeUsage: "소득공제용" | "지출증빙용";
   identityNum: string;

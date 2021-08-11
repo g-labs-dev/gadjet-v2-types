@@ -431,6 +431,7 @@ export type Bills = {
   gadjetPayFlag: boolean;
   manualFlag: boolean;
 
+  contract?: Relation<Contracts>;
   tenant?: Relation<Tenants>;
   user?: Relation<Users>;
   payments?: Relation<Payments[]>;

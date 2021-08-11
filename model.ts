@@ -124,6 +124,7 @@ export type BranchBusiness = {
   identityNumber: string;
   businessNumber: string;
   corporationNumber: string;
+  managers?: [{ name: string; department: string; tel: string; contact: string; email: string }, { name: string; department: string; tel: string; contact: string; email: string }];
 };
 
 export type BranchSettlement = {

@@ -26,6 +26,7 @@ export type ADD_TAX_INVOICE_BODY = {
   taxInvoice: Pick<
     Taxinvoice,
     | "writeDate"
+    | "taxType"
     | "purposeType"
     | "supplyCostTotal"
     | "taxTotal"
@@ -80,6 +81,7 @@ export type UPDATE_TAX_INOVICE_BODY = {
   taxInvoice: Pick<
     TaxinvoiceModify,
     | "writeDate"
+    | "taxType"
     | "purposeType"
     | "supplyCostTotal"
     | "taxTotal"

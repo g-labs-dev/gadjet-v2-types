@@ -24,11 +24,16 @@ export type Taxinvoice = {
   invoicerAddr?: string;
   invoicerBizType?: string;
   invoicerBizClass?: string;
-  invoicerContactName?: string;
-  invoicerDeptName?: string;
-  invoicerTEL?: string;
-  invoicerHP?: string;
-  invoicerEmail?: string;
+  invoicerContactName1?: string;
+  invoicerDeptName1?: string;
+  invoicerTEL1?: string;
+  invoicerHP1?: string;
+  invoicerEmail1?: string;
+  invoicerContactName2?: string;
+  invoicerDeptName2?: string;
+  invoicerTEL2?: string;
+  invoicerHP2?: string;
+  invoicerEmail2?: string;
 
   // 공급받는자
   invoiceeType: "사업자" | "개인" | "외국인";

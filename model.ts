@@ -124,8 +124,8 @@ export type BranchBusiness = {
   identityNumber: string;
   businessNumber: string;
   corporationNumber: string;
-  type: string;
-  class: string;
+  businessType: string;
+  businessClass: string;
   managers?: [{ name: string; department: string; tel: string; contact: string; email: string }, { name: string; department: string; tel: string; contact: string; email: string }];
 };
 

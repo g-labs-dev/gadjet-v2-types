@@ -66,6 +66,10 @@ export type ContractTenant = {
   foreignerNumber: string;
   gicsCode: number;
   type: TenantType;
+  businessType: string;
+  businessClass: string;
+  address: string;
+  identityNumber: string;
 };
 
 export type ContractDirector = {

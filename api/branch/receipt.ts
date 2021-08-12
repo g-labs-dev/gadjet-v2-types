@@ -137,7 +137,9 @@ export type ADD_CASH_RECEIPT_PARAMS = PARAMS;
 export type ADD_CASH_RECEIPT_BODY = {
   cashReceipt: Pick<
     Cashbill,
-    | "tardeUsage"
+    | "tradeType"
+    | "taxationType"
+    | "tradeUsage"
     | "identityNum"
     | "totalAmount"
     | "supplyCost"

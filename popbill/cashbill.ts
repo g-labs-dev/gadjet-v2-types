@@ -3,9 +3,9 @@
 export type Cashbill = {
   mgtKey: string;
   tradeType: "승인거래" | "취소거래";
-  tardeUsage: "소득공제용" | "지출증빙용";
+  tradeUsage: "소득공제용" | "지출증빙용";
   identityNum: string;
-  taxationType: "과세";
+  taxationType: "과세" | "비과세";
 
   totalAmount: string;
   supplyCost: string;

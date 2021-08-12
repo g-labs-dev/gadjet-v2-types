@@ -172,10 +172,10 @@ export type DELETE_CASH_RECEIPT_PARAMS = PARAMS & { receiptId: number };
 export type DELETE_CASH_RECEIPT_BODY = {
   cancelType: 1 | 2 | 3;
   isPartCancel: boolean;
-  supplyCost?: number;
-  tax?: number;
-  serviceFee?: number;
-  totalAmount?: number;
+  supplyCost?: string;
+  tax?: string;
+  serviceFee?: string;
+  totalAmount?: string;
 };
 export type DELETE_CASH_RECEIPT_RESPONSE = [number];
 // ===========================

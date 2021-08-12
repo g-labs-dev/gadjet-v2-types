@@ -12,6 +12,12 @@ export type GET_LIST_QUERY = Pagination & { query: string; requestDatetime: [str
 export type GET_LIST_RESPONSE = { total: number; receipts: Receipts[] };
 // ===========================
 
+// 증빙 상세조회
+// GET /hqs/0/branches/0/receipts/0
+export type GET_DETAIL_PARAMS = PARAMS & { receiptId: number };
+export type GET_DETAIL_RESPONSE = Receipts;
+// ===========================
+
 // 증빙 요약
 // GET /hqs/0/branches/0/receipts/summary
 export type GET_SUMMARY_PARAMS = PARAMS;

@@ -170,7 +170,12 @@ export type ADD_CASH_RECEIPT_RESPONSE = Receipts;
 // DEL /hqs/0/branches/0/receipts/0/cash-receipt
 export type DELETE_CASH_RECEIPT_PARAMS = PARAMS & { receiptId: number };
 export type DELETE_CASH_RECEIPT_BODY = {
-  cashReceipt: Pick<CashbillCancel, "cancelType">;
+  cancelType: 1 | 2 | 3;
+  isPartCancel: boolean;
+  supplyCost?: number;
+  tax?: number;
+  serviceFee?: number;
+  totalAmount?: number;
 };
 export type DELETE_CASH_RECEIPT_RESPONSE = [number];
 // ===========================

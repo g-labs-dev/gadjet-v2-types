@@ -1,3 +1,5 @@
+import { Cashbill } from "./popbill/cashbill";
+import { Taxinvoice } from "./popbill/taxinvoice";
 import {
   BillPrice,
   BillType,
@@ -648,6 +650,7 @@ export type Receipts = {
   branchId: number;
   billId: number;
   type: ReceiptType;
+  json: Taxinvoice | Cashbill;
   status: ReceiptStatus;
   price: number;
   ntsConfirmNumber: string;

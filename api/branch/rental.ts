@@ -10,6 +10,12 @@ export type GET_LIST_QUERY = Pagination & { query: string };
 export type GET_LIST_RESPONSE = { total: number; rentals: Rentals[] };
 // ===========================
 
+// 대관대여 상세 조회
+// GET /hqs/0/branches/0/rentals/0
+export type GET_DETAIL_PARAMS = PARAMS & { rentalId: number };
+export type GET_DETAIL_RESPONSE = Rentals;
+// ===========================
+
 // 대관대여 추가
 // POST /hqs/0/branches/0/rentals
 export type ADD_PARAMS = PARAMS;

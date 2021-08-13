@@ -210,6 +210,7 @@ export type Tenants = {
   type: TenantType;
   availableCreditUsage: CreditUsage[];
 
+  credits: Relation<Credits>;
   gics?: Relation<Gics>;
   users?: Relation<Users[]>;
 };

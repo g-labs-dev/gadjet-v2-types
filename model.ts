@@ -499,6 +499,7 @@ export type Credits = {
   contractId: number | null;
   userId: number | null;
   type: CreditType;
+  amount: number;
   availableStartDate: string;
   availableEndDate: string;
   availableFlag: boolean;

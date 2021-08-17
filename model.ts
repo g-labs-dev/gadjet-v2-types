@@ -236,6 +236,7 @@ export type Users = {
   profileImageId: number | null;
 
   profile?: Relation<Images>;
+  tenantRoles?: Relation<TenantRoles>;
 };
 
 export type HqRoles = {

@@ -1,4 +1,4 @@
-import { Contracts, Credits, ProductSales, RentalReservations, Tenants, Users } from "../../model";
+import { Contracts, CreditLogs, Credits, ProductSales, RentalReservations, Tenants, Users } from "../../model";
 import { ContractStatus, CreditType, Pagination } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
@@ -45,8 +45,34 @@ export type GET_CREDITS_QUERY = Pagination & { date: string; creditTypes: Credit
 export type GET_CREDITS_RESPONSE = { total: number; credits: Credits[] };
 // ===========================
 
+// 입주사 크레딧 로그 조회
+// GET /hqs/0/branches/0/tenants/0/credit-logs
+export type GET_CREDIT_LOGS_PARAMS = PARAMS & { tenantId: number };
+export type GET_CREDIT_LOGS_QUERY = Pagination & { datetime: [string, string] };
+export type GET_CREDIT_LOGS_RESPONSE = { total: number; creditLogss: CreditLogs[] };
+// ===========================
+
 // 입주사 내보내기
 // GET /hqs/0/branches/0/tenants/export
 export type EXPORT_PARAMS = PARAMS;
-export type EXPORT_RESPONSE = any; // @@@@ xlsx 계약중인 입주사 전체 내보내기
+export type EXPORT_BODY = { includeExpired: boolean }; // 계약 만료된 입주사 포함
+export type EXPORT_RESPONSE = any; // @@@@ xlsx 입주사 전체 내보내기
 // ===========================
+
+// 입주사 크레딧 지급
+// POST /hqs/0/branches/9/tenants/credits
+export type ADD_CREDITS_PARAMS = PARAMS & { tenantId: number };
+export type ADD_CREDITS_BODY = {
+  credit: {
+    contract: { amount: number; availableRange: [string, string] };
+    milage: { amount: number };
+    buy: { amount: number };
+  };
+};
+export type ADD_CREDITS_RESPONSE = boolean;
+
+// 입주사 멤버 초대
+// POST /hqs/0/branches/9/tenants/invite
+export type INVITE_USERS_PARAMS = PARAMS & { tenantId: number };
+export type INVITE_USERS_BODY = { phone: string[] };
+export type INVITE_USERS_RESPONSE = boolean;

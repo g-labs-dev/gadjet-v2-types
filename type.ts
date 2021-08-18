@@ -1,4 +1,4 @@
-export type ImageCategory = "hq" | "branch" | "notice" | "rental" | "room" | "tenant" | "user" | "manager" | "event" | "signature";
+export type ImageCategory = "hq" | "branch" | "notice" | "rental" | "room" | "tenant" | "user" | "manager" | "event" | "signature" | "product" | "service";
 
 export type FileCategory =
   | "branch-terms" // 지점 이용약관

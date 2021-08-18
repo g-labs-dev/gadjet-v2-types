@@ -55,7 +55,7 @@ export type GET_SALES_SUMMARY_RESPONSE = ProductSalesSummary;
 
 // 상품 판매내역 환불
 // DEL /hqs/0/branches/0/product-sales/0
-export type REFUND_SALES_PARAMS = PARAMS & { productSalesId: number };
+export type REFUND_SALES_PARAMS = PARAMS & { productSaleId: number };
 export type REFUND_SALES_RESPONSE = [number];
 // ===========================
 

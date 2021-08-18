@@ -512,7 +512,7 @@ export type CreditLogs = {
   creditLogId: number;
   creditId: number;
   creditType: CreditType;
-  target: CreditUsage | null;
+  usage: CreditUsage | null;
   amount: number;
   datetime: string;
 };

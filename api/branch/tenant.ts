@@ -65,7 +65,7 @@ export type ADD_CREDITS_PARAMS = PARAMS & { tenantId: number };
 export type ADD_CREDITS_BODY = {
   credit: {
     contract: { amount: number; availableRange: [string, string] };
-    milage: { amount: number };
+    mileage: { amount: number };
     buy: { amount: number };
   };
 };

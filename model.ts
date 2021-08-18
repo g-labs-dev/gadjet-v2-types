@@ -310,6 +310,7 @@ export type Notices = {
   title: string;
   content: string;
   writeDate: string;
+  openFlag: boolean;
 
   hq?: Relation<Hqs>;
   branch?: Relation<Branches>;

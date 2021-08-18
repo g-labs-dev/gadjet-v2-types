@@ -288,6 +288,8 @@ export type TenantRoles = {
   tenantRoleId: number;
   tenantId: number;
   userId: number;
+  adminFlag: boolean;
+  roleManageFlag: boolean;
   // ... 앱 메뉴들 들어감
 
   tenant?: Relation<Tenants>;

@@ -511,9 +511,9 @@ export type Credits = {
 export type CreditLogs = {
   creditLogId: number;
   creditId: number;
-  usage: CreditUsage | null;
+  creditType: CreditType;
+  target: CreditUsage | null;
   amount: number;
-  useFlag: boolean;
   datetime: string;
 };
 

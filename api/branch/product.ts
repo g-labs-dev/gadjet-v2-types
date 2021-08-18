@@ -21,7 +21,7 @@ export type ADD_RESPONSE = Products;
 
 // 상품 수정
 // PUT /hqs/0/branches/0/products/0
-export type UPDATE_PARAMS = PARAMS;
+export type UPDATE_PARAMS = PARAMS & { productId: number };
 export type UPDATE_BODY = {
   product: Pick<Products, "name" | "description" | "price" | "stock" | "availableCreditType" | "imageId">;
 };

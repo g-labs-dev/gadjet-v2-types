@@ -49,7 +49,7 @@ export type GET_CREDITS_RESPONSE = { total: number; credits: Credits[] };
 // GET /hqs/0/branches/0/tenants/0/credit-logs
 export type GET_CREDIT_LOGS_PARAMS = PARAMS & { tenantId: number };
 export type GET_CREDIT_LOGS_QUERY = Pagination & { datetime: [string, string] };
-export type GET_CREDIT_LOGS_RESPONSE = { total: number; creditLogss: CreditLogs[] };
+export type GET_CREDIT_LOGS_RESPONSE = { total: number; creditLogs: CreditLogs[] };
 // ===========================
 
 // 입주사 내보내기

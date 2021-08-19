@@ -10,17 +10,23 @@ export type GET_LIST_QUERY = Pagination & { query: string; expenditureTypes: Exp
 export type GET_LIST_RESPONSE = { total: number; expenditure: Expenditure[] };
 // ===========================
 
+// 지출 상세 조회
+// GET /hqs/0/branches/0/expenditure
+export type GET_DETAIL_PARAMS = PARAMS & { expenditureId: number };
+export type GET_DETAIL_RESPONSE = Expenditure;
+// ===========================
+
 // 지출 요약
 // GET /hqs/0/branches/0/expenditure/summary
 export type GET_SUMMARY_PARAMS = PARAMS;
-export type GET_SUMMARY_QUERY = { query: string; expenditureTypes: ExpenditureType[] };
+export type GET_SUMMARY_QUERY = { query: string; expenditureTypes: ExpenditureType[]; date: [string, string] };
 export type GET_SUMMARY_RESPONSE = ExpenditureSummary;
 // ===========================
 
 // 지출 내보내기
 // GET /hqs/0/branches/0/expenditure/export
 export type EXPORT_PARAMS = PARAMS;
-export type EXPORT_QUERY = { query: string; expenditureTypes: ExpenditureType[] };
+export type EXPORT_QUERY = { date: [string, string] };
 export type EXPORT_RESPONSE = any; // @@@@ xlsx
 // ===========================
 

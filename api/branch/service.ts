@@ -10,6 +10,12 @@ export type GET_LIST_QUERY = Pagination & {};
 export type GET_LIST_RESPONSE = { total: number; services: Services[] };
 // ===========================
 
+// 서비스 상세 조회
+// GET /hqs/0/branches/0/services/0
+export type GET_DETAIL_PARAMS = PARAMS & { serviceId: number };
+export type GET_DETAIL_RESPONSE = Services;
+// ===========================
+
 // 서비스 추가
 // POST /hqs/0/branches/0/services
 export type ADD_PARAMS = PARAMS;
@@ -21,7 +27,7 @@ export type ADD_RESPONSE = Services;
 
 // 서비스 수정
 // PUT /hqs/0/branches/0/services/0
-export type UPDATE_PARAMS = PARAMS & { serviceId: number };;
+export type UPDATE_PARAMS = PARAMS & { serviceId: number };
 export type UPDATE_BODY = {
   service: Pick<Services, "name" | "description" | "guide" | "price" | "imageId">;
 };

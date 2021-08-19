@@ -10,6 +10,12 @@ export type GET_LIST_QUERY = Pagination & { query: string; date: [string, string
 export type GET_LIST_RESPONSE = { total: number; cash: Cash[] };
 // ===========================
 
+// 현금 조회
+// GET /hqs/0/branches/0/cash/0
+export type GET_DETAIL_PARAMS = PARAMS & { cashId: number };
+export type GET_DETAIL_RESPONSE = Cash;
+// ===========================
+
 // 현금 요약
 // GET /hqs/0/branches/0/cash/summary
 export type GET_SUMMARY_PARAMS = PARAMS;
@@ -20,7 +26,7 @@ export type GET_SUMMARY_RESPONSE = CashSummary;
 // 현금 내보내기
 // GET /hqs/0/branches/0/cash/export
 export type EXPORT_PARAMS = PARAMS;
-export type EXPORT_QUERY = { query: string };
+export type EXPORT_QUERY = { date: [string, string] };
 export type EXPORT_RESPONSE = any; // @@@@ xlsx
 // ===========================
 

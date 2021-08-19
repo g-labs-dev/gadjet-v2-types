@@ -56,7 +56,7 @@ export type GET_SALES_SUMMARY_RESPONSE = ServiceSalesSummary;
 
 // 서비스 판매내역 환불
 // DEL /hqs/0/branches/0/service-sales/0
-export type REFUND_SALES_PARAMS = PARAMS & { serviceSalesId: number };
+export type REFUND_SALES_PARAMS = PARAMS & { serviceSaleId: number };
 export type REFUND_SALES_RESPONSE = [number];
 // ===========================
 

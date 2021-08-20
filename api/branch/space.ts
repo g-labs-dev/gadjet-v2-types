@@ -10,6 +10,12 @@ export type GET_LIST_QUERY = Pagination & { query: string; emptyFlag: boolean };
 export type GET_LIST_RESPONSE = { total: number; spaces: Spaces[] };
 // ===========================
 
+// 공간 상세 조회
+// GET /hqs/0/branches/0/spaces
+export type GET_DETAIL_PARAMS = PARAMS & { spaceId: number };
+export type GET_DETAIL_RESPONSE = Spaces;
+// ===========================
+
 // 공간 요약
 // GET /hqs/0/branches/0/spaces/summary
 export type GET_SUMMARY_PARAMS = PARAMS;

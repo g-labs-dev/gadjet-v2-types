@@ -1,3 +1,5 @@
+import { Bills, Contracts, Expenditure, Payments, RentalReservations } from "./model";
+
 export type ImageCategory = "hq" | "branch" | "notice" | "rental" | "room" | "tenant" | "user" | "manager" | "event" | "signature" | "product" | "service";
 
 export type FileCategory =
@@ -202,4 +204,33 @@ export type ServiceSalesSummary = {
 export type ContractReceiver = {
   bill: { type: "email" | "sms"; value: string }[]; // 청구서 문자 또는 이메일 받을사람
   invoice: { name: string; email: string }[]; // 세금계산서, 현금영수증 메일 받을사람
+};
+
+export type BranchDashboardEventSummary = {
+  salePrice: number; // 매출 금액
+  expectSalePrice: number; // 예상매출 금액
+  unpaidPrice: number; // 미납 금액
+  expenditurePrice: number; // 지출 금액
+  billingCount: number; // 청구 제공기간 시작일 수
+  contractStartCount: number; // 계약 시작 수
+  contractEndCount: number; // 계약 종료 수
+  rentalReservationCount: number; // 대여/대관 예약 수
+};
+
+export type BranchDashboardDayEvent = {
+  contractStartCount: number; // 계약 시작 수
+  contractEndCount: number; // 계약 종료 수
+  billingCount: number; // 청구서 발송 수
+  expenditurePrice: number; // 매출 금액
+  paymentPrice: number; // 결제 금액
+  rentalReservationCount: number; // 대여/대관 예약 수
+};
+
+export type BranchDashboardDayEventDetail = {
+  startContracts: Contracts[];
+  endContracts: Contracts[];
+  billingBills: Bills[];
+  expenditure: Expenditure[];
+  payments: Payments[];
+  rentalReservations: RentalReservations[];
 };

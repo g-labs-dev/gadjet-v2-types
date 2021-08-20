@@ -1,4 +1,4 @@
-import { Spaces } from "../../model";
+import { Contracts, Spaces } from "../../model";
 import { Pagination, SpaceSummary } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
@@ -59,4 +59,11 @@ export type UPDATE_RESPONSE = [number];
 // DEL /hqs/0/branches/0/spaces/0
 export type DELETE_PARAMS = PARAMS & { spaceId: number };
 export type DELETE_RESPONSE = [number];
+// ===========================
+
+// 공간 계약 조회
+// GET /hqs/0/branches/0/spaces/0/contracts
+export type GET_CONTRACTS_PARAMS = PARAMS & { spaceId: number };
+export type GET_CONTRACTS_QUERY = Pagination;
+export type GET_CONTRACTS_RESPONSE = { total: number; contracts: Contracts[] };
 // ===========================

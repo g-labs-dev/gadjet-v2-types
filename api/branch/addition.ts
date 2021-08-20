@@ -12,7 +12,7 @@ export type GET_LIST_RESPONSE = { total: number; additions: Additions[] };
 
 // 부가서비스 상세 조회
 // GET /hqs/0/branches/0/additions/0
-export type GET_DETAIL_PARAMS = PARAMS;
+export type GET_DETAIL_PARAMS = PARAMS & { additionId: number };
 export type GET_DETAIL_RESPONSE = Additions;
 // ===========================
 

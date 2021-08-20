@@ -1,4 +1,4 @@
-import { Additions } from "../../model";
+import { Additions, Contracts } from "../../model";
 import { Pagination } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
@@ -38,4 +38,11 @@ export type UPDATE_RESPONSE = [number];
 // DEL /hqs/0/branches/0/additions/0
 export type DELETE_PARAMS = PARAMS & { additionId: number };
 export type DELETE_RESPONSE = [number];
+// ===========================
+
+// 부가서비스 계약 조회
+// GET /hqs/0/branches/0/additions/0/contracts
+export type GET_CONTRACTS_PARAMS = PARAMS & { additionId: number };
+export type GET_CONTRACTS_QUERY = Pagination;
+export type GET_CONTRACTS_RESPONSE = { total: number; contracts: Contracts[] };
 // ===========================

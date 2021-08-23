@@ -120,7 +120,8 @@ export type PaymentType =
   | "oversea-card" // 해외카드
   | "paypal" // 페이팔
   | "alipay" // 알리페이
-  | "wechatpay"; // 위쳇페이
+  | "wechatpay" // 위쳇페이
+  | "cash"; // 현금
 
 export type PaymentStatus =
   | "ready" // 결제준비

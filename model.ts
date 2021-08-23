@@ -466,6 +466,7 @@ export type Payments = {
   branchId: number;
   billId: number;
   userId: number;
+  item: string;
   type: PaymentType;
   status: PaymentStatus;
   readyDatetime: string;
@@ -479,6 +480,7 @@ export type Payments = {
   settlementPrice: number;
   confirmFlag: boolean;
   settlementFlag: boolean;
+  manualFlag: boolean;
 
   bill?: Relation<Bills>;
   user?: Relation<Users>;

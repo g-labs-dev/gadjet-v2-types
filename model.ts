@@ -224,6 +224,7 @@ export type Managers = {
   name: string;
   joinType: ManagerJoinType;
   socialId: string;
+  pushToken: string | null;
   profileImageId: number | null;
 
   profile?: Relation<Images>;
@@ -235,6 +236,7 @@ export type Users = {
   password: string;
   email: string;
   name: string;
+  pushToken: string | null;
   profileImageId: number | null;
 
   profile?: Relation<Images>;

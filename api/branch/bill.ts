@@ -1,5 +1,5 @@
 import { Bills } from "../../model";
-import { BillSummary, Pagination } from "../../type";
+import { BillSummary, ContractReceiver, Pagination } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
 
@@ -50,4 +50,13 @@ export type DELETE_RESPONSE = [number];
 export type EXPORT_PARAMS = PARAMS;
 export type EXPORT_QUERY = { startDate: [string, string] }; // YYYY-MM-DD
 export type EXPORT_RESPONSE = any; // xlsx
+// ===========================
+
+// 청구서 발송
+// POST /hqs/0/branches/0/bills/0/send
+export type SEND_PARAMS = PARAMS & { billId: number };
+export type SEND_BODY = {
+  receivers: ContractReceiver["bill"];
+};
+export type SEND_RESPONSE = any; // 발송결과
 // ===========================

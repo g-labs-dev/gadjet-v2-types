@@ -62,3 +62,10 @@ export type UPDATE_SOCIAL_BODY = {
 };
 export type UPDATE_SOCIAL_RESPONSE = [number];
 // ===========================
+
+// 푸시토큰 수정
+// PUT /managers/0/push-token
+export type UPDATE_PUSH_TOKEN_PARAMS = PARAMS & { managerId: number };
+export type UPDATE_PUSH_TOKEN_BODY = { pushToken: string };
+export type UPDATE_PUSH_TOKEN_RESPONSE = [number];
+// ===========================

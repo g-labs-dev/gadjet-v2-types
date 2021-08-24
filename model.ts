@@ -196,6 +196,8 @@ export type BranchAutomations = {
   branchId: number;
   extendCheckFlag: boolean;
   extendCheckValue: number;
+  billing: boolean;
+  receipt: boolean;
 };
 
 export type Tenants = {

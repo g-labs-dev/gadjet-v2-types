@@ -672,12 +672,14 @@ export type Receipts = {
   requestDatetime: string;
 };
 
-export type Notifications = {
-  notificationId: number;
-  branchId: number;
+export type ManagerNotifications = {
+  managerNotificationId: number;
+  managerId: number;
   title: string;
   content: string;
   sendDatetime: string;
+  link: string;
+  readFlag: boolean;
 };
 
 export type UserNotifications = {
@@ -686,6 +688,8 @@ export type UserNotifications = {
   title: string;
   content: string;
   sendDatetime: string;
+  link: string;
+  readFlag: boolean;
 };
 
 export type BranchCards = {

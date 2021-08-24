@@ -75,3 +75,10 @@ export type UPLOAD_PARAMS = PARAMS;
 export type UPLOAD_BODY = { contracts: Partial<Contracts>[] }; // @@@@ front 파싱 기준
 export type UPLOAD_RESPONSE = [number]; // create 된 계약 수
 // ===========================
+
+// 계약 종료
+// PUT /hqs/0/branches/0/contracts/0/suspend
+export type SUSPEND_PARAMS = PARAMS & { contractId: number };
+export type SUSPEND_BODY = { suspendDate: string };
+export type SUSPEND_RESPONSE = [number];
+// ===========================

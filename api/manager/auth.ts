@@ -15,7 +15,7 @@ export type JOIN_PARAMS = PARAMS;
 export type JOIN_BODY = {
   manager: Pick<Managers, "email" | "password" | "name" | "joinType" | "socialId" | "profileImageId">;
 };
-export type JOIN_RESPONSE = Managers;
+export type JOIN_RESPONSE = { token: string; manager: Managers | null };
 // ===========================
 
 // 로그인

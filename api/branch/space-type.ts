@@ -12,7 +12,7 @@ export type GET_LIST_RESPONSE = SpaceTypes[];
 // POST /hqs/0/branches/0/space-types
 export type ADD_PARAMS = PARAMS;
 export type ADD_BODY = {
-  floor: Pick<SpaceTypes, "name" | "virtualFlag">;
+  spaceType: Pick<SpaceTypes, "name" | "virtualFlag">;
 };
 export type ADD_RESPONSE = SpaceTypes;
 // ===========================
@@ -21,7 +21,7 @@ export type ADD_RESPONSE = SpaceTypes;
 // PUT /hqs/0/branches/0/space-types/0
 export type UPDATE_PARAMS = PARAMS & { spaceTypeId: number };
 export type UPDATE_BODY = {
-  floor: Pick<SpaceTypes, "name" | "virtualFlag">;
+  spaceType: Pick<SpaceTypes, "name" | "virtualFlag">;
 };
 export type UPDATE_RESPONSE = [number];
 // ===========================

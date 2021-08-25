@@ -69,3 +69,17 @@ export type UPDATE_PUSH_TOKEN_PARAMS = PARAMS & { managerId: number };
 export type UPDATE_PUSH_TOKEN_BODY = { pushToken: string };
 export type UPDATE_PUSH_TOKEN_RESPONSE = [number];
 // ===========================
+
+// 이메일 사용가능 확인
+// GET /email/verify
+export type EMAIL_VERIFY_PARAMS = {};
+export type EMAIL_VERIFY_BODY = { email: string };
+export type EMAIL_VERIFY_RESPONSE = boolean; // true 사용 가능
+// ===========================
+
+// 이메일 코드검증
+// POST /email/code
+export type EMAIL_CODE_PARAMS = {};
+export type EMAIL_CODE_BODY = { email: string };
+export type EMAIL_CODE_RESPONSE = string; // 이메일에 발송 된 코드
+// ===========================

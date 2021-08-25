@@ -1,4 +1,5 @@
 import { BranchAutomations, BranchBusiness, BranchContractDocument, Branches, BranchRentee, BranchSettlement, BranchSublet } from "../../model";
+import { PopbillJoinForm } from "../../popbill/auth";
 import {} from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
@@ -73,5 +74,10 @@ export type UPDATE_AUTOMATION_RESPONSE = [number];
 // ===========================
 
 // 팝빌 회원가입
-//
+// post /hqs/0/branches/0/popbill
+export type JOIN_POPBILL_PARAMS = PARAMS;
+export type JOIN_POPBILL_BODY = {
+  form: PopbillJoinForm;
+};
+export type JOIN_POPBILL_RESPONSE = [number];
 // ===========================

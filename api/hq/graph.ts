@@ -43,7 +43,7 @@ export type GRAPH_SPACE_TYPE_PARAMS = PARAMS;
 export type GRAPH_SPACE_TYPE_QUERY = { date: [string, string] };
 export type GRAPH_SPACE_TYPE_RESPONSE = {
   [branchName: string]: {
-    sales: { [spaceTypeName: string]: { month: string; price: number } }[];
+    [spaceTypeName: string]: { month: string; price: number }[];
   }[]; // 지점별 (key = 지점 아이디)
 };
 // ===========================

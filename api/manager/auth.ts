@@ -83,3 +83,30 @@ export type EMAIL_CODE_PARAMS = {};
 export type EMAIL_CODE_BODY = { email: string };
 export type EMAIL_CODE_RESPONSE = string; // 이메일에 발송 된 코드
 // ===========================
+
+// 비밀번호 재설정 링크 발송
+// POST /email/password
+export type RESET_PASSWORD_LINK_PARAMS = {};
+export type RESET_PASSWORD_LINK_BODY = { email: string };
+export type RESET_PASSWORD_LINK_RESPONSE = boolean;
+/* 
+  - Managers.joinType === 'local' 이면 재설정 가능
+  - body의 이메일로 링크포함 전달
+  - 링크샘플 https://console.gadjet.io/reset-password?key=$$$$
+  - 비밀번호 수정 api 요청 시 $$$$과 수정 할 비밀번호 전달
+  - 서버에서 $$$$로 매니저를 찾아야함 (AES ??)
+*/
+// ===========================
+
+// 비밀번호 재설정
+// PUT /password
+export type RESET_PASSWORD_PARAMS = {};
+export type RESET_PASSWORD_BODY = {
+  key: string;
+  password: string;
+};
+export type RESET_PASSWORD_RESPONSE = boolean;
+/*
+  - 비밀번호 재설정 링크 발송 참고
+*/
+// ===========================

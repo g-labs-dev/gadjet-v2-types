@@ -19,7 +19,7 @@ export type GRAPH_EXPECT_PAYMENT_PARAMS = PARAMS;
 export type GRAPH_EXPECT_PAYMENT_QUERY = { date: [string, string] };
 export type GRAPH_EXPECT_PAYMENT_RESPONSE = {
   total: { month: string; price: number }[]; // 전 지점 합계
-  [branchId: number]: { month: string; price: number }[]; // 지점별
+  [branchName: string]: { month: string; price: number }[]; // 지점별
 };
 // ===========================
 
@@ -29,7 +29,7 @@ export type GRAPH_CONTRACT_PARAMS = PARAMS;
 export type GRAPH_CONTRACT_QUERY = { date: [string, string] };
 export type GRAPH_CONTRACT_RESPONSE = {
   total: { month: string; start: number; end: number }[]; // 전 지점 합계
-  [branchId: number]: { month: string; start: number; end: number }[]; // 지점별
+  [branchName: string]: { month: string; start: number; end: number }[]; // 지점별
 };
 /**
  *  start: 시작계약
@@ -43,8 +43,7 @@ export type GRAPH_SPACE_TYPE_PARAMS = PARAMS;
 export type GRAPH_SPACE_TYPE_QUERY = { date: [string, string] };
 export type GRAPH_SPACE_TYPE_RESPONSE = {
   [branchId: number]: {
-    month: string;
-    sales: { [spaceTypeId: number]: { month: string; price: number } }[];
+    sales: { [spaceTypeName: string]: { month: string; price: number } }[];
   }[]; // 지점별 (key = 지점 아이디)
 };
 // ===========================

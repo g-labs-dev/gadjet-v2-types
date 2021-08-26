@@ -21,6 +21,8 @@ import {
   FileCategory,
   ImageCategory,
   ManagerJoinType,
+  NotificationTemplate,
+  NotificationType,
   PaymentStatus,
   PaymentType,
   ReceiptStatus,
@@ -775,6 +777,33 @@ export type AccessLogs = {
   ua: string;
   successFlag: boolean;
   datetime: string;
+
+  manager?: Relation<Managers>;
+};
+
+export type ManagerInviteCodes = {
+  managerInviteCode: string;
+  hqId: number | null;
+  branchId: number | null;
+  managerId: number;
+  hqRole: Partial<HqRoles> | null; // branchId === null && hqId 일 때 사용
+  branchRole: Partial<BranchRoles> | null; // hqId === null && branchId 일 때 사용
+  to: string;
+  receivedFlag: boolean;
+
+  manager?: Relation<Managers>;
+};
+
+export type NotificationSendLogs = {
+  notificationSendLogId: number;
+  hqId: number | null;
+  branchId: number | null;
+  managerId: string;
+  type: NotificationType;
+  to: string; // 전화번호 or email
+  template: NotificationTemplate;
+  data: any; // 템플릿에 맞는 데이터 json
+  datetime: string; // YYYY-MM-DD HH:mm:ss
 
   manager?: Relation<Managers>;
 };

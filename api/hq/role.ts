@@ -32,3 +32,14 @@ export type UPDATE_RESPONSE = [number];
 export type DELETE_PARAMS = PARAMS & { hqRoleId: number };
 export type DELETE_RESPONSE = [number];
 // ===========================
+
+// 권한 초대
+// POST /hqs/0/roles/invite
+export type INVITE_PARAMS = PARAMS;
+export type INVITE_BODY = { phone: string; hqRole: Partial<HqRoles> };
+export type INVITE_RESPONSE = boolean;
+/**
+ * 1. 줄 권한 미리 선택
+ * 2. 문자로 CODE 전달
+ */
+// ===========================

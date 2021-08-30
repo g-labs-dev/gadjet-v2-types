@@ -391,7 +391,6 @@ export type Contracts = {
   additions?: Relation<ContractAdditions[]>;
   signatureImage?: Relation<Images>;
   documentFile?: Relation<Files>;
-
   branch?: Relation<Branches>;
 };
 
@@ -454,6 +453,7 @@ export type Bills = {
   user?: Relation<Users>;
   payments?: Relation<Payments[]>;
   receipts?: Relation<Receipts[]>;
+  branch?: Relation<Branches>;
 };
 
 export type ContractDeposit = {

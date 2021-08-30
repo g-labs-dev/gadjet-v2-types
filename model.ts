@@ -391,6 +391,8 @@ export type Contracts = {
   additions?: Relation<ContractAdditions[]>;
   signatureImage?: Relation<Images>;
   documentFile?: Relation<Files>;
+
+  branch?: Relation<Branches>;
 };
 
 export type ContractSpaces = {

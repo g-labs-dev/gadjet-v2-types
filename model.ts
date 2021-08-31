@@ -333,6 +333,9 @@ export type SpaceTypes = {
   branchId: number;
   name: string;
   virtualFlag: boolean;
+
+  branch?: Relation<Branches>;
+  spaces?: Relation<Spaces[]>;
 };
 
 export type Spaces = {

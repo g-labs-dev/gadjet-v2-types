@@ -31,3 +31,15 @@ export type UPDATE_RESPONSE = [number];
 export type DELETE_PARAMS = PARAMS & { spaceTypeId: number };
 export type DELETE_RESPONSE = [number];
 // ===========================
+
+// 공간타입 공간 계약 상태
+// GET /hqs/0/branches/0/space-types/spaces/contracts
+export type GET_SPACES_CONTRACTS_PARAMS = PARAMS;
+export type GET_SPACES_CONTRACTS_QUERY = { date: string };
+export type GET_SPACES_CONTRACTS_RESPONSE = SpaceTypes[];
+/**
+ * 공간타입 + 공간 + 계약
+ * 공간타입 별 공간 계약 상태확인 목적
+ * date < contractEnd 인 계약 조회
+ */
+// ===========================

@@ -350,6 +350,7 @@ export type Spaces = {
 
   spaceType?: Relation<SpaceTypes>;
   image?: Relation<Images>;
+  contracts?: Relation<Contracts[]>;
 };
 
 export type Additions = {

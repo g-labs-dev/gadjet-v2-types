@@ -13,7 +13,7 @@ export type GET_LIST_RESPONSE = HqRoles[];
 // POST /hqs/0/roles
 export type ADD_PARAMS = PARAMS;
 export type ADD_BODY = {
-  role: Omit<HqRoles, "hqRoleId" | "hqId" | "hq" | "manager">;
+  role: Partial<HqRoles>;
 };
 export type ADD_RESPONSE = HqRoles;
 // ===========================
@@ -22,7 +22,7 @@ export type ADD_RESPONSE = HqRoles;
 // PUT /hqs/0/roles/0
 export type UPDATE_PARAMS = PARAMS & { hqRoleId: number };
 export type UPDATE_BODY = {
-  role: Omit<HqRoles, "hqRoleId" | "hqId" | "hq" | "manager">;
+  role: Partial<HqRoles>;
 };
 export type UPDATE_RESPONSE = [number];
 // ===========================

@@ -51,7 +51,7 @@ export type GET_RESERVATIONS_RESPONSE = { total: number; rentalReservations: Ren
 // POST /hqs/0/branches/0/rentals/0/rental-reservations
 export type ADD_RESERVATION_PARAMS = PARAMS & { rentalId: number };
 export type ADD_RESERVATION_BODY = {
-  rental: Pick<RentalReservations, "tenantId" | "userId" | "date" | "startTime" | "endTime" | "memo" | "usedCreditAmount" | "managerFlag">;
+  rentalReservation: Pick<RentalReservations, "tenantId" | "userId" | "date" | "startTime" | "endTime" | "memo" | "usedCreditAmount" | "managerFlag">;
 };
 export type ADD_RESERVATION_RESPONSE = RentalReservations;
 // ===========================
@@ -60,7 +60,7 @@ export type ADD_RESERVATION_RESPONSE = RentalReservations;
 // PUT /hqs/0/branches/0/rentals/0/rental-reservations/0
 export type UPDATE_RESERVATION_PARAMS = PARAMS & { rentalId: number; rentalReservationId: number };
 export type UPDATE_RESERVATION_BODY = {
-  rental: Pick<RentalReservations, "tenantId" | "userId" | "date" | "startTime" | "endTime" | "memo" | "usedCreditAmount" | "managerFlag">;
+  rentalReservation: Pick<RentalReservations, "tenantId" | "userId" | "date" | "startTime" | "endTime" | "memo" | "usedCreditAmount" | "managerFlag">;
 };
 export type UPDATE_RESERVATION_RESPONSE = [number];
 // ===========================

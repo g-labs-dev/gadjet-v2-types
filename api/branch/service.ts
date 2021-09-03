@@ -61,7 +61,7 @@ export type REFUND_SALES_RESPONSE = [number];
 // ===========================
 
 // 서비스 판매내역 내보내기
-// GET /hqs/0/branches/0/service-sales/exports
+// GET /hqs/0/branches/0/service-sales/export
 export type EXPORT_SALES_PARAMS = PARAMS;
 export type EXPORT_SALES_QUERY = { datetime: [string, string] };
 export type EXPORT_SALES_RESPONSE = any; // @@@@ xlsx

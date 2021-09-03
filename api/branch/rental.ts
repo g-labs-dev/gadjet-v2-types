@@ -72,7 +72,7 @@ export type DELETE_RESERVATION_RESPONSE = [number];
 // ===========================
 
 // 대관대여 내역 내보내기
-// GET /hqs/0/branches/0/rental-reservations
+// GET /hqs/0/branches/0/rental-reservations/export
 export type EXPORT_RESERVATIONS_PARAMS = PARAMS;
 export type EXPORT_RESERVATIONS_QUERY = { date: [string, string] };
 export type EXPORT_RESERVATIONS_RESPONSE = any; // @@@@ xlsx

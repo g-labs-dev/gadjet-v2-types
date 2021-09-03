@@ -48,7 +48,7 @@ export type GET_SUMMARY_RESPONSE = PaymentSummary;
 // ===========================
 
 // 결제내역 내보내기
-// GET /hqs/0/branches/0/payments
+// GET /hqs/0/branches/0/payments/export
 export type EXPORT_PARAMS = PARAMS;
 export type EXPORT_QUERY = { query: string; paymentType: PaymentType[]; paymentStatus: PaymentStatus[] };
 export type EXPORT_RESPONSE = any; // @@@@ xlsx

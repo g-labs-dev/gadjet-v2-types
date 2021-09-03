@@ -167,15 +167,17 @@ export type ADD_CASH_RECEIPT_RESPONSE = Receipts;
 // ===========================
 
 // 현금영수증 취소
-// DEL /hqs/0/branches/0/receipts/0/cash-receipt
-export type DELETE_CASH_RECEIPT_PARAMS = PARAMS & { receiptId: number };
-export type DELETE_CASH_RECEIPT_BODY = {
-  cancelType: 1 | 2 | 3;
-  isPartCancel: boolean;
-  supplyCost?: string;
-  tax?: string;
-  serviceFee?: string;
-  totalAmount?: string;
+// PUT /hqs/0/branches/0/receipts/0/cash-receipt
+export type CANCEL_CASH_RECEIPT_PARAMS = PARAMS & { receiptId: number };
+export type CANCEL_CASH_RECEIPT_BODY = {
+  cashReceipt: {
+    cancelType: 1 | 2 | 3;
+    isPartCancel: boolean;
+    supplyCost?: string;
+    tax?: string;
+    serviceFee?: string;
+    totalAmount?: string;
+  };
 };
-export type DELETE_CASH_RECEIPT_RESPONSE = [number];
+export type CANCEL_CASH_RECEIPT_RESPONSE = [number];
 // ===========================

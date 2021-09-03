@@ -3,7 +3,7 @@
 type PARAMS = { hqId: number };
 
 // 매출 그래프 (월 별 group)
-// GET /hqs/0/graphs/sales
+// GET /hqs/0/graphs/payments
 export type GRAPH_PAYMENT_PARAMS = PARAMS;
 export type GRAPH_PAYMENT_QUERY = { date: [string, string] };
 export type GRAPH_PAYMENT_RESPONSE = {
@@ -38,7 +38,7 @@ export type GRAPH_CONTRACT_RESPONSE = {
 // ===========================
 
 // 공간 유형 별 매출 (지점 별, 공간 유형 별 group)
-// GET /hqs/0/graphs/contracts
+// GET /hqs/0/graphs/space-types
 export type GRAPH_SPACE_TYPE_PARAMS = PARAMS;
 export type GRAPH_SPACE_TYPE_QUERY = { date: [string, string] };
 export type GRAPH_SPACE_TYPE_RESPONSE = {

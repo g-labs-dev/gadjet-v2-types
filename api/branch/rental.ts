@@ -41,14 +41,14 @@ export type DELETE_RESPONSE = [number];
 // ===========================
 
 // 대관대여 내역 조회
-// GET /hqs/0/branches/0/rental-resevations
+// GET /hqs/0/branches/0/rental-reservations
 export type GET_RESERVATIONS_PARAMS = PARAMS;
 export type GET_RESERVATIONS_QUERY = Pagination & { date: [string, string]; rentalIds: number[] };
 export type GET_RESERVATIONS_RESPONSE = { total: number; rentalReservations: RentalReservations[] };
 // ===========================
 
 // 대관대여 내역 추가
-// POST /hqs/0/branches/0/rentals/0/rental-resevations
+// POST /hqs/0/branches/0/rentals/0/rental-reservations
 export type ADD_RESERVATION_PARAMS = PARAMS & { rentalId: number };
 export type ADD_RESERVATION_BODY = {
   rental: Pick<RentalReservations, "tenantId" | "userId" | "date" | "startTime" | "endTime" | "memo" | "usedCreditAmount" | "managerFlag">;
@@ -57,7 +57,7 @@ export type ADD_RESERVATION_RESPONSE = RentalReservations;
 // ===========================
 
 // 대관대여 내역 수정
-// PUT /hqs/0/branches/0/rentals/0/rental-resevations/0
+// PUT /hqs/0/branches/0/rentals/0/rental-reservations/0
 export type UPDATE_RESERVATION_PARAMS = PARAMS & { rentalId: number; rentalReservationId: number };
 export type UPDATE_RESERVATION_BODY = {
   rental: Pick<RentalReservations, "tenantId" | "userId" | "date" | "startTime" | "endTime" | "memo" | "usedCreditAmount" | "managerFlag">;
@@ -66,7 +66,7 @@ export type UPDATE_RESERVATION_RESPONSE = [number];
 // ===========================
 
 // 대관대여 내역 제거
-// DEL /hqs/0/branches/0/rentals/0/rental-resevations/0
+// DEL /hqs/0/branches/0/rentals/0/rental-reservations/0
 export type DELETE_RESERVATION_PARAMS = PARAMS & { rentalId: number; rentalReservationId: number };
 export type DELETE_RESERVATION_RESPONSE = [number];
 // ===========================

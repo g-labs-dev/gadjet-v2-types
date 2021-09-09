@@ -220,7 +220,7 @@ export type Tenants = {
 };
 
 export type Managers = {
-  managerId: number;
+  managerId: string;
   email: string;
   password: string;
   name: string;
@@ -233,7 +233,7 @@ export type Managers = {
 };
 
 export type Users = {
-  userId: number;
+  userId: string;
   contact: string;
   password: string;
   email: string;

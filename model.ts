@@ -487,8 +487,8 @@ export type Payments = {
   readyJson: object;
   approveDatetime: string;
   approvoeJson: object;
-  cancelDatetime: string;
-  cancelJson: object;
+  refundDatetime: string;
+  refundJson: object;
   price: number;
   commissionPrice: number;
   settlementPrice: number;

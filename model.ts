@@ -492,6 +492,7 @@ export type Payments = {
   price: number;
   commissionPrice: number;
   settlementPrice: number;
+  memo: string;
   confirmFlag: boolean;
   settlementFlag: boolean;
   manualFlag: boolean;

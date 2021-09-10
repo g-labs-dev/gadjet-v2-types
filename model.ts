@@ -252,7 +252,6 @@ export type HqRoles = {
   hqId: number;
   managerId: number;
   adminFlag: boolean;
-  roleManageFlag: boolean;
   dashboard: Role;
   graph: Role;
   notice: Role;
@@ -269,7 +268,6 @@ export type BranchRoles = {
   branchId: number;
   managerId: number;
   adminFlag: boolean;
-  roleManageFlag: boolean;
   dashboard: Role;
   contract: Role;
   bill: Role;
@@ -285,6 +283,7 @@ export type BranchRoles = {
   service: Role;
   cash: Role;
   payment: Role;
+  role: Role;
   accessLog: Role;
   config: Role;
 
@@ -297,7 +296,13 @@ export type TenantRoles = {
   tenantId: number;
   userId: number;
   adminFlag: boolean;
-  roleManageFlag: boolean;
+  contract: Role;
+  bill: Role;
+  rental: Role;
+  product: Role;
+  service: Role;
+  credit: Role;
+  role: Role;
   // ... 앱 메뉴들 들어감
 
   tenant?: Relation<Tenants>;

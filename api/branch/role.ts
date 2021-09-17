@@ -13,7 +13,7 @@ export type GET_LIST_RESPONSE = BranchRoles[];
 // POST /hqs/0/branches/0/roles
 export type ADD_PARAMS = PARAMS;
 export type ADD_BODY = {
-  role: Omit<BranchRoles, "branchRoleId" | "hqId" | "branchId" | "branch" | "manager">;
+  role: BranchRoles;
 };
 export type ADD_RESPONSE = BranchRoles;
 // ===========================
@@ -22,7 +22,7 @@ export type ADD_RESPONSE = BranchRoles;
 // PUT /hqs/0/branches/0/roles/0
 export type UPDATE_PARAMS = PARAMS & { branchRoleId: number };
 export type UPDATE_BODY = {
-  role: Omit<BranchRoles, "branchRoleId" | "hqId" | "branchId" | "branch" | "manager">;
+  role: BranchRoles;
 };
 export type UPDATE_RESPONSE = [number];
 // ===========================

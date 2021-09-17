@@ -7,7 +7,7 @@ type PARAMS = { hqId: number; branchId: number };
 // GET /hqs/0/branches/0/events
 export type GET_LIST_PARAMS = PARAMS;
 export type GET_LIST_QUERY = Pagination & { query: string }; // @@@@ 이벤트 상태로 조회?? (모집 중, 모집 마감, 종료됨)
-export type GET_LIST_RESPONSE = { total: number; events: Omit<Events, "content">[] };
+export type GET_LIST_RESPONSE = { total: number; events: Events[] }; // Events.content 빼고
 // ===========================
 
 // 이벤트 상세조회

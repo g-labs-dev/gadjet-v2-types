@@ -14,7 +14,7 @@ export type GET_LIST_RESPONSE = { total: number; tenants: Tenants[] };
 // GET /hqs/0/branches/0/tenants/0/users
 export type GET_USERS_PARAMS = PARAMS & { tenantId: number };
 export type GET_USERS_QUERY = Pagination & { query: string };
-export type GET_USERS_RESPONSE = { total: number; users: Omit<Users, "password">[] };
+export type GET_USERS_RESPONSE = { total: number; users: Users[] }; // password 제외
 // ===========================
 
 // 입주사 계약 조회

@@ -242,6 +242,7 @@ export type Users = {
   name: string;
   pushToken: string | null;
   profileImageId: number | null;
+  code: string;
 
   profile?: Relation<Images>;
   tenantRoles?: Relation<TenantRoles[]>;

@@ -35,7 +35,7 @@ export type JOIN_RESPONSE = { token: string; user: Users | null };
 // 유저 인증코드 발송
 // POST /users/code
 export type SEND_AUTH_CODE_PARAMS = PARAMS;
-export type SEND_AUTH_CODE_BODY = { id: string };
+export type SEND_AUTH_CODE_BODY = { id: string; type: "email" | "contact" };
 export type SEND_AUTH_CODE_RESPONSE = { code: string };
 /**
  * Users.findOne({ where: { email }}) 또는 Users.findOne({ where: { contact }})

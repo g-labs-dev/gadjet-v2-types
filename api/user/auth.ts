@@ -27,7 +27,7 @@ export type LOGIN_RESPONSE = { token: string; user: Users | null };
 // POST /users/join
 export type JOIN_PARAMS = PARAMS;
 export type JOIN_BODY = {
-  user: { contact: string; password: string; name: string };
+  user: { type: "email" | "contact"; id: string; password: string; name: string };
 };
 export type JOIN_RESPONSE = { token: string; user: Users | null };
 // ===========================

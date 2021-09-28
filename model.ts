@@ -589,6 +589,7 @@ export type Rentals = {
   shareFlag: boolean;
   imageId: number | null;
 
+  branch?: Relation<Branches>;
   image?: Relation<Images>;
 };
 

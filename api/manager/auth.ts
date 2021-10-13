@@ -73,7 +73,7 @@ export type UPDATE_PUSH_TOKEN_RESPONSE = [number];
 // 이메일 사용가능 확인
 // GET /email/verify
 export type EMAIL_VERIFY_PARAMS = {};
-export type EMAIL_VERIFY_BODY = { email: string };
+export type EMAIL_VERIFY_QUERY = { email: string };
 export type EMAIL_VERIFY_RESPONSE = boolean; // true 사용 가능
 // ===========================
 

@@ -29,6 +29,7 @@ export type GET_SUMMARY_RESPONSE = ReceiptSummary;
 // POST /hqs/0/branches/0/receipts/tax-invoice
 export type ADD_TAX_INVOICE_PARAMS = PARAMS;
 export type ADD_TAX_INVOICE_BODY = {
+  billId: number;
   taxInvoice: Pick<
     Taxinvoice,
     | "writeDate"
@@ -84,6 +85,8 @@ export type ADD_TAX_INVOICE_RESPONSE = Receipts;
 // PUT /hqs/0/branches/0/receipts/0/tax-invoice
 export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & { receiptId: number };
 export type UPDATE_TAX_INOVICE_BODY = {
+  billId: number;
+  parentReceiptId: number;
   taxInvoice: Pick<
     TaxinvoiceModify,
     | "writeDate"
@@ -141,6 +144,7 @@ export type UPDATE_TAX_INVOICE_RESPONSE = Receipts;
 // POST /hqs/0/branches/0/receipts/cash-receipt
 export type ADD_CASH_RECEIPT_PARAMS = PARAMS;
 export type ADD_CASH_RECEIPT_BODY = {
+  billId: number;
   cashReceipt: Pick<
     Cashbill,
     | "tradeType"
@@ -170,6 +174,7 @@ export type ADD_CASH_RECEIPT_RESPONSE = Receipts;
 // PUT /hqs/0/branches/0/receipts/0/cash-receipt
 export type CANCEL_CASH_RECEIPT_PARAMS = PARAMS & { receiptId: number };
 export type CANCEL_CASH_RECEIPT_BODY = {
+  billId: number;
   cashReceipt: {
     cancelType: 1 | 2 | 3;
     isPartCancel: boolean;

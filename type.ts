@@ -241,3 +241,7 @@ export type NotificationTemplate =
   | "invite-manager" // 역할 초대 (매니저 대상 발송)
   | "invite-tenant" // 계약 초대 (입주사 대상 발송)
   | "bill"; // 청구서
+
+export type NicePayReserve =
+  | { type: "bill-payment"; billId: number } // 청구서 결제
+  | { type: "credit-purchase"; amount: number; tenantId?: number; userId?: number }; // 크레딧 구매

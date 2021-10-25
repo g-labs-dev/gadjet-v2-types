@@ -86,7 +86,6 @@ export type ADD_TAX_INVOICE_RESPONSE = Receipts;
 export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & { receiptId: number };
 export type UPDATE_TAX_INOVICE_BODY = {
   billId: number;
-  parentReceiptId: number;
   taxInvoice: Pick<
     TaxinvoiceModify,
     | "writeDate"

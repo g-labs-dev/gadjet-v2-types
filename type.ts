@@ -243,8 +243,8 @@ export type NotificationTemplate =
   | "bill"; // 청구서
 
 export type NicePayReserve =
-  | { type: "bill-payment"; billId: number } // 청구서 결제
-  | { type: "credit-purchase"; amount: number; tenantId?: number; userId?: number }; // 크레딧 구매
+  | { type: "bill-payment"; billId: number; branchId: number } // 청구서 결제
+  | { type: "credit-purchase"; amount: number; hqId: number; branchId: number; contractId: number; tenantId?: number; userId?: number }; // 크레딧 구매
 
 // mid 구분용 (mid 발급 완료 시 주석 추가 예정)
 export type PayType =

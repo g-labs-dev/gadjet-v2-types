@@ -251,3 +251,5 @@ export type PayType =
   | "GENERAL" // 일반결제
   | "OVERSEA" // 해외카드 결제
   | "BILLING"; // 자동결제
+
+export type PayResult = { isSuccess: boolean; message: string };

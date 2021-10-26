@@ -252,4 +252,4 @@ export type PayType =
   | "OVERSEA" // 해외카드 결제
   | "BILLING"; // 자동결제
 
-export type PayResult = { isSuccess: boolean; message: string };
+export type PayResult = { isSuccess: "true" | "false"; message: string };

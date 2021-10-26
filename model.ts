@@ -500,6 +500,7 @@ export type Payments = {
   price: number;
   commissionPrice: number;
   settlementPrice: number;
+  gadjetPrice: number;
   memo: string;
   confirmFlag: boolean;
   settlementFlag: boolean;

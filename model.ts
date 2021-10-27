@@ -567,6 +567,7 @@ export type Events = {
   bannerImageId: number | null;
 
   bannerImage?: Relation<Images>;
+  attendees?: Relation<EventAttendees[]>;
 };
 
 export type EventAttendees = {

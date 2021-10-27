@@ -1,5 +1,5 @@
-import { TenantRoles, Users } from "../../model";
-import {} from "../../type";
+import { EventAttendees, TenantRoles, Users } from "../../model";
+import { UsedCreditAmount } from "../../type";
 
 type PARAMS = { userId: number };
 
@@ -21,4 +21,17 @@ export type UPDATE_RESPONSE = [number];
 // GET /users/0/roles
 export type GET_ROLE_PARAMS = PARAMS;
 export type GET_ROLE_RESPONSE = { roles: TenantRoles[] };
+// ===========================
+
+// 이벤트 참가
+// POST /users/0/events/0/attend
+export type ATTEND_EVENT_PARAMS = PARAMS & { eventId: number };
+export type ATTEND_EVENT_BODY = { tenantId: number; usedCreditAmount: UsedCreditAmount }; // TODO 일단 진행 / 크레딧-이벤트-입주사-유저 관계 명확하게 할 필요가 있음.
+export type ATTEND_EVENT_RESPONSE = { eventAttendee: EventAttendees };
+// ===========================
+
+// 이벤트 참가 취소
+// DELETE /users/0/events/0/cancel-attend
+export type CANCEL_ATTEND_EVENT_PARAMS = PARAMS & { eventId: number };
+export type CANCEL_ATTEND_EVENT_RESPONSE = [number];
 // ===========================

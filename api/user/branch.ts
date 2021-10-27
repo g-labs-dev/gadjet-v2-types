@@ -1,4 +1,4 @@
-import { Bills, Branches, CreditLogs, Payments, ProductSales, RentalReservations, ServiceSales } from "../../model";
+import { Bills, Branches, CreditLogs, Events, Notices, Payments, ProductSales, RentalReservations, ServiceSales } from "../../model";
 import { CreditType, Pagination } from "../../type";
 
 type PARAMS = { tenantId: number; branchId: number };
@@ -68,4 +68,30 @@ export type GET_BILLS_RESPONSE = { total: number; bills: Bills[] };
 export type GET_PAYMENTS_PARAMS = PARAMS;
 export type GET_PAYMENTS_QUERY = Pagination & {};
 export type GET_PAYMENTS_RESPONSE = { total: number; payments: Payments[] };
+// ===========================
+
+// 공지사항 목록 조회
+// GET /tenants/0/branches/0/notices
+export type GET_NOTICES_PARAMS = PARAMS;
+export type GET_NOTICES_QUERY = Pagination & {};
+export type GET_NOTICES_RESPONSE = { total: number; notices: Notices[] }; // content 제외
+// ===========================
+
+// 공지사항 상세 조회
+// GET /tenants/0/branches/0/notices/0
+export type GET_NOTICE_DETAIL_PARAMS = PARAMS & { noticeId: number };
+export type GET_NOTICE_DETAIL_RESPONSE = { notice: Notices };
+// ===========================
+
+// 이벤트 목록 조회
+// GET /tenants/0/branches/0/events
+export type GET_EVENTS_PARAMS = PARAMS;
+export type GET_EVENTS_QUERY = Pagination & {};
+export type GET_EVENTS_RESPONSE = { total: number; events: Events[] }; // content 제외
+// ===========================
+
+// 이벤트 상세 조회
+// GET /tenants/0/branches/0/events/0
+export type GET_EVENT_DETAIL_PARAMS = PARAMS & { eventId: number };
+export type GET_EVENT_DETAIL_RESPONSE = { event: Events };
 // ===========================

@@ -1,4 +1,4 @@
-import { EventAttendees, Events, TenantRoles, Users } from "../../model";
+import { EventAttendees, Events, TenantRoles, Tenants, Users } from "../../model";
 import { Pagination, UsedCreditAmount } from "../../type";
 
 type PARAMS = { userId: number };
@@ -40,4 +40,11 @@ export type ATTEND_EVENT_RESPONSE = { eventAttendee: EventAttendees };
 // DELETE /users/0/events/0/attendee/0
 export type CANCEL_ATTEND_EVENT_PARAMS = PARAMS & { eventId: number; eventAttendeeId: number };
 export type CANCEL_ATTEND_EVENT_RESPONSE = [number];
+// ===========================
+
+// 입주사 목록
+// GET /users/0/tenants
+export type GET_TENANTS_PARAMS = PARAMS;
+export type GET_TENANTS_QUERY = Pagination;
+export type GET_TENANTS_RESPONSE = { total: number; tenants: Tenants[] };
 // ===========================

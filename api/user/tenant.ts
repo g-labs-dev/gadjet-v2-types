@@ -1,4 +1,4 @@
-import { Tenants, TenantRoles, Contracts, Users, Hqs } from "../../model";
+import { Tenants, TenantRoles, Contracts, Users, Hqs, RentalReservations, Payments, Bills, Events, Notices } from "../../model";
 import { Pagination } from "../../type";
 
 type PARAMS = { tenantId: number };
@@ -68,4 +68,22 @@ export type UPDATE_MEMBER_ROLE_RESPONSE = [number];
 // DEL /tenants/0/roles/0
 export type DELETE_MEMBER_ROLE_PARAMS = PARAMS & { tenantRoleId: number };
 export type DELETE_MEMBER_ROLE_RESPONSE = [number];
+// ===========================
+
+// 대관대여 예약내역 조회
+// GET /tenants/0/branches/0/rental-reservations
+export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS & { branchId: number };
+export type GET_RENTAL_RESERVATIONS_QUERY = Pagination;
+export type GET_RENTAL_RESERVATIONS_RESPONSE = { total: number; rentalReservations: RentalReservations[] };
+// ===========================
+
+// 홈 대시보드 조회
+// GET /tenants/0/branches/0/home-dashboard
+export type GET_HOME_DASHBOARD_PARAMS = PARAMS & { branchId: number };
+export type GET_HOME_DASHBOARD_RESPONSE = {
+  contracts: Contracts[]; // contractStatus = before-started 또는 started
+  bills: Bills[]; // openDate가 지났고 미납
+  notices: Notices[]; // 최근 마지막 3개
+  events: Events[]; // 오늘 < startDate
+};
 // ===========================

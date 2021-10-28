@@ -11,6 +11,12 @@ export type GET_RENTAL_DETAIL_PARAMS = PARAMS;
 export type GET_RENTAL_DETAIL_RESPONSE = { rental: Rentals };
 // ===========================
 
+// 대관/대여 예약내역 상세 조회
+// GET /rentals/0/rental-reservations/0
+export type GET_RENTAL_RESERVATION_DETAIL_PARAMS = PARAMS & { rentalReservationId: number };
+export type GET_RENTAL_RESERVATION_DETAIL_RESPONSE = { rentalReservation: RentalReservations };
+// ===========================
+
 // 대관/대여 예약내역 조회
 // GET /rentals/0/rental-reservations
 export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;

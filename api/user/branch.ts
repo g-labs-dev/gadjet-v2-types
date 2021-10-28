@@ -1,4 +1,4 @@
-import { Bills, Branches, CreditLogs, Events, Notices, Payments, ProductSales, RentalReservations, ServiceSales } from "../../model";
+import { Bills, Branches, CreditLogs, Events, Notices, Payments, Products, ProductSales, RentalReservations, Rentals, Services, ServiceSales } from "../../model";
 import { CreditType, Pagination } from "../../type";
 
 type PARAMS = { tenantId: number; branchId: number };
@@ -94,4 +94,25 @@ export type GET_EVENTS_RESPONSE = { total: number; events: Events[] }; // conten
 // GET /tenants/0/branches/0/events/0
 export type GET_EVENT_DETAIL_PARAMS = PARAMS & { eventId: number };
 export type GET_EVENT_DETAIL_RESPONSE = { event: Events };
+// ===========================
+
+// 서비스 목록 조회
+// GET /tenants/0/branches/0/services
+export type GET_SERVICES_PARAMS = PARAMS;
+export type GET_SERVICES_QUERY = Pagination;
+export type GET_SERVICES_RESPONSE = { total: number; services: Services[] };
+// ===========================
+
+// 상품 목록 조회
+// GET /tenants/0/branches/0/products
+export type GET_PRODUCTS_PARAMS = PARAMS;
+export type GET_PRODUCTS_QUERY = Pagination;
+export type GET_PRODUCTS_RESPONSE = { total: number; products: Products[] };
+// ===========================
+
+// 대관 목록 조회
+// GET /tenants/0/branches/0/rentals
+export type GET_RENTALS_PARAMS = PARAMS;
+export type GET_RENTALS_QUERY = Pagination;
+export type GET_RENTALS_RESPONSE = { total: number; rentals: Rentals[] };
 // ===========================

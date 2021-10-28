@@ -424,7 +424,7 @@ export type ContractAdditions = {
   price: number;
 };
 
-export type ContractQuries = {
+export type ContractQueries = {
   contractQueryId: number;
   contractId: number;
   query: string;

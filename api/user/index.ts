@@ -1,4 +1,4 @@
-import { EventAttendees, Events, TenantRoles, Tenants, Users } from "../../model";
+import { Branches, Contracts, EventAttendees, Events, Hqs, TenantRoles, Tenants, Users } from "../../model";
 import { Pagination, UsedCreditAmount } from "../../type";
 
 type PARAMS = { userId: number };
@@ -47,4 +47,10 @@ export type CANCEL_ATTEND_EVENT_RESPONSE = [number];
 export type GET_TENANTS_PARAMS = PARAMS;
 export type GET_TENANTS_QUERY = Pagination;
 export type GET_TENANTS_RESPONSE = { total: number; tenants: Tenants[] };
+// ===========================
+
+// 내 생태 조회
+// GET /users/0/state
+export type GET_STATE_PARAMS = PARAMS;
+export type GET_STATE_RESPONSE = { state: { contracts: Contracts[]; tenants: Tenants[]; branches: Branches[]; hqs: Hqs[] } };
 // ===========================

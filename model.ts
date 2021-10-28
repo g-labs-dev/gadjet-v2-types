@@ -745,8 +745,8 @@ export type TenantCards = {
 };
 
 export type UserCards = {
-  branchCardId: number;
-  branchId: number;
+  userCardId: number;
+  userId: number;
   billKey: string;
   cardCode: string;
   cardName: string;

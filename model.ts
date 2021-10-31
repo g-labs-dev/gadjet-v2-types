@@ -494,7 +494,7 @@ export type Payments = {
   readyDatetime: string;
   readyJson: object;
   approveDatetime: string;
-  approvoeJson: object;
+  approveJson: object;
   refundDatetime: string;
   refundJson: object;
   price: number;

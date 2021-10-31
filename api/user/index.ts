@@ -54,3 +54,10 @@ export type GET_TENANTS_RESPONSE = { total: number; tenants: Tenants[] };
 export type GET_STATE_PARAMS = PARAMS;
 export type GET_STATE_RESPONSE = { state: { contracts: Contracts[]; tenants: Tenants[]; branches: Branches[]; hqs: Hqs[] } };
 // ===========================
+
+// 초대수락 (초대코드 입력)
+// POST /users/0/invite-code/receive
+export type RECEIVE_INVITE_PARAMS = PARAMS;
+export type RECEIVE_INVITE_BODY = { code: string };
+export type RECEIVE_INVITE_RESPONSE = { tenantRole: TenantRoles };
+// ===========================

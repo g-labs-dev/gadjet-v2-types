@@ -137,7 +137,8 @@ export type CreditUsage =
   | "rental" // 대관/대여
   | "store" // 스토어
   | "service" // 서비스
-  | "event"; // 이벤트
+  | "event" // 이벤트
+  | "purchase"; // 구매
 
 export type UsedCreditAmount = {
   [K in CreditType]?: number;

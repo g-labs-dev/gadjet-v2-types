@@ -21,6 +21,7 @@ import {
   ExpenditureType,
   FileCategory,
   ImageCategory,
+  Lang,
   ManagerJoinType,
   NotificationTemplate,
   NotificationType,
@@ -109,18 +110,18 @@ export type Branches = {
   popbillId: string | null;
 
   hq?: Relation<Hqs>;
-  business?: Relation<BranchBusiness>;
-  settlement?: Relation<BranchSettlement>;
-  contractDocument?: Relation<BranchContractDocument>;
-  sublet?: Relation<BranchSublet>;
-  rentee?: Relation<BranchRentee>;
+  business?: Relation<BranchBusinesses>;
+  settlement?: Relation<BranchSettlements>;
+  contractDocument?: Relation<BranchContractDocuments>;
+  sublet?: Relation<BranchSublets>;
+  rentee?: Relation<BranchRentees>;
   automation?: Relation<BranchAutomations>;
   roles?: Relation<BranchRoles[]>;
   floors?: Relation<Floors[]>;
   spaceTypes?: Relation<SpaceTypes[]>;
 };
 
-export type BranchBusiness = {
+export type BranchBusinesses = {
   branchBusinessId: number;
   branchId: number;
   director: string;
@@ -134,7 +135,7 @@ export type BranchBusiness = {
   managers?: [{ name: string; department: string; tel: string; contact: string; email: string }, { name: string; department: string; tel: string; contact: string; email: string }];
 };
 
-export type BranchSettlement = {
+export type BranchSettlements = {
   branchSettlementId: number;
   branchId: number;
   bankCode: string;
@@ -145,7 +146,7 @@ export type BranchSettlement = {
   bank?: Relation<Banks>;
 };
 
-export type BranchContractDocument = {
+export type BranchContractDocuments = {
   branchContractDocumentId: number;
   branchId: number;
   zipcode: string;
@@ -167,7 +168,7 @@ export type BranchContractDocument = {
   etcFile?: Relation<Files>;
 };
 
-export type BranchSublet = {
+export type BranchSublets = {
   branchSubletId: number;
   branchId: number;
   name: string;
@@ -182,7 +183,7 @@ export type BranchSublet = {
   consentFile?: Relation<Files>;
 };
 
-export type BranchRentee = {
+export type BranchRentees = {
   branchRenteeId: number;
   branchId: number;
   name: string;
@@ -395,12 +396,13 @@ export type Contracts = {
   extendStatus: ContractExtendStatus;
   extendContractId: number | null;
   receiver: ContractReceiver;
+  lang: Lang;
 
   tenant: ContractTenant;
   director: ContractDirector;
   contractor: ContractContractor;
 
-  contractDeposit?: Relation<ContractDeposit>;
+  contractDeposit?: Relation<ContractDeposits>;
   contractSpaces?: Relation<ContractSpaces[]>;
   spaces?: Relation<Spaces[]>;
   contractAdditions?: Relation<ContractAdditions[]>;
@@ -472,7 +474,7 @@ export type Bills = {
   branch?: Relation<Branches>;
 };
 
-export type ContractDeposit = {
+export type ContractDeposits = {
   contractDepositId: number;
   branchId: number;
   contractId: number;
@@ -761,7 +763,7 @@ export type UserCards = {
   billingFlag: boolean;
 };
 
-export type Expenditure = {
+export type Expenditures = {
   expenditureId: number;
   branchId: number;
   managerId: number | null;

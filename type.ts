@@ -1,4 +1,4 @@
-import { Bills, Contracts, Expenditure, Payments, RentalReservations } from "./model";
+import { Bills, Contracts, Expenditures, Payments, RentalReservations } from "./model";
 
 export type ImageCategory = "hq" | "branch" | "notice" | "rental" | "room" | "tenant" | "user" | "manager" | "event" | "signature" | "product" | "service";
 
@@ -232,7 +232,7 @@ export type BranchDashboardDayEventDetail = {
   startContracts: Contracts[];
   endContracts: Contracts[];
   billingBills: Bills[];
-  expenditure: Expenditure[];
+  expenditure: Expenditures[];
   payments: Payments[];
   rentalReservations: RentalReservations[];
 };
@@ -256,3 +256,5 @@ export type PayType =
 export type PayResult = { result: "success" | "fail"; message: string };
 
 export type BranchBuildingContractType = "none" | "rent" | "sublet";
+
+export type Lang = "ko" | "en";

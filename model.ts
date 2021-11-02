@@ -106,7 +106,6 @@ export type Branches = {
   zipcode: string;
   address: string;
   addressDetail: string;
-  billingContractType: BranchBuildingContractType;
   popbillId: string | null;
 
   hq?: Relation<Hqs>;
@@ -152,6 +151,7 @@ export type BranchContractDocument = {
   zipcode: string;
   address: string;
   addressDetail: string;
+  buildingContractType: BranchBuildingContractType;
   deposit: string;
   rent: string;
   area: string;

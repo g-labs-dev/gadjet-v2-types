@@ -20,8 +20,8 @@ export type GET_RENTAL_RESERVATION_DETAIL_RESPONSE = { rentalReservation: Rental
 // 대관/대여 예약내역 조회
 // GET /rentals/0/rental-reservations
 export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;
-export type GET_RENTAL_RESERVATIONS_QUERY = { date: [string, string] }; // [from, to] YYYY-MM-DD
-export type GET_RENTAL_RESERVATIONS_RESPONSE = Dates[];
+export type GET_RENTAL_RESERVATIONS_QUERY = { date: string }; // YYYY-MM-DD
+export type GET_RENTAL_RESERVATIONS_RESPONSE = { rentalReservations: RentalReservations[] };
 /**
  * 예약 없는날 빈 배열 채워서 전달
  */

@@ -36,7 +36,7 @@ export type JOIN_RESPONSE = { token: string; user: Users | null };
 // POST /users/code
 export type SEND_AUTH_CODE_PARAMS = PARAMS;
 export type SEND_AUTH_CODE_BODY = { id: string; type: "email" | "contact" };
-export type SEND_AUTH_CODE_RESPONSE = { code: string };
+export type SEND_AUTH_CODE_RESPONSE = { code: string; error: null | string };
 /**
  * Users.findOne({ where: { email }}) 또는 Users.findOne({ where: { contact }})
  * 없으면 에러

@@ -1,4 +1,4 @@
-import { RentalReservations, Rentals } from "../../model";
+import { Dates, RentalReservations, Rentals } from "../../model";
 import { UsedCreditAmount } from "../../type";
 
 type RENTAL_RESERVATION_ERROR = any; // => 에러 타입 추후 정의 (i18n연관)
@@ -21,7 +21,7 @@ export type GET_RENTAL_RESERVATION_DETAIL_RESPONSE = { rentalReservation: Rental
 // GET /rentals/0/rental-reservations
 export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;
 export type GET_RENTAL_RESERVATIONS_QUERY = { date: [string, string] }; // [from, to] YYYY-MM-DD
-export type GET_RENTAL_RESERVATIONS_RESPONSE = { date: string; rentalReservations: RentalReservations[] }[];
+export type GET_RENTAL_RESERVATIONS_RESPONSE = Dates[];
 /**
  * 예약 없는날 빈 배열 채워서 전달
  */

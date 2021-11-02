@@ -258,3 +258,5 @@ export type PayResult = { result: "success" | "fail"; message: string };
 export type BranchBuildingContractType = "none" | "rent" | "sublet";
 
 export type Lang = "ko" | "en";
+
+export type JoinStatus = null | "PROCESS" | "DONE";

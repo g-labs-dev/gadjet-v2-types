@@ -255,4 +255,4 @@ export type PayType =
 
 export type PayResult = { result: "success" | "fail"; message: string };
 
-export type BranchBuildingContractType = "rent" | "sublet";
+export type BranchBuildingContractType = "none" | "rent" | "sublet";

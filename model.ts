@@ -3,6 +3,7 @@ import { Taxinvoice } from "./popbill/taxinvoice";
 import {
   BillPrice,
   BillType,
+  BranchBuildingContractType,
   ContractBillingSplitType,
   ContractBillingType,
   ContractContractor,
@@ -105,6 +106,7 @@ export type Branches = {
   zipcode: string;
   address: string;
   addressDetail: string;
+  billingContractType: BranchBuildingContractType;
   popbillId: string | null;
 
   hq?: Relation<Hqs>;

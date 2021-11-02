@@ -254,3 +254,5 @@ export type PayType =
   | "BILLING"; // 자동결제
 
 export type PayResult = { result: "success" | "fail"; message: string };
+
+export type BranchBuildingContractType = "rent" | "sublet";

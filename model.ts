@@ -420,6 +420,8 @@ export type ContractSpaces = {
   spaceId: number;
   name: string;
   price: number;
+
+  space?: Relation<Spaces>;
 };
 
 export type ContractAdditions = {
@@ -428,6 +430,8 @@ export type ContractAdditions = {
   additionId: number;
   name: string;
   price: number;
+
+  addition?: Relation<Additions>;
 };
 
 export type ContractQueries = {

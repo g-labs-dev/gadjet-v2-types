@@ -363,7 +363,7 @@ export type Spaces = {
 
   spaceType?: Relation<SpaceTypes>;
   image?: Relation<Images>;
-  contractSpace?: Relation<ContractSpaces>;
+  contractSpaces?: Relation<ContractSpaces[]>;
 };
 
 export type Additions = {
@@ -372,7 +372,7 @@ export type Additions = {
   name: string;
   price: number;
 
-  contractAddition?: Relation<ContractAdditions>;
+  contractAdditions?: Relation<ContractAdditions[]>;
 };
 
 export type Contracts = {

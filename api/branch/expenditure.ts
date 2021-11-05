@@ -1,4 +1,4 @@
-import { Expenditure } from "../../model";
+import { Expenditures } from "../../model";
 import { Pagination, ExpenditureSummary, ExpenditureType } from "../../type";
 
 type PARAMS = { hqId: number; branchId: number };
@@ -7,13 +7,13 @@ type PARAMS = { hqId: number; branchId: number };
 // GET /hqs/0/branches/0/expenditure
 export type GET_LIST_PARAMS = PARAMS;
 export type GET_LIST_QUERY = Pagination & { query: string; expenditureTypes: ExpenditureType[]; date: [string, string] }; // query: memo
-export type GET_LIST_RESPONSE = { total: number; expenditure: Expenditure[] };
+export type GET_LIST_RESPONSE = { total: number; expenditure: Expenditures[] };
 // ===========================
 
 // 지출 상세 조회
 // GET /hqs/0/branches/0/expenditure
 export type GET_DETAIL_PARAMS = PARAMS & { expenditureId: number };
-export type GET_DETAIL_RESPONSE = Expenditure;
+export type GET_DETAIL_RESPONSE = Expenditures;
 // ===========================
 
 // 지출 요약
@@ -34,16 +34,16 @@ export type EXPORT_RESPONSE = any; // @@@@ xlsx
 // POST /hqs/0/branches/0/expenditure
 export type ADD_PARAMS = PARAMS;
 export type ADD_BODY = {
-  expenditure: Pick<Expenditure, "date" | "type" | "price" | "memo" | "managerId" | "managerName">;
+  expenditure: Pick<Expenditures, "date" | "type" | "price" | "memo" | "managerId" | "managerName">;
 };
-export type ADD_RESPONSE = Expenditure;
+export type ADD_RESPONSE = Expenditures;
 // ===========================
 
 // 지출 수정
 // PUT /hqs/0/branches/0/expenditure/0
 export type UPDATE_PARAMS = PARAMS & { expenditureId: number };
 export type UPDATE_BODY = {
-  expenditure: Pick<Expenditure, "date" | "type" | "price" | "memo" | "managerId" | "managerName">;
+  expenditure: Pick<Expenditures, "date" | "type" | "price" | "memo" | "managerId" | "managerName">;
 };
 export type UPDATE_RESPONSE = [number];
 // ===========================

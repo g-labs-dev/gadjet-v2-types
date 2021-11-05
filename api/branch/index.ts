@@ -1,4 +1,4 @@
-import { BranchAutomations, BranchBusiness, BranchContractDocument, Branches, BranchRentee, BranchSettlement, BranchSublet } from "../../model";
+import { BranchAutomations, BranchBusinesses, BranchContractDocuments, Branches, BranchRentees, BranchSettlements, BranchSublets } from "../../model";
 import { PopbillJoinForm } from "../../popbill/auth";
 import {} from "../../type";
 
@@ -23,7 +23,7 @@ export type UPDATE_RESPONSE = [number];
 // PUT /hqs/0/branches/0/business
 export type UPDATE_BUSINESS_PARAMS = PARAMS;
 export type UPDATE_BUSINESS_BODY = {
-  business: Partial<BranchBusiness>;
+  business: Partial<BranchBusinesses>;
 };
 export type UPDATE_BUSINESS_RESPONSE = [number];
 // ===========================
@@ -32,7 +32,7 @@ export type UPDATE_BUSINESS_RESPONSE = [number];
 // PUT /hqs/0/branches/0/settlement
 export type UPDATE_SETTLEMENT_PARAMS = PARAMS;
 export type UPDATE_SETTLEMENT_BODY = {
-  settlement: Partial<BranchSettlement>;
+  settlement: Partial<BranchSettlements>;
 };
 export type UPDATE_SETTLEMENT_RESPONSE = [number];
 // ===========================
@@ -41,7 +41,7 @@ export type UPDATE_SETTLEMENT_RESPONSE = [number];
 // PUT /hqs/0/branches/0/contract-document
 export type UPDATE_CONTRACT_DOCUMENT_PARAMS = PARAMS;
 export type UPDATE_CONTRACT_DOCUMENT_BODY = {
-  contractDocument: Partial<BranchContractDocument>;
+  contractDocument: Partial<BranchContractDocuments>;
 };
 export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = [number];
 // ===========================
@@ -50,7 +50,7 @@ export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = [number];
 // PUT /hqs/0/branches/0/sublet
 export type UPDATE_SUBLET_PARAMS = PARAMS;
 export type UPDATE_SUBLET_BODY = {
-  sublet: Partial<BranchSublet>;
+  sublet: Partial<BranchSublets>;
 };
 export type UPDATE_SUBLET_RESPONSE = [number];
 // ===========================
@@ -59,7 +59,7 @@ export type UPDATE_SUBLET_RESPONSE = [number];
 // PUT /hqs/0/branches/0/rentee
 export type UPDATE_RENTEE_PARAMS = PARAMS;
 export type UPDATE_RENTEE_BODY = {
-  rentee: Partial<BranchRentee>;
+  rentee: Partial<BranchRentees>;
 };
 export type UPDATE_RENTEE_RESPONSE = [number];
 // ===========================

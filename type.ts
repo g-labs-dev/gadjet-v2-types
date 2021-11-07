@@ -138,7 +138,8 @@ export type CreditUsage =
   | "store" // 스토어
   | "service" // 서비스
   | "event" // 이벤트
-  | "purchase"; // 구매
+  | "purchase" // 구매
+  | "etc"; // 기타
 
 export type UsedCreditAmount = {
   [K in CreditType]?: number;

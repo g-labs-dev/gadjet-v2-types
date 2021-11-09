@@ -55,9 +55,9 @@ exports.paymentStatus = {
     refund: '결제취소(환불)',
 };
 exports.creditType = {
-    contract: '계약 크레딧',
-    buy: '구매 크레딧',
-    mileage: '마일리지 크레딧',
+    contract: '계약',
+    buy: '구매',
+    mileage: '마일리지',
 };
 exports.creditUsage = {
     rental: '대관/대여',

@@ -8,6 +8,7 @@
     "./": "./dist"
   },
   "scripts": {
+    "prepare": "husky install",
     "build": "rm -rf dist && tsc"
   },
   "repository": {
@@ -29,10 +30,5 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run build"
-    }
   }
 }

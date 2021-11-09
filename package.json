@@ -2,9 +2,10 @@
   "name": "gadjet-v2-types",
   "version": "1.0.3",
   "description": "gadjet v2 models, types, ...",
-  "main": "index.js",
+  "main": "dist",
+  "types": "dist",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && tsc"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/g-labs-dev/gadjet-v2-types#readme",
   "dependencies": {
+    "D": "^1.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
     "typescript": "^4.3.4"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0"
   }
 }

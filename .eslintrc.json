@@ -1,0 +1,28 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "airbnb-typescript",
+    "react-app",
+    "react-app/jest",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "settings": {},
+  "rules": {
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "no-underscore-dangle": "off",
+    "react/destructuring-assignment": "off"
+  }
+}

@@ -129,3 +129,4 @@ export const billType: Record<T.BillType, string> = {
   deposit: '보증금',
   sales: '매출',
 }
+export const test = 'test'

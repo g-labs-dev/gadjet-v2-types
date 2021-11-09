@@ -1,2 +1,26 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
+
+npm run build
+
+git add dist
+
+isCommit=''
+
+for dir in $(git diff --name-only --cached);
+do 
+  if [[ $dir == "dist/"* ]]; then
+    isCommit=1
+    if [[ isCommit ]]; then
+      break
+    fi
+  fi
+done
+
+if [[ isCommit ]]; then
+  echo "commit"
+  git commit -m "chore: build"
+fi
+
+
+exit 0

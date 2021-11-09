@@ -127,4 +127,4 @@ exports.billType = {
     deposit: '보증금',
     sales: '매출',
 };
-//# sourceMappingURL=typeLabel.js.map
+//# sourceMappingURL=label.js.map

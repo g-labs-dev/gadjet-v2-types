@@ -56,9 +56,9 @@ export const paymentStatus: Record<T.PaymentStatus, string> = {
   refund: '결제취소(환불)',
 }
 export const creditType: Record<T.CreditType, string> = {
-  contract: '계약 크레딧',
-  buy: '구매 크레딧',
-  mileage: '마일리지 크레딧',
+  contract: '계약',
+  buy: '구매',
+  mileage: '마일리지',
 }
 export const creditUsage: Record<T.CreditUsage, string> = {
   rental: '대관/대여',

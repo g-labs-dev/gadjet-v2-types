@@ -5,4 +5,5 @@ echo "==== build start"
 npm run build
 
 
-echo "==== commit"npm test
+echo "==== commit"
+git add dist && git commit -m "chore: build"

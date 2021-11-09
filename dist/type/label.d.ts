@@ -15,5 +15,4 @@ export declare const receiptStatus: Record<T.ReceiptStatus, string>;
 export declare const expenditureType: Record<T.ExpenditureType, string>;
 export declare const ntsResultCode: Record<string, string>;
 export declare const billType: Record<T.BillType, string>;
-export declare const test = "test";
 //# sourceMappingURL=label.d.ts.map

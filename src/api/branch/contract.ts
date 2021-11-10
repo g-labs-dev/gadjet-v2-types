@@ -20,31 +20,7 @@ export type GET_DETAIL_RESPONSE = Contracts
 // POST /hqs/0/branches/0/contracts
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  contract: Pick<
-    Contracts,
-    | 'tenantId'
-    | 'startDate'
-    | 'endDate'
-    | 'address'
-    | 'population'
-    | 'paymentDate'
-    | 'billingType'
-    | 'billingSplitType'
-    | 'paymentDueDate'
-    | 'lateFeeType'
-    | 'lateFee'
-    | 'publicMemo'
-    | 'privateMemo'
-    | 'status'
-    | 'signatureImageId'
-    | 'documentFileId'
-    | 'extendStatus'
-    | 'extendContractId'
-    | 'director'
-    | 'contractor'
-    | 'spaces'
-    | 'additions'
-  >
+  contract: Partial<Contracts>
 }
 export type ADD_RESPONSE = Contracts
 // ===========================

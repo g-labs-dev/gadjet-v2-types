@@ -411,9 +411,7 @@ export type Contracts = {
 
   contractDeposit?: Relation<ContractDeposits>
   contractSpaces?: Relation<ContractSpaces[]>
-  spaces?: Relation<Spaces[]>
   contractAdditions?: Relation<ContractAdditions[]>
-  additions?: Relation<Additions[]>
   signatureImage?: Relation<Images>
   documentFile?: Relation<Files>
   branch?: Relation<Branches>

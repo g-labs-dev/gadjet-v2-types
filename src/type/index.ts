@@ -280,4 +280,4 @@ export type BranchBuildingContractType = 'none' | 'rent' | 'sublet'
 
 export type Lang = 'ko' | 'en'
 
-export type JoinStatus = null | 'PROCESS' | 'DONE'
+export type UserStatus = 'pending' | 'done'

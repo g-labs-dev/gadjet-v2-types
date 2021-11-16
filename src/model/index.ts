@@ -33,7 +33,7 @@ import {
   Role,
   TenantType,
   UsedCreditAmount,
-  JoinStatus,
+  UserStatus,
 } from '../type'
 
 export type Images = {
@@ -250,7 +250,7 @@ export type Users = {
   pushToken: string | null
   profileImageId: number | null
   code: string
-  status: JoinStatus
+  status: UserStatus
 
   profile?: Relation<Images>
   tenantRoles?: Relation<TenantRoles[]>

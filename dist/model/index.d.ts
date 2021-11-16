@@ -1,6 +1,6 @@
 import { Cashbill } from '../popbill/cashbill';
 import { Taxinvoice } from '../popbill/taxinvoice';
-import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, JoinStatus } from '../type';
+import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus } from '../type';
 export declare type Images = {
     imageId: number;
     size: number;
@@ -202,7 +202,7 @@ export declare type Users = {
     pushToken: string | null;
     profileImageId: number | null;
     code: string;
-    status: JoinStatus;
+    status: UserStatus;
     profile?: Relation<Images>;
     tenantRoles?: Relation<TenantRoles[]>;
 };
@@ -342,9 +342,7 @@ export declare type Contracts = {
     contractor: ContractContractor;
     contractDeposit?: Relation<ContractDeposits>;
     contractSpaces?: Relation<ContractSpaces[]>;
-    spaces?: Relation<Spaces[]>;
     contractAdditions?: Relation<ContractAdditions[]>;
-    additions?: Relation<Additions[]>;
     signatureImage?: Relation<Images>;
     documentFile?: Relation<Files>;
     branch?: Relation<Branches>;

@@ -19,7 +19,7 @@ export declare type GET_DETAIL_PARAMS = PARAMS & {
 export declare type GET_DETAIL_RESPONSE = Contracts;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    contract: Pick<Contracts, 'tenantId' | 'startDate' | 'endDate' | 'address' | 'population' | 'paymentDate' | 'billingType' | 'billingSplitType' | 'paymentDueDate' | 'lateFeeType' | 'lateFee' | 'publicMemo' | 'privateMemo' | 'status' | 'signatureImageId' | 'documentFileId' | 'extendStatus' | 'extendContractId' | 'director' | 'contractor' | 'spaces' | 'additions'>;
+    contract: Partial<Contracts>;
 };
 export declare type ADD_RESPONSE = Contracts;
 export declare type UPDATE_PARAMS = PARAMS & {

@@ -5,9 +5,7 @@ declare type PARAMS = {
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query:string
-};
+export declare type GET_LIST_QUERY = Pagination & {};
 export declare type GET_LIST_RESPONSE = {
     total: number;
     products: Products[];
@@ -34,7 +32,6 @@ export declare type DELETE_PARAMS = PARAMS & {
 export declare type DELETE_RESPONSE = [number];
 export declare type GET_SALES_PARAMS = PARAMS;
 export declare type GET_SALES_QUERY = Pagination & {
-    query:string
     datetime: [string, string];
     productIds: number[];
 };

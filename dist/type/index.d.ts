@@ -136,7 +136,7 @@ export declare type BranchDashboardDayEventDetail = {
     payments: Payments[];
     rentalReservations: RentalReservations[];
 };
-export declare type NotificationType = 'sms' | 'lms' | 'kakaotalk' | 'email';
+export declare type NotificationType = 'email' | 'sms' | 'fcm';
 export declare type NotificationTemplate = 'invite-manager' | 'invite-tenant' | 'bill';
 export declare type NicePayReserve = {
     type: 'bill-payment';
@@ -158,5 +158,5 @@ export declare type PayResult = {
 };
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export declare type Lang = 'ko' | 'en';
-export declare type JoinStatus = null | 'PROCESS' | 'DONE';
+export declare type UserStatus = 'pending' | 'done';
 //# sourceMappingURL=index.d.ts.map

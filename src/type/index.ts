@@ -250,7 +250,7 @@ export type BranchDashboardDayEventDetail = {
   rentalReservations: RentalReservations[]
 }
 
-export type NotificationType = 'sms' | 'lms' | 'kakaotalk' | 'email'
+export type NotificationType = 'email' | 'sms' | 'fcm'
 export type NotificationTemplate =
   | 'invite-manager' // 역할 초대 (매니저 대상 발송)
   | 'invite-tenant' // 계약 초대 (입주사 대상 발송)

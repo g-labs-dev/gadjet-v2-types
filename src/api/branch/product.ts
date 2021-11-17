@@ -6,7 +6,7 @@ type PARAMS = { hqId: number; branchId: number }
 // 상품 조회
 // GET /hqs/0/branches/0/products
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & {}
+export type GET_LIST_QUERY = Pagination & { query: string }
 export type GET_LIST_RESPONSE = { total: number; products: Products[] }
 // ===========================
 
@@ -49,7 +49,7 @@ export type GET_SALES_RESPONSE = { total: number; productSales: ProductSales[] }
 // 상품 판매내역 요약
 // GET /hqs/0/branches/0/product-sales/summary
 export type GET_SALES_SUMMARY_PARAMS = PARAMS
-export type GET_SALES_SUMMARY_QUERY = Pagination & { datetime: [string, string]; productIds: number[] }
+export type GET_SALES_SUMMARY_QUERY = Pagination & { query: string; datetime: [string, string]; productIds: number[] }
 export type GET_SALES_SUMMARY_RESPONSE = ProductSalesSummary
 // ===========================
 

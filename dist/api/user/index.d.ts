@@ -62,5 +62,10 @@ export declare type RECEIVE_INVITE_BODY = {
 export declare type RECEIVE_INVITE_RESPONSE = {
     tenantRole: TenantRoles;
 };
+export declare type UPDATE_PUSH_TOKEN_PARAMS = PARAMS;
+export declare type UPDATE_PUSH_TOKEN_BODY = {
+    pushToken: string;
+};
+export declare type UPDATE_PUSH_TOKEN_RESPONSE = [number];
 export {};
 //# sourceMappingURL=index.d.ts.map

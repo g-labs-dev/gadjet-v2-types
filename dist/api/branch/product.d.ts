@@ -34,6 +34,7 @@ export declare type DELETE_PARAMS = PARAMS & {
 export declare type DELETE_RESPONSE = [number];
 export declare type GET_SALES_PARAMS = PARAMS;
 export declare type GET_SALES_QUERY = Pagination & {
+    query: string;
     datetime: [string, string];
     productIds: number[];
 };

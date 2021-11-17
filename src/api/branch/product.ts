@@ -42,7 +42,7 @@ export type DELETE_RESPONSE = [number]
 // 상품 판매내역 조회
 // GET /hqs/0/branches/0/product-sales
 export type GET_SALES_PARAMS = PARAMS
-export type GET_SALES_QUERY = Pagination & { datetime: [string, string]; productIds: number[] } // productIds.length === 0 이면 전체
+export type GET_SALES_QUERY = Pagination & { query: string; datetime: [string, string]; productIds: number[] } // productIds.length === 0 이면 전체
 export type GET_SALES_RESPONSE = { total: number; productSales: ProductSales[] }
 // ===========================
 

@@ -63,3 +63,10 @@ export type RECEIVE_INVITE_PARAMS = PARAMS
 export type RECEIVE_INVITE_BODY = { code: string }
 export type RECEIVE_INVITE_RESPONSE = { tenantRole: TenantRoles }
 // ===========================
+
+// 푸시토큰 업데이트
+// PUT /users/0/push-tokens
+export type UPDATE_PUSH_TOKEN_PARAMS = PARAMS
+export type UPDATE_PUSH_TOKEN_BODY = { pushToken: string }
+export type UPDATE_PUSH_TOKEN_RESPONSE = [number]
+// ===========================

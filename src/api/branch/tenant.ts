@@ -75,7 +75,7 @@ export type ADD_CREDITS_BODY = {
 export type ADD_CREDITS_RESPONSE = boolean
 
 // 입주사 멤버 초대
-// POST /hqs/0/branches/9/tenants/invite
+// POST /hqs/0/branches/9/tenants/0/invite
 export type INVITE_USERS_PARAMS = PARAMS & { tenantId: number }
 export type INVITE_USERS_BODY = { phone: string[] }
 export type INVITE_USERS_RESPONSE = boolean

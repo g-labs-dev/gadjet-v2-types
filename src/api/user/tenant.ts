@@ -64,7 +64,7 @@ export type GET_MEMBERS_RESPONSE = { total: number; members: Users[] }
 // 멤버 권한 초대코드 발송
 // POST /tenants/0/code
 export type SEND_MEMBER_CODE_PARAMS = PARAMS
-export type SEND_MEMBER_CODE_BODY = { contacts: string[] }
+export type SEND_MEMBER_CODE_BODY = { contacts: string[]; contractId: number }
 export type SEND_MEMBER_CODE_RESPONSE = boolean
 // ===========================
 

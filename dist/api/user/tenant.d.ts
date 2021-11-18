@@ -47,6 +47,7 @@ export declare type GET_MEMBERS_RESPONSE = {
 export declare type SEND_MEMBER_CODE_PARAMS = PARAMS;
 export declare type SEND_MEMBER_CODE_BODY = {
     contacts: string[];
+    contractId: number;
 };
 export declare type SEND_MEMBER_CODE_RESPONSE = boolean;
 export declare type UPDATE_MEMBER_ROLE_PARAMS = PARAMS & {

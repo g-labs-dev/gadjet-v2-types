@@ -7,6 +7,7 @@ import {
   ContractBillingSplitType,
   ContractBillingType,
   ContractContractor,
+  ContractCreditPolicy,
   ContractDepositStatus,
   ContractDirector,
   ContractExtendStatus,
@@ -157,6 +158,7 @@ export type BranchContractDocuments = {
   address: string
   addressDetail: string
   buildingContractType: BranchBuildingContractType
+  creditPolicy: ContractCreditPolicy
   deposit: string
   rent: string
   area: string

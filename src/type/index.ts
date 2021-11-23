@@ -274,7 +274,11 @@ export type PayType =
   | 'OVERSEA' // 해외카드 결제
   | 'BILLING' // 자동결제
 
-export type PayResult = { result: 'success' | 'fail'; message: string }
+export type PayResult =
+  | { result: 'success' | 'fail'; message: string }
+  | { type: 'card' }
+  | { type: 'transfer' }
+  | { type: 'direct'; data: { bankName: string; account: string; expireDatetime: string } }
 
 export type BranchBuildingContractType = 'none' | 'rent' | 'sublet'
 

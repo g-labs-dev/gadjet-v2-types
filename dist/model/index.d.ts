@@ -427,6 +427,7 @@ export declare type Payments = {
     item: string;
     type: PaymentType;
     status: PaymentStatus;
+    moid: string;
     readyDatetime: string;
     readyJson: object;
     approveDatetime: string;

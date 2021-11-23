@@ -168,6 +168,7 @@ export declare type ApprovePayResponse = {
         bankName: string;
         account: string;
         expireDatetime: string;
+        price: number | string;
     };
 }));
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';

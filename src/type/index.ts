@@ -279,7 +279,7 @@ export type ApprovePayResponse =
   | ({ result: 'success'; message: string } & (
       | { type: 'card' }
       | { type: 'transfer' }
-      | { type: 'direct'; data?: { bankName: string; account: string; expireDatetime: string } }
+      | { type: 'direct'; data?: { bankName: string; account: string; expireDatetime: string; price: number | string } }
     ))
 
 export type BranchBuildingContractType = 'none' | 'rent' | 'sublet'

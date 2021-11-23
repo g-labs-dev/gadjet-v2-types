@@ -464,6 +464,7 @@ export type Bills = {
   tenantId: number | null
   userId: number | null
   type: BillType
+  rate: number
   price: number
   unpaidPrice: number
   openDate: string

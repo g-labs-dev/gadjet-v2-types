@@ -153,7 +153,10 @@ export declare type NicePayReserve = {
 };
 export declare type PayType = 'GENERAL' | 'OVERSEA' | 'BILLING';
 export declare type ApprovePayResponse = {
-    result: 'success' | 'fail';
+    result: 'fail';
+    message: string;
+} | ({
+    result: 'success';
     message: string;
 } & ({
     type: 'card';
@@ -161,12 +164,12 @@ export declare type ApprovePayResponse = {
     type: 'transfer';
 } | {
     type: 'direct';
-    data: {
+    data?: {
         bankName: string;
         account: string;
         expireDatetime: string;
     };
-});
+}));
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export declare type Lang = 'ko' | 'en';
 export declare type UserStatus = 'pending' | 'done';

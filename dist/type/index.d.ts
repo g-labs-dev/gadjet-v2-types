@@ -155,6 +155,17 @@ export declare type PayType = 'GENERAL' | 'OVERSEA' | 'BILLING';
 export declare type PayResult = {
     result: 'success' | 'fail';
     message: string;
+} | {
+    type: 'card';
+} | {
+    type: 'transfer';
+} | {
+    type: 'direct';
+    data: {
+        bankName: string;
+        account: string;
+        expireDatetime: string;
+    };
 };
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export declare type Lang = 'ko' | 'en';

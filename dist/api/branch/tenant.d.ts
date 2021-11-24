@@ -31,7 +31,7 @@ export declare type GET_CONTRACTS_QUERY = Pagination & {
 };
 export declare type GET_CONTRACTS_RESPONSE = {
     total: number;
-    contracts: Partial<Contracts>[];
+    contracts: Contracts[];
 };
 export declare type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS & {
     tenantId: number;

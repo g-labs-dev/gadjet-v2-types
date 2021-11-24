@@ -703,14 +703,16 @@ export type Receipts = {
   parentReceiptId: number | null
   branchId: number
   billId: number
+  type: ReceiptType
   status: ReceiptStatus
   price: number
   ntsConfirmNumber: string
   ntsResultCode: string
   mgtKey: string
   requestDatetime: string
-  type: ReceiptType
-} & ({ type: 'tax-invoice'; json: Taxinvoice } | { type: 'cash-receipt'; json: Cashbill })
+  taxInvoiceJson: Taxinvoice
+  cashBillJson: Cashbill
+}
 
 export type ManagerNotifications = {
   managerNotificationId: number

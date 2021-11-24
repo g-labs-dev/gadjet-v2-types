@@ -58,3 +58,10 @@ export type SUSPEND_PARAMS = PARAMS & { contractId: number }
 export type SUSPEND_BODY = { suspendDate: string }
 export type SUSPEND_RESPONSE = [number]
 // ===========================
+
+// 계약 초대 발송
+// POST /hqs/0/branches/0/contracts/0/send-invite
+export type SEND_INVITE_PARAMS = PARAMS & { contractId: number }
+export type SEND_INVITE_BODY = { contacts: string[] }
+export type SEND_INVITE_RESPONSE = boolean
+// ===========================

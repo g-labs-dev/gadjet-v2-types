@@ -51,5 +51,12 @@ export declare type SUSPEND_BODY = {
     suspendDate: string;
 };
 export declare type SUSPEND_RESPONSE = [number];
+export declare type SEND_INVITE_PARAMS = PARAMS & {
+    contractId: number;
+};
+export declare type SEND_INVITE_BODY = {
+    contacts: string[];
+};
+export declare type SEND_INVITE_RESPONSE = boolean;
 export {};
 //# sourceMappingURL=contract.d.ts.map

@@ -34,7 +34,7 @@ export type EXPORT_RESPONSE = any // @@@@ xlsx
 // POST /hqs/0/branches/0/cash
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  cash: Pick<Cash, 'date' | 'price' | 'memo' | 'managerId' | 'managerName'>
+  cash: Partial<Cash>
 }
 export type ADD_RESPONSE = Cash
 // ===========================
@@ -43,7 +43,7 @@ export type ADD_RESPONSE = Cash
 // PUT /hqs/0/branches/0/cash/0
 export type UPDATE_PARAMS = PARAMS & { cashId: number }
 export type UPDATE_BODY = {
-  cash: Pick<Cash, 'date' | 'price' | 'memo' | 'managerId' | 'managerName'>
+  cash: Partial<Cash>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

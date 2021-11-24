@@ -30,53 +30,7 @@ export type GET_SUMMARY_RESPONSE = ReceiptSummary
 export type ADD_TAX_INVOICE_PARAMS = PARAMS
 export type ADD_TAX_INVOICE_BODY = {
   billId: number
-  taxInvoice: Pick<
-    Taxinvoice,
-    | 'writeDate'
-    | 'taxType'
-    | 'purposeType'
-    | 'supplyCostTotal'
-    | 'taxTotal'
-    | 'totalAmount'
-    | 'remark1'
-    | 'invoicerMgtKey'
-    | 'invoicerCorpNum'
-    | 'invoicerTaxRegID'
-    | 'invoicerCorpName'
-    | 'invoicerCEOName'
-    | 'invoicerAddr'
-    | 'invoicerBizType'
-    | 'invoicerBizClass'
-    | 'invoicerContactName1'
-    | 'invoicerDeptName1'
-    | 'invoicerTEL1'
-    | 'invoicerHP1'
-    | 'invoicerEmail1'
-    | 'invoicerContactName2'
-    | 'invoicerDeptName2'
-    | 'invoicerTEL2'
-    | 'invoicerHP2'
-    | 'invoicerEmail2'
-    | 'invoiceeType'
-    | 'invoiceeCorpNum'
-    | 'invoiceeTaxRegID'
-    | 'invoiceeCorpName'
-    | 'invoiceeCEOName'
-    | 'invoiceeAddr'
-    | 'invoiceeBizType'
-    | 'invoiceeBizClass'
-    | 'invoiceeContactName1'
-    | 'invoiceeDeptName1'
-    | 'invoiceeTEL1'
-    | 'invoiceeHP1'
-    | 'invoiceeEmail1'
-    | 'invoiceeContactName2'
-    | 'invoiceeDeptName2'
-    | 'invoiceeTEL2'
-    | 'invoiceeHP2'
-    | 'invoiceeEmail2'
-    | 'detailList'
-  >
+  taxInvoice: Partial<Taxinvoice>
 }
 export type ADD_TAX_INVOICE_RESPONSE = Receipts
 // ===========================
@@ -86,55 +40,7 @@ export type ADD_TAX_INVOICE_RESPONSE = Receipts
 export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & { receiptId: number }
 export type UPDATE_TAX_INOVICE_BODY = {
   billId: number
-  taxInvoice: Pick<
-    TaxinvoiceModify,
-    | 'writeDate'
-    | 'taxType'
-    | 'purposeType'
-    | 'supplyCostTotal'
-    | 'taxTotal'
-    | 'totalAmount'
-    | 'remark1'
-    | 'invoicerMgtKey'
-    | 'invoicerCorpNum'
-    | 'invoicerTaxRegID'
-    | 'invoicerCorpName'
-    | 'invoicerCEOName'
-    | 'invoicerAddr'
-    | 'invoicerBizType'
-    | 'invoicerBizClass'
-    | 'invoicerContactName1'
-    | 'invoicerDeptName1'
-    | 'invoicerTEL1'
-    | 'invoicerHP1'
-    | 'invoicerEmail1'
-    | 'invoicerContactName2'
-    | 'invoicerDeptName2'
-    | 'invoicerTEL2'
-    | 'invoicerHP2'
-    | 'invoicerEmail2'
-    | 'invoiceeType'
-    | 'invoiceeCorpNum'
-    | 'invoiceeTaxRegID'
-    | 'invoiceeCorpName'
-    | 'invoiceeCEOName'
-    | 'invoiceeAddr'
-    | 'invoiceeBizType'
-    | 'invoiceeBizClass'
-    | 'invoiceeContactName1'
-    | 'invoiceeDeptName1'
-    | 'invoiceeTEL1'
-    | 'invoiceeHP1'
-    | 'invoiceeEmail1'
-    | 'invoiceeContactName2'
-    | 'invoiceeDeptName2'
-    | 'invoiceeTEL2'
-    | 'invoiceeHP2'
-    | 'invoiceeEmail2'
-    | 'detailList'
-    | 'modifyCode'
-    | 'orgNTSConfirmNum'
-  >
+  taxInvoice: Partial<Taxinvoice>
 }
 export type UPDATE_TAX_INVOICE_RESPONSE = Receipts
 // ===========================
@@ -144,27 +50,7 @@ export type UPDATE_TAX_INVOICE_RESPONSE = Receipts
 export type ADD_CASH_RECEIPT_PARAMS = PARAMS
 export type ADD_CASH_RECEIPT_BODY = {
   billId: number
-  cashReceipt: Pick<
-    Cashbill,
-    | 'tradeType'
-    | 'taxationType'
-    | 'tradeUsage'
-    | 'identityNum'
-    | 'totalAmount'
-    | 'supplyCost'
-    | 'tax'
-    | 'serviceFee'
-    | 'franchiseCorpNum'
-    | 'franchiseCorpName'
-    | 'franchiseCEOName'
-    | 'franchiseAddr'
-    | 'franchiseTEL'
-    | 'customerName'
-    | 'itemName'
-    | 'orderNumber'
-    | 'email'
-    | 'hp'
-  >
+  cashReceipt: Partial<Cashbill>
 }
 export type ADD_CASH_RECEIPT_RESPONSE = Receipts
 // ===========================

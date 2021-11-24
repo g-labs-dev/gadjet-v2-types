@@ -13,7 +13,7 @@ export type GET_RESPONSE = Managers | null
 // POST /managers/join
 export type JOIN_PARAMS = PARAMS
 export type JOIN_BODY = {
-  manager: Pick<Managers, 'email' | 'password' | 'name' | 'joinType' | 'socialId' | 'profileImageId'>
+  manager: Partial<Managers>
 }
 export type JOIN_RESPONSE = { token: string; manager: Managers | null }
 // ===========================
@@ -22,7 +22,7 @@ export type JOIN_RESPONSE = { token: string; manager: Managers | null }
 // POST /managers/login
 export type LOGIN_PARAMS = PARAMS
 export type LOGIN_BODY = {
-  manager: Pick<Managers, 'email' | 'password'>
+  manager: Partial<Managers>
 }
 export type LOGIN_RESPONSE = { token: string; manager: Managers | null }
 // ===========================
@@ -31,7 +31,7 @@ export type LOGIN_RESPONSE = { token: string; manager: Managers | null }
 // POST /managers/social-login
 export type SOCIAL_LOGIN_PARAMS = PARAMS
 export type SOCIAL_LOGIN_BODY = {
-  manager: Pick<Managers, 'socialId'>
+  manager: Partial<Managers>
 }
 export type SOCIAL_LOGIN_RESPONSE = { token: string; manager: Managers | null }
 // ===========================
@@ -40,7 +40,7 @@ export type SOCIAL_LOGIN_RESPONSE = { token: string; manager: Managers | null }
 // PUT /managers/0
 export type UPDATE_PARAMS = PARAMS & { managerId: number }
 export type UPDATE_BODY = {
-  manager: Pick<Managers, 'name' | 'profileImageId'>
+  manager: Partial<Managers>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================
@@ -49,7 +49,7 @@ export type UPDATE_RESPONSE = [number]
 // PUT /managers/0/password
 export type UPDATE_PASSWORD_PARAMS = PARAMS & { managerId: number }
 export type UPDATE_PASSWORD_BODY = {
-  manager: Pick<Managers, 'password'>
+  manager: Partial<Managers>
 }
 export type UPDATE_PASSWORD_RESPONSE = [number]
 // ===========================
@@ -58,7 +58,7 @@ export type UPDATE_PASSWORD_RESPONSE = [number]
 // PUT /managers/0/social
 export type UPDATE_SOCIAL_PARAMS = PARAMS & { managerId: number }
 export type UPDATE_SOCIAL_BODY = {
-  manager: Pick<Managers, 'socialId'>
+  manager: Partial<Managers>
 }
 export type UPDATE_SOCIAL_RESPONSE = [number]
 // ===========================

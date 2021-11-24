@@ -20,7 +20,7 @@ export type GET_DETAIL_RESPONSE = Services
 // POST /hqs/0/branches/0/services
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  service: Pick<Services, 'name' | 'description' | 'guide' | 'price' | 'imageId'>
+  service: Partial<Services>
 }
 export type ADD_RESPONSE = Services
 // ===========================
@@ -29,7 +29,7 @@ export type ADD_RESPONSE = Services
 // PUT /hqs/0/branches/0/services/0
 export type UPDATE_PARAMS = PARAMS & { serviceId: number }
 export type UPDATE_BODY = {
-  service: Pick<Services, 'name' | 'description' | 'guide' | 'price' | 'imageId'>
+  service: Partial<Services>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

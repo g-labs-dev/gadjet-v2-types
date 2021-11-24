@@ -27,22 +27,7 @@ export type GET_SUMMARY_RESPONSE = BillSummary
 // POST /hqs/0/branches/0/bills
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  bill: Pick<
-    Bills,
-    | 'contractId'
-    | 'tenantId'
-    | 'type'
-    | 'openDate'
-    | 'startDate'
-    | 'endDate'
-    | 'paymentStartDate'
-    | 'paymentEndDate'
-    | 'spaces'
-    | 'additions'
-    | 'surcharges'
-    | 'memo'
-    | 'manualFlag'
-  >
+  bill: Partial<Bills>
 }
 export type ADD_RESPONSE = Bills
 // ===========================

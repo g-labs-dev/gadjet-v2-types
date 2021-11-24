@@ -23,7 +23,7 @@ export type GET_CONTRACTS_PARAMS = PARAMS & { tenantId: number }
 export type GET_CONTRACTS_QUERY = Pagination & { query: string }
 export type GET_CONTRACTS_RESPONSE = {
   total: number
-  contracts: Pick<Contracts, 'contractId' | 'startDate' | 'suspendDate' | 'director' | 'status' | 'extendStatus'>[]
+  contracts: Partial<Contracts>[]
 }
 // ===========================
 

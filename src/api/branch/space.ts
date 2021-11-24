@@ -41,7 +41,7 @@ export type UPLOAD_RESPONSE = [number]
 // POST /hqs/0/branches/0/spaces
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  space: Pick<Spaces, 'spaceTypeId' | 'name' | 'price' | 'area' | 'capacity' | 'imageId'>
+  space: Partial<Spaces>
 }
 export type ADD_RESPONSE = Spaces
 // ===========================
@@ -50,7 +50,7 @@ export type ADD_RESPONSE = Spaces
 // PUT /hqs/0/branches/0/spaces/0
 export type UPDATE_PARAMS = PARAMS & { spaceId: number }
 export type UPDATE_BODY = {
-  space: Pick<Spaces, 'spaceTypeId' | 'name' | 'price' | 'area' | 'capacity' | 'imageId'>
+  space: Partial<Spaces>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

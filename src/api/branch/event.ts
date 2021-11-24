@@ -20,26 +20,7 @@ export type GET_DETAIL_RESPONSE = Events
 // POST /hqs/0/branches/0/events
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  event: Pick<
-    Events,
-    | 'title'
-    | 'content'
-    | 'price'
-    | 'openDate'
-    | 'applyStartDate'
-    | 'applyEndDate'
-    | 'startDate'
-    | 'endDate'
-    | 'maxAttendeeCount'
-    | 'place'
-    | 'address'
-    | 'addressDetail'
-    | 'lat'
-    | 'lng'
-    | 'availableCreditType'
-    | 'onlineFlag'
-    | 'bannerImageId'
-  >
+  event: Partial<Events>
 }
 export type ADD_RESPONSE = Events
 // ===========================
@@ -48,26 +29,7 @@ export type ADD_RESPONSE = Events
 // PUT /hqs/0/branches/0/events/0
 export type UPDATE_PARAMS = PARAMS & { eventId: number }
 export type UPDATE_BODY = {
-  event: Pick<
-    Events,
-    | 'title'
-    | 'content'
-    | 'price'
-    | 'openDate'
-    | 'applyStartDate'
-    | 'applyEndDate'
-    | 'startDate'
-    | 'endDate'
-    | 'maxAttendeeCount'
-    | 'place'
-    | 'address'
-    | 'addressDetail'
-    | 'lat'
-    | 'lng'
-    | 'availableCreditType'
-    | 'onlineFlag'
-    | 'bannerImageId'
-  >
+  event: Partial<Events>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

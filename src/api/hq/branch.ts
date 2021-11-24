@@ -14,7 +14,7 @@ export type GET_LIST_RESPONSE = Branches[]
 // POST /hqs/0/branches
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  branch: Pick<Branches, 'name' | 'contact' | 'email' | 'zipcode' | 'address' | 'addressDetail'>
+  branch: Partial<Branches>
 }
 export type ADD_RESPONSE = Branches
 // ===========================

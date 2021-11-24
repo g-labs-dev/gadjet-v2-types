@@ -20,7 +20,7 @@ export type GET_DETAIL_RESPONSE = Payments
 // POST /hqs/0/branches/0/payments
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  payment: Pick<Payments, 'billId' | 'item' | 'price' | 'approveDatetime' | 'type' | 'manualFlag' | 'status'>
+  payment: Partial<Payments>
 }
 export type ADD_RESPONSE = Payments
 // ===========================
@@ -29,7 +29,7 @@ export type ADD_RESPONSE = Payments
 // PUT /hqs/0/branches/0/payments/0
 export type UPDATE_PARAMS = PARAMS & { paymentId: number }
 export type UPDATE_BODY = {
-  payment: Pick<Payments, 'billId' | 'item' | 'price' | 'approveDatetime' | 'type' | 'manualFlag' | 'status'>
+  payment: Partial<Payments>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

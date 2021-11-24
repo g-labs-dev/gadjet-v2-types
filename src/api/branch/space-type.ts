@@ -12,7 +12,7 @@ export type GET_LIST_RESPONSE = SpaceTypes[]
 // POST /hqs/0/branches/0/space-types
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  spaceType: Pick<SpaceTypes, 'name' | 'virtualFlag'>
+  spaceType: Partial<SpaceTypes>
 }
 export type ADD_RESPONSE = SpaceTypes
 // ===========================
@@ -21,7 +21,7 @@ export type ADD_RESPONSE = SpaceTypes
 // PUT /hqs/0/branches/0/space-types/0
 export type UPDATE_PARAMS = PARAMS & { spaceTypeId: number }
 export type UPDATE_BODY = {
-  spaceType: Pick<SpaceTypes, 'name' | 'virtualFlag'>
+  spaceType: Partial<SpaceTypes>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

@@ -20,7 +20,7 @@ export type GET_DETAIL_RESPONSE = Additions
 // POST /hqs/0/branches/0/additions
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  addition: Pick<Additions, 'name' | 'price'>
+  addition: Partial<Additions>
 }
 export type ADD_RESPONSE = Additions
 // ===========================
@@ -29,7 +29,7 @@ export type ADD_RESPONSE = Additions
 // PUT /hqs/0/branches/0/additions/0
 export type UPDATE_PARAMS = PARAMS & { additionId: number }
 export type UPDATE_BODY = {
-  addition: Pick<Additions, 'name' | 'price'>
+  addition: Partial<Additions>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

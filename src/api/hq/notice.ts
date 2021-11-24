@@ -20,7 +20,7 @@ export type GET_DETAIL_RESPONSE = Notices
 // POST /hqs/0/notices
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  notice: Pick<Notices, 'title' | 'content'>
+  notice: Partial<Notices>
 }
 export type ADD_RESPONSE = Notices
 // ===========================
@@ -29,7 +29,7 @@ export type ADD_RESPONSE = Notices
 // PUT /hqs/0/notices/0
 export type UPDATE_PARAMS = PARAMS & { noticeId: number }
 export type UPDATE_BODY = {
-  notice: Pick<Notices, 'title' | 'content'>
+  notice: Partial<Notices>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

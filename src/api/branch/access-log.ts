@@ -14,7 +14,7 @@ export type GET_LIST_RESPONSE = { total: number; accessLogs: AccessLogs[] }
 // POST /hqs/0/branches/0/access-logs
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  accessLog: Pick<AccessLogs, 'managerId' | 'managerName' | 'title' | 'url' | 'successFlag'>
+  accessLog: Partial<AccessLogs>
 }
 export type ADD_RESPONSE = AccessLogs
 // ===========================

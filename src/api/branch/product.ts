@@ -19,7 +19,7 @@ export type GET_DETAIL_RESPONSE = Products
 // POST /hqs/0/branches/0/products
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  product: Pick<Products, 'name' | 'description' | 'price' | 'stock' | 'availableCreditType' | 'imageId'>
+  product: Partial<Products>
 }
 export type ADD_RESPONSE = Products
 // ===========================
@@ -28,7 +28,7 @@ export type ADD_RESPONSE = Products
 // PUT /hqs/0/branches/0/products/0
 export type UPDATE_PARAMS = PARAMS & { productId: number }
 export type UPDATE_BODY = {
-  product: Pick<Products, 'name' | 'description' | 'price' | 'stock' | 'availableCreditType' | 'imageId'>
+  product: Partial<Products>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

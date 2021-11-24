@@ -20,18 +20,7 @@ export type GET_DETAIL_RESPONSE = Rentals
 // POST /hqs/0/branches/0/rentals
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  rental: Pick<
-    Rentals,
-    | 'price'
-    | 'name'
-    | 'description'
-    | 'startTime'
-    | 'endTime'
-    | 'availableCreditType'
-    | 'weekendFlag'
-    | 'shareFlag'
-    | 'imageId'
-  >
+  rental: Partial<Rentals>
 }
 export type ADD_RESPONSE = Rentals
 // ===========================
@@ -40,18 +29,7 @@ export type ADD_RESPONSE = Rentals
 // PUT /hqs/0/branches/0/rentals/0
 export type UPDATE_PARAMS = PARAMS & { rentalId: number }
 export type UPDATE_BODY = {
-  rental: Pick<
-    Rentals,
-    | 'price'
-    | 'name'
-    | 'description'
-    | 'startTime'
-    | 'endTime'
-    | 'availableCreditType'
-    | 'weekendFlag'
-    | 'shareFlag'
-    | 'imageId'
-  >
+  rental: Partial<Rentals>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================
@@ -73,10 +51,7 @@ export type GET_RESERVATIONS_RESPONSE = { total: number; rentalReservations: Ren
 // POST /hqs/0/branches/0/rentals/0/rental-reservations
 export type ADD_RESERVATION_PARAMS = PARAMS & { rentalId: number }
 export type ADD_RESERVATION_BODY = {
-  rentalReservation: Pick<
-    RentalReservations,
-    'tenantId' | 'userId' | 'date' | 'startTime' | 'endTime' | 'memo' | 'usedCreditAmount' | 'managerFlag'
-  >
+  rentalReservation: Partial<RentalReservations>
 }
 export type ADD_RESERVATION_RESPONSE = RentalReservations
 // ===========================
@@ -85,10 +60,7 @@ export type ADD_RESERVATION_RESPONSE = RentalReservations
 // PUT /hqs/0/branches/0/rentals/0/rental-reservations/0
 export type UPDATE_RESERVATION_PARAMS = PARAMS & { rentalId: number; rentalReservationId: number }
 export type UPDATE_RESERVATION_BODY = {
-  rentalReservation: Pick<
-    RentalReservations,
-    'tenantId' | 'userId' | 'date' | 'startTime' | 'endTime' | 'memo' | 'usedCreditAmount' | 'managerFlag'
-  >
+  rentalReservation: Partial<RentalReservations>
 }
 export type UPDATE_RESERVATION_RESPONSE = [number]
 // ===========================

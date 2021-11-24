@@ -4,7 +4,7 @@ import {} from '../type'
 // 파일 추가
 // POST /files
 export type ADD_FILE_BODY = {
-  file: Pick<Files, 'size' | 'category' | 'path' | 'uri'>
+  file: Partial<Files>
 }
 export type ADD_FILE_RESPONSE = Files
 // ===========================
@@ -12,7 +12,7 @@ export type ADD_FILE_RESPONSE = Files
 // 이미지 추가
 // POST /images
 export type ADD_IMAGE_BODY = {
-  image: Pick<Images, 'size' | 'width' | 'height' | 'category' | 'path' | 'uri'>
+  image: Partial<Images>
 }
 export type ADD_IMAGE_RESPONSE = Images
 // ===========================

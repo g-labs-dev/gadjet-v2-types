@@ -12,7 +12,7 @@ export type GET_LIST_RESPONSE = Floors[]
 // POST /hqs/0/branches/0/floors
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
-  floor: Pick<Floors, 'name'>
+  floor: Partial<Floors>
 }
 export type ADD_RESPONSE = Floors
 // ===========================
@@ -21,7 +21,7 @@ export type ADD_RESPONSE = Floors
 // PUT /hqs/0/branches/0/floors/0
 export type UPDATE_PARAMS = PARAMS & { floorId: number }
 export type UPDATE_BODY = {
-  floor: Pick<Floors, 'name'>
+  floor: Partial<Floors>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

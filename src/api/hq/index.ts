@@ -13,7 +13,7 @@ export type GET_DETAIL_RESPONSE = Hqs
 // /hqs/0
 export type UPDATE_PARAMS = PARAMS
 export type UPDATE_BODY = {
-  hq: Pick<Hqs, 'email' | 'name' | 'logoImageId'>
+  hq: Partial<Hqs>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================

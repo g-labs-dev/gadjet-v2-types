@@ -76,6 +76,7 @@ exports.receiptStatus = {
     'tax-invoice-request': '세금계산서 발행 요청',
     'tax-invoice-fail': '세금계산서 발행 실패',
     'tax-invoice-done': '세금계산서 발행 완료',
+    'tax-invoice-update-request': '세금계산서 수정 발행 요청',
     'tax-invoice-updated': '세금계산서 수정 발행 됨',
     'cash-receipt-request': '현금영수증 발행 요청',
     'cash-receipt-fail': '현금영수증 발행 실패',

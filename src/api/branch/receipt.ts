@@ -1,5 +1,5 @@
 import { Receipts } from '../../model'
-import { Cashbill, CashbillCancel } from '../../popbill/cashbill'
+import { Cashbill } from '../../popbill/cashbill'
 import { Taxinvoice, TaxinvoiceModify } from '../../popbill/taxinvoice'
 import { Pagination, ReceiptSummary } from '../../type'
 

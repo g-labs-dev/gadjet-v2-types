@@ -114,6 +114,7 @@ export type ReceiptStatus =
   | 'tax-invoice-request' // 세금계산서 요청
   | 'tax-invoice-fail' // 세금계산서 실패
   | 'tax-invoice-done' // 세금계산서 완료
+  | 'tax-invoice-update-request' // 세금계산서 수정 요청
   | 'tax-invoice-updated' // 세금계산서 수정 발행 됨
   | 'cash-receipt-request' // 현금영수증 요청
   | 'cash-receipt-fail' // 현금영수증 실패

@@ -6,7 +6,7 @@ export declare type GET_DETAIL_PARAMS = PARAMS;
 export declare type GET_DETAIL_RESPONSE = Hqs;
 export declare type UPDATE_PARAMS = PARAMS;
 export declare type UPDATE_BODY = {
-    hq: Pick<Hqs, 'email' | 'name' | 'logoImageId'>;
+    hq: Partial<Hqs>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export {};

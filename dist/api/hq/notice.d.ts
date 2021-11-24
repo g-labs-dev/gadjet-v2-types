@@ -18,14 +18,14 @@ export declare type GET_DETAIL_PARAMS = PARAMS & {
 export declare type GET_DETAIL_RESPONSE = Notices;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    notice: Pick<Notices, 'title' | 'content'>;
+    notice: Partial<Notices>;
 };
 export declare type ADD_RESPONSE = Notices;
 export declare type UPDATE_PARAMS = PARAMS & {
     noticeId: number;
 };
 export declare type UPDATE_BODY = {
-    notice: Pick<Notices, 'title' | 'content'>;
+    notice: Partial<Notices>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export declare type DELETE_PARAMS = PARAMS & {

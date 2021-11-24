@@ -18,14 +18,14 @@ export declare type GET_DETAIL_PARAMS = PARAMS & {
 export declare type GET_DETAIL_RESPONSE = Rentals;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    rental: Pick<Rentals, 'price' | 'name' | 'description' | 'startTime' | 'endTime' | 'availableCreditType' | 'weekendFlag' | 'shareFlag' | 'imageId'>;
+    rental: Partial<Rentals>;
 };
 export declare type ADD_RESPONSE = Rentals;
 export declare type UPDATE_PARAMS = PARAMS & {
     rentalId: number;
 };
 export declare type UPDATE_BODY = {
-    rental: Pick<Rentals, 'price' | 'name' | 'description' | 'startTime' | 'endTime' | 'availableCreditType' | 'weekendFlag' | 'shareFlag' | 'imageId'>;
+    rental: Partial<Rentals>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export declare type DELETE_PARAMS = PARAMS & {
@@ -45,7 +45,7 @@ export declare type ADD_RESERVATION_PARAMS = PARAMS & {
     rentalId: number;
 };
 export declare type ADD_RESERVATION_BODY = {
-    rentalReservation: Pick<RentalReservations, 'tenantId' | 'userId' | 'date' | 'startTime' | 'endTime' | 'memo' | 'usedCreditAmount' | 'managerFlag'>;
+    rentalReservation: Partial<RentalReservations>;
 };
 export declare type ADD_RESERVATION_RESPONSE = RentalReservations;
 export declare type UPDATE_RESERVATION_PARAMS = PARAMS & {
@@ -53,7 +53,7 @@ export declare type UPDATE_RESERVATION_PARAMS = PARAMS & {
     rentalReservationId: number;
 };
 export declare type UPDATE_RESERVATION_BODY = {
-    rentalReservation: Pick<RentalReservations, 'tenantId' | 'userId' | 'date' | 'startTime' | 'endTime' | 'memo' | 'usedCreditAmount' | 'managerFlag'>;
+    rentalReservation: Partial<RentalReservations>;
 };
 export declare type UPDATE_RESERVATION_RESPONSE = [number];
 export declare type DELETE_RESERVATION_PARAMS = PARAMS & {

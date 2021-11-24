@@ -18,14 +18,14 @@ export declare type GET_DETAIL_PARAMS = PARAMS & {
 export declare type GET_DETAIL_RESPONSE = Products;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    product: Pick<Products, 'name' | 'description' | 'price' | 'stock' | 'availableCreditType' | 'imageId'>;
+    product: Partial<Products>;
 };
 export declare type ADD_RESPONSE = Products;
 export declare type UPDATE_PARAMS = PARAMS & {
     productId: number;
 };
 export declare type UPDATE_BODY = {
-    product: Pick<Products, 'name' | 'description' | 'price' | 'stock' | 'availableCreditType' | 'imageId'>;
+    product: Partial<Products>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export declare type DELETE_PARAMS = PARAMS & {

@@ -36,14 +36,14 @@ export declare type UPLOAD_BODY = {
 export declare type UPLOAD_RESPONSE = [number];
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    space: Pick<Spaces, 'spaceTypeId' | 'name' | 'price' | 'area' | 'capacity' | 'imageId'>;
+    space: Partial<Spaces>;
 };
 export declare type ADD_RESPONSE = Spaces;
 export declare type UPDATE_PARAMS = PARAMS & {
     spaceId: number;
 };
 export declare type UPDATE_BODY = {
-    space: Pick<Spaces, 'spaceTypeId' | 'name' | 'price' | 'area' | 'capacity' | 'imageId'>;
+    space: Partial<Spaces>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export declare type DELETE_PARAMS = PARAMS & {

@@ -7,14 +7,14 @@ export declare type GET_LIST_PARAMS = PARAMS;
 export declare type GET_LIST_RESPONSE = SpaceTypes[];
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    spaceType: Pick<SpaceTypes, 'name' | 'virtualFlag'>;
+    spaceType: Partial<SpaceTypes>;
 };
 export declare type ADD_RESPONSE = SpaceTypes;
 export declare type UPDATE_PARAMS = PARAMS & {
     spaceTypeId: number;
 };
 export declare type UPDATE_BODY = {
-    spaceType: Pick<SpaceTypes, 'name' | 'virtualFlag'>;
+    spaceType: Partial<SpaceTypes>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export declare type DELETE_PARAMS = PARAMS & {

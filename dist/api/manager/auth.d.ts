@@ -4,7 +4,7 @@ export declare type GET_PARAMS = PARAMS;
 export declare type GET_RESPONSE = Managers | null;
 export declare type JOIN_PARAMS = PARAMS;
 export declare type JOIN_BODY = {
-    manager: Pick<Managers, 'email' | 'password' | 'name' | 'joinType' | 'socialId' | 'profileImageId'>;
+    manager: Partial<Managers>;
 };
 export declare type JOIN_RESPONSE = {
     token: string;
@@ -12,7 +12,7 @@ export declare type JOIN_RESPONSE = {
 };
 export declare type LOGIN_PARAMS = PARAMS;
 export declare type LOGIN_BODY = {
-    manager: Pick<Managers, 'email' | 'password'>;
+    manager: Partial<Managers>;
 };
 export declare type LOGIN_RESPONSE = {
     token: string;
@@ -20,7 +20,7 @@ export declare type LOGIN_RESPONSE = {
 };
 export declare type SOCIAL_LOGIN_PARAMS = PARAMS;
 export declare type SOCIAL_LOGIN_BODY = {
-    manager: Pick<Managers, 'socialId'>;
+    manager: Partial<Managers>;
 };
 export declare type SOCIAL_LOGIN_RESPONSE = {
     token: string;
@@ -30,21 +30,21 @@ export declare type UPDATE_PARAMS = PARAMS & {
     managerId: number;
 };
 export declare type UPDATE_BODY = {
-    manager: Pick<Managers, 'name' | 'profileImageId'>;
+    manager: Partial<Managers>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export declare type UPDATE_PASSWORD_PARAMS = PARAMS & {
     managerId: number;
 };
 export declare type UPDATE_PASSWORD_BODY = {
-    manager: Pick<Managers, 'password'>;
+    manager: Partial<Managers>;
 };
 export declare type UPDATE_PASSWORD_RESPONSE = [number];
 export declare type UPDATE_SOCIAL_PARAMS = PARAMS & {
     managerId: number;
 };
 export declare type UPDATE_SOCIAL_BODY = {
-    manager: Pick<Managers, 'socialId'>;
+    manager: Partial<Managers>;
 };
 export declare type UPDATE_SOCIAL_RESPONSE = [number];
 export declare type UPDATE_PUSH_TOKEN_PARAMS = PARAMS & {

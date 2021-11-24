@@ -20,14 +20,14 @@ export declare type GET_DETAIL_PARAMS = PARAMS & {
 export declare type GET_DETAIL_RESPONSE = Payments;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    payment: Pick<Payments, 'billId' | 'item' | 'price' | 'approveDatetime' | 'type' | 'manualFlag' | 'status'>;
+    payment: Partial<Payments>;
 };
 export declare type ADD_RESPONSE = Payments;
 export declare type UPDATE_PARAMS = PARAMS & {
     paymentId: number;
 };
 export declare type UPDATE_BODY = {
-    payment: Pick<Payments, 'billId' | 'item' | 'price' | 'approveDatetime' | 'type' | 'manualFlag' | 'status'>;
+    payment: Partial<Payments>;
 };
 export declare type UPDATE_RESPONSE = [number];
 export declare type DELETE_PARAMS = PARAMS & {

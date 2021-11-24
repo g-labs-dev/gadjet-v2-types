@@ -601,15 +601,20 @@ export declare type Receipts = {
     parentReceiptId: number | null;
     branchId: number;
     billId: number;
-    type: ReceiptType;
-    json: Taxinvoice | Cashbill;
     status: ReceiptStatus;
     price: number;
     ntsConfirmNumber: string;
     ntsResultCode: string;
     mgtKey: string;
     requestDatetime: string;
-};
+    type: ReceiptType;
+} & ({
+    type: 'tax-invoice';
+    json: Taxinvoice;
+} | {
+    type: 'cash-receipt';
+    json: Cashbill;
+});
 export declare type ManagerNotifications = {
     managerNotificationId: number;
     managerId: number;

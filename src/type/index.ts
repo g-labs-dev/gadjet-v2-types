@@ -288,3 +288,5 @@ export type BranchBuildingContractType = 'none' | 'rent' | 'sublet'
 export type Lang = 'ko' | 'en'
 
 export type UserStatus = 'pending' | 'done'
+
+export type Result = { isSuccess: boolean; message: string }

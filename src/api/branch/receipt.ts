@@ -1,7 +1,7 @@
 import { Receipts } from '../../model'
 import { Cashbill } from '../../popbill/cashbill'
 import { Taxinvoice, TaxinvoiceModify } from '../../popbill/taxinvoice'
-import { Pagination, ReceiptSummary } from '../../type'
+import { Pagination, ReceiptSummary, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -32,7 +32,7 @@ export type ADD_TAX_INVOICE_BODY = {
   billId: number
   taxInvoice: Taxinvoice
 }
-export type ADD_TAX_INVOICE_RESPONSE = Receipts
+export type ADD_TAX_INVOICE_RESPONSE = Result
 // ===========================
 
 // 세금계산서 수정발행
@@ -42,7 +42,7 @@ export type UPDATE_TAX_INOVICE_BODY = {
   billId: number
   taxInvoice: Taxinvoice
 }
-export type UPDATE_TAX_INVOICE_RESPONSE = Receipts
+export type UPDATE_TAX_INVOICE_RESPONSE = Result
 // ===========================
 
 // 현금영수증 발행
@@ -52,7 +52,7 @@ export type ADD_CASH_RECEIPT_BODY = {
   billId: number
   cashReceipt: Cashbill
 }
-export type ADD_CASH_RECEIPT_RESPONSE = Receipts
+export type ADD_CASH_RECEIPT_RESPONSE = Result
 // ===========================
 
 // 현금영수증 취소
@@ -69,5 +69,5 @@ export type CANCEL_CASH_RECEIPT_BODY = {
     totalAmount?: string
   }
 }
-export type CANCEL_CASH_RECEIPT_RESPONSE = [number]
+export type CANCEL_CASH_RECEIPT_RESPONSE = Result
 // ===========================

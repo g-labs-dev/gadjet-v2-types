@@ -1,5 +1,5 @@
 import { Contracts } from '../../model'
-import { Pagination } from '../../type'
+import { ContractStatus, Pagination } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -69,6 +69,6 @@ export type SEND_INVITE_RESPONSE = boolean
 // 계약 검색 (attributes: ['contractId', 'tenant','status', 'startDate', 'suspendDate'])
 // GET /hqs/0/branches/0/contracts/search
 export type SEARCH_PARAMS = PARAMS
-export type SEARCH_QUERY = { query: string }
+export type SEARCH_QUERY = { query: string; status: ContractStatus[] }
 export type SEARCH_RESPONSE = { contracts: Contracts[] }
 // ===========================

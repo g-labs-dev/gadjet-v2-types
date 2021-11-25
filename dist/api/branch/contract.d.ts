@@ -1,5 +1,5 @@
 import { Contracts } from '../../model';
-import { Pagination } from '../../type';
+import { ContractStatus, Pagination } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -61,6 +61,7 @@ export declare type SEND_INVITE_RESPONSE = boolean;
 export declare type SEARCH_PARAMS = PARAMS;
 export declare type SEARCH_QUERY = {
     query: string;
+    status: ContractStatus[];
 };
 export declare type SEARCH_RESPONSE = {
     contracts: Contracts[];

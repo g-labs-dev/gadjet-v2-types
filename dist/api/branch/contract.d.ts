@@ -58,5 +58,12 @@ export declare type SEND_INVITE_BODY = {
     contacts: string[];
 };
 export declare type SEND_INVITE_RESPONSE = boolean;
+export declare type SEARCH_PARAMS = PARAMS;
+export declare type SEARCH_QUERY = {
+    query: string;
+};
+export declare type SEARCH_RESPONSE = {
+    contracts: Contracts[];
+};
 export {};
 //# sourceMappingURL=contract.d.ts.map

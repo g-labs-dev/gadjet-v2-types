@@ -65,3 +65,10 @@ export type SEND_INVITE_PARAMS = PARAMS & { contractId: number }
 export type SEND_INVITE_BODY = { contacts: string[] }
 export type SEND_INVITE_RESPONSE = boolean
 // ===========================
+
+// 계약 검색 (attributes: ['contractId', 'tenant','status', 'startDate', 'suspendDate'])
+// GET /hqs/0/branches/0/contracts/search
+export type SEARCH_PARAMS = PARAMS
+export type SEARCH_QUERY = { query: string }
+export type SEARCH_RESPONSE = { contracts: Contracts[] }
+// ===========================

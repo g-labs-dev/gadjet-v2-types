@@ -30,7 +30,7 @@ export type GET_SUMMARY_RESPONSE = ReceiptSummary
 export type ADD_TAX_INVOICE_PARAMS = PARAMS
 export type ADD_TAX_INVOICE_BODY = {
   billId: number
-  taxInvoice: Partial<Taxinvoice>
+  taxInvoice: Taxinvoice
 }
 export type ADD_TAX_INVOICE_RESPONSE = Receipts
 // ===========================
@@ -40,7 +40,7 @@ export type ADD_TAX_INVOICE_RESPONSE = Receipts
 export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & { receiptId: number }
 export type UPDATE_TAX_INOVICE_BODY = {
   billId: number
-  taxInvoice: Partial<Taxinvoice>
+  taxInvoice: Taxinvoice
 }
 export type UPDATE_TAX_INVOICE_RESPONSE = Receipts
 // ===========================
@@ -50,7 +50,7 @@ export type UPDATE_TAX_INVOICE_RESPONSE = Receipts
 export type ADD_CASH_RECEIPT_PARAMS = PARAMS
 export type ADD_CASH_RECEIPT_BODY = {
   billId: number
-  cashReceipt: Partial<Cashbill>
+  cashReceipt: Cashbill
 }
 export type ADD_CASH_RECEIPT_RESPONSE = Receipts
 // ===========================

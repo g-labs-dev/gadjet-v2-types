@@ -28,7 +28,7 @@ export declare type GET_SUMMARY_RESPONSE = ReceiptSummary;
 export declare type ADD_TAX_INVOICE_PARAMS = PARAMS;
 export declare type ADD_TAX_INVOICE_BODY = {
     billId: number;
-    taxInvoice: Partial<Taxinvoice>;
+    taxInvoice: Taxinvoice;
 };
 export declare type ADD_TAX_INVOICE_RESPONSE = Receipts;
 export declare type UPDATE_TAX_INVOICE_PARAMS = PARAMS & {
@@ -36,13 +36,13 @@ export declare type UPDATE_TAX_INVOICE_PARAMS = PARAMS & {
 };
 export declare type UPDATE_TAX_INOVICE_BODY = {
     billId: number;
-    taxInvoice: Partial<Taxinvoice>;
+    taxInvoice: Taxinvoice;
 };
 export declare type UPDATE_TAX_INVOICE_RESPONSE = Receipts;
 export declare type ADD_CASH_RECEIPT_PARAMS = PARAMS;
 export declare type ADD_CASH_RECEIPT_BODY = {
     billId: number;
-    cashReceipt: Partial<Cashbill>;
+    cashReceipt: Cashbill;
 };
 export declare type ADD_CASH_RECEIPT_RESPONSE = Receipts;
 export declare type CANCEL_CASH_RECEIPT_PARAMS = PARAMS & {

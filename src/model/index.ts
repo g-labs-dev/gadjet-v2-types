@@ -709,7 +709,6 @@ export type Receipts = {
   ntsConfirmNumber: string
   ntsResultCode: string
   mgtKey: string
-  mgtKeyIndex: number
   requestDatetime: string
   taxInvoiceJson: Taxinvoice
   cashBillJson: Cashbill

@@ -54,6 +54,13 @@ export declare type CONFIRM_RESPONSE = [number];
 export declare type REFUND_PARAMS = PARAMS & {
     paymentId: number;
 };
+export declare type REFUND_BODY = {
+    account?: {
+        number: string;
+        bankCode: string;
+        holder: string;
+    };
+};
 export declare type REFUND_RESPONSE = [number];
 export {};
 //# sourceMappingURL=payment.d.ts.map

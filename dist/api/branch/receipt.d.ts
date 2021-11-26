@@ -1,7 +1,7 @@
 import { Receipts } from '../../model';
 import { Cashbill } from '../../popbill/cashbill';
 import { Taxinvoice } from '../../popbill/taxinvoice';
-import { Pagination, ReceiptSummary } from '../../type';
+import { Pagination, ReceiptSummary, Result } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -30,7 +30,7 @@ export declare type ADD_TAX_INVOICE_BODY = {
     billId: number;
     taxInvoice: Taxinvoice;
 };
-export declare type ADD_TAX_INVOICE_RESPONSE = Receipts;
+export declare type ADD_TAX_INVOICE_RESPONSE = Result;
 export declare type UPDATE_TAX_INVOICE_PARAMS = PARAMS & {
     receiptId: number;
 };
@@ -38,13 +38,13 @@ export declare type UPDATE_TAX_INOVICE_BODY = {
     billId: number;
     taxInvoice: Taxinvoice;
 };
-export declare type UPDATE_TAX_INVOICE_RESPONSE = Receipts;
+export declare type UPDATE_TAX_INVOICE_RESPONSE = Result;
 export declare type ADD_CASH_RECEIPT_PARAMS = PARAMS;
 export declare type ADD_CASH_RECEIPT_BODY = {
     billId: number;
     cashReceipt: Cashbill;
 };
-export declare type ADD_CASH_RECEIPT_RESPONSE = Receipts;
+export declare type ADD_CASH_RECEIPT_RESPONSE = Result;
 export declare type CANCEL_CASH_RECEIPT_PARAMS = PARAMS & {
     receiptId: number;
 };
@@ -59,6 +59,6 @@ export declare type CANCEL_CASH_RECEIPT_BODY = {
         totalAmount?: string;
     };
 };
-export declare type CANCEL_CASH_RECEIPT_RESPONSE = [number];
+export declare type CANCEL_CASH_RECEIPT_RESPONSE = Result;
 export {};
 //# sourceMappingURL=receipt.d.ts.map

@@ -174,4 +174,8 @@ export declare type ApprovePayResponse = {
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export declare type Lang = 'ko' | 'en';
 export declare type UserStatus = 'pending' | 'done';
+export declare type Result = {
+    isSuccess: boolean;
+    message: string;
+};
 //# sourceMappingURL=index.d.ts.map

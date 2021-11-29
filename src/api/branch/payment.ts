@@ -6,7 +6,12 @@ type PARAMS = { hqId: number; branchId: number }
 // 결제내역 조회
 // GET /hqs/0/branches/0/payments
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; paymentType: PaymentType[]; paymentStatus: PaymentStatus[] }
+export type GET_LIST_QUERY = Pagination & {
+  query: string
+  paymentType: PaymentType[]
+  paymentStatus: PaymentStatus[]
+  date: [string, string]
+}
 export type GET_LIST_RESPONSE = { total: number; payments: Payments[] }
 // ===========================
 
@@ -43,7 +48,7 @@ export type DELETE_RESPONSE = [number]
 // 결제내역 요약
 // GET /hqs/0/branches/0/payments
 export type GET_SUMMARY_PARAMS = PARAMS
-export type GET_SUMMARY_QUERY = { query: string; paymentType: PaymentType[] }
+export type GET_SUMMARY_QUERY = { query: string; paymentType: PaymentType[]; date: [string, string] }
 export type GET_SUMMARY_RESPONSE = PaymentSummary
 // ===========================
 

@@ -9,6 +9,7 @@ export declare type GET_LIST_QUERY = Pagination & {
     query: string;
     paymentType: PaymentType[];
     paymentStatus: PaymentStatus[];
+    date: [string, string];
 };
 export declare type GET_LIST_RESPONSE = {
     total: number;
@@ -38,6 +39,7 @@ export declare type GET_SUMMARY_PARAMS = PARAMS;
 export declare type GET_SUMMARY_QUERY = {
     query: string;
     paymentType: PaymentType[];
+    date: [string, string];
 };
 export declare type GET_SUMMARY_RESPONSE = PaymentSummary;
 export declare type EXPORT_PARAMS = PARAMS;

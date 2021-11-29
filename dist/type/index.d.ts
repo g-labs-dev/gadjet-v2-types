@@ -170,6 +170,16 @@ export declare type ApprovePayResponse = {
         expireDatetime: string;
         price: number | string;
     };
+} | {
+    type: 'oversea-card';
+} | {
+    type: 'paypal';
+} | {
+    type: 'alipay';
+} | {
+    type: 'wechatpay';
+} | {
+    type: 'cash';
 }));
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export declare type Lang = 'ko' | 'en';

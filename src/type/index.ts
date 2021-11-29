@@ -281,6 +281,11 @@ export type ApprovePayResponse =
       | { type: 'card' }
       | { type: 'transfer' }
       | { type: 'direct'; data?: { bankName: string; account: string; expireDatetime: string; price: number | string } }
+      | { type: 'oversea-card' }
+      | { type: 'paypal' }
+      | { type: 'alipay' }
+      | { type: 'wechatpay' }
+      | { type: 'cash' }
     ))
 
 export type BranchBuildingContractType = 'none' | 'rent' | 'sublet'

@@ -1,5 +1,5 @@
 import { Payments } from '../../model'
-import { Pagination, PaymentStatus, PaymentSummary, PaymentType } from '../../type'
+import { Pagination, PaymentStatus, PaymentSummary, PaymentType, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -71,5 +71,5 @@ export type REFUND_PARAMS = PARAMS & { paymentId: number }
 export type REFUND_BODY = {
   account?: { number: string; bankCode: string; holder: string }
 }
-export type REFUND_RESPONSE = [number]
+export type REFUND_RESPONSE = Result
 // ===========================

@@ -1,5 +1,5 @@
 import { Payments } from '../../model';
-import { Pagination, PaymentStatus, PaymentSummary, PaymentType } from '../../type';
+import { Pagination, PaymentStatus, PaymentSummary, PaymentType, Result } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -63,6 +63,6 @@ export declare type REFUND_BODY = {
         holder: string;
     };
 };
-export declare type REFUND_RESPONSE = [number];
+export declare type REFUND_RESPONSE = Result;
 export {};
 //# sourceMappingURL=payment.d.ts.map

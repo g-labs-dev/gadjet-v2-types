@@ -58,7 +58,7 @@ export declare type BillPrice = {
     name: string;
     price: number;
 };
-export declare type ExpenditureType = 'card' | 'transfer' | 'cash' | 'pay-commission';
+export declare type ExpenditureType = 'card' | 'transfer' | 'cash' | 'commission';
 export declare type Pagination = {
     current: number;
     pageSize: number;

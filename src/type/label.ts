@@ -88,7 +88,7 @@ export const expenditureType: Record<T.ExpenditureType, string> = {
   card: '카드',
   cash: '현금',
   transfer: '계좌이체',
-  'pay-commission': '결제수수료',
+  commission: '결제수수료',
 }
 export const ntsResultCode: Record<string, string> = {
   // 세금계산서 관련

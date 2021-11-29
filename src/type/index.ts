@@ -167,7 +167,7 @@ export type DayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6
 
 export type BillPrice = { name: string; price: number }
 
-export type ExpenditureType = 'card' | 'transfer' | 'cash'
+export type ExpenditureType = 'card' | 'transfer' | 'cash' | 'pay-commission'
 
 export type Pagination = { current: number; pageSize: number }
 

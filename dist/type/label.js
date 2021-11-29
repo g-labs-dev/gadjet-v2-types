@@ -87,6 +87,7 @@ exports.expenditureType = {
     card: '카드',
     cash: '현금',
     transfer: '계좌이체',
+    'pay-commission': '결제수수료',
 };
 exports.ntsResultCode = {
     // 세금계산서 관련

@@ -1,9 +1,9 @@
 export declare type Cashbill = {
     mgtKey: string;
-    tradeType: "승인거래" | "취소거래";
-    tradeUsage: "소득공제용" | "지출증빙용";
+    tradeType: '승인거래' | '취소거래';
+    tradeUsage: '소득공제용' | '지출증빙용';
     identityNum: string;
-    taxationType: "과세" | "비과세";
+    taxationType: '과세' | '비과세';
     totalAmount: string;
     supplyCost: string;
     tax: string;
@@ -18,6 +18,8 @@ export declare type Cashbill = {
     orderNumber?: string;
     email?: string;
     hp?: string;
+    isPartCancel?: number;
+    cancelType?: number;
 };
 export declare type CashbillCancel = Cashbill & {
     orgConfirmNum: string;

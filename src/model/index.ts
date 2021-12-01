@@ -524,6 +524,7 @@ export type Payments = {
   confirmFlag: boolean
   settlementFlag: boolean
   manualFlag: boolean
+  legacyJson: any
 
   bill?: Relation<Bills>
   user?: Relation<Users>

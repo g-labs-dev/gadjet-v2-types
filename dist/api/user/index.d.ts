@@ -1,5 +1,5 @@
 import { Branches, Contracts, EventAttendees, Events, Hqs, TenantRoles, Tenants, Users } from '../../model';
-import { Pagination, UsedCreditAmount } from '../../type';
+import { Pagination, Result, UsedCreditAmount } from '../../type';
 declare type PARAMS = {
     userId: number;
 };
@@ -61,7 +61,7 @@ export declare type RECEIVE_INVITE_BODY = {
 };
 export declare type RECEIVE_INVITE_RESPONSE = {
     tenantRole: TenantRoles;
-};
+} & Result;
 export declare type UPDATE_PUSH_TOKEN_PARAMS = PARAMS;
 export declare type UPDATE_PUSH_TOKEN_BODY = {
     pushToken: string;

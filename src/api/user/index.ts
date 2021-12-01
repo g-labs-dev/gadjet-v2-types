@@ -1,5 +1,5 @@
 import { Branches, Contracts, EventAttendees, Events, Hqs, TenantRoles, Tenants, Users } from '../../model'
-import { Pagination, UsedCreditAmount } from '../../type'
+import { Pagination, Result, UsedCreditAmount } from '../../type'
 
 type PARAMS = { userId: number }
 
@@ -61,7 +61,7 @@ export type GET_STATE_RESPONSE = {
 // POST /users/0/invite-code/receive
 export type RECEIVE_INVITE_PARAMS = PARAMS
 export type RECEIVE_INVITE_BODY = { code: string }
-export type RECEIVE_INVITE_RESPONSE = { tenantRole: TenantRoles }
+export type RECEIVE_INVITE_RESPONSE = { tenantRole: TenantRoles } & Result
 // ===========================
 
 // 푸시토큰 업데이트

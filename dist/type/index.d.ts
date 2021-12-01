@@ -18,7 +18,7 @@ export declare type ContractTenant = {
     businessNumber: string;
     corporationNumber: string;
     foreignerNumber: string;
-    gicsCode: number;
+    gicsCode: number | null;
     type: TenantType;
     businessType: string;
     businessClass: string;

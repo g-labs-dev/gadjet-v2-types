@@ -50,6 +50,7 @@ export declare type RESET_PASSWORD_PARAMS = PARAMS & {
 };
 export declare type RESET_PASSWORD_BODY = {
     password: string;
+    id: string;
 };
 export declare type RESET_PASSWORD_RESPONSE = [number];
 /**

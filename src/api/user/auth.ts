@@ -46,7 +46,7 @@ export type SEND_AUTH_CODE_RESPONSE = { code: string; error: null | string }
 // 인증 코드로 비밀번호 수정
 // PUT /users/code/0/password
 export type RESET_PASSWORD_PARAMS = PARAMS & { code: string }
-export type RESET_PASSWORD_BODY = { password: string }
+export type RESET_PASSWORD_BODY = { password: string; id: string }
 export type RESET_PASSWORD_RESPONSE = [number]
 /**
  * Users.update({ password },{ where: { code } })

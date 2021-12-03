@@ -403,6 +403,7 @@ export type Contracts = {
   signatureImageId: number | null
   documentFileId: number | null
   extendStatus: ContractExtendStatus
+  extendCheckDate: string
   extendContractId: number | null
   receiver: ContractReceiver
   lang: Lang

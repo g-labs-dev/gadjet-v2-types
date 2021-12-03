@@ -162,7 +162,6 @@ export declare type BranchAutomations = {
     branchAutomationId: number;
     branchId: number;
     extendCheckFlag: boolean;
-    extendCheckValue: number;
     billing: boolean;
     receipt: boolean;
 };

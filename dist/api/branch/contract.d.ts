@@ -1,5 +1,5 @@
 import { Contracts } from '../../model';
-import { ContractStatus, Pagination } from '../../type';
+import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -66,5 +66,12 @@ export declare type SEARCH_QUERY = {
 export declare type SEARCH_RESPONSE = {
     contracts: Contracts[];
 };
+export declare type UPDATE_SIGNATURE_STATUS_PARAMS = PARAMS & {
+    contractId: number;
+};
+export declare type UPDATE_SIGNATURE_STATUS_BODY = {
+    signatureStatus: ContractSignatureStatus;
+};
+export declare type UPDATE_SIGNATURE_STATUS_RESPONSE = [number];
 export {};
 //# sourceMappingURL=contract.d.ts.map

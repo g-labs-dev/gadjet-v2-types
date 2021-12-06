@@ -1,5 +1,5 @@
 import { Contracts } from '../../model'
-import { ContractStatus, Pagination } from '../../type'
+import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -71,4 +71,11 @@ export type SEND_INVITE_RESPONSE = boolean
 export type SEARCH_PARAMS = PARAMS
 export type SEARCH_QUERY = { query: string; status: ContractStatus[] }
 export type SEARCH_RESPONSE = { contracts: Contracts[] }
+// ===========================
+
+// 계약 서명 요청
+// PUT /hqs/0/branches/0/contracts/0/signature-status
+export type UPDATE_SIGNATURE_STATUS_PARAMS = PARAMS & { contractId: number }
+export type UPDATE_SIGNATURE_STATUS_BODY = { signatureStatus: ContractSignatureStatus }
+export type UPDATE_SIGNATURE_STATUS_RESPONSE = [number]
 // ===========================

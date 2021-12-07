@@ -622,6 +622,14 @@ export declare type ManagerNotifications = {
     link: string;
     readFlag: boolean;
 };
+export declare type BranchNotifications = {
+    branchNotificationId: number;
+    branchId: number;
+    title: string;
+    content: string;
+    sendDatetime: string;
+    link: string;
+};
 export declare type UserNotifications = {
     userNotificationId: number;
     userId: number;

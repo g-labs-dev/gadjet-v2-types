@@ -725,6 +725,15 @@ export type ManagerNotifications = {
   readFlag: boolean
 }
 
+export type BranchNotifications = {
+  branchNotificationId: number
+  branchId: number
+  title: string
+  content: string
+  sendDatetime: string
+  link: string
+}
+
 export type UserNotifications = {
   userNotificationId: number
   userId: number

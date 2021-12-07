@@ -82,8 +82,8 @@ export type DELETE_MEMBER_ROLE_RESPONSE = [number]
 // ===========================
 
 // 대관대여 예약내역 조회
-// GET /tenants/0/branches/0/rental-reservations
-export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS & { branchId: number }
+// GET /tenants/0/rental-reservations
+export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS
 export type GET_RENTAL_RESERVATIONS_QUERY = Pagination
 export type GET_RENTAL_RESERVATIONS_RESPONSE = { total: number; rentalReservations: RentalReservations[] }
 // ===========================

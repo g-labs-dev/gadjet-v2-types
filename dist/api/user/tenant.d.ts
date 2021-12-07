@@ -61,9 +61,7 @@ export declare type DELETE_MEMBER_ROLE_PARAMS = PARAMS & {
     tenantRoleId: number;
 };
 export declare type DELETE_MEMBER_ROLE_RESPONSE = [number];
-export declare type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS & {
-    branchId: number;
-};
+export declare type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;
 export declare type GET_RENTAL_RESERVATIONS_QUERY = Pagination;
 export declare type GET_RENTAL_RESERVATIONS_RESPONSE = {
     total: number;

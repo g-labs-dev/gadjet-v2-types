@@ -537,6 +537,7 @@ export declare type RentalReservations = {
     memo: string;
     usedCreditAmount: UsedCreditAmount;
     managerFlag: boolean;
+    branch?: Relation<Branches>;
     rental?: Relation<Rentals>;
     tenant?: Relation<Tenants>;
     user?: Relation<Users>;

@@ -630,6 +630,7 @@ export type RentalReservations = {
   usedCreditAmount: UsedCreditAmount
   managerFlag: boolean
 
+  branch?: Relation<Branches>
   rental?: Relation<Rentals>
   tenant?: Relation<Tenants>
   user?: Relation<Users>

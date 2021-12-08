@@ -62,6 +62,7 @@ export declare type ExpenditureType = 'card' | 'transfer' | 'cash' | 'commission
 export declare type Pagination = {
     current: number;
     pageSize: number;
+    sort?: [string, 'desc' | 'asc'][];
 };
 export declare type Relation<T> = T | null;
 export declare type BillSummary = {

@@ -169,7 +169,7 @@ export type BillPrice = { name: string; price: number }
 
 export type ExpenditureType = 'card' | 'transfer' | 'cash' | 'commission'
 
-export type Pagination = { current: number; pageSize: number }
+export type Pagination = { current: number; pageSize: number; sort?: [string, 'desc' | 'asc'][] }
 
 export type Relation<T> = T | null
 

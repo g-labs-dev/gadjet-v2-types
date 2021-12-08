@@ -394,7 +394,7 @@ export type Contracts = {
   paymentDueDate: number
   lateFeeType: ContractLateFeeType
   lateFee: number
-  lateFeeDeferDate: string
+  lateFeeDeferDate: number
   creditAmount: number
   publicMemo: string
   privateMemo: string

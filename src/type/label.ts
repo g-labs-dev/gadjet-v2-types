@@ -19,10 +19,10 @@ export const contractLateFeeType: Record<T.ContractLateFeeType, string> = {
 }
 export const contractStatus: Record<T.ContractStatus, string> = {
   'before-started': '시작전',
-  started: '시작됨',
-  expired: '만료됨',
-  suspended: '조기종료됨',
-  extended: '연장됨',
+  started: '시작',
+  expired: '만료',
+  suspended: '조기종료',
+  extended: '연장',
 }
 export const contractSignatureStatus: Record<T.ContractSignatureStatus, string> = {
   none: '-',
@@ -43,7 +43,7 @@ export const contractDepositStatus: Record<T.ContractDepositStatus, string> = {
 export const paymentType: Record<T.PaymentType, string> = {
   card: '카드',
   transfer: '실시간계좌이체',
-  direct: '무통장입금',
+  direct: '가상계좌',
   'oversea-card': '해외카드',
   paypal: '페이팔',
   alipay: '알리페이',

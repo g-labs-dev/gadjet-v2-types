@@ -24,5 +24,10 @@ export declare type UPDATE_CONTRACT_RECEIVER_BODY = {
     receiver: ContractReceiver;
 };
 export declare type UPDATE_CONTRACT_RECEIVER_RESPONSE = [number];
+export declare type DOCUMENT_EMAIL_PARAMS = PARAMS;
+export declare type DOCUMENT_EMAIL_BODY = {
+    email: string;
+};
+export declare type DOCUMENT_EMAIL_RESPONSE = boolean;
 export {};
 //# sourceMappingURL=contract.d.ts.map

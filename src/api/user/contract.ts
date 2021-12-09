@@ -31,7 +31,7 @@ export type UPDATE_CONTRACT_RECEIVER_RESPONSE = [number]
 // ===========================
 
 // 계약서 이메일로 받기
-// POST /contract/0/document/email
+// POST /contracts/0/document/email
 export type DOCUMENT_EMAIL_PARAMS = PARAMS
 export type DOCUMENT_EMAIL_BODY = { email: string }
 export type DOCUMENT_EMAIL_RESPONSE = boolean

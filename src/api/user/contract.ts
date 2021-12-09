@@ -1,5 +1,5 @@
 import { Contracts, Files } from '../../model'
-import { ContractExtendStatus, ContractReceiver } from '../../type'
+import { ContractExtendStatus, ContractReceiver, Result } from '../../type'
 
 type PARAMS = { contractId: number }
 
@@ -34,5 +34,5 @@ export type UPDATE_CONTRACT_RECEIVER_RESPONSE = [number]
 // POST /contracts/0/document/email
 export type DOCUMENT_EMAIL_PARAMS = PARAMS
 export type DOCUMENT_EMAIL_BODY = { email: string }
-export type DOCUMENT_EMAIL_RESPONSE = boolean
+export type DOCUMENT_EMAIL_RESPONSE = Result
 // ===========================

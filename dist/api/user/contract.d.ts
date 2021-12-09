@@ -1,5 +1,5 @@
 import { Contracts, Files } from '../../model';
-import { ContractExtendStatus, ContractReceiver } from '../../type';
+import { ContractExtendStatus, ContractReceiver, Result } from '../../type';
 declare type PARAMS = {
     contractId: number;
 };
@@ -28,6 +28,6 @@ export declare type DOCUMENT_EMAIL_PARAMS = PARAMS;
 export declare type DOCUMENT_EMAIL_BODY = {
     email: string;
 };
-export declare type DOCUMENT_EMAIL_RESPONSE = boolean;
+export declare type DOCUMENT_EMAIL_RESPONSE = Result;
 export {};
 //# sourceMappingURL=contract.d.ts.map

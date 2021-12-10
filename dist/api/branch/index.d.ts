@@ -1,5 +1,6 @@
-import { BranchAutomations, BranchBusinesses, BranchContractDocuments, Branches, BranchRentees, BranchSettlements, BranchSublets } from '../../model';
+import { BranchAutomations, BranchBusinesses, BranchContractDocuments, Branches, BranchNotifications, BranchRentees, BranchSettlements, BranchSublets } from '../../model';
 import { PopbillJoinForm } from '../../popbill/auth';
+import { Pagination } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -46,5 +47,11 @@ export declare type JOIN_POPBILL_BODY = {
     form: PopbillJoinForm;
 };
 export declare type JOIN_POPBILL_RESPONSE = [number];
+export declare type GET_BRANCH_NOTIFICATIONS_PARAMS = PARAMS;
+export declare type GET_BRANCH_NOTIFICATIONS_QUERY = Pagination;
+export declare type GET_BRANCH_NOTIFICATIONS_RESPONSE = {
+    total: number;
+    branchNotifications: BranchNotifications[];
+};
 export {};
 //# sourceMappingURL=index.d.ts.map

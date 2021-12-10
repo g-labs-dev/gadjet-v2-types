@@ -3,12 +3,13 @@ import {
   BranchBusinesses,
   BranchContractDocuments,
   Branches,
+  BranchNotifications,
   BranchRentees,
   BranchSettlements,
   BranchSublets,
 } from '../../model'
 import { PopbillJoinForm } from '../../popbill/auth'
-import {} from '../../type'
+import { Pagination } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -88,4 +89,11 @@ export type JOIN_POPBILL_BODY = {
   form: PopbillJoinForm
 }
 export type JOIN_POPBILL_RESPONSE = [number]
+// ===========================
+
+// 알림 조회
+// GET /hqs/0/branches/0/notifications
+export type GET_BRANCH_NOTIFICATIONS_PARAMS = PARAMS
+export type GET_BRANCH_NOTIFICATIONS_QUERY = Pagination
+export type GET_BRANCH_NOTIFICATIONS_RESPONSE = { total: number; branchNotifications: BranchNotifications[] }
 // ===========================

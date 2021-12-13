@@ -57,6 +57,7 @@ export declare type DayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 export declare type BillPrice = {
     name: string;
     price: number;
+    vat: number;
 };
 export declare type ExpenditureType = 'card' | 'transfer' | 'cash' | 'commission';
 export declare type Pagination = {

@@ -165,7 +165,7 @@ export type ReceiptType =
 // 일 | 월 | 화 | 수 | 목 | 금 | 토
 export type DayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6
 
-export type BillPrice = { name: string; price: number }
+export type BillPrice = { name: string; price: number; vat: number }
 
 export type ExpenditureType = 'card' | 'transfer' | 'cash' | 'commission'
 

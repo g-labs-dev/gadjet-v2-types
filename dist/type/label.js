@@ -24,12 +24,12 @@ exports.contractStatus = {
     extended: '연장',
 };
 exports.contractSignatureStatus = {
-    none: '-',
+    none: '요청 전',
     waiting: '서명대기',
     signed: '서명완료',
 };
 exports.contractExtendStatus = {
-    none: '-',
+    none: '미확인',
     asked: '확인 중',
     approval: '연장동의',
     refusal: '연장거절',

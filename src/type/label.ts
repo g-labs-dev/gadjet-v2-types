@@ -25,12 +25,12 @@ export const contractStatus: Record<T.ContractStatus, string> = {
   extended: '연장',
 }
 export const contractSignatureStatus: Record<T.ContractSignatureStatus, string> = {
-  none: '-',
+  none: '요청 전',
   waiting: '서명대기',
   signed: '서명완료',
 }
 export const contractExtendStatus: Record<T.ContractExtendStatus, string> = {
-  none: '-',
+  none: '미확인',
   asked: '확인 중',
   approval: '연장동의',
   refusal: '연장거절',

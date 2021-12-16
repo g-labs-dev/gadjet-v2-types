@@ -494,7 +494,6 @@ export type ContractDeposits = {
   contractDepositId: number
   branchId: number
   contractId: number
-  billId: number
   price: number
   bankCode: string
   bankName: string

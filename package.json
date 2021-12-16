@@ -4,9 +4,6 @@
   "description": "gadjet v2 models, types, ...",
   "main": "dist",
   "types": "dist",
-  "exports": {
-    "./": "./dist"
-  },
   "scripts": {
     "prepare": "husky install",
     "build": "rm -rf dist && tsc"

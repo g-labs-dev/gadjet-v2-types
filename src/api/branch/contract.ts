@@ -6,7 +6,7 @@ type PARAMS = { hqId: number; branchId: number }
 // 계약 목록 검색
 // GET /hqs/0/branches/0/contracts
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; spaceTypes: number[] }
+export type GET_LIST_QUERY = Pagination & { query: string; spaceTypes: number[]; includeExpired: boolean }
 export type GET_LIST_RESPONSE = { total: number; contracts: Contracts[] }
 // ===========================
 

@@ -8,6 +8,7 @@ export declare type GET_LIST_PARAMS = PARAMS;
 export declare type GET_LIST_QUERY = Pagination & {
     query: string;
     spaceTypes: number[];
+    includeExpired: boolean;
 };
 export declare type GET_LIST_RESPONSE = {
     total: number;

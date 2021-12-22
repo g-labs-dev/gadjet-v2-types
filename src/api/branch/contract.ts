@@ -1,4 +1,4 @@
-import { Contracts } from '../../model'
+import { Bills, Contracts } from '../../model'
 import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
@@ -78,4 +78,11 @@ export type SEARCH_RESPONSE = { contracts: Contracts[] }
 export type UPDATE_SIGNATURE_STATUS_PARAMS = PARAMS & { contractId: number }
 export type UPDATE_SIGNATURE_STATUS_BODY = { signatureStatus: ContractSignatureStatus }
 export type UPDATE_SIGNATURE_STATUS_RESPONSE = [number]
+// ===========================
+
+// 계약 보증금 청구서 조회
+// GET /hqs/0/branches/0/contracts/0/deposit-bills
+export type GET_CONTRACT_DEPOSIT_BILLS_PARAMS = PARAMS & { contractId: number }
+export type GET_CONTRACT_DEPOSIT_BILLS_QUERY = {}
+export type GET_CONTRACT_DEPOSIT_BILLS_RESPONSE = { bills: Bills[] }
 // ===========================

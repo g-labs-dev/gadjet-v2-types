@@ -1,4 +1,4 @@
-import { Contracts } from '../../model';
+import { Bills, Contracts } from '../../model';
 import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type';
 declare type PARAMS = {
     hqId: number;
@@ -74,5 +74,12 @@ export declare type UPDATE_SIGNATURE_STATUS_BODY = {
     signatureStatus: ContractSignatureStatus;
 };
 export declare type UPDATE_SIGNATURE_STATUS_RESPONSE = [number];
+export declare type GET_CONTRACT_DEPOSIT_BILLS_PARAMS = PARAMS & {
+    contractId: number;
+};
+export declare type GET_CONTRACT_DEPOSIT_BILLS_QUERY = {};
+export declare type GET_CONTRACT_DEPOSIT_BILLS_RESPONSE = {
+    bills: Bills[];
+};
 export {};
 //# sourceMappingURL=contract.d.ts.map

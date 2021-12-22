@@ -1,5 +1,8 @@
 import { Bills, Contracts, Expenditures, Payments, RentalReservations } from '../model'
 
+export type FileContentType = 'application/pdf' | 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+export type ImageContentType = 'image/jpeg' | 'image/png'
+
 export type ImageCategory =
   | 'hq'
   | 'branch'

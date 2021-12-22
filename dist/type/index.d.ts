@@ -1,4 +1,6 @@
 import { Bills, Contracts, Expenditures, Payments, RentalReservations } from '../model';
+export declare type FileContentType = 'application/pdf' | 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+export declare type ImageContentType = 'image/jpeg' | 'image/png';
 export declare type ImageCategory = 'hq' | 'branch' | 'notice' | 'rental' | 'room' | 'tenant' | 'user' | 'manager' | 'event' | 'signature' | 'product' | 'service';
 export declare type FileCategory = 'branch-terms' | 'branch-policy' | 'branch-etc' | 'sublet-consent' | 'sublet-document' | 'rentee-document' | 'contract-document';
 export declare type TenantType = 'sole-proprietor' | 'corporation-business' | 'local' | 'foreigner';

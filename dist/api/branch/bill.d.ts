@@ -1,5 +1,5 @@
 import { Bills } from '../../model';
-import { BillSummary, ContractReceiver, Pagination } from '../../type';
+import { BillSummary, ContractReceiver, Pagination, Result } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -53,5 +53,12 @@ export declare type SEND_BODY = {
     receivers: ContractReceiver['bill'];
 };
 export declare type SEND_RESPONSE = any;
+export declare type REFUND_DEPOSIT_PARAMS = PARAMS & {
+    billId: number;
+};
+export declare type REFUND_DEPOSIT_BODY = {
+    price: number;
+};
+export declare type REFUND_DEPOSIT_RESPONSE = Result;
 export {};
 //# sourceMappingURL=bill.d.ts.map

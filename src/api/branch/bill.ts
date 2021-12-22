@@ -1,5 +1,5 @@
 import { Bills } from '../../model'
-import { BillSummary, ContractReceiver, Pagination } from '../../type'
+import { BillSummary, ContractReceiver, Pagination, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -59,4 +59,11 @@ export type SEND_BODY = {
   receivers: ContractReceiver['bill']
 }
 export type SEND_RESPONSE = any // 발송결과
+// ===========================
+
+// 보증금 청구서 보증금 반환
+// PUT /hqs/0/branches/0/bills/0/deposit-refund
+export type REFUND_DEPOSIT_PARAMS = PARAMS & { billId: number }
+export type REFUND_DEPOSIT_BODY = { price: number }
+export type REFUND_DEPOSIT_RESPONSE = Result
 // ===========================

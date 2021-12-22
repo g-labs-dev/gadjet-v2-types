@@ -1,5 +1,5 @@
 import { Bills } from '../../model';
-import { BillSummary, ContractReceiver, Pagination, Result } from '../../type';
+import { BillSummary, ContractReceiver, Pagination, PaymentType, Result } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -58,6 +58,7 @@ export declare type RETURN_DEPOSIT_PARAMS = PARAMS & {
 };
 export declare type RETURN_DEPOSIT_BODY = {
     price: number;
+    type: PaymentType;
 };
 export declare type RETURN_DEPOSIT_RESPONSE = Result;
 export {};

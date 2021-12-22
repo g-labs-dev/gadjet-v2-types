@@ -53,12 +53,12 @@ export declare type SEND_BODY = {
     receivers: ContractReceiver['bill'];
 };
 export declare type SEND_RESPONSE = any;
-export declare type REFUND_DEPOSIT_PARAMS = PARAMS & {
+export declare type RETURN_DEPOSIT_PARAMS = PARAMS & {
     billId: number;
 };
-export declare type REFUND_DEPOSIT_BODY = {
+export declare type RETURN_DEPOSIT_BODY = {
     price: number;
 };
-export declare type REFUND_DEPOSIT_RESPONSE = Result;
+export declare type RETURN_DEPOSIT_RESPONSE = Result;
 export {};
 //# sourceMappingURL=bill.d.ts.map

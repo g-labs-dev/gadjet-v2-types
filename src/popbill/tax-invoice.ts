@@ -56,7 +56,7 @@ export type TaxInvoiceTrustee = {
   trusteeEmail: 'support@gadjet.io'
 }
 
-export type TaxInvoice = {
+export type TaxInvoiceBasic = {
   ntsconfirmNum?: string
   issueType: '위수탁' //  "정발행" | "역발행" | "위수탁"
   taxType: '과세' | '영세' | '면세'
@@ -71,12 +71,14 @@ export type TaxInvoice = {
   totalAmount: string
   remark1?: string
 
-  detailList: TaxInvoiceDetail[]
-  addContactList: TaxInvoiceAddContact[]
+  detailList?: TaxInvoiceDetail[]
+  addContactList?: TaxInvoiceAddContact[]
 
   modifyCode?: number
   orgNTSConfirmNum?: string
 }
+
+export type TaxInvoice = TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer & TaxInvoiceTrustee
 
 export type TaxInvoiceModify = TaxInvoice & { modifyCode: number; orgNTSConfirmNum: string }
 

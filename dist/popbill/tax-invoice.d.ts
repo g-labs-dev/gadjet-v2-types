@@ -48,7 +48,7 @@ export declare type TaxInvoiceTrustee = {
     trusteeHP: '07042054025';
     trusteeEmail: 'support@gadjet.io';
 };
-export declare type TaxInvoice = {
+export declare type TaxInvoiceBasic = {
     ntsconfirmNum?: string;
     issueType: '위수탁';
     taxType: '과세' | '영세' | '면세';
@@ -62,11 +62,12 @@ export declare type TaxInvoice = {
     taxTotal: string;
     totalAmount: string;
     remark1?: string;
-    detailList: TaxInvoiceDetail[];
-    addContactList: TaxInvoiceAddContact[];
+    detailList?: TaxInvoiceDetail[];
+    addContactList?: TaxInvoiceAddContact[];
     modifyCode?: number;
     orgNTSConfirmNum?: string;
 };
+export declare type TaxInvoice = TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer & TaxInvoiceTrustee;
 export declare type TaxInvoiceModify = TaxInvoice & {
     modifyCode: number;
     orgNTSConfirmNum: string;

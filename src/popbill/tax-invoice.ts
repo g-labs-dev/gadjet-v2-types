@@ -39,7 +39,7 @@ export type TaxInvoiceInvoicee = {
   invoiceeEmail2?: string
 }
 
-export type Trustee = {
+export type TaxInvoiceTrustee = {
   // 수탁자
   trusteeMgtKey: string
   trusteeCorpNum: '3788700388'

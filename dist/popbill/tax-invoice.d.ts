@@ -33,7 +33,7 @@ export declare type TaxInvoiceInvoicee = {
     invoiceeHP2?: string;
     invoiceeEmail2?: string;
 };
-export declare type Trustee = {
+export declare type TaxInvoiceTrustee = {
     trusteeMgtKey: string;
     trusteeCorpNum: '3788700388';
     trusteeTaxRegID?: string;

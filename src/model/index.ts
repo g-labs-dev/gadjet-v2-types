@@ -1,5 +1,5 @@
 import { Cashbill } from '../popbill/cashbill'
-import { Taxinvoice } from '../popbill/taxinvoice'
+import { TaxInvoice } from '../popbill/taxinvoice'
 import {
   BillPrice,
   BillType,
@@ -713,7 +713,7 @@ export type Receipts = {
   ntsResultCode: string
   mgtKey: string
   requestDatetime: string
-  taxInvoiceJson: Taxinvoice
+  taxInvoiceJson: TaxInvoice
   cashBillJson: Cashbill
 }
 

@@ -1,17 +1,4 @@
-export declare type Taxinvoice = {
-    ntsconfirmNum?: string;
-    issueType: '위수탁';
-    taxType: '과세' | '영세' | '면세';
-    chargeDirection: '정과금';
-    serialNum?: string;
-    kwon?: string;
-    ho?: string;
-    writeDate: string;
-    purposeType: '영수' | '청구' | '없음';
-    supplyCostTotal: string;
-    taxTotal: string;
-    totalAmount: string;
-    remark1?: string;
+export declare type TaxInvoiceInvoicer = {
     invoicerMgtKey?: string;
     invoicerCorpNum: string;
     invoicerTaxRegID?: string;
@@ -25,6 +12,8 @@ export declare type Taxinvoice = {
     invoicerTEL?: string;
     invoicerHP?: string;
     invoicerEmail?: string;
+};
+export declare type TaxInvoiceInvoicee = {
     invoiceeType: '사업자' | '개인' | '외국인';
     invoiceeCorpNum: string;
     invoiceeTaxRegID?: string;
@@ -43,6 +32,8 @@ export declare type Taxinvoice = {
     invoiceeTEL2?: string;
     invoiceeHP2?: string;
     invoiceeEmail2?: string;
+};
+export declare type Trustee = {
     trusteeMgtKey: string;
     trusteeCorpNum: '3788700388';
     trusteeTaxRegID?: string;
@@ -56,21 +47,36 @@ export declare type Taxinvoice = {
     trusteeTEL: '07042054025';
     trusteeHP: '07042054025';
     trusteeEmail: 'support@gadjet.io';
-    detailList: TaxinvoiceDetail[];
-    addContactList: TaxinvoiceAddContact[];
+};
+export declare type TaxInvoice = {
+    ntsconfirmNum?: string;
+    issueType: '위수탁';
+    taxType: '과세' | '영세' | '면세';
+    chargeDirection: '정과금';
+    serialNum?: string;
+    kwon?: string;
+    ho?: string;
+    writeDate: string;
+    purposeType: '영수' | '청구' | '없음';
+    supplyCostTotal: string;
+    taxTotal: string;
+    totalAmount: string;
+    remark1?: string;
+    detailList: TaxInvoiceDetail[];
+    addContactList: TaxInvoiceAddContact[];
     modifyCode?: number;
     orgNTSConfirmNum?: string;
 };
-export declare type TaxinvoiceModify = Taxinvoice & {
+export declare type TaxInvoiceModify = TaxInvoice & {
     modifyCode: number;
     orgNTSConfirmNum: string;
 };
-export declare type TaxinvoiceAddContact = {
+export declare type TaxInvoiceAddContact = {
     serialNum: number;
     contactName: string;
     email: string;
 };
-export declare type TaxinvoiceDetail = {
+export declare type TaxInvoiceDetail = {
     serialNum: number;
     purchaseDT?: string;
     itemName?: string;

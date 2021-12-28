@@ -1,6 +1,6 @@
 import { Receipts } from '../../model'
 import { Cashbill } from '../../popbill/cashbill'
-import { Taxinvoice, TaxinvoiceModify } from '../../popbill/taxinvoice'
+import { TaxInvoice, TaxInvoiceModify } from '../../popbill/taxinvoice'
 import { Pagination, ReceiptSummary, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
@@ -30,7 +30,7 @@ export type GET_SUMMARY_RESPONSE = ReceiptSummary
 export type ADD_TAX_INVOICE_PARAMS = PARAMS
 export type ADD_TAX_INVOICE_BODY = {
   billId: number
-  taxInvoice: Taxinvoice
+  taxInvoice: TaxInvoice
 }
 export type ADD_TAX_INVOICE_RESPONSE = Result
 // ===========================
@@ -40,7 +40,7 @@ export type ADD_TAX_INVOICE_RESPONSE = Result
 export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & { receiptId: number }
 export type UPDATE_TAX_INOVICE_BODY = {
   billId: number
-  taxInvoice: Taxinvoice
+  taxInvoice: TaxInvoice
 }
 export type UPDATE_TAX_INVOICE_RESPONSE = Result
 // ===========================

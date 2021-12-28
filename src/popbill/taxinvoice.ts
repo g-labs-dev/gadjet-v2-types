@@ -1,20 +1,6 @@
 // https://docs.popbill.com/taxinvoice/node/api
 
-export type Taxinvoice = {
-  ntsconfirmNum?: string
-  issueType: '위수탁' //  "정발행" | "역발행" | "위수탁"
-  taxType: '과세' | '영세' | '면세'
-  chargeDirection: '정과금' // "정과금" | "역과금"
-  serialNum?: string
-  kwon?: string
-  ho?: string
-  writeDate: string // YYYYMMDD
-  purposeType: '영수' | '청구' | '없음'
-  supplyCostTotal: string
-  taxTotal: string
-  totalAmount: string
-  remark1?: string
-
+export type TaxInvoiceInvoicer = {
   // 공급자
   invoicerMgtKey?: string
   invoicerCorpNum: string
@@ -29,7 +15,9 @@ export type Taxinvoice = {
   invoicerTEL?: string
   invoicerHP?: string
   invoicerEmail?: string
+}
 
+export type TaxInvoiceInvoicee = {
   // 공급받는자
   invoiceeType: '사업자' | '개인' | '외국인'
   invoiceeCorpNum: string
@@ -49,7 +37,9 @@ export type Taxinvoice = {
   invoiceeTEL2?: string
   invoiceeHP2?: string
   invoiceeEmail2?: string
+}
 
+export type Trustee = {
   // 수탁자
   trusteeMgtKey: string
   trusteeCorpNum: '3788700388'
@@ -64,19 +54,35 @@ export type Taxinvoice = {
   trusteeTEL: '07042054025'
   trusteeHP: '07042054025'
   trusteeEmail: 'support@gadjet.io'
+}
 
-  detailList: TaxinvoiceDetail[]
-  addContactList: TaxinvoiceAddContact[]
+export type TaxInvoice = {
+  ntsconfirmNum?: string
+  issueType: '위수탁' //  "정발행" | "역발행" | "위수탁"
+  taxType: '과세' | '영세' | '면세'
+  chargeDirection: '정과금' // "정과금" | "역과금"
+  serialNum?: string
+  kwon?: string
+  ho?: string
+  writeDate: string // YYYYMMDD
+  purposeType: '영수' | '청구' | '없음'
+  supplyCostTotal: string
+  taxTotal: string
+  totalAmount: string
+  remark1?: string
+
+  detailList: TaxInvoiceDetail[]
+  addContactList: TaxInvoiceAddContact[]
 
   modifyCode?: number
   orgNTSConfirmNum?: string
 }
 
-export type TaxinvoiceModify = Taxinvoice & { modifyCode: number; orgNTSConfirmNum: string }
+export type TaxInvoiceModify = TaxInvoice & { modifyCode: number; orgNTSConfirmNum: string }
 
-export type TaxinvoiceAddContact = { serialNum: number; contactName: string; email: string }
+export type TaxInvoiceAddContact = { serialNum: number; contactName: string; email: string }
 
-export type TaxinvoiceDetail = {
+export type TaxInvoiceDetail = {
   serialNum: number
   purchaseDT?: string // YYYYMMDD
   itemName?: string

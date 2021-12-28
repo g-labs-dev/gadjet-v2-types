@@ -1,5 +1,5 @@
 import { Cashbill } from '../popbill/cashbill';
-import { Taxinvoice } from '../popbill/taxinvoice';
+import { TaxInvoice } from '../popbill/taxinvoice';
 import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus } from '../type';
 export declare type Images = {
     imageId: number;
@@ -611,7 +611,7 @@ export declare type Receipts = {
     ntsResultCode: string;
     mgtKey: string;
     requestDatetime: string;
-    taxInvoiceJson: Taxinvoice;
+    taxInvoiceJson: TaxInvoice;
     cashBillJson: Cashbill;
 };
 export declare type ManagerNotifications = {

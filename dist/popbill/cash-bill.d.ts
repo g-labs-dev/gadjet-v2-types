@@ -26,4 +26,4 @@ export declare type CashbillCancel = Cashbill & {
     orgTradeDate: string;
     cancelType: 1 | 2 | 3;
 };
-//# sourceMappingURL=cashbill.d.ts.map
+//# sourceMappingURL=cash-bill.d.ts.map

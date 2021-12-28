@@ -1,5 +1,5 @@
-import { Cashbill } from '../popbill/cashbill';
-import { TaxInvoice } from '../popbill/taxinvoice';
+import { Cashbill } from '../popbill/cash-bill';
+import { TaxInvoice } from '../popbill/tax-invoice';
 import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus } from '../type';
 export declare type Images = {
     imageId: number;

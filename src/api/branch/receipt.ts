@@ -1,6 +1,6 @@
 import { Receipts } from '../../model'
-import { Cashbill } from '../../popbill/cashbill'
-import { TaxInvoice, TaxInvoiceModify } from '../../popbill/taxinvoice'
+import { Cashbill } from '../../popbill/cash-bill'
+import { TaxInvoice, TaxInvoiceModify } from '../../popbill/tax-invoice'
 import { Pagination, ReceiptSummary, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }

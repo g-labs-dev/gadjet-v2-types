@@ -87,4 +87,4 @@ export declare type TaxInvoiceDetail = {
     tax?: string;
     remark?: string;
 };
-//# sourceMappingURL=taxinvoice.d.ts.map
+//# sourceMappingURL=tax-invoice.d.ts.map

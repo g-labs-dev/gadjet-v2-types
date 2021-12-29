@@ -78,5 +78,5 @@ export type REFUND_RESPONSE = Result
 // GET /hqs/0/branches/0/payments/deposit/export
 export type EXPORT_DEPOSIT_PAYMENTS_PARAMS = PARAMS
 export type EXPORT_DEPOSIT_PAYMENTS_QUERY = { contractRange: [string, string] }
-export type EXPORT_DEPOSIT_PAYMENTS_RESPONSE = ArrayBuffer
+export type EXPORT_DEPOSIT_PAYMENTS_RESPONSE = Buffer
 // ===========================

@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Payments } from '../../model';
 import { Pagination, PaymentStatus, PaymentSummary, PaymentType, Result } from '../../type';
 declare type PARAMS = {
@@ -68,6 +69,6 @@ export declare type EXPORT_DEPOSIT_PAYMENTS_PARAMS = PARAMS;
 export declare type EXPORT_DEPOSIT_PAYMENTS_QUERY = {
     contractRange: [string, string];
 };
-export declare type EXPORT_DEPOSIT_PAYMENTS_RESPONSE = ArrayBuffer;
+export declare type EXPORT_DEPOSIT_PAYMENTS_RESPONSE = Buffer;
 export {};
 //# sourceMappingURL=payment.d.ts.map

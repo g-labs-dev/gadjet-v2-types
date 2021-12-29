@@ -480,6 +480,7 @@ export declare type CreditLogs = {
     usage: CreditUsage | null;
     amount: number;
     datetime: string;
+    memo: string;
 };
 export declare type Events = {
     eventId: number;

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/g-labs-dev/gadjet-v2-types#readme",
   "dependencies": {
+    "@types/node": "^17.0.5",
     "D": "^1.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",

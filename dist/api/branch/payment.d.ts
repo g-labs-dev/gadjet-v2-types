@@ -64,5 +64,8 @@ export declare type REFUND_BODY = {
     };
 };
 export declare type REFUND_RESPONSE = Result;
+export declare type EXPORT_DEPOSIT_PAYMENTS = PARAMS;
+export declare type EXPORT_DEPOSIT_QUERY = {};
+export declare type EXPORT_DEPOSIT_RESPONSE = ArrayBuffer;
 export {};
 //# sourceMappingURL=payment.d.ts.map

@@ -73,3 +73,10 @@ export type REFUND_BODY = {
 }
 export type REFUND_RESPONSE = Result
 // ===========================
+
+// 보증금 결제내역 내보내기
+// GET /hqs/0/branches/0/payments/deposit/export
+export type EXPORT_DEPOSIT_PAYMENTS = PARAMS
+export type EXPORT_DEPOSIT_QUERY = {}
+export type EXPORT_DEPOSIT_RESPONSE = ArrayBuffer
+// ===========================

@@ -405,6 +405,7 @@ export type Contracts = {
   extendStatus: ContractExtendStatus
   extendCheckDate: string
   extendContractId: number | null
+  extendSinceDate: string
   receiver: ContractReceiver
   lang: Lang
 
@@ -418,6 +419,7 @@ export type Contracts = {
   signatureImage?: Relation<Images>
   documentFile?: Relation<Files>
   branch?: Relation<Branches>
+  parentContract?: Relation<Contracts>
 }
 
 export type ContractSpaces = {

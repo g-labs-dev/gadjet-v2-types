@@ -1,5 +1,5 @@
 import { Branches, Contracts, EventAttendees, Events, Hqs, TenantRoles, Tenants, Users } from '../../model';
-import { Pagination, Result, UsedCreditAmount } from '../../type';
+import { Device, Pagination, Result, UsedCreditAmount } from '../../type';
 declare type PARAMS = {
     userId: number;
 };
@@ -67,5 +67,10 @@ export declare type UPDATE_PUSH_TOKEN_BODY = {
     pushToken: string;
 };
 export declare type UPDATE_PUSH_TOKEN_RESPONSE = [number];
+export declare type UPDATE_DEVICE_PARAMS = PARAMS;
+export declare type UPDATE_DEVICE_BODY = {
+    device: Device;
+};
+export declare type UPDATE_DEVICE_RESPONSE = [number];
 export {};
 //# sourceMappingURL=index.d.ts.map

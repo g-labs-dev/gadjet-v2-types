@@ -1,5 +1,5 @@
 import { Branches, Contracts, EventAttendees, Events, Hqs, TenantRoles, Tenants, Users } from '../../model'
-import { Pagination, Result, UsedCreditAmount } from '../../type'
+import { Device, Pagination, Result, UsedCreditAmount } from '../../type'
 
 type PARAMS = { userId: number }
 
@@ -69,4 +69,11 @@ export type RECEIVE_INVITE_RESPONSE = { tenantRole: TenantRoles } & Result
 export type UPDATE_PUSH_TOKEN_PARAMS = PARAMS
 export type UPDATE_PUSH_TOKEN_BODY = { pushToken: string }
 export type UPDATE_PUSH_TOKEN_RESPONSE = [number]
+// ===========================
+
+// 디바이스 정보 업데이트
+// PUT /users/0/device
+export type UPDATE_DEVICE_PARAMS = PARAMS
+export type UPDATE_DEVICE_BODY = { device: Device }
+export type UPDATE_DEVICE_RESPONSE = [number]
 // ===========================

@@ -298,3 +298,13 @@ export type Lang = 'ko' | 'en'
 export type UserStatus = 'pending' | 'done'
 
 export type Result = { isSuccess: boolean; message: string }
+
+export type Device = {
+  uniqueId: string
+  manufacturer: string
+  model: string
+  systemVersion: string
+  appVersion: string
+  deviceName: string
+  useragent: string
+}

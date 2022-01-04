@@ -192,4 +192,13 @@ export declare type Result = {
     isSuccess: boolean;
     message: string;
 };
+export declare type Device = {
+    uniqueId: string;
+    manufacturer: string;
+    model: string;
+    systemVersion: string;
+    appVersion: string;
+    deviceName: string;
+    useragent: string;
+};
 //# sourceMappingURL=index.d.ts.map

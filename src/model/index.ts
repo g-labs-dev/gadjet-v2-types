@@ -19,6 +19,7 @@ import {
   CreditType,
   CreditUsage,
   DayIndex,
+  Device,
   ExpenditureType,
   FileCategory,
   ImageCategory,
@@ -252,6 +253,7 @@ export type Users = {
   profileImageId: number | null
   code: string
   status: UserStatus
+  device: null | Device
 
   profile?: Relation<Images>
   tenantRoles?: Relation<TenantRoles[]>

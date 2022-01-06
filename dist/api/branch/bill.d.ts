@@ -1,5 +1,5 @@
 import { Bills } from '../../model';
-import { BillSummary, ContractReceiver, Pagination, PaymentType, Result } from '../../type';
+import { BillSummary, BillType, ContractReceiver, Pagination, PaymentType, Result } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -9,6 +9,7 @@ export declare type GET_LIST_QUERY = Pagination & {
     query: string;
     startDate: [string, string];
     spaceTypes: number[];
+    type: BillType[];
 };
 export declare type GET_LIST_RESPONSE = {
     total: number;

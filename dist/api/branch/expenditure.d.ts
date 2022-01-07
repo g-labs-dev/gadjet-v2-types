@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Expenditures } from '../../model';
 import { Pagination, ExpenditureSummary, ExpenditureType } from '../../type';
 declare type PARAMS = {
@@ -29,7 +30,7 @@ export declare type EXPORT_PARAMS = PARAMS;
 export declare type EXPORT_QUERY = {
     date: [string, string];
 };
-export declare type EXPORT_RESPONSE = any;
+export declare type EXPORT_RESPONSE = Buffer;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     expenditure: Partial<Expenditures>;

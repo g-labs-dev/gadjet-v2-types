@@ -42,7 +42,7 @@ export type DELETE_RESPONSE = [number]
 // GET /hqs/0/branches/0/contracts/export
 export type EXPORT_PARAMS = PARAMS
 export type EXPORT_QUERY = { startDate?: [string, string]; suspendDate?: [string, string] } // ['YYYY-MM-DD', 'YYYY-MM-DD']
-export type EXPORT_RESPONSE = any // @@@@ xlsx
+export type EXPORT_RESPONSE = Buffer
 // ===========================
 
 // 계약 데이터 업로드

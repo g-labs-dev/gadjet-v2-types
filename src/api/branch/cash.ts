@@ -27,7 +27,7 @@ export type GET_SUMMARY_RESPONSE = CashSummary
 // GET /hqs/0/branches/0/cash/export
 export type EXPORT_PARAMS = PARAMS
 export type EXPORT_QUERY = { date: [string, string] }
-export type EXPORT_RESPONSE = any // @@@@ xlsx
+export type EXPORT_RESPONSE = Buffer
 // ===========================
 
 // 현금 추가

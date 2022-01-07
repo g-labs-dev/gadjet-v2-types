@@ -27,7 +27,7 @@ export type GET_SUMMARY_RESPONSE = SpaceSummary
 // GET /hqs/0/branches/0/spaces/export
 export type EXPORT_PARAMS = PARAMS
 export type EXPORT_QUERY = { query: string; emptyFlag: boolean }
-export type EXPORT_RESPONSE = any // @@@@ xlsx
+export type EXPORT_RESPONSE = Buffer
 // ===========================
 
 // 공간 업로드

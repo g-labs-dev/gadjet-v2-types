@@ -54,7 +54,7 @@ export type DELETE_RESPONSE = [number]
 // GET /hqs/0/branches/0/bills/export
 export type EXPORT_PARAMS = PARAMS
 export type EXPORT_QUERY = { startDate: [string, string] } // YYYY-MM-DD
-export type EXPORT_RESPONSE = any // xlsx
+export type EXPORT_RESPONSE = Buffer
 // ===========================
 
 // 청구서 발송

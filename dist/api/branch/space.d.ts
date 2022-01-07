@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Contracts, Spaces } from '../../model';
 import { Pagination, SpaceSummary } from '../../type';
 declare type PARAMS = {
@@ -28,7 +29,7 @@ export declare type EXPORT_QUERY = {
     query: string;
     emptyFlag: boolean;
 };
-export declare type EXPORT_RESPONSE = any;
+export declare type EXPORT_RESPONSE = Buffer;
 export declare type UPLOAD_PARAMS = PARAMS;
 export declare type UPLOAD_BODY = {
     spaces: Partial<Spaces>[];

@@ -49,7 +49,7 @@ export declare type EXPORT_QUERY = {
     paymentType: PaymentType[];
     paymentStatus: PaymentStatus[];
 };
-export declare type EXPORT_RESPONSE = any;
+export declare type EXPORT_RESPONSE = Buffer;
 export declare type CONFIRM_PARAMS = PARAMS & {
     paymentId: number;
 };

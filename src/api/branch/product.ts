@@ -63,5 +63,5 @@ export type REFUND_SALES_RESPONSE = [number]
 // GET /hqs/0/branches/0/product-sales/export
 export type EXPORT_SALES_PARAMS = PARAMS
 export type EXPORT_SALES_QUERY = { datetime: [string, string] }
-export type EXPORT_SALES_RESPONSE = any // @@@@ xlsx
+export type EXPORT_SALES_RESPONSE = Buffer
 // ===========================

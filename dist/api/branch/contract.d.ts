@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Bills, Contracts } from '../../model';
 import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type';
 declare type PARAMS = {
@@ -39,7 +40,7 @@ export declare type EXPORT_QUERY = {
     startDate?: [string, string];
     suspendDate?: [string, string];
 };
-export declare type EXPORT_RESPONSE = any;
+export declare type EXPORT_RESPONSE = Buffer;
 export declare type UPLOAD_PARAMS = PARAMS;
 export declare type UPLOAD_BODY = {
     contracts: Partial<Contracts>[];

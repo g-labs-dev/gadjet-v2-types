@@ -59,7 +59,7 @@ export type GET_CREDIT_LOGS_RESPONSE = { total: number; creditLogs: CreditLogs[]
 // GET /hqs/0/branches/0/tenants/export
 export type EXPORT_PARAMS = PARAMS
 export type EXPORT_QUERY = { includeExpired: boolean } // 계약 만료된 입주사 포함
-export type EXPORT_RESPONSE = any // @@@@ xlsx 입주사 전체 내보내기
+export type EXPORT_RESPONSE = Buffer
 // ===========================
 
 // 입주사 크레딧 지급

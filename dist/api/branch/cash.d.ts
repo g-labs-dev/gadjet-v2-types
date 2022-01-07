@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Cash } from '../../model';
 import { Pagination, CashSummary } from '../../type';
 declare type PARAMS = {
@@ -24,7 +25,7 @@ export declare type EXPORT_PARAMS = PARAMS;
 export declare type EXPORT_QUERY = {
     date: [string, string];
 };
-export declare type EXPORT_RESPONSE = any;
+export declare type EXPORT_RESPONSE = Buffer;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     cash: Partial<Cash>;

@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Products, ProductSales } from '../../model';
 import { Pagination, ProductSalesSummary } from '../../type';
 declare type PARAMS = {
@@ -57,6 +58,6 @@ export declare type EXPORT_SALES_PARAMS = PARAMS;
 export declare type EXPORT_SALES_QUERY = {
     datetime: [string, string];
 };
-export declare type EXPORT_SALES_RESPONSE = any;
+export declare type EXPORT_SALES_RESPONSE = Buffer;
 export {};
 //# sourceMappingURL=product.d.ts.map

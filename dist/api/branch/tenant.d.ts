@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Contracts, CreditLogs, Credits, ProductSales, RentalReservations, Tenants, Users } from '../../model';
 import { ContractStatus, CreditType, Pagination } from '../../type';
 declare type PARAMS = {
@@ -78,7 +79,7 @@ export declare type EXPORT_PARAMS = PARAMS;
 export declare type EXPORT_QUERY = {
     includeExpired: boolean;
 };
-export declare type EXPORT_RESPONSE = any;
+export declare type EXPORT_RESPONSE = Buffer;
 export declare type ADD_CREDITS_PARAMS = PARAMS & {
     tenantId: number;
 };

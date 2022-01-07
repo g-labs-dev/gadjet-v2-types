@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { RentalReservations, Rentals } from '../../model';
 import { Pagination } from '../../type';
 declare type PARAMS = {
@@ -65,6 +66,6 @@ export declare type EXPORT_RESERVATIONS_PARAMS = PARAMS;
 export declare type EXPORT_RESERVATIONS_QUERY = {
     date: [string, string];
 };
-export declare type EXPORT_RESERVATIONS_RESPONSE = any;
+export declare type EXPORT_RESERVATIONS_RESPONSE = Buffer;
 export {};
 //# sourceMappingURL=rental.d.ts.map

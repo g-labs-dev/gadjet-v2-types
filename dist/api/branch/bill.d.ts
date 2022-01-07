@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Bills } from '../../model';
 import { BillSummary, BillType, ContractReceiver, Pagination, PaymentType, Result } from '../../type';
 declare type PARAMS = {
@@ -46,7 +47,7 @@ export declare type EXPORT_PARAMS = PARAMS;
 export declare type EXPORT_QUERY = {
     startDate: [string, string];
 };
-export declare type EXPORT_RESPONSE = any;
+export declare type EXPORT_RESPONSE = Buffer;
 export declare type SEND_PARAMS = PARAMS & {
     billId: number;
 };

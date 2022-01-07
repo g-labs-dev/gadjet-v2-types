@@ -75,5 +75,5 @@ export type DELETE_RESERVATION_RESPONSE = [number]
 // GET /hqs/0/branches/0/rental-reservations/export
 export type EXPORT_RESERVATIONS_PARAMS = PARAMS
 export type EXPORT_RESERVATIONS_QUERY = { date: [string, string] }
-export type EXPORT_RESERVATIONS_RESPONSE = any // @@@@ xlsx
+export type EXPORT_RESERVATIONS_RESPONSE = Buffer
 // ===========================

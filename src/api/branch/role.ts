@@ -32,3 +32,10 @@ export type UPDATE_RESPONSE = [number]
 export type DELETE_PARAMS = PARAMS & { branchRoleId: number }
 export type DELETE_RESPONSE = [number]
 // ===========================
+
+// 권한 초대
+// POST /hqs/0/branches/0/roles/invite
+export type INVITE_PARAMS = PARAMS
+export type INVITE_BODY = { email: string; hqRole: Partial<BranchRoles> }
+export type INVITE_RESPONSE = boolean
+// ===========================

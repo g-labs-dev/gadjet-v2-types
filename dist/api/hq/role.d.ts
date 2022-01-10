@@ -22,13 +22,9 @@ export declare type DELETE_PARAMS = PARAMS & {
 export declare type DELETE_RESPONSE = [number];
 export declare type INVITE_PARAMS = PARAMS;
 export declare type INVITE_BODY = {
-    phone: string;
+    email: string;
     hqRole: Partial<HqRoles>;
 };
 export declare type INVITE_RESPONSE = boolean;
 export {};
-/**
- * 1. 줄 권한 미리 선택
- * 2. 문자로 CODE 전달
- */
 //# sourceMappingURL=role.d.ts.map

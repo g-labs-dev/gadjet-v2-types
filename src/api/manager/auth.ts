@@ -71,21 +71,21 @@ export type UPDATE_PUSH_TOKEN_RESPONSE = [number]
 // ===========================
 
 // 이메일 사용가능 확인
-// GET /email/verify
+// GET /managers/email/verify
 export type EMAIL_VERIFY_PARAMS = {}
 export type EMAIL_VERIFY_QUERY = { email: string }
 export type EMAIL_VERIFY_RESPONSE = boolean // true 사용 가능
 // ===========================
 
 // 이메일 코드검증
-// POST /email/code
+// POST /managers/email/code
 export type EMAIL_CODE_PARAMS = {}
 export type EMAIL_CODE_BODY = { email: string }
 export type EMAIL_CODE_RESPONSE = string // 이메일에 발송 된 코드
 // ===========================
 
 // 비밀번호 재설정 링크 발송
-// POST /email/password
+// POST /managers/email/password
 export type RESET_PASSWORD_LINK_PARAMS = {}
 export type RESET_PASSWORD_LINK_BODY = { email: string }
 export type RESET_PASSWORD_LINK_RESPONSE = boolean
@@ -99,7 +99,7 @@ export type RESET_PASSWORD_LINK_RESPONSE = boolean
 // ===========================
 
 // 비밀번호 재설정
-// PUT /password
+// PUT /managers/password
 export type RESET_PASSWORD_PARAMS = {}
 export type RESET_PASSWORD_BODY = {
   key: string

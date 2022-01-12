@@ -5,6 +5,10 @@ declare type PARAMS = {
 };
 export declare type GET_LIST_PARAMS = PARAMS;
 export declare type GET_LIST_RESPONSE = BranchRoles[];
+export declare type GET_DETAIL_PARAMS = PARAMS & {
+    branchRoleId: number;
+};
+export declare type GET_DETAIL_RESPONSE = BranchRoles;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     role: BranchRoles;

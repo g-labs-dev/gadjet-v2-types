@@ -4,6 +4,10 @@ declare type PARAMS = {
 };
 export declare type GET_LIST_PARAMS = PARAMS;
 export declare type GET_LIST_RESPONSE = HqRoles[];
+export declare type GET_DETAIL_PARAMS = PARAMS & {
+    hqRoleId: number;
+};
+export declare type GET_DETAIL_RESPONSE = HqRoles;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     role: Partial<HqRoles>;

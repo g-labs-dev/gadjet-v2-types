@@ -9,6 +9,12 @@ export type GET_LIST_PARAMS = PARAMS
 export type GET_LIST_RESPONSE = HqRoles[]
 // ===========================
 
+// 권한 조회
+// GET /hqs/0/roles/0
+export type GET_DETAIL_PARAMS = PARAMS & { hqRoleId: number }
+export type GET_DETAIL_RESPONSE = HqRoles
+// ===========================
+
 // 권한 추가
 // POST /hqs/0/roles
 export type ADD_PARAMS = PARAMS

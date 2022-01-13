@@ -37,6 +37,10 @@ export declare type UPDATE_RENTEE_BODY = {
     rentee: Partial<BranchRentees>;
 };
 export declare type UPDATE_RENTEE_RESPONSE = [number];
+export declare type GET_AUTOMATION_PARAMS = PARAMS;
+export declare type GET_AUTOMATION_RESPONSE = {
+    automation: BranchAutomations;
+};
 export declare type UPDATE_AUTOMATION_PARAMS = PARAMS;
 export declare type UPDATE_AUTOMATION_BODY = {
     automation: Partial<BranchAutomations>;

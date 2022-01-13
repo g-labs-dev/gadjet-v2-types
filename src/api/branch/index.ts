@@ -73,8 +73,14 @@ export type UPDATE_RENTEE_BODY = {
 export type UPDATE_RENTEE_RESPONSE = [number]
 // ===========================
 
-// 청구서 자동화 설정
-// PUT /hqs/0/branches/0/automation
+// 지점 자동화 설정 조회
+// GET /hqs/0/branches/0/automations
+export type GET_AUTOMATION_PARAMS = PARAMS
+export type GET_AUTOMATION_RESPONSE = { automation: BranchAutomations }
+// ===========================
+
+// 지점 자동화 설정
+// PUT /hqs/0/branches/0/automations
 export type UPDATE_AUTOMATION_PARAMS = PARAMS
 export type UPDATE_AUTOMATION_BODY = {
   automation: Partial<BranchAutomations>

@@ -618,15 +618,6 @@ export declare type Receipts = {
     taxInvoiceJson: TaxInvoice;
     cashBillJson: Cashbill;
 };
-export declare type ManagerNotifications = {
-    managerNotificationId: number;
-    managerId: number;
-    title: string;
-    content: string;
-    sendDatetime: string;
-    link: string;
-    readFlag: boolean;
-};
 export declare type BranchNotifications = {
     branchNotificationId: number;
     branchId: number;

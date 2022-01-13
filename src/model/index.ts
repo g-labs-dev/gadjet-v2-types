@@ -722,16 +722,6 @@ export type Receipts = {
   cashBillJson: Cashbill
 }
 
-export type ManagerNotifications = {
-  managerNotificationId: number
-  managerId: number
-  title: string
-  content: string
-  sendDatetime: string
-  link: string
-  readFlag: boolean
-}
-
 export type BranchNotifications = {
   branchNotificationId: number
   branchId: number

@@ -206,7 +206,6 @@ export type BranchRentees = {
 export type BranchAutomations = {
   branchAutomationId: number
   branchId: number
-  extendCheckFlag: boolean
   billing: boolean
   receipt: boolean
 }

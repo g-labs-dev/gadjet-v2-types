@@ -350,6 +350,7 @@ export declare type Contracts = {
     documentFile?: Relation<Files>;
     branch?: Relation<Branches>;
     parentContract?: Relation<Contracts>;
+    bills?: Relation<Bills[]>;
 };
 export declare type ContractSpaces = {
     contractSpaceId: number;

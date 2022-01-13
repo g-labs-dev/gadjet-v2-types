@@ -421,6 +421,7 @@ export type Contracts = {
   documentFile?: Relation<Files>
   branch?: Relation<Branches>
   parentContract?: Relation<Contracts>
+  bills?: Relation<Bills[]>
 }
 
 export type ContractSpaces = {

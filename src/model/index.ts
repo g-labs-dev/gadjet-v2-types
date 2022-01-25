@@ -718,8 +718,8 @@ export type Receipts = {
   ntsResultCode: string
   mgtKey: string
   requestDatetime: string
-  taxInvoiceJson: TaxInvoice | {}
-  cashBillJson: Cashbill | {}
+  taxInvoiceJson: TaxInvoice
+  cashBillJson: Cashbill
 }
 
 export type BranchNotifications = {

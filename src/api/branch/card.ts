@@ -30,7 +30,7 @@ export type VALIDATE_RESPONSE = Result
 // ===========================
 
 // 지점 결제수단 자동결제 변경
-// PUT /hqs/0/branches/0/cards/0
+// PUT /hqs/0/branches/0/cards/0/active
 export type UPDATE_BILLING_PARAMS = PARAMS & { branchCardId: number }
 export type UPDATE_BILLING_RESPONSE = Result
 // ===========================

@@ -18,19 +18,19 @@ export type ADD_RESPONSE = { branchCard: BranchCards }
 // ===========================
 
 // 지점 결제수단 제거
-// DELETE /hqs/0/branches/0/cards/:branchCardId
+// DELETE /hqs/0/branches/0/cards/0
 export type DELETE_PARAMS = PARAMS & { branchCardId: number }
 export type DELETE_RESPONSE = Result
 // ===========================
 
 // 지점 결제수단 검증
-// GET /hqs/0/branches/0/cards/:branchCardId
+// GET /hqs/0/branches/0/cards/0/validate
 export type VALIDATE_PARAMS = PARAMS & { branchCardId: number }
 export type VALIDATE_RESPONSE = Result
 // ===========================
 
 // 지점 결제수단 자동결제 변경
-// PUT /hqs/0/branches/0/cards/:branchCardId
+// PUT /hqs/0/branches/0/cards/0
 export type UPDATE_BILLING_PARAMS = PARAMS & { branchCardId: number }
 export type UPDATE_BILLING_RESPONSE = Result
 // ===========================

@@ -14,7 +14,7 @@ export type GET_LIST_RESPONSE = { branchCards: BranchCards[] }
 // POST /hqs/0/branches/0/cards
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = { card: BillingCard }
-export type ADD_RESPONSE = { branchCard: BranchCards }
+export type ADD_RESPONSE = Result
 // ===========================
 
 // 지점 결제수단 제거

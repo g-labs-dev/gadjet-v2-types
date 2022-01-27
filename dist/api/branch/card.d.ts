@@ -13,9 +13,7 @@ export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     card: BillingCard;
 };
-export declare type ADD_RESPONSE = {
-    branchCard: BranchCards;
-};
+export declare type ADD_RESPONSE = Result;
 export declare type DELETE_PARAMS = PARAMS & {
     branchCardId: number;
 };

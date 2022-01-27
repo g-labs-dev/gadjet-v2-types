@@ -201,4 +201,11 @@ export declare type Device = {
     deviceName: string;
     useragent: string;
 };
+export declare type BillingCard = {
+    number: string;
+    password: string;
+    expYear: string;
+    expMonth: string;
+    identityNumber: string;
+};
 //# sourceMappingURL=index.d.ts.map

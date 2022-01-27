@@ -1,5 +1,5 @@
 import { BranchCards } from '../../model'
-import { Result } from '../../type'
+import { BillingCard, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -13,7 +13,7 @@ export type GET_LIST_RESPONSE = { branchCards: BranchCards[] }
 // 지점 결제수단 추가
 // POST /hqs/0/branches/0/cards
 export type ADD_PARAMS = PARAMS
-export type ADD_BODY = { branchCard: Partial<BranchCards> }
+export type ADD_BODY = { card: BillingCard }
 export type ADD_RESPONSE = { branchCard: BranchCards }
 // ===========================
 

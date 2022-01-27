@@ -308,3 +308,11 @@ export type Device = {
   deviceName: string
   useragent: string
 }
+
+export type BillingCard = {
+  number: string // 카드번호
+  password: string // 카드 비밀번호 앞 2자리
+  expYear: string // 만료 YY
+  expMonth: string // 만료 MM
+  identityNumber: string // 생년월일(YYMMDD) or 사업자번호(10자리)
+}

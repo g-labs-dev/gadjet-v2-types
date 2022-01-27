@@ -1,5 +1,5 @@
 import { BranchCards } from '../../model';
-import { Result } from '../../type';
+import { BillingCard, Result } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -11,7 +11,7 @@ export declare type GET_LIST_RESPONSE = {
 };
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    branchCard: Partial<BranchCards>;
+    card: BillingCard;
 };
 export declare type ADD_RESPONSE = {
     branchCard: BranchCards;

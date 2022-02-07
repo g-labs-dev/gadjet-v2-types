@@ -9,7 +9,7 @@ import {
   BranchSublets,
 } from '../../model'
 import { PopbillJoinForm } from '../../popbill/auth'
-import { Pagination } from '../../type'
+import { Pagination, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -94,7 +94,7 @@ export type JOIN_POPBILL_PARAMS = PARAMS
 export type JOIN_POPBILL_BODY = {
   form: PopbillJoinForm
 }
-export type JOIN_POPBILL_RESPONSE = [number]
+export type JOIN_POPBILL_RESPONSE = Result
 // ===========================
 
 // 알림 조회

@@ -2,7 +2,8 @@ import { Hqs } from '../../model';
 declare type PARAMS = {
     hqId: number;
 };
-export declare type GET_RESPONSE = Hqs[];
+export declare type GET_LIST_PARAMS = {};
+export declare type GET_LIST_RESPONSE = Hqs[];
 export declare type GET_DETAIL_PARAMS = PARAMS;
 export declare type GET_DETAIL_RESPONSE = Hqs;
 export declare type ADD_PARAMS = PARAMS;

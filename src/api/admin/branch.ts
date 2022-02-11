@@ -31,6 +31,15 @@ export type ADD_BODY = {
 export type ADD_RESPONSE = Branches
 // ===========================
 
+// 지점 수정
+// PUT /hqs/0/branches/0
+export type UPDATE_PARAMS = PARAMS
+export type UPDATE_BODY = {
+  branch: Partial<Branches>
+}
+export type UPDATE_RESPONSE = [number]
+// ===========================
+
 // 지점 사업자 추가
 // POST /hqs/0/branches/0/business
 export type ADD_BUSINESS_PARAMS = PARAMS & { branchId: number }

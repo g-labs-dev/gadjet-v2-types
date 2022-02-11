@@ -5,7 +5,8 @@ type PARAMS = { hqId: number }
 
 // 운영사 전체 리스트 조회
 // GET /hqs
-export type GET_RESPONSE = Hqs[]
+export type GET_LIST_PARAMS = {}
+export type GET_LIST_RESPONSE = Hqs[]
 // ===========================
 
 // 운영사 조회

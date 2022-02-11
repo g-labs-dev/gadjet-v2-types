@@ -125,7 +125,7 @@ export type GET_AUTOMATION_RESPONSE = BranchAutomations
 // PUT /hqs/0/branches/0/business
 export type UPDATE_BUSINESS_PARAMS = { branchId: number }
 export type UPDATE_BUSINESS_BODY = { branchBusiness: Partial<BranchBusinesses> }
-export type UPDATE_BUSINESS_RESPONSE = BranchBusinesses
+export type UPDATE_BUSINESS_RESPONSE = [number]
 // ===========================
 
 // 지점 정산 수정
@@ -134,7 +134,7 @@ export type UPDATE_SETTLEMENT_PARAMS = { branchId: number }
 export type UPDATE_SETTLEMENT_BODY = {
   branchSettlement: Partial<BranchSettlements>
 }
-export type UPDATE_SETTLEMENT_RESPONSE = BranchSettlements
+export type UPDATE_SETTLEMENT_RESPONSE = [number]
 // ===========================
 
 // 지점 계약서 수정
@@ -143,7 +143,7 @@ export type UPDATE_CONTRACT_DOCUMENT_PARAMS = { branchId: number }
 export type UPDATE_CONTRACT_DOCUMENT_BODY = {
   branchContractDocument: Partial<BranchContractDocuments>
 }
-export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = BranchContractDocuments
+export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = [number]
 // ===========================
 
 // 지점 전대차 수정
@@ -152,7 +152,7 @@ export type UPDATE_SUBLET_PARAMS = { branchId: number }
 export type UPDATE_SUBLET_BODY = {
   branchSublet: Partial<BranchSublets>
 }
-export type UPDATE_SUBLET_RESPONSE = BranchSublets
+export type UPDATE_SUBLET_RESPONSE = [number]
 // ===========================
 
 // 지점 임대차 수정
@@ -161,7 +161,7 @@ export type UPDATE_RENTEE_PARAMS = { branchId: number }
 export type UPDATE_RENTEE_BODY = {
   branchRentee: Partial<BranchRentees>
 }
-export type UPDATE_RENTEE_RESPONSE = BranchRentees
+export type UPDATE_RENTEE_RESPONSE = [number]
 // ===========================
 
 // 지점 자동화 설정
@@ -170,5 +170,5 @@ export type UPDATE_AUTOMATION_PARAMS = { branchId: number }
 export type UPDATE_AUTOMATION_BODY = {
   branchAutomation: Partial<BranchAutomations>
 }
-export type UPDATE_AUTOMATION_RESPONSE = BranchAutomations
+export type UPDATE_AUTOMATION_RESPONSE = [number]
 // ===========================

@@ -85,41 +85,41 @@ export declare type UPDATE_BUSINESS_PARAMS = {
 export declare type UPDATE_BUSINESS_BODY = {
     branchBusiness: Partial<BranchBusinesses>;
 };
-export declare type UPDATE_BUSINESS_RESPONSE = BranchBusinesses;
+export declare type UPDATE_BUSINESS_RESPONSE = [number];
 export declare type UPDATE_SETTLEMENT_PARAMS = {
     branchId: number;
 };
 export declare type UPDATE_SETTLEMENT_BODY = {
     branchSettlement: Partial<BranchSettlements>;
 };
-export declare type UPDATE_SETTLEMENT_RESPONSE = BranchSettlements;
+export declare type UPDATE_SETTLEMENT_RESPONSE = [number];
 export declare type UPDATE_CONTRACT_DOCUMENT_PARAMS = {
     branchId: number;
 };
 export declare type UPDATE_CONTRACT_DOCUMENT_BODY = {
     branchContractDocument: Partial<BranchContractDocuments>;
 };
-export declare type UPDATE_CONTRACT_DOCUMENT_RESPONSE = BranchContractDocuments;
+export declare type UPDATE_CONTRACT_DOCUMENT_RESPONSE = [number];
 export declare type UPDATE_SUBLET_PARAMS = {
     branchId: number;
 };
 export declare type UPDATE_SUBLET_BODY = {
     branchSublet: Partial<BranchSublets>;
 };
-export declare type UPDATE_SUBLET_RESPONSE = BranchSublets;
+export declare type UPDATE_SUBLET_RESPONSE = [number];
 export declare type UPDATE_RENTEE_PARAMS = {
     branchId: number;
 };
 export declare type UPDATE_RENTEE_BODY = {
     branchRentee: Partial<BranchRentees>;
 };
-export declare type UPDATE_RENTEE_RESPONSE = BranchRentees;
+export declare type UPDATE_RENTEE_RESPONSE = [number];
 export declare type UPDATE_AUTOMATION_PARAMS = {
     branchId: number;
 };
 export declare type UPDATE_AUTOMATION_BODY = {
     branchAutomation: Partial<BranchAutomations>;
 };
-export declare type UPDATE_AUTOMATION_RESPONSE = BranchAutomations;
+export declare type UPDATE_AUTOMATION_RESPONSE = [number];
 export {};
 //# sourceMappingURL=branch.d.ts.map

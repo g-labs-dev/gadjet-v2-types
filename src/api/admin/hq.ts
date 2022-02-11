@@ -3,20 +3,19 @@ import {} from '../../type'
 
 type PARAMS = { hqId: number }
 
-// 운영사 조회
-// /hqs/0
-export type GET_PARAMS = { name: string }
+// 운영사 전체 리스트 조회
+// GET /hqs
 export type GET_RESPONSE = Hqs[]
 // ===========================
 
 // 운영사 조회
-// /hqs/0
+// GET /hqs/0
 export type GET_DETAIL_PARAMS = PARAMS
 export type GET_DETAIL_RESPONSE = Hqs
 // ===========================
 
 // 운영사 추가
-// /hqs
+// POST /hqs
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = {
   hq: Partial<Hqs>
@@ -25,15 +24,16 @@ export type ADD_RESPONSE = Hqs
 // ===========================
 
 // 운영사 수정
-// /hqs/0
+// POST /hqs/0
 export type UPDATE_PARAMS = PARAMS
 export type UPDATE_BODY = {
   hq: Partial<Hqs>
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================
+
 // 운영사 삭제
-// /hqs/0
+// DELETE/hqs/0
 export type DELETE_PARAMS = PARAMS
 export type DELETE_RESPONSE = [number]
 // ===========================

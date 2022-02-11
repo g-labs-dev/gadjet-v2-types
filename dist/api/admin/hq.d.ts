@@ -6,6 +6,8 @@ export declare type GET_PARAMS = {
     name: string;
 };
 export declare type GET_RESPONSE = Hqs[];
+export declare type GET_DETAIL_PARAMS = PARAMS;
+export declare type GET_DETAIL_RESPONSE = Hqs;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     hq: Partial<Hqs>;

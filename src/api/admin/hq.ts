@@ -9,6 +9,12 @@ export type GET_PARAMS = { name: string }
 export type GET_RESPONSE = Hqs[]
 // ===========================
 
+// 운영사 조회
+// /hqs/0
+export type GET_DETAIL_PARAMS = PARAMS
+export type GET_DETAIL_RESPONSE = Hqs
+// ===========================
+
 // 운영사 추가
 // /hqs
 export type ADD_PARAMS = PARAMS

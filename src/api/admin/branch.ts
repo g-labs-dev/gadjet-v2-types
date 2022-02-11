@@ -65,35 +65,40 @@ export type ADD_AUTOMATION_RESPONSE = BranchAutomations
 
 // ===========================
 
-export type UPDATE_BUSINESS_BODY = {
-  branchBusiness: Partial<BranchBusinesses>
-}
+export type UPDATE_BUSINESS_PARAMS = { branchId: number }
+export type UPDATE_BUSINESS_BODY = { branchBusiness: Partial<BranchBusinesses> }
 export type UPDATE_BUSINESS_RESPONSE = BranchBusinesses
 // ===========================
+
+export type UPDATE_SETTLEMENT_PARAMS = { branchId: number }
 export type UPDATE_SETTLEMENT_BODY = {
   branchSettlement: Partial<BranchSettlements>
 }
 export type UPDATE_SETTLEMENT_RESPONSE = BranchSettlements
 
 // ===========================
+export type UPDATE_CONTRACT_DOCUMENT_PARAMS = { branchId: number }
 export type UPDATE_CONTRACT_DOCUMENT_BODY = {
   branchContractDocument: Partial<BranchContractDocuments>
 }
 export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = BranchContractDocuments
 
 // ===========================
+export type UPDATE_SUBLET_PARAMS = { branchId: number }
 export type UPDATE_SUBLET_BODY = {
   branchSublet: Partial<BranchSublets>
 }
 export type UPDATE_SUBLET_RESPONSE = BranchSublets
 
 // ===========================
+export type UPDATE_RENTEE_PARAMS = { branchId: number }
 export type UPDATE_RENTEE_BODY = {
   branchRentee: Partial<BranchRentees>
 }
 export type UPDATE_RENTEE_RESPONSE = BranchRentees
 
 // ===========================
+export type UPDATE_AUTOMATION_PARAMS = { branchId: number }
 export type UPDATE_AUTOMATION_BODY = {
   branchAutomation: Partial<BranchAutomations>
 }

@@ -13,7 +13,9 @@ export declare type ADD_BODY = {
     branch: Partial<Branches>;
 };
 export declare type ADD_RESPONSE = Branches;
-export declare type UPDATE_PARAMS = PARAMS;
+export declare type UPDATE_PARAMS = PARAMS & {
+    branchId: number;
+};
 export declare type UPDATE_BODY = {
     branch: Partial<Branches>;
 };

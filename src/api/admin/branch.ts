@@ -33,7 +33,7 @@ export type ADD_RESPONSE = Branches
 
 // 지점 수정
 // PUT /hqs/0/branches/0
-export type UPDATE_PARAMS = PARAMS
+export type UPDATE_PARAMS = PARAMS & { branchId: number }
 export type UPDATE_BODY = {
   branch: Partial<Branches>
 }

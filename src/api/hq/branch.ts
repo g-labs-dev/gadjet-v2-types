@@ -29,39 +29,3 @@ export type ADD_BODY = {
 }
 export type ADD_RESPONSE = Branches
 // ===========================
-
-export type UPDATE_BUSINESS_PARAMS = PARAMS
-export type UPDATE_BUSINESS_BODY = {
-  business: Partial<BranchBusinesses>
-}
-export type UPDATE_BUSINESS_RESPONSE = [number]
-
-export type UPDATE_SETTLEMENT_PARAMS = PARAMS
-export type UPDATE_SETTLEMENT_BODY = {
-  settlement: Partial<BranchSettlements>
-}
-export type UPDATE_SETTLEMENT_RESPONSE = [number]
-
-export type UPDATE_CONTRACT_DOCUMENT_PARAMS = PARAMS
-export type UPDATE_CONTRACT_DOCUMENT_BODY = {
-  contractDocument: Partial<BranchContractDocuments>
-}
-export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = [number]
-
-export type UPDATE_SUBLET_PARAMS = PARAMS
-export type UPDATE_SUBLET_BODY = {
-  sublet: Partial<BranchSublets>
-}
-export type UPDATE_SUBLET_RESPONSE = [number]
-
-export type UPDATE_RENTEE_PARAMS = PARAMS
-export type UPDATE_RENTEE_BODY = {
-  rentee: Partial<BranchRentees>
-}
-export type UPDATE_RENTEE_RESPONSE = [number]
-
-export type UPDATE_AUTOMATION_PARAMS = PARAMS
-export type UPDATE_AUTOMATION_BODY = {
-  automation: Partial<BranchAutomations>
-}
-export type UPDATE_AUTOMATION_RESPONSE = [number]

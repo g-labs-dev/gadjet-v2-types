@@ -30,7 +30,7 @@ export type UPDATE_PARAMS = PARAMS
 export type UPDATE_BODY = {
   hq: Partial<Hqs>
 }
-export type UPDATE_RESPONSE = [number]
+export type UPDATE_RESPONSE = Hqs
 // ===========================
 
 // 운영사 삭제

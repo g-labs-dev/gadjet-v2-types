@@ -37,7 +37,7 @@ export type UPDATE_PARAMS = PARAMS & { branchId: number }
 export type UPDATE_BODY = {
   branch: Partial<Branches>
 }
-export type UPDATE_RESPONSE = [number]
+export type UPDATE_RESPONSE = Branches
 // ===========================
 
 // 지점 사업자 추가
@@ -134,7 +134,7 @@ export type GET_AUTOMATION_RESPONSE = BranchAutomations
 // PUT /hqs/0/branches/0/business
 export type UPDATE_BUSINESS_PARAMS = { branchId: number }
 export type UPDATE_BUSINESS_BODY = { branchBusiness: Partial<BranchBusinesses> }
-export type UPDATE_BUSINESS_RESPONSE = [number]
+export type UPDATE_BUSINESS_RESPONSE = BranchBusinesses
 // ===========================
 
 // 지점 정산 수정
@@ -143,7 +143,7 @@ export type UPDATE_SETTLEMENT_PARAMS = { branchId: number }
 export type UPDATE_SETTLEMENT_BODY = {
   branchSettlement: Partial<BranchSettlements>
 }
-export type UPDATE_SETTLEMENT_RESPONSE = [number]
+export type UPDATE_SETTLEMENT_RESPONSE = BranchSettlements
 // ===========================
 
 // 지점 계약서 수정
@@ -152,7 +152,7 @@ export type UPDATE_CONTRACT_DOCUMENT_PARAMS = { branchId: number }
 export type UPDATE_CONTRACT_DOCUMENT_BODY = {
   branchContractDocument: Partial<BranchContractDocuments>
 }
-export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = [number]
+export type UPDATE_CONTRACT_DOCUMENT_RESPONSE = BranchContractDocuments
 // ===========================
 
 // 지점 전대차 수정
@@ -161,7 +161,7 @@ export type UPDATE_SUBLET_PARAMS = { branchId: number }
 export type UPDATE_SUBLET_BODY = {
   branchSublet: Partial<BranchSublets>
 }
-export type UPDATE_SUBLET_RESPONSE = [number]
+export type UPDATE_SUBLET_RESPONSE = BranchSublets
 // ===========================
 
 // 지점 임대차 수정
@@ -170,7 +170,7 @@ export type UPDATE_RENTEE_PARAMS = { branchId: number }
 export type UPDATE_RENTEE_BODY = {
   branchRentee: Partial<BranchRentees>
 }
-export type UPDATE_RENTEE_RESPONSE = [number]
+export type UPDATE_RENTEE_RESPONSE = BranchRentees
 // ===========================
 
 // 지점 자동화 설정
@@ -179,5 +179,5 @@ export type UPDATE_AUTOMATION_PARAMS = { branchId: number }
 export type UPDATE_AUTOMATION_BODY = {
   branchAutomation: Partial<BranchAutomations>
 }
-export type UPDATE_AUTOMATION_RESPONSE = [number]
+export type UPDATE_AUTOMATION_RESPONSE = BranchAutomations
 // ===========================

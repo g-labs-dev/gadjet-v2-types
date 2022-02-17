@@ -101,19 +101,19 @@ export type GET_BUSINESS_RESPONSE = BranchBusinesses
 // ===========================
 
 // 지점 정산 조회
-// GET /hqs/0/branches/0/
+// GET /hqs/0/branches/0/settlement
 export type GET_SETTLEMENT_PARAMS = PARAMS & { branchId: number }
 export type GET_SETTLEMENT_RESPONSE = BranchSettlements
 // ===========================
 
 //지점 계약서 조회
-// GET /hqs/0/branches/0/
+// GET /hqs/0/branches/0/contract-document
 export type GET_CONTRACT_DOCUMENT_PARAMS = PARAMS & { branchId: number }
 export type GET_CONTRACT_DOCUMENT_RESPONSE = BranchContractDocuments
 // ===========================
 
 //지점 전대차 조회
-// GET /hqs/0/branches/0/
+// GET /hqs/0/branches/0/sublet
 export type GET_SUBLET_PARAMS = PARAMS & { branchId: number }
 export type GET_SUBLET_RESPONSE = BranchSublets
 // ===========================
@@ -125,7 +125,7 @@ export type GET_RENTEE_RESPONSE = BranchRentees
 // ===========================
 
 // 지점 자동화 조회
-// GET /hqs/0/branches/0/automations
+// GET /hqs/0/branches/0/automation
 export type GET_AUTOMATION_PARAMS = PARAMS & { branchId: number }
 export type GET_AUTOMATION_RESPONSE = BranchAutomations
 // ===========================

@@ -15,7 +15,7 @@ export declare type UPDATE_PARAMS = PARAMS;
 export declare type UPDATE_BODY = {
     hq: Partial<Hqs>;
 };
-export declare type UPDATE_RESPONSE = [number];
+export declare type UPDATE_RESPONSE = Hqs;
 export declare type DELETE_PARAMS = PARAMS;
 export declare type DELETE_RESPONSE = [number];
 export {};

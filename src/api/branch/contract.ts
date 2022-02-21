@@ -86,3 +86,10 @@ export type GET_CONTRACT_DEPOSIT_BILLS_PARAMS = PARAMS & { contractId: number }
 export type GET_CONTRACT_DEPOSIT_BILLS_QUERY = {}
 export type GET_CONTRACT_DEPOSIT_BILLS_RESPONSE = { bills: Bills[] }
 // ===========================
+
+// 계약서 업데이트
+// PUT /hqs/0/branches/0/contracts/0/document-file/0
+export type UPDATE_DOCUMENT_FILE_PARAMS = PARAMS & { contractId: number }
+export type UPDATE_DOCUMENT_FILE_BODY = { documentFileId: number }
+export type UPDATE_DOCUMENT_FILE_RESPONSE = [number]
+// ===========================

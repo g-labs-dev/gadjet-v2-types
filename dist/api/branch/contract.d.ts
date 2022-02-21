@@ -82,5 +82,12 @@ export declare type GET_CONTRACT_DEPOSIT_BILLS_QUERY = {};
 export declare type GET_CONTRACT_DEPOSIT_BILLS_RESPONSE = {
     bills: Bills[];
 };
+export declare type UPDATE_DOCUMENT_FILE_PARAMS = PARAMS & {
+    contractId: number;
+};
+export declare type UPDATE_DOCUMENT_FILE_BODY = {
+    documentFileId: number;
+};
+export declare type UPDATE_DOCUMENT_FILE_RESPONSE = [number];
 export {};
 //# sourceMappingURL=contract.d.ts.map

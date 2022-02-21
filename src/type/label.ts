@@ -79,10 +79,12 @@ export const receiptStatus: Record<T.ReceiptStatus, string> = {
   'tax-invoice-done': '세금계산서 발행 완료',
   'tax-invoice-update-request': '세금계산서 수정 발행 요청',
   'tax-invoice-updated': '세금계산서 수정 발행 됨',
+  'tax-invoice-update-request-fail': '세금계산서 수정 발행 실패',
   'cash-receipt-request': '현금영수증 발행 요청',
   'cash-receipt-fail': '현금영수증 발행 실패',
   'cash-receipt-done': '현금영수증 발행 완료',
   'cash-receipt-cancel': '현금영수증 취소 발행 됨',
+  'cash-receipt-cancel-fail': '현금영수증 취소 발행 실패',
 }
 export const expenditureType: Record<T.ExpenditureType, string> = {
   card: '카드',

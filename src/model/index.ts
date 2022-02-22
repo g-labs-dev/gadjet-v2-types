@@ -731,7 +731,7 @@ export type ReceiptsFailLogs = {
   modifyCode: number
   mgtKey: string
   mgtKey2: string
-  code: string
+  code: number
   message: string
   ntsResultCode: string
   requestDatetime: string

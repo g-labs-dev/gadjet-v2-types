@@ -722,6 +722,23 @@ export type Receipts = {
   cashBillJson: Cashbill
 }
 
+export type ReceiptsFailLogs = {
+  receiptsFailLogId: number
+  branchId: number
+  billId: number
+  type: ReceiptType
+  status: ReceiptStatus
+  modifyCode: number
+  mgtKey: string
+  mgtKey2: string
+  code: string
+  message: string
+  ntsResultCode: string
+  requestDatetime: string
+  taxInvoiceJson: TaxInvoice
+  cashBillJson: Cashbill
+}
+
 export type BranchNotifications = {
   branchNotificationId: number
   branchId: number

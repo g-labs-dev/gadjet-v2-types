@@ -752,8 +752,8 @@ export declare type NotificationSendLogs = {
     datetime: string;
     manager?: Relation<Managers>;
 };
-export declare type NotificationLog = {
-    notificationSendLogId: number;
+export declare type NotificationLogs = {
+    notificationLogId: number;
     type: string;
     resultCode: number;
     resultMsg: string;

@@ -871,3 +871,12 @@ export type NotificationSendLogs = {
 
   manager?: Relation<Managers>
 }
+
+export type NotificationLog = {
+  notificationSendLogId: number
+  type: string
+  resultCode: number
+  resultMsg: string
+  isSuccessful: boolean
+  data: object
+}

@@ -752,4 +752,12 @@ export declare type NotificationSendLogs = {
     datetime: string;
     manager?: Relation<Managers>;
 };
+export declare type NotificationLog = {
+    notificationSendLogId: number;
+    type: string;
+    resultCode: number;
+    resultMsg: string;
+    isSuccessful: boolean;
+    data: object;
+};
 //# sourceMappingURL=index.d.ts.map

@@ -208,4 +208,7 @@ export declare type BillingCard = {
     expMonth: string;
     identityNumber: string;
 };
+export declare type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN';
+export declare type PrintColorType = 'color' | 'bnw';
+export declare type PrintSizeType = 'A4' | 'A3';
 //# sourceMappingURL=index.d.ts.map

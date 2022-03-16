@@ -318,3 +318,9 @@ export type BillingCard = {
   expMonth: string // 만료 MM
   identityNumber: string // 생년월일(YYMMDD) or 사업자번호(10자리)
 }
+
+export declare type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN'
+
+export declare type PrintColorType = 'color' | 'bnw'
+
+export declare type PrintSizeType = 'A4' | 'A3'

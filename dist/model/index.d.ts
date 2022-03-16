@@ -1,6 +1,6 @@
 import { Cashbill } from '../popbill/cash-bill';
 import { TaxInvoice } from '../popbill/tax-invoice';
-import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus } from '../type';
+import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType } from '../type';
 export declare type Images = {
     imageId: number;
     size: number;
@@ -759,5 +759,21 @@ export declare type NotificationLogs = {
     resultMsg: string;
     isSuccessful: boolean;
     data: object;
+};
+export declare type mPrintLogs = {
+    mPrintLogId: number;
+    deptId: number;
+    parentDeptId: number;
+    userId: number;
+    productType: PrintJobType;
+    colorType: PrintColorType;
+    size: PrintSizeType;
+    count: number;
+    date: string;
+    deptName: string;
+    parentDeptName: string;
+    userName: string;
+    title: string;
+    floor: string;
 };
 //# sourceMappingURL=index.d.ts.map

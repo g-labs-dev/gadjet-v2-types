@@ -36,6 +36,9 @@ import {
   TenantType,
   UsedCreditAmount,
   UserStatus,
+  PrintJobType,
+  PrintColorType,
+  PrintSizeType,
 } from '../type'
 
 export type Images = {
@@ -879,4 +882,21 @@ export type NotificationLogs = {
   resultMsg: string
   isSuccessful: boolean
   data: object
+}
+
+export declare type mPrintLogs = {
+  mPrintLogId: number
+  deptId: number
+  parentDeptId: number
+  userId: number
+  productType: PrintJobType
+  colorType: PrintColorType
+  size: PrintSizeType
+  count: number
+  date: string
+  deptName: string
+  parentDeptName: string
+  userName: string
+  title: string
+  floor: string
 }

@@ -1,12 +1,13 @@
 import { Services, ServiceSales } from '../../model'
 import { Pagination, ServiceSalesSummary } from '../../type'
+import { ServiceSaleSearch, ServiceSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 서비스 조회
 // GET /hqs/0/branches/0/services
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string }
+export type GET_LIST_QUERY = Pagination & ServiceSearch
 export type GET_LIST_RESPONSE = { total: number; services: Services[] }
 // ===========================
 
@@ -43,7 +44,7 @@ export type DELETE_RESPONSE = [number]
 // 서비스 판매내역 조회
 // GET /hqs/0/branches/0/service-sales
 export type GET_SALES_PARAMS = PARAMS
-export type GET_SALES_QUERY = Pagination & { query: string; datetime: [string, string]; serviceIds: number[] } // serviceIds.length === 0 이면 전체
+export type GET_SALES_QUERY = Pagination & ServiceSaleSearch
 export type GET_SALES_RESPONSE = { total: number; serviceSales: ServiceSales[] }
 // ===========================
 

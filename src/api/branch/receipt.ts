@@ -2,13 +2,14 @@ import { Receipts } from '../../model'
 import { Cashbill } from '../../popbill/cash-bill'
 import { TaxInvoiceBasic, TaxInvoiceInvoicee, TaxInvoiceInvoicer } from '../../popbill/tax-invoice'
 import { Pagination, ReceiptSummary, Result } from '../../type'
+import { ReceiptSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 증빙 조회
 // GET /hqs/0/branches/0/receipts
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; requestDatetime: [string, string] } // requestDatetime 조회 시 시간 처리 필요 (requestDatetime 포맷은 YYYY-MM-DD HH:mm:ss / query는 YYYY-MM-DD 로)
+export type GET_LIST_QUERY = Pagination & ReceiptSearch
 export type GET_LIST_RESPONSE = { total: number; receipts: Receipts[] }
 // ===========================
 

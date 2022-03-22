@@ -1,17 +1,13 @@
 import { Payments } from '../../model'
 import { Pagination, PaymentStatus, PaymentSummary, PaymentType, Result } from '../../type'
+import { PaymentSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 결제내역 조회
 // GET /hqs/0/branches/0/payments
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & {
-  query: string
-  paymentType: PaymentType[]
-  paymentStatus: PaymentStatus[]
-  date: [string, string]
-}
+export type GET_LIST_QUERY = Pagination & PaymentSearch
 export type GET_LIST_RESPONSE = { total: number; payments: Payments[] }
 // ===========================
 

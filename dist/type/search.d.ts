@@ -1,4 +1,7 @@
 import { BillType, ContractStatus, ExpenditureType, PaymentStatus, PaymentType } from '.';
+/**
+ * 기본 Date Format YYYY-MM-DD
+ */
 export declare type ContractSearch = {
     query: string;
     spaceTypes: number[];
@@ -70,9 +73,9 @@ export declare type EventSearch = {
 export declare type AdditionSearch = {
     query: string;
 };
-export declare type BranchRoleSearch = Record<string, unknown>;
 export declare type CashSearch = {
     query: string;
     date: [string, string];
 };
+export declare type BranchRoleSearch = Record<string, unknown>;
 //# sourceMappingURL=search.d.ts.map

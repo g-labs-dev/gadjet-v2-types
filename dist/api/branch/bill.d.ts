@@ -1,17 +1,13 @@
 /// <reference types="node" />
 import { Bills } from '../../model';
-import { BillSummary, BillType, ContractReceiver, Pagination, PaymentType, Result } from '../../type';
+import { BillSummary, ContractReceiver, Pagination, PaymentType, Result } from '../../type';
+import { BillSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-    startDate: [string, string];
-    spaceTypes: number[];
-    type: BillType[];
-};
+export declare type GET_LIST_QUERY = Pagination & BillSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     bills: Bills[];

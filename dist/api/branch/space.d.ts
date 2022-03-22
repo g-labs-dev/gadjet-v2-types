@@ -1,15 +1,13 @@
 /// <reference types="node" />
 import { Contracts, Spaces } from '../../model';
 import { Pagination, SpaceSummary } from '../../type';
+import { SpaceSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-    emptyFlag: boolean;
-};
+export declare type GET_LIST_QUERY = Pagination & SpaceSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     spaces: Spaces[];

@@ -1,16 +1,13 @@
 /// <reference types="node" />
 import { Expenditures } from '../../model';
 import { Pagination, ExpenditureSummary, ExpenditureType } from '../../type';
+import { ExpenditureSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-    expenditureTypes: ExpenditureType[];
-    date: [string, string];
-};
+export declare type GET_LIST_QUERY = Pagination & ExpenditureSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     expenditure: Expenditures[];

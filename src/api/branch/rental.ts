@@ -1,12 +1,13 @@
 import { RentalReservations, Rentals } from '../../model'
 import { Pagination } from '../../type'
+import { RentalReservationSearch, RentalSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 대관대여 조회
 // GET /hqs/0/branches/0/rentals
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string }
+export type GET_LIST_QUERY = Pagination & RentalSearch
 export type GET_LIST_RESPONSE = { total: number; rentals: Rentals[] }
 // ===========================
 
@@ -43,7 +44,7 @@ export type DELETE_RESPONSE = [number]
 // 대관대여 내역 조회
 // GET /hqs/0/branches/0/rental-reservations
 export type GET_RESERVATIONS_PARAMS = PARAMS
-export type GET_RESERVATIONS_QUERY = Pagination & { date: [string, string]; rentalIds: number[] }
+export type GET_RESERVATIONS_QUERY = Pagination & RentalReservationSearch
 export type GET_RESERVATIONS_RESPONSE = { total: number; rentalReservations: RentalReservations[] }
 // ===========================
 

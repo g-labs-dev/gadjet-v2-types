@@ -1,14 +1,13 @@
 /// <reference types="node" />
 import { RentalReservations, Rentals } from '../../model';
 import { Pagination } from '../../type';
+import { RentalReservationSearch, RentalSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-};
+export declare type GET_LIST_QUERY = Pagination & RentalSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     rentals: Rentals[];
@@ -34,10 +33,7 @@ export declare type DELETE_PARAMS = PARAMS & {
 };
 export declare type DELETE_RESPONSE = [number];
 export declare type GET_RESERVATIONS_PARAMS = PARAMS;
-export declare type GET_RESERVATIONS_QUERY = Pagination & {
-    date: [string, string];
-    rentalIds: number[];
-};
+export declare type GET_RESERVATIONS_QUERY = Pagination & RentalReservationSearch;
 export declare type GET_RESERVATIONS_RESPONSE = {
     total: number;
     rentalReservations: RentalReservations[];

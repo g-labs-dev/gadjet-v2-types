@@ -1,15 +1,13 @@
 /// <reference types="node" />
 import { Contracts, CreditLogs, Credits, ProductSales, RentalReservations, Tenants, Users } from '../../model';
-import { ContractStatus, CreditType, Pagination } from '../../type';
+import { CreditType, Pagination } from '../../type';
+import { TenantSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-    contractStatus: ContractStatus[];
-};
+export declare type GET_LIST_QUERY = Pagination & TenantSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     tenants: Tenants[];

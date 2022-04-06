@@ -1,13 +1,12 @@
 import { EventAttendees, Events } from '../../model';
 import { Pagination } from '../../type';
+import { EventSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-};
+export declare type GET_LIST_QUERY = Pagination & EventSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     events: Events[];

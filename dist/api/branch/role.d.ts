@@ -1,10 +1,11 @@
 import { BranchRoles } from '../../model';
 import { Pagination } from '../../type';
+import { BranchRoleSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
-export declare type GET_LIST_PARAMS = PARAMS;
+export declare type GET_LIST_PARAMS = PARAMS & BranchRoleSearch;
 export declare type GET_LIST_QUERY = Pagination & {
     query: string;
 };

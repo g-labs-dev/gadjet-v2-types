@@ -1,12 +1,13 @@
 import { Contracts, Spaces } from '../../model'
 import { Pagination, SpaceSummary } from '../../type'
+import { SpaceSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 공간 조회
 // GET /hqs/0/branches/0/spaces
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; emptyFlag: boolean } // emptyFlag = 공실인지 아닌지 계약으로 판단
+export type GET_LIST_QUERY = Pagination & SpaceSearch
 export type GET_LIST_RESPONSE = { total: number; spaces: Spaces[] }
 // ===========================
 

@@ -1,12 +1,13 @@
 import { Expenditures } from '../../model'
 import { Pagination, ExpenditureSummary, ExpenditureType } from '../../type'
+import { ExpenditureSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 지출 조회
 // GET /hqs/0/branches/0/expenditure
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; expenditureTypes: ExpenditureType[]; date: [string, string] } // query: memo
+export type GET_LIST_QUERY = Pagination & ExpenditureSearch
 export type GET_LIST_RESPONSE = { total: number; expenditure: Expenditures[] }
 // ===========================
 

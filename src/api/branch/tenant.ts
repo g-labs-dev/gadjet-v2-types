@@ -1,12 +1,13 @@
 import { Contracts, CreditLogs, Credits, ProductSales, RentalReservations, Tenants, Users } from '../../model'
-import { ContractStatus, CreditType, Pagination } from '../../type'
+import { CreditType, Pagination } from '../../type'
+import { TenantSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 입주사 조회
 // GET /hqs/0/branches/0/tenants
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; contractStatus: ContractStatus[] } // @@@@ query : name, email, user.name
+export type GET_LIST_QUERY = Pagination & TenantSearch
 export type GET_LIST_RESPONSE = { total: number; tenants: Tenants[] }
 // ===========================
 

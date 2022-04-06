@@ -1,12 +1,13 @@
 import { Cash } from '../../model'
 import { Pagination, CashSummary } from '../../type'
+import { CashSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 현금 조회
 // GET /hqs/0/branches/0/cash
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; date: [string, string] } // query: memo
+export type GET_LIST_QUERY = Pagination & CashSearch
 export type GET_LIST_RESPONSE = { total: number; cash: Cash[] }
 // ===========================
 

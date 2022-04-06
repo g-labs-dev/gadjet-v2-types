@@ -1,14 +1,13 @@
 /// <reference types="node" />
 import { Services, ServiceSales } from '../../model';
 import { Pagination, ServiceSalesSummary } from '../../type';
+import { ServiceSaleSearch, ServiceSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-};
+export declare type GET_LIST_QUERY = Pagination & ServiceSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     services: Services[];
@@ -34,11 +33,7 @@ export declare type DELETE_PARAMS = PARAMS & {
 };
 export declare type DELETE_RESPONSE = [number];
 export declare type GET_SALES_PARAMS = PARAMS;
-export declare type GET_SALES_QUERY = Pagination & {
-    query: string;
-    datetime: [string, string];
-    serviceIds: number[];
-};
+export declare type GET_SALES_QUERY = Pagination & ServiceSaleSearch;
 export declare type GET_SALES_RESPONSE = {
     total: number;
     serviceSales: ServiceSales[];

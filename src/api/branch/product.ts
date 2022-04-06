@@ -1,12 +1,13 @@
 import { Products, ProductSales } from '../../model'
 import { Pagination, ProductSalesSummary } from '../../type'
+import { ProductSaleSearch, ProductSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 상품 조회
 // GET /hqs/0/branches/0/products
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string }
+export type GET_LIST_QUERY = Pagination & ProductSearch
 export type GET_LIST_RESPONSE = { total: number; products: Products[] }
 // ===========================
 
@@ -42,7 +43,7 @@ export type DELETE_RESPONSE = [number]
 // 상품 판매내역 조회
 // GET /hqs/0/branches/0/product-sales
 export type GET_SALES_PARAMS = PARAMS
-export type GET_SALES_QUERY = Pagination & { query: string; datetime: [string, string]; productIds: number[] } // productIds.length === 0 이면 전체
+export type GET_SALES_QUERY = Pagination & ProductSaleSearch
 export type GET_SALES_RESPONSE = { total: number; productSales: ProductSales[] }
 // ===========================
 

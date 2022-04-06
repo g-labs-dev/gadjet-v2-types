@@ -1,12 +1,13 @@
 import { Additions, Contracts } from '../../model'
 import { Pagination } from '../../type'
+import { AdditionSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 부가서비스 조회
 // GET /hqs/0/branches/0/additions
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string }
+export type GET_LIST_QUERY = Pagination & AdditionSearch
 export type GET_LIST_RESPONSE = { total: number; additions: Additions[] }
 // ===========================
 

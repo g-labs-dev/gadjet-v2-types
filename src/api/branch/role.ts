@@ -1,4 +1,5 @@
 import { BranchRoles } from '../../model'
+import { Pagination } from '../../type'
 import {} from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
@@ -6,6 +7,7 @@ type PARAMS = { hqId: number; branchId: number }
 // 권한 조회
 // GET /hqs/0/branches/0/roles
 export type GET_LIST_PARAMS = PARAMS
+export type GET_LIST_QUERY = Pagination & { query: string }
 export type GET_LIST_RESPONSE = BranchRoles[]
 // ===========================
 

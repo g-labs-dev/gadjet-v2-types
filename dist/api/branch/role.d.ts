@@ -1,9 +1,13 @@
 import { BranchRoles } from '../../model';
+import { Pagination } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
+export declare type GET_LIST_QUERY = Pagination & {
+    query: string;
+};
 export declare type GET_LIST_RESPONSE = BranchRoles[];
 export declare type GET_DETAIL_PARAMS = PARAMS & {
     branchRoleId: number;

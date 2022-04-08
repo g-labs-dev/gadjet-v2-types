@@ -42,7 +42,7 @@ export declare type TaxInvoiceTrustee = {
     trusteeAddr: '서울특별시 강남구 선릉로 578, 7층(삼성동)';
     trusteeBizType: '부동산업 및 임대업, 서비스, 소매';
     trusteeBizClass: '정보통신서비스업, 전자상거래업';
-    trusteeContactName: '강병선';
+    trusteeContactName: '이태호';
     trusteeDeptName: 'GADJET';
     trusteeTEL: '07042054025';
     trusteeHP: '07042054025';

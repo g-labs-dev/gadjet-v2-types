@@ -118,6 +118,7 @@ export type Branches = {
   hq?: Relation<Hqs>
   business?: Relation<BranchBusinesses>
   settlement?: Relation<BranchSettlements>
+  cards?: Relation<BranchCards>
   contractDocument?: Relation<BranchContractDocuments>
   sublet?: Relation<BranchSublets>
   rentee?: Relation<BranchRentees>

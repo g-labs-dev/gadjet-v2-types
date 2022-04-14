@@ -257,7 +257,7 @@ export type Users = {
   code: string
   status: UserStatus
   device: null | Device
-
+  lastLogin: string
   profile?: Relation<Images>
   tenantRoles?: Relation<TenantRoles[]>
 }

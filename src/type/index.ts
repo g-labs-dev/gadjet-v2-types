@@ -33,7 +33,7 @@ export type TenantType =
   | 'foreigner' // 비사업자 외국인
 
 export type ManagerJoinType = 'local' | 'google'
-
+export type ManagerStatus = 'inactive' | 'pending' | 'done'
 export type Role =
   | 1 // 편집, 조회
   | 2 // 조회
@@ -297,7 +297,7 @@ export type BranchBuildingContractType = 'none' | 'rent' | 'sublet'
 
 export type Lang = 'ko' | 'en'
 
-export type UserStatus = 'pending' | 'done'
+export type UserStatus = 'inactive' | 'pending' | 'done'
 
 export type Result = { isSuccess: boolean; message: string }
 

@@ -5,6 +5,7 @@ export declare type ImageCategory = 'hq' | 'branch' | 'notice' | 'rental' | 'roo
 export declare type FileCategory = 'branch-terms' | 'branch-policy' | 'branch-etc' | 'sublet-consent' | 'sublet-document' | 'rentee-document' | 'contract-document';
 export declare type TenantType = 'sole-proprietor' | 'corporation-business' | 'local' | 'foreigner';
 export declare type ManagerJoinType = 'local' | 'google';
+export declare type ManagerStatus = 'inactive' | 'pending' | 'done';
 export declare type Role = 1 | 2 | 3;
 export declare type ContractBillingType = 'prepayment' | 'monthly';
 export declare type ContractBillingSplitType = 'A' | 'B';
@@ -187,7 +188,7 @@ export declare type ApprovePayResponse = {
 }));
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export declare type Lang = 'ko' | 'en';
-export declare type UserStatus = 'pending' | 'done';
+export declare type UserStatus = 'inactive' | 'pending' | 'done';
 export declare type Result = {
     isSuccess: boolean;
     message: string;

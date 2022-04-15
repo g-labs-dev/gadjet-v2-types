@@ -39,6 +39,7 @@ import {
   PrintJobType,
   PrintColorType,
   PrintSizeType,
+  ManagerStatus,
 } from '../type'
 
 export type Images = {
@@ -244,6 +245,7 @@ export type Managers = {
   pushToken: string | null
   profileImageId: number | null
   lastLogin: string
+  status: ManagerStatus
   profile?: Relation<Images>
 }
 

@@ -241,7 +241,7 @@ export type Managers = {
   socialId: string
   pushToken: string | null
   profileImageId: number | null
-
+  lastLogin: string
   profile?: Relation<Images>
 }
 

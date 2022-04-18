@@ -66,7 +66,6 @@ export declare type Branches = {
     addressDetail: string;
     popbillId: string | null;
     remainDate: string;
-    isAgree: boolean;
     hq?: Relation<Hqs>;
     business?: Relation<BranchBusinesses>;
     settlement?: Relation<BranchSettlements>;

@@ -221,6 +221,7 @@ export declare type HqRoles = {
     notice: Role;
     role: Role;
     config: Role;
+    branch: Role;
     hq?: Relation<Hqs>;
     manager?: Relation<Managers>;
 };

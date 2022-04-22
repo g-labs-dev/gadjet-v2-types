@@ -57,5 +57,11 @@ export declare type GET_BRANCH_NOTIFICATIONS_RESPONSE = {
     total: number;
     branchNotifications: BranchNotifications[];
 };
+export declare type GET_REMAIN_DATE = PARAMS & {
+    managerId: number;
+};
+export declare type GET_REMAIN_DATE_RESPONSE = Result & {
+    type: number;
+};
 export {};
 //# sourceMappingURL=index.d.ts.map

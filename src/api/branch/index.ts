@@ -103,3 +103,9 @@ export type GET_BRANCH_NOTIFICATIONS_PARAMS = PARAMS
 export type GET_BRANCH_NOTIFICATIONS_QUERY = Pagination
 export type GET_BRANCH_NOTIFICATIONS_RESPONSE = { total: number; branchNotifications: BranchNotifications[] }
 // ===========================
+
+// 가젯서비스이용 결제까지 남은 일자 조회
+export type GET_REMAIN_DATE = PARAMS & { managerId: number }
+export type GET_REMAIN_DATE_RESPONSE = Result & { type: number }
+// 1 : adminFlag가 false && remainDate <= 0
+// 2 : adminFlag가 true && remainDate <= 0 // 운영자이면서, 결제를 해야하는 경우

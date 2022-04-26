@@ -6,7 +6,8 @@
   "types": "dist",
   "scripts": {
     "prepare": "husky install",
-    "build": "rm -rf dist && tsc"
+    "build": "rm -rf dist && tsc",
+    "wbuild": "rmdir /s dist && tsc"
   },
   "repository": {
     "type": "git",

@@ -15,6 +15,7 @@ export declare type ADD_BODY = {
     branch: Partial<Branches>;
 };
 export declare type ADD_RESPONSE = Branches;
+export declare type ADD_CARD_PARAMS = PARAMS;
 export declare type ADD_CARD_BODY = {
     card: BillingCard;
 };

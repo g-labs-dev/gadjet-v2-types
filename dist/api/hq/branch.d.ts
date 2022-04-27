@@ -1,5 +1,5 @@
-import { Branches } from '../../model';
-import { BillingCard, Result } from '../../type';
+import { BranchCards, Branches } from '../../model';
+import { BillingCard } from '../../type';
 declare type PARAMS = {
     hqId: number;
 };
@@ -19,6 +19,6 @@ export declare type ADD_CARD_PARAMS = PARAMS;
 export declare type ADD_CARD_BODY = {
     card: BillingCard;
 };
-export declare type ADD_CARD_RESPONSE = Result;
+export declare type ADD_CARD_RESPONSE = BranchCards;
 export {};
 //# sourceMappingURL=branch.d.ts.map

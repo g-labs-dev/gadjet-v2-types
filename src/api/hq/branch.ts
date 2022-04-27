@@ -1,6 +1,7 @@
 import {
   BranchAutomations,
   BranchBusinesses,
+  BranchCards,
   BranchContractDocuments,
   Branches,
   BranchRentees,
@@ -34,4 +35,4 @@ export type ADD_RESPONSE = Branches
 // POST /hqs/0/card
 export type ADD_CARD_PARAMS = PARAMS
 export type ADD_CARD_BODY = { card: BillingCard }
-export type ADD_CARD_RESPONSE = Result
+export type ADD_CARD_RESPONSE = BranchCards

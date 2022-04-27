@@ -34,5 +34,5 @@ export type ADD_RESPONSE = Branches
 // 지점 결제수단 추가
 // POST /hqs/0/card
 export type ADD_CARD_PARAMS = PARAMS
-export type ADD_CARD_BODY = { card: BillingCard }
+export type ADD_CARD_BODY = { card: BillingCard } &{ contact:string, email:string, name:string}
 export type ADD_CARD_RESPONSE = BranchCards

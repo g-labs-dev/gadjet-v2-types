@@ -13,6 +13,7 @@ export declare type GET_DETAIL_RESPONSE = Branches;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     branch: Partial<Branches>;
+    managerId: number;
 };
 export declare type ADD_RESPONSE = Branches;
 export declare type ADD_CARD_PARAMS = PARAMS;

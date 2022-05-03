@@ -63,5 +63,11 @@ export declare type GET_REMAIN_DATE = PARAMS & {
 export declare type GET_REMAIN_DATE_RESPONSE = Result & {
     type: number;
 };
+export declare type UPDATE_CHARGE_NOTICE_PARAMS = PARAMS;
+export declare type UPDATE_CHARGE_NOTICE_BODY = {
+    chargeNotice: number;
+    managerId: number;
+};
+export declare type UPDATE_CHARGE_NOTICE_RESPONSE = Result;
 export {};
 //# sourceMappingURL=index.d.ts.map

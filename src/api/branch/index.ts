@@ -105,7 +105,17 @@ export type GET_BRANCH_NOTIFICATIONS_RESPONSE = { total: number; branchNotificat
 // ===========================
 
 // 가젯서비스이용 결제까지 남은 일자 조회
-export type GET_REMAIN_DATE = PARAMS & { managerId: number }
-export type GET_REMAIN_DATE_RESPONSE = Result & { type: number }
 // 1 : adminFlag가 false && remainDate <= 0
 // 2 : adminFlag가 true && remainDate <= 0 // 운영자이면서, 결제를 해야하는 경우
+// GET /hqs/0/branches/0/checkRemainDate/:managerId
+export type GET_REMAIN_DATE = PARAMS & { managerId: number }
+export type GET_REMAIN_DATE_RESPONSE = Result & { type: number }
+
+// 유료공지전환 상태 업데이트
+// PUT /hqs/0/branches/0/chargeNotice
+export type UPDATE_CHARGE_NOTICE_PARAMS = PARAMS
+export type UPDATE_CHARGE_NOTICE_BODY = {
+  chargeNotice: number
+  managerId: number
+}
+export type UPDATE_CHARGE_NOTICE_RESPONSE = Result

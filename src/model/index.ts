@@ -545,16 +545,17 @@ export type Payments = {
   user?: Relation<Users>
 }
 
-export type Settlements = {
-  settlementId: number
+export type GadjetSettlements = {
+  gadjetSettlementId: number
   branchId: number
-  bankCode: string
-  bankName: string
-  account: string
-  holder: string
+  paymentInfo: object
   price: number
   date: string
-  paymentJson: Payments[]
+  month: number
+  settlementHistory: object
+  isSuccess: boolean
+  message: string
+  isManual: boolean
 }
 
 export type Credits = {

@@ -458,16 +458,17 @@ export declare type Payments = {
     bill?: Relation<Bills>;
     user?: Relation<Users>;
 };
-export declare type Settlements = {
-    settlementId: number;
+export declare type GadjetSettlements = {
+    gadjetSettlementId: number;
     branchId: number;
-    bankCode: string;
-    bankName: string;
-    account: string;
-    holder: string;
+    paymentInfo: object;
     price: number;
     date: string;
-    paymentJson: Payments[];
+    month: number;
+    settlementHistory: object;
+    isSuccess: boolean;
+    message: string;
+    isManual: boolean;
 };
 export declare type Credits = {
     creditId: number;

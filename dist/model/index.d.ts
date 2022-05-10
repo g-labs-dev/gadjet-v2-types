@@ -469,6 +469,7 @@ export declare type GadjetSettlements = {
     isSuccess: boolean;
     message: string;
     isManual: boolean;
+    paymentUserInfo: object;
 };
 export declare type Credits = {
     creditId: number;

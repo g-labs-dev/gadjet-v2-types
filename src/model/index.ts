@@ -556,6 +556,7 @@ export type GadjetSettlements = {
   isSuccess: boolean
   message: string
   isManual: boolean
+  paymentUserInfo: object
 }
 
 export type Credits = {

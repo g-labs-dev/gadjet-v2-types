@@ -194,6 +194,7 @@ export declare type Managers = {
     profileImageId: number | null;
     lastLogin: string;
     status: ManagerStatus;
+    resetCode: string;
     profile?: Relation<Images>;
 };
 export declare type Users = {

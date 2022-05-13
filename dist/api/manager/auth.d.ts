@@ -75,5 +75,10 @@ export declare type RESET_PASSWORD_BODY = {
     password: string;
 };
 export declare type RESET_PASSWORD_RESPONSE = boolean;
+export declare type CODE_VERIFY_PARAMS = {
+    code: string;
+};
+export declare type CODE_VERIFY_QUERY = {};
+export declare type CODE_VERIFY_RESPONSE = Managers | null;
 export {};
 //# sourceMappingURL=auth.d.ts.map

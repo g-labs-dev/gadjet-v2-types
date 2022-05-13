@@ -110,3 +110,9 @@ export type RESET_PASSWORD_RESPONSE = boolean
   - 비밀번호 재설정 링크 발송 참고
 */
 // ===========================
+
+// 이메일 사용가능 확인
+// GET /managers/verify/code
+export type CODE_VERIFY_PARAMS = { code: string }
+export type CODE_VERIFY_QUERY = {}
+export type CODE_VERIFY_RESPONSE = Managers | null

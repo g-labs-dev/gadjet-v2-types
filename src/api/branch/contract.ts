@@ -1,4 +1,4 @@
-import { Bills, Contracts } from '../../model'
+import { Bills, ContractInviteCodes, Contracts } from '../../model'
 import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type'
 import { ContractSearch } from '../../type/search'
 
@@ -64,7 +64,7 @@ export type SUSPEND_RESPONSE = [number]
 // POST /hqs/0/branches/0/contracts/0/send-invite
 export type SEND_INVITE_PARAMS = PARAMS & { contractId: number }
 export type SEND_INVITE_BODY = { contacts: string[] }
-export type SEND_INVITE_RESPONSE = boolean
+export type SEND_INVITE_RESPONSE = ContractInviteCodes[]
 // ===========================
 
 // 계약 검색 (attributes: ['contractId', 'tenant','status', 'startDate', 'suspendDate'])

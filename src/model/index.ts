@@ -630,6 +630,7 @@ export type Rentals = {
   availableCreditType: CreditType[]
   weekendFlag: boolean
   shareFlag: boolean
+  colorInfo: string
   imageId: number | null
 
   branch?: Relation<Branches>
@@ -894,7 +895,7 @@ export type NotificationLogs = {
   data: object
 }
 
-export declare type mPrintLogs = {
+export type mPrintLogs = {
   mPrintLogId: number
   deptId: number
   parentDeptId: number
@@ -909,4 +910,16 @@ export declare type mPrintLogs = {
   userName: string
   title: string
   floor: string
+}
+
+export type Settlements = {
+  settlementId: number
+  branchId: number
+  bankCode: string
+  bankName: string
+  account: string
+  holder: string
+  price: number
+  date: string
+  paymentJson: object
 }

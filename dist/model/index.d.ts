@@ -536,6 +536,7 @@ export declare type Rentals = {
     availableCreditType: CreditType[];
     weekendFlag: boolean;
     shareFlag: boolean;
+    colorInfo: string;
     imageId: number | null;
     branch?: Relation<Branches>;
     image?: Relation<Images>;
@@ -785,5 +786,16 @@ export declare type mPrintLogs = {
     userName: string;
     title: string;
     floor: string;
+};
+export declare type Settlements = {
+    settlementId: number;
+    branchId: number;
+    bankCode: string;
+    bankName: string;
+    account: string;
+    holder: string;
+    price: number;
+    date: string;
+    paymentJson: object;
 };
 //# sourceMappingURL=index.d.ts.map

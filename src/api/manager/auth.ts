@@ -120,4 +120,4 @@ export type CODE_VERIFY_RESPONSE = Managers | null
 // 운영사 직접 생성
 // POST /managers/verify/code
 export type JOIN_WITH_HQ_BODY = { manager: Partial<Managers>; branch: Partial<Branches>; hq: Partial<Hqs> }
-export type JOIN_WITH_HQ_RESPONSE = Managers | null
+export type JOIN_WITH_HQ_RESPONSE = { token: string; manager: Managers | null }

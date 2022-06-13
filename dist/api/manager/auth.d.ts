@@ -85,6 +85,9 @@ export declare type JOIN_WITH_HQ_BODY = {
     branch: Partial<Branches>;
     hq: Partial<Hqs>;
 };
-export declare type JOIN_WITH_HQ_RESPONSE = Managers | null;
+export declare type JOIN_WITH_HQ_RESPONSE = {
+    token: string;
+    manager: Managers | null;
+};
 export {};
 //# sourceMappingURL=auth.d.ts.map

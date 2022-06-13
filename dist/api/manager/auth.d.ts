@@ -1,4 +1,4 @@
-import { Managers } from '../../model';
+import { Branches, Hqs, Managers } from '../../model';
 declare type PARAMS = {};
 export declare type GET_PARAMS = PARAMS;
 export declare type GET_RESPONSE = Managers | null;
@@ -80,5 +80,11 @@ export declare type CODE_VERIFY_PARAMS = {
 };
 export declare type CODE_VERIFY_QUERY = {};
 export declare type CODE_VERIFY_RESPONSE = Managers | null;
+export declare type JOIN_WITH_HQ_BODY = {
+    manager: Partial<Managers>;
+    branch: Partial<Branches>;
+    hq: Partial<Hqs>;
+};
+export declare type JOIN_WITH_HQ_RESPONSE = Managers | null;
 export {};
 //# sourceMappingURL=auth.d.ts.map

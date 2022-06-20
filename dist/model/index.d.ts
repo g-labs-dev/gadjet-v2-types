@@ -1,6 +1,6 @@
 import { Cashbill } from '../popbill/cash-bill';
 import { TaxInvoice } from '../popbill/tax-invoice';
-import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType, ManagerStatus } from '../type';
+import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType, ManagerStatus, GadjetServiceType, GadjetServiceStatus, GadjetServiceSubType } from '../type';
 export declare type Images = {
     imageId: number;
     size: number;
@@ -78,6 +78,7 @@ export declare type Branches = {
     roles?: Relation<BranchRoles[]>;
     floors?: Relation<Floors[]>;
     spaceTypes?: Relation<SpaceTypes[]>;
+    gadjetService?: Relation<BranchGadjetService>;
 };
 export declare type BranchBusinesses = {
     branchBusinessId: number;
@@ -166,6 +167,27 @@ export declare type BranchAutomations = {
     branchId: number;
     billing: boolean;
     receipt: boolean;
+};
+export declare type BranchGadjetService = {
+    branchGadjetServiceId: number;
+    branchId: number;
+    branchCardId: number;
+    type: GadjetServiceType;
+    subType: GadjetServiceSubType;
+    status: GadjetServiceStatus;
+    startDate: string;
+    endDate: string;
+    isActive: boolean;
+    gadjetServiceLog?: Relation<BranchGadjetServiceLog>;
+};
+export declare type BranchGadjetServiceLog = {
+    branchGadjetServiceLogId: number;
+    branchId: number;
+    branchGadjetServiceId: number;
+    price: number;
+    branchCardId: number;
+    approveJson: object;
+    approveDatetime: string;
 };
 export declare type Tenants = {
     tenantId: number;
@@ -675,6 +697,7 @@ export declare type BranchCards = {
     corporationFlag: boolean;
     lastUsedFlag: boolean;
     billingFlag: boolean;
+    gadjetService?: Relation<BranchGadjetService>;
 };
 export declare type TenantCards = {
     tenantCardId: number;

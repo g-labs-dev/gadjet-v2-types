@@ -212,4 +212,7 @@ export declare type BillingCard = {
 export declare type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN';
 export declare type PrintColorType = 'color' | 'bnw';
 export declare type PrintSizeType = 'A4' | 'A3';
+export declare type GadjetServiceType = 'A4' | 'A3';
+export declare type GadjetServiceSubType = 'A4' | 'A3';
+export declare type GadjetServiceStatus = 'A4' | 'A3';
 //# sourceMappingURL=index.d.ts.map

@@ -40,6 +40,9 @@ import {
   PrintColorType,
   PrintSizeType,
   ManagerStatus,
+  GadjetServiceType,
+  GadjetServiceStatus,
+  GadjetServiceSubType
 } from '../type'
 
 export type Images = {
@@ -129,6 +132,7 @@ export type Branches = {
   roles?: Relation<BranchRoles[]>
   floors?: Relation<Floors[]>
   spaceTypes?: Relation<SpaceTypes[]>
+  gadjetService?: Relation<BranchGadjetService>
 }
 
 export type BranchBusinesses = {
@@ -215,6 +219,31 @@ export type BranchAutomations = {
   branchId: number
   billing: boolean
   receipt: boolean
+}
+
+export type BranchGadjetService = {
+  branchGadjetServiceId: number
+  branchId: number
+  branchCardId: number
+  type: GadjetServiceType
+  subType: GadjetServiceSubType
+  status : GadjetServiceStatus
+  startDate:string
+  endDate:string
+  isActive: boolean
+
+  gadjetServiceLog?: Relation<BranchGadjetServiceLog>
+}
+
+export type BranchGadjetServiceLog = {
+  branchGadjetServiceLogId: number
+  branchId: number
+  branchGadjetServiceId: number
+  price: number
+  branchCardId: number
+  approveJson: object
+  approveDatetime: string
+
 }
 
 export type Tenants = {
@@ -785,6 +814,8 @@ export type BranchCards = {
   corporationFlag: boolean
   lastUsedFlag: boolean
   billingFlag: boolean
+
+  gadjetService?: Relation<BranchGadjetService>
 }
 
 export type TenantCards = {

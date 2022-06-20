@@ -319,8 +319,15 @@ export type BillingCard = {
   identityNumber: string // 생년월일(YYMMDD) or 사업자번호(10자리)
 }
 
-export declare type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN'
+export type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN'
 
-export declare type PrintColorType = 'color' | 'bnw'
+export type PrintColorType = 'color' | 'bnw'
 
-export declare type PrintSizeType = 'A4' | 'A3'
+export type PrintSizeType = 'A4' | 'A3'
+
+
+export type GadjetServiceType = 'A4' | 'A3'
+
+export type GadjetServiceSubType = 'A4' | 'A3'
+
+export type GadjetServiceStatus = 'A4' | 'A3'

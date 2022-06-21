@@ -73,6 +73,9 @@ exports.receiptType = {
 };
 exports.receiptStatus = {
     none: '증빙 안함',
+    'before-receipt': '증빙 전',
+    card: '카드 결제',
+    'seperately-receipt': '별도 증빙',
     'tax-invoice-request': '세금계산서 발행 요청',
     'tax-invoice-fail': '세금계산서 발행 실패',
     'tax-invoice-done': '세금계산서 발행 완료',

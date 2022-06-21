@@ -114,6 +114,9 @@ export type BillType =
 
 export type ReceiptStatus =
   | 'none' // 증빙 안함
+  | 'before-receipt' // 증빙 전
+  | 'card' // 카드 결제
+  | 'seperately-receipt' // 별도 증빙
   | 'tax-invoice-request' // 세금계산서 요청
   | 'tax-invoice-fail' // 세금계산서 실패
   | 'tax-invoice-done' // 세금계산서 완료
@@ -324,7 +327,6 @@ export type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN'
 export type PrintColorType = 'color' | 'bnw'
 
 export type PrintSizeType = 'A4' | 'A3'
-
 
 export type GadjetServiceType = 'year' | 'yearByMonth' | 'month' // 연구독 | 연구독 월결제 | 월구독
 

@@ -11,11 +11,11 @@ export declare type SEARCH_CONTRACT_RESPONSE = {
     total: number;
     contracts: Contracts[];
 };
-export declare type GET_BEFORE_START_CONTRACT_PARAMS = PARAMS;
-export declare type GET_BEFORE_START_CONTRACT_QUERY = {
+export declare type GET_BEFORE_STARTED_CONTRACT_PARAMS = PARAMS;
+export declare type GET_BEFORE_STARTED_CONTRACT_QUERY = {
     date: string;
 };
-export declare type GET_BEFORE_START_CONTRACT_RESPONSE = Contracts[];
+export declare type GET_BEFORE_STARTED_CONTRACT_RESPONSE = Contracts[];
 export declare type GET_START_CONTRACT_PARAMS = PARAMS;
 export declare type GET_START_CONTRACT_QUERY = {
     date: string;

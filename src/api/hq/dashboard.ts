@@ -11,10 +11,10 @@ export type SEARCH_CONTRACT_RESPONSE = { total: number; contracts: Contracts[] }
 // ===========================
 
 // 시작 전 계약 조회
-// GET /hqs/0/dashboard/contracts/before-start
-export type GET_BEFORE_START_CONTRACT_PARAMS = PARAMS
-export type GET_BEFORE_START_CONTRACT_QUERY = { date: string }
-export type GET_BEFORE_START_CONTRACT_RESPONSE = Contracts[]
+// GET /hqs/0/dashboard/contracts/before-started
+export type GET_BEFORE_STARTED_CONTRACT_PARAMS = PARAMS
+export type GET_BEFORE_STARTED_CONTRACT_QUERY = { date: string }
+export type GET_BEFORE_STARTED_CONTRACT_RESPONSE = Contracts[]
 // ===========================
 
 // 시작계약

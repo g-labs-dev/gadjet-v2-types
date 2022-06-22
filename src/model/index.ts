@@ -42,7 +42,8 @@ import {
   ManagerStatus,
   GadjetServiceType,
   GadjetServiceStatus,
-  GadjetServiceSubType
+  GadjetServiceSubType,
+  ContractInfo,
 } from '../type'
 
 export type Images = {
@@ -227,9 +228,9 @@ export type BranchGadjetService = {
   branchCardId: number
   type: GadjetServiceType
   subType: GadjetServiceSubType
-  status : GadjetServiceStatus
-  startDate:string
-  endDate:string
+  status: GadjetServiceStatus
+  startDate: string
+  endDate: string
   isActive: boolean
 
   gadjetServiceLog?: Relation<BranchGadjetServiceLog>
@@ -243,7 +244,8 @@ export type BranchGadjetServiceLog = {
   branchCardId: number
   approveJson: object
   approveDatetime: string
-
+  contractInfos: ContractInfo[]
+  isPaid: boolean
 }
 
 export type Tenants = {

@@ -333,3 +333,8 @@ export type GadjetServiceType = 'year' | 'yearByMonth' | 'month' // 연구독 | 
 export type GadjetServiceSubType = string // 정해져야 함. 추가 기능 id 배열로 들고있기? 기획 완료 필요.
 
 export type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate' // 사용중 | 해지요청 | 해지
+
+export type ContractInfo = {
+  contractId: number // 계약Id
+  tenant: ContractTenant // 계약 입주사 정보
+}

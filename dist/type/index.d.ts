@@ -215,4 +215,8 @@ export declare type PrintSizeType = 'A4' | 'A3';
 export declare type GadjetServiceType = 'year' | 'yearByMonth' | 'month';
 export declare type GadjetServiceSubType = string;
 export declare type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate';
+export declare type ContractInfo = {
+    contractId: number;
+    tenant: ContractTenant;
+};
 //# sourceMappingURL=index.d.ts.map

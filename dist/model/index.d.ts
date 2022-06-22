@@ -1,6 +1,6 @@
 import { Cashbill } from '../popbill/cash-bill';
 import { TaxInvoice } from '../popbill/tax-invoice';
-import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType, ManagerStatus, GadjetServiceType, GadjetServiceStatus, GadjetServiceSubType } from '../type';
+import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType, ManagerStatus, GadjetServiceType, GadjetServiceStatus, GadjetServiceSubType, ContractInfo } from '../type';
 export declare type Images = {
     imageId: number;
     size: number;
@@ -188,6 +188,8 @@ export declare type BranchGadjetServiceLog = {
     branchCardId: number;
     approveJson: object;
     approveDatetime: string;
+    contractInfos: ContractInfo[];
+    isPaid: boolean;
 };
 export declare type Tenants = {
     tenantId: number;

@@ -3,21 +3,18 @@ import { Pagination } from '../../type'
 
 type PARAMS = { hqId: number }
 
-// 최근 추가된 계약 조회 (20개)
-// GET /hqs/0/dashboard/contracts/recent
-export type GET_RECENT_CONTRACT_PARAMS = PARAMS
-export type GET_RECENT_CONTRACT_QUERY = { pageSize: number }
-export type GET_RECENT_CONTRACT_RESPONSE = Contracts[]
-/**
- * order by createdAt desc
- */
-// ===========================
-
 // 전 지점 계약 검색
 // GET /hqs/0/dashboard/contracts/search
 export type SEARCH_CONTRACT_PARAMS = PARAMS
 export type SEARCH_CONTRACT_QUERY = Pagination & { query: string }
 export type SEARCH_CONTRACT_RESPONSE = { total: number; contracts: Contracts[] }
+// ===========================
+
+// 시작 전 계약 조회
+// GET /hqs/0/dashboard/contracts/before-start
+export type GET_BEFORE_START_CONTRACT_PARAMS = PARAMS
+export type GET_BEFORE_START_CONTRACT_QUERY = { date: string }
+export type GET_BEFORE_START_CONTRACT_RESPONSE = Contracts[]
 // ===========================
 
 // 시작계약

@@ -185,7 +185,9 @@ export declare type BranchGadjetServiceLog = {
     branchId: number;
     branchGadjetServiceId: number;
     price: number;
+    contractsPrice: number;
     branchCardId: number;
+    date: string;
     approveJson: object;
     approveDatetime: string;
     contractInfos: ContractInfo[];

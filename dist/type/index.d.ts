@@ -220,6 +220,5 @@ export declare type ContractInfo = {
     tenant: ContractTenant;
     startDate: string;
     endDate: string;
-    createdAt: string;
 };
 //# sourceMappingURL=index.d.ts.map

@@ -339,5 +339,4 @@ export type ContractInfo = {
   tenant: ContractTenant // 계약 입주사 정보
   startDate: string
   endDate: string
-  createdAt: string
 }

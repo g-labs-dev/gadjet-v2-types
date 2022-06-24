@@ -218,5 +218,8 @@ export declare type GadjetServiceStatus = 'used' | 'request-terminate' | 'termin
 export declare type ContractInfo = {
     contractId: number;
     tenant: ContractTenant;
+    startDate: string;
+    endDate: string;
+    createdAt: string;
 };
 //# sourceMappingURL=index.d.ts.map

@@ -337,4 +337,7 @@ export type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate' // 
 export type ContractInfo = {
   contractId: number // 계약Id
   tenant: ContractTenant // 계약 입주사 정보
+  startDate: string
+  endDate: string
+  createdAt: string
 }

@@ -452,6 +452,7 @@ export type Contracts = {
   extendContractId: number | null
   extendSinceDate: string
   receiver: ContractReceiver
+  gadjetServiceFlag: boolean
   lang: Lang
 
   tenant: ContractTenant

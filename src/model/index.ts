@@ -44,6 +44,7 @@ import {
   GadjetServiceStatus,
   GadjetServiceSubType,
   ContractInfo,
+  GadjetServicePlan,
 } from '../type'
 
 export type Images = {
@@ -226,6 +227,7 @@ export type BranchGadjetService = {
   branchGadjetServiceId: number
   branchId: number
   branchCardId: number
+  plan: GadjetServicePlan
   type: GadjetServiceType
   subType: GadjetServiceSubType
   status: GadjetServiceStatus

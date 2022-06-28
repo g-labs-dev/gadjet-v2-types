@@ -212,6 +212,7 @@ export declare type BillingCard = {
 export declare type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN';
 export declare type PrintColorType = 'color' | 'bnw';
 export declare type PrintSizeType = 'A4' | 'A3';
+export declare type GadjetServicePlan = 'essential' | 'advanced' | 'enterprise';
 export declare type GadjetServiceType = 'year' | 'yearByMonth' | 'month';
 export declare type GadjetServiceSubType = string;
 export declare type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate';

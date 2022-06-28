@@ -328,6 +328,8 @@ export type PrintColorType = 'color' | 'bnw'
 
 export type PrintSizeType = 'A4' | 'A3'
 
+export type GadjetServicePlan = 'essential' | 'advanced' | 'enterprise' // 연구독 | 연구독 월결제 | 월구독
+
 export type GadjetServiceType = 'year' | 'yearByMonth' | 'month' // 연구독 | 연구독 월결제 | 월구독
 
 export type GadjetServiceSubType = string // 정해져야 함. 추가 기능 id 배열로 들고있기? 기획 완료 필요.

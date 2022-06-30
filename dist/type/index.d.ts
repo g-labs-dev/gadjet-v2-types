@@ -222,14 +222,23 @@ export declare type ContractInfo = {
     startDate: string;
     endDate: string;
 };
-export declare type BillingApproveData = {
-    bid: string;
-    price: string;
-    goodsName: string;
-    user?: {
-        name?: string;
-        email?: string;
-        contact?: string;
-    };
+export declare type BillingApproveResponseData = {
+    ResultCode: string;
+    ResultMsg: string;
+    TID: string;
+    Moid: string;
+    Amt: string;
+    AuthCode: string;
+    AuthDate: string;
+    AcquCardCode: string;
+    AcquCardName: string;
+    CardNo: string;
+    CardCode: string;
+    CardName: string;
+    CardQuota: string;
+    CardCl: string;
+    CardInterest: string;
+    CcPartCl: string;
+    MallReserved: string;
 };
 //# sourceMappingURL=index.d.ts.map

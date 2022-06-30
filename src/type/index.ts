@@ -342,10 +342,22 @@ export type ContractInfo = {
   startDate: string
   endDate: string
 }
-
-export type BillingApproveData = {
-  bid: string
-  price: string
-  goodsName: string
-  user?: { name?: string; email?: string; contact?: string }
+export type BillingApproveResponseData = {
+  ResultCode: string // 결과코드 (3001: 성공 / 그 외 실패)
+  ResultMsg: string
+  TID: string
+  Moid: string
+  Amt: string // 결제금액
+  AuthCode: string // 승인번호
+  AuthDate: string // 승인일자
+  AcquCardCode: string // 매입카드사코드
+  AcquCardName: string // 매입카드사이름
+  CardNo: string // 카드번호
+  CardCode: string // 카드사 코드
+  CardName: string // 카드사 이름
+  CardQuota: string // 할부개월
+  CardCl: string // 카드타입 (0: 신용카드, 1: 체크카드)
+  CardInterest: string // 무이자 여부 (0: 이자, 1: 무이자)
+  CcPartCl: string // 부분취소 가능 여부 (0: 불가능, 1: 가능)
+  MallReserved: string // 정보 전달용 필드 (우리 마음대로 사용 가능)
 }

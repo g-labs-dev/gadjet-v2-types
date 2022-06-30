@@ -1,5 +1,5 @@
 import { BranchCards } from '../../model'
-import { BillingApproveData, BillingCard, Result } from '../../type'
+import { BillingApproveResponseData, BillingCard, Result } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -38,5 +38,5 @@ export type UPDATE_BILLING_RESPONSE = Result
 // 지점 결제수단 수동결제
 // PUT /hqs/0/branches/0/cards/0/active
 export type PAY_BILLING_PARAMS = PARAMS & { branchCardId: number }
-export type PAY_BILLING_RESPONSE = Result & { result: BillingApproveData }
+export type PAY_BILLING_RESPONSE = Result & { result: BillingApproveResponseData }
 // ===========================

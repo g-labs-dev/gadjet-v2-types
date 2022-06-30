@@ -233,6 +233,7 @@ export type BranchGadjetService = {
   status: GadjetServiceStatus
   startDate: string
   endDate: string
+  suspendDate: string
   isActive: boolean
 
   gadjetServiceLog?: Relation<BranchGadjetServiceLog>

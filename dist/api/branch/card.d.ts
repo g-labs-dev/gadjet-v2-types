@@ -1,5 +1,5 @@
 import { BranchCards } from '../../model';
-import { BillingCard, Result } from '../../type';
+import { BillingApproveData, BillingCard, Result } from '../../type';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
@@ -26,5 +26,11 @@ export declare type UPDATE_BILLING_PARAMS = PARAMS & {
     branchCardId: number;
 };
 export declare type UPDATE_BILLING_RESPONSE = Result;
+export declare type PAY_BILLING_PARAMS = PARAMS & {
+    branchCardId: number;
+};
+export declare type PAY_BILLING_RESPONSE = Result & {
+    result: BillingApproveData;
+};
 export {};
 //# sourceMappingURL=card.d.ts.map

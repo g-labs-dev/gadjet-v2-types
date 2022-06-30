@@ -222,4 +222,14 @@ export declare type ContractInfo = {
     startDate: string;
     endDate: string;
 };
+export declare type BillingApproveData = {
+    bid: string;
+    price: string;
+    goodsName: string;
+    user?: {
+        name?: string;
+        email?: string;
+        contact?: string;
+    };
+};
 //# sourceMappingURL=index.d.ts.map

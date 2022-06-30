@@ -342,3 +342,10 @@ export type ContractInfo = {
   startDate: string
   endDate: string
 }
+
+export type BillingApproveData = {
+  bid: string
+  price: string
+  goodsName: string
+  user?: { name?: string; email?: string; contact?: string }
+}

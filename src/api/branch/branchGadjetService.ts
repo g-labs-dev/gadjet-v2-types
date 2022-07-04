@@ -12,6 +12,13 @@ export type GET_LIST_RESPONSE = { total: number; branchGadjetService: BranchGadj
 
 // 가젯서비스로그 리스트 조회
 // GET /hqs/0/branches/0/gadjetService/0/logs
+export type ADD_PARAMS = PARAMS
+export type ADD_BODY = { branchGadjetService: Partial<BranchGadjetService> }
+export type ADD_RESPONSE = BranchGadjetService
+// ===========================
+
+// 가젯서비스로그 리스트 조회
+// GET /hqs/0/branches/0/gadjetService/0/logs
 export type GET_LOG_LIST_PARAMS = PARAMS
 export type GET_LOG_LIST_QUERY = {}
 export type GET_LOG_LIST_RESPONSE = { total: number; branchGadjetServiceLog: BranchGadjetServiceLog[] }

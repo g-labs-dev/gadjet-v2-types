@@ -194,6 +194,7 @@ export declare type BranchGadjetServiceLog = {
     approveDatetime: string;
     contractInfos: ContractInfo[];
     isPaid: boolean;
+    penaltyPrice: number;
 };
 export declare type Tenants = {
     tenantId: number;

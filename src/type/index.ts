@@ -342,6 +342,7 @@ export type ContractInfo = {
   startDate: string
   endDate: string
 }
+
 export type BillingApproveResponseData = {
   ResultCode: string // 결과코드 (3001: 성공 / 그 외 실패)
   ResultMsg: string
@@ -361,3 +362,5 @@ export type BillingApproveResponseData = {
   CcPartCl: string // 부분취소 가능 여부 (0: 불가능, 1: 가능)
   MallReserved: string // 정보 전달용 필드 (우리 마음대로 사용 가능)
 }
+
+export type TerminationType = {}

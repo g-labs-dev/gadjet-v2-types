@@ -241,4 +241,5 @@ export declare type BillingApproveResponseData = {
     CcPartCl: string;
     MallReserved: string;
 };
+export declare type TerminationType = {};
 //# sourceMappingURL=index.d.ts.map

@@ -235,7 +235,6 @@ export type BranchGadjetService = {
   endDate: string
   suspendDate: string
   isActive: boolean
-
   gadjetServiceLog?: Relation<BranchGadjetServiceLog>
 }
 
@@ -251,6 +250,7 @@ export type BranchGadjetServiceLog = {
   approveDatetime: string
   contractInfos: ContractInfo[]
   isPaid: boolean
+  penaltyPrice: number
 }
 
 export type Tenants = {

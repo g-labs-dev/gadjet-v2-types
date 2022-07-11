@@ -33,6 +33,7 @@ exports.contractExtendStatus = {
     asked: '확인 중',
     approval: '연장동의',
     refusal: '연장거절',
+    done: '연장완료',
 };
 exports.contractDepositStatus = {
     unpaid: '미납',

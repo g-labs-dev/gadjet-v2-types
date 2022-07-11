@@ -69,6 +69,7 @@ export type ContractExtendStatus =
   | 'asked' // 연장할지 물어봄
   | 'approval' // 연장한다고 대답함
   | 'refusal' // 연장거절
+  | 'done'
 
 export type ContractCreditPolicy =
   | 'weekly' // 계약 크레딧 주 단위

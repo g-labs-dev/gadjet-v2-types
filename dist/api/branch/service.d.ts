@@ -32,6 +32,11 @@ export declare type DELETE_PARAMS = PARAMS & {
     serviceId: number;
 };
 export declare type DELETE_RESPONSE = [number];
+export declare type ADD_SALES_PARAMS = PARAMS;
+export declare type ADD_SALES_BODY = {
+    serviceSales: Partial<ServiceSales>;
+};
+export declare type ADD_SALES_RESPONSE = ServiceSales;
 export declare type GET_SALES_PARAMS = PARAMS;
 export declare type GET_SALES_QUERY = Pagination & ServiceSaleSearch;
 export declare type GET_SALES_RESPONSE = {

@@ -40,6 +40,16 @@ export type DELETE_PARAMS = PARAMS & { productId: number }
 export type DELETE_RESPONSE = [number]
 // ===========================
 
+
+// 상품 판매내역 수동 추가
+// POST /hqs/0/branches/0/product-sales
+export type ADD_SALES_PARAMS = PARAMS
+export type ADD_SALES_BODY = {
+  productSales: Partial<ProductSales>
+}
+export type ADD_SALES_RESPONSE = ProductSales
+// ===========================
+
 // 상품 판매내역 조회
 // GET /hqs/0/branches/0/product-sales
 export type GET_SALES_PARAMS = PARAMS

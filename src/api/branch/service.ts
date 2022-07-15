@@ -41,6 +41,15 @@ export type DELETE_PARAMS = PARAMS & { serviceId: number }
 export type DELETE_RESPONSE = [number]
 // ===========================
 
+// 서비스 판매내역 수동 추가
+// POST /hqs/0/branches/0/service-sales
+export type ADD_SALES_PARAMS = PARAMS
+export type ADD_SALES_BODY = {
+  serviceSales: Partial<ServiceSales>
+}
+export type ADD_SALES_RESPONSE = ServiceSales
+// ===========================
+
 // 서비스 판매내역 조회
 // GET /hqs/0/branches/0/service-sales
 export type GET_SALES_PARAMS = PARAMS

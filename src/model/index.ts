@@ -719,6 +719,7 @@ export type ProductSales = {
   usedCreditAmount: UsedCreditAmount
   datetime: string
   refundFlag: boolean
+  isManual:boolean
 
   product?: Relation<Products>
   tenant?: Relation<Tenants>
@@ -751,6 +752,7 @@ export type ServiceSales = {
   usedCreditAmount: UsedCreditAmount
   datetime: string
   refundFlag: boolean
+  isManual: boolean
 
   service?: Relation<Services>
   tenant?: Relation<Tenants>

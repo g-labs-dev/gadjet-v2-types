@@ -71,6 +71,7 @@ export type ADD_CREDITS_BODY = {
     contract: { amount: number; availableRange: [string, string] }
     mileage: { amount: number }
     buy: { amount: number }
+    memo: string
   }
 }
 export type ADD_CREDITS_RESPONSE = boolean

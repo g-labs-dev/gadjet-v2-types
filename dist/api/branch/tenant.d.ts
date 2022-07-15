@@ -93,6 +93,7 @@ export declare type ADD_CREDITS_BODY = {
         buy: {
             amount: number;
         };
+        memo: string;
     };
 };
 export declare type ADD_CREDITS_RESPONSE = boolean;

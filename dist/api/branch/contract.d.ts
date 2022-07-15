@@ -65,6 +65,13 @@ export declare type SEARCH_QUERY = {
 export declare type SEARCH_RESPONSE = {
     contracts: Contracts[];
 };
+export declare type UPDATE_MEMO_PARAMS = PARAMS & {
+    contractId: number;
+};
+export declare type UPDATE_MEMO_BODY = {
+    contracts: Partial<Contracts>;
+};
+export declare type UPDATE_MEMO_RESPONSE = [number];
 export declare type UPDATE_SIGNATURE_STATUS_PARAMS = PARAMS & {
     contractId: number;
 };

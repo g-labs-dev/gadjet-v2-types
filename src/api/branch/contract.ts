@@ -74,6 +74,13 @@ export type SEARCH_QUERY = { query: string; status: ContractStatus[] }
 export type SEARCH_RESPONSE = { contracts: Contracts[] }
 // ===========================
 
+// 계약 메모 수정
+// PUT /hqs/0/branches/0/contracts/0/memo
+export type UPDATE_MEMO_PARAMS = PARAMS & { contractId: number }
+export type UPDATE_MEMO_BODY = {  contracts: Partial<Contracts> }
+export type UPDATE_MEMO_RESPONSE = [number]
+// ===========================
+
 // 계약 서명 요청
 // PUT /hqs/0/branches/0/contracts/0/signature-status
 export type UPDATE_SIGNATURE_STATUS_PARAMS = PARAMS & { contractId: number }

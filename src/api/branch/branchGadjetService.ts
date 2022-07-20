@@ -12,13 +12,6 @@ export type GET_LIST_RESPONSE = { total: number; branchGadjetService: BranchGadj
 
 // 가젯서비스로그 리스트 조회
 // GET /hqs/0/branches/0/gadjetService/0/logs
-export type ADD_PARAMS = PARAMS
-export type ADD_BODY = { branchGadjetService: Partial<BranchGadjetService> }
-export type ADD_RESPONSE = BranchGadjetService
-// ===========================
-
-// 가젯서비스로그 리스트 조회
-// GET /hqs/0/branches/0/gadjetService/0/logs
 export type GET_LOG_LIST_PARAMS = PARAMS
 export type GET_LOG_LIST_QUERY = {}
 export type GET_LOG_LIST_RESPONSE = { total: number; branchGadjetServiceLog: BranchGadjetServiceLog[] }
@@ -28,6 +21,13 @@ export type GET_LOG_LIST_RESPONSE = { total: number; branchGadjetServiceLog: Bra
 // DELETE /hqs/0/branches/0/gadjetService/0/log/0
 export type DELETE_PARAMS = PARAMS & { branchGadjetServiceLogId: number }
 export type DELETE_RESPONSE = BranchGadjetServiceLog
+// ===========================
+
+// 가젯서비스 이용하기
+// GET /hqs/0/branches/0/gadjetService/
+export type ADD_PARAMS = PARAMS
+export type ADD_BODY = { branchGadjetService: Partial<BranchGadjetService> }
+export type ADD_RESPONSE = BranchGadjetService
 // ===========================
 
 // 가젯 서비스 해지하기.

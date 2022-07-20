@@ -179,6 +179,7 @@ export declare type BranchGadjetService = {
     startDate: string;
     endDate: string;
     suspendDate: string;
+    pendingDate: string;
     isActive: boolean;
     gadjetServiceLog?: Relation<BranchGadjetServiceLog>;
 };

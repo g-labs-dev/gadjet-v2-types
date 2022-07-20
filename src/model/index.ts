@@ -234,6 +234,7 @@ export type BranchGadjetService = {
   startDate: string
   endDate: string
   suspendDate: string
+  pendingDate: string
   isActive: boolean
   gadjetServiceLog?: Relation<BranchGadjetServiceLog>
 }
@@ -719,7 +720,7 @@ export type ProductSales = {
   usedCreditAmount: UsedCreditAmount
   datetime: string
   refundFlag: boolean
-  isManual:boolean
+  isManual: boolean
 
   product?: Relation<Products>
   tenant?: Relation<Tenants>

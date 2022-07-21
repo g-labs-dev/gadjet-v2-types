@@ -22,8 +22,8 @@ export declare type DELETE_PARAMS = PARAMS & {
 export declare type DELETE_RESPONSE = BranchGadjetServiceLog;
 export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
-    branchGadjetService: Partial<BranchGadjetService> & Result;
-};
+    branchGadjetService: Partial<BranchGadjetService>;
+} & Result;
 export declare type ADD_RESPONSE = BranchGadjetService;
 export declare type TERMINATE_PARAMS = PARAMS & {
     branchGadjetServiceId: number;

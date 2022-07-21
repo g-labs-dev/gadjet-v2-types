@@ -24,7 +24,9 @@ export declare type ADD_PARAMS = PARAMS;
 export declare type ADD_BODY = {
     branchGadjetService: Partial<BranchGadjetService>;
 };
-export declare type ADD_RESPONSE = BranchGadjetService & Result;
+export declare type ADD_RESPONSE = {
+    branchGadjetService: BranchGadjetService;
+} & Result;
 export declare type TERMINATE_PARAMS = PARAMS & {
     branchGadjetServiceId: number;
 };

@@ -27,7 +27,7 @@ export type DELETE_RESPONSE = BranchGadjetServiceLog
 // GET /hqs/0/branches/0/gadjetService/
 export type ADD_PARAMS = PARAMS
 export type ADD_BODY = { branchGadjetService: Partial<BranchGadjetService> }
-export type ADD_RESPONSE = BranchGadjetService & Result
+export type ADD_RESPONSE = { branchGadjetService: BranchGadjetService } & Result
 // ===========================
 
 // 가젯 서비스 해지하기.

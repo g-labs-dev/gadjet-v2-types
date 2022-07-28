@@ -116,7 +116,7 @@ export declare type ContractReceiver = {
     }[];
 };
 export declare type BranchDashboardEventSummary = {
-    salePrice: number;
+    paymentPrice: number;
     expectSalePrice: number;
     unpaidPrice: number;
     expenditurePrice: number;

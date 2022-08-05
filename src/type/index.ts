@@ -114,8 +114,8 @@ export type BillType =
   | 'sales' // 매출 청구서
 
 export type ReceiptStatus =
-  | 'none' // 증빙 안함
-  | 'before-receipt' // 증빙 전
+  | 'none' // 발행 안함
+  | 'before-receipt' // 발행 전
   | 'card' // 카드 결제
   | 'seperately-receipt' // 별도 증빙
   | 'tax-invoice-request' // 세금계산서 요청

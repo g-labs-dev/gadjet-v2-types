@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.billType = exports.ntsResultCode = exports.expenditureType = exports.receiptStatus = exports.receiptType = exports.creditUsage = exports.creditType = exports.paymentStatus = exports.paymentType = exports.contractDepositStatus = exports.contractExtendStatus = exports.contractSignatureStatus = exports.contractStatus = exports.contractLateFeeType = exports.contractBillingType = exports.tenantType = void 0;
+exports.billType = exports.ntsResultCode = exports.expenditureType = exports.receiptStatus = exports.receiptType = exports.creditUsage = exports.creditType = exports.paymentStatus = exports.paymentType = exports.contractDepositStatus = exports.contractExtendStatus = exports.contractSignatureStatus = exports.contractStatus = exports.contractLateFeeType = exports.contractBillingSplitType = exports.contractBillingType = exports.tenantType = void 0;
 exports.tenantType = {
     'sole-proprietor': '개인사업자',
     'corporation-business': '법인사업자',
@@ -10,6 +10,10 @@ exports.tenantType = {
 exports.contractBillingType = {
     prepayment: '선납',
     monthly: '월납',
+};
+exports.contractBillingSplitType = {
+    A: '월단위 청구',
+    B: '지정일 청구',
 };
 exports.contractLateFeeType = {
     none: '없음',

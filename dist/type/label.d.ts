@@ -1,6 +1,7 @@
 import * as T from '.';
 export declare const tenantType: Record<T.TenantType, string>;
 export declare const contractBillingType: Record<T.ContractBillingType, string>;
+export declare const contractBillingSplitType: Record<T.ContractBillingSplitType, string>;
 export declare const contractLateFeeType: Record<T.ContractLateFeeType, string>;
 export declare const contractStatus: Record<T.ContractStatus, string>;
 export declare const contractSignatureStatus: Record<T.ContractSignatureStatus, string>;

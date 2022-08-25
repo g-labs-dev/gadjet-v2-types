@@ -12,6 +12,11 @@ export const contractBillingType: Record<T.ContractBillingType, string> = {
   monthly: '월납',
 }
 
+export const contractBillingSplitType: Record<T.ContractBillingSplitType, string> = {
+  A: '월단위 청구',
+  B: '지정일 청구',
+}
+
 export const contractLateFeeType: Record<T.ContractLateFeeType, string> = {
   none: '없음',
   fix: '고정금액',

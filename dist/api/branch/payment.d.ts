@@ -1,17 +1,13 @@
 /// <reference types="node" />
 import { Payments } from '../../model';
-import { Pagination, PaymentStatus, PaymentSummary, PaymentType, Result } from '../../type';
+import { Pagination, PaymentSummary, PaymentType, Result } from '../../type';
+import { PaymentSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-    paymentType: PaymentType[];
-    paymentStatus: PaymentStatus[];
-    date: [string, string];
-};
+export declare type GET_LIST_QUERY = Pagination & PaymentSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     payments: Payments[];
@@ -44,11 +40,7 @@ export declare type GET_SUMMARY_QUERY = {
 };
 export declare type GET_SUMMARY_RESPONSE = PaymentSummary;
 export declare type EXPORT_PARAMS = PARAMS;
-export declare type EXPORT_QUERY = {
-    query: string;
-    paymentType: PaymentType[];
-    paymentStatus: PaymentStatus[];
-};
+export declare type EXPORT_QUERY = PaymentSearch;
 export declare type EXPORT_RESPONSE = Buffer;
 export declare type CONFIRM_PARAMS = PARAMS & {
     paymentId: number;

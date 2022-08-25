@@ -1,13 +1,12 @@
 import { Additions, Contracts } from '../../model';
 import { Pagination } from '../../type';
+import { AdditionSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-};
+export declare type GET_LIST_QUERY = Pagination & AdditionSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     additions: Additions[];

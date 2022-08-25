@@ -1,12 +1,13 @@
-import { Bills, Contracts } from '../../model'
+import { Bills, ContractInviteCodes, Contracts } from '../../model'
 import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type'
+import { ContractSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 계약 목록 검색
 // GET /hqs/0/branches/0/contracts
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string; spaceTypes: number[]; status: ContractStatus[] }
+export type GET_LIST_QUERY = Pagination & ContractSearch
 export type GET_LIST_RESPONSE = { total: number; contracts: Contracts[] }
 // ===========================
 
@@ -63,7 +64,7 @@ export type SUSPEND_RESPONSE = [number]
 // POST /hqs/0/branches/0/contracts/0/send-invite
 export type SEND_INVITE_PARAMS = PARAMS & { contractId: number }
 export type SEND_INVITE_BODY = { contacts: string[] }
-export type SEND_INVITE_RESPONSE = boolean
+export type SEND_INVITE_RESPONSE = ContractInviteCodes[]
 // ===========================
 
 // 계약 검색 (attributes: ['contractId', 'tenant','status', 'startDate', 'suspendDate'])
@@ -71,6 +72,13 @@ export type SEND_INVITE_RESPONSE = boolean
 export type SEARCH_PARAMS = PARAMS
 export type SEARCH_QUERY = { query: string; status: ContractStatus[] }
 export type SEARCH_RESPONSE = { contracts: Contracts[] }
+// ===========================
+
+// 계약 메모 수정
+// PUT /hqs/0/branches/0/contracts/0/memo
+export type UPDATE_MEMO_PARAMS = PARAMS & { contractId: number }
+export type UPDATE_MEMO_BODY = {  contracts: Partial<Contracts> }
+export type UPDATE_MEMO_RESPONSE = [number]
 // ===========================
 
 // 계약 서명 요청

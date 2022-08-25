@@ -39,6 +39,12 @@ import {
   PrintJobType,
   PrintColorType,
   PrintSizeType,
+  ManagerStatus,
+  GadjetServiceType,
+  GadjetServiceStatus,
+  GadjetServiceSubType,
+  ContractInfo,
+  GadjetServicePlan,
 } from '../type'
 
 export type Images = {
@@ -114,10 +120,13 @@ export type Branches = {
   address: string
   addressDetail: string
   popbillId: string | null
+  chargeNotice: number
+  remainDate: number
 
   hq?: Relation<Hqs>
   business?: Relation<BranchBusinesses>
   settlement?: Relation<BranchSettlements>
+  cards?: Relation<BranchCards>
   contractDocument?: Relation<BranchContractDocuments>
   sublet?: Relation<BranchSublets>
   rentee?: Relation<BranchRentees>
@@ -125,6 +134,7 @@ export type Branches = {
   roles?: Relation<BranchRoles[]>
   floors?: Relation<Floors[]>
   spaceTypes?: Relation<SpaceTypes[]>
+  gadjetService?: Relation<BranchGadjetService>
 }
 
 export type BranchBusinesses = {
@@ -213,6 +223,37 @@ export type BranchAutomations = {
   receipt: boolean
 }
 
+export type BranchGadjetService = {
+  branchGadjetServiceId: number
+  branchId: number
+  branchCardId: number
+  plan: GadjetServicePlan
+  type: GadjetServiceType
+  subType: GadjetServiceSubType
+  status: GadjetServiceStatus
+  startDate: string
+  endDate: string
+  suspendDate: string
+  pendingDate: string
+  isActive: boolean
+  gadjetServiceLog?: Relation<BranchGadjetServiceLog>
+}
+
+export type BranchGadjetServiceLog = {
+  branchGadjetServiceLogId: number
+  branchId: number
+  branchGadjetServiceId: number
+  price: number
+  contractsPrice: number
+  branchCardId: number
+  date: string
+  approveJson: object
+  approveDatetime: string
+  contractInfos: ContractInfo[]
+  isPaid: boolean
+  penaltyPrice: number
+}
+
 export type Tenants = {
   tenantId: number
   name: string
@@ -240,7 +281,9 @@ export type Managers = {
   socialId: string
   pushToken: string | null
   profileImageId: number | null
-
+  lastLogin: string
+  status: ManagerStatus
+  resetCode: string
   profile?: Relation<Images>
 }
 
@@ -256,6 +299,7 @@ export type Users = {
   code: string
   status: UserStatus
   device: null | Device
+  lastLogin: string
 
   profile?: Relation<Images>
   tenantRoles?: Relation<TenantRoles[]>
@@ -271,6 +315,7 @@ export type HqRoles = {
   notice: Role
   role: Role
   config: Role
+  branch: Role
 
   hq?: Relation<Hqs>
   manager?: Relation<Managers>
@@ -411,6 +456,7 @@ export type Contracts = {
   extendContractId: number | null
   extendSinceDate: string
   receiver: ContractReceiver
+  gadjetServiceFlag: boolean
   lang: Lang
 
   tenant: ContractTenant
@@ -538,16 +584,18 @@ export type Payments = {
   user?: Relation<Users>
 }
 
-export type Settlements = {
-  settlementId: number
+export type GadjetSettlements = {
+  gadjetSettlementId: number
   branchId: number
-  bankCode: string
-  bankName: string
-  account: string
-  holder: string
+  paymentInfo: object
   price: number
   date: string
-  paymentJson: Payments[]
+  month: number
+  settlementHistory: object
+  isSuccess: boolean
+  message: string
+  isManual: boolean
+  paymentUserInfo: object
 }
 
 export type Credits = {
@@ -620,6 +668,7 @@ export type Rentals = {
   availableCreditType: CreditType[]
   weekendFlag: boolean
   shareFlag: boolean
+  colorInfo: string
   imageId: number | null
 
   branch?: Relation<Branches>
@@ -671,6 +720,7 @@ export type ProductSales = {
   usedCreditAmount: UsedCreditAmount
   datetime: string
   refundFlag: boolean
+  isManual: boolean
 
   product?: Relation<Products>
   tenant?: Relation<Tenants>
@@ -703,6 +753,7 @@ export type ServiceSales = {
   usedCreditAmount: UsedCreditAmount
   datetime: string
   refundFlag: boolean
+  isManual: boolean
 
   service?: Relation<Services>
   tenant?: Relation<Tenants>
@@ -774,6 +825,8 @@ export type BranchCards = {
   corporationFlag: boolean
   lastUsedFlag: boolean
   billingFlag: boolean
+
+  gadjetService?: Relation<BranchGadjetService>
 }
 
 export type TenantCards = {
@@ -884,7 +937,7 @@ export type NotificationLogs = {
   data: object
 }
 
-export declare type mPrintLogs = {
+export type mPrintLogs = {
   mPrintLogId: number
   deptId: number
   parentDeptId: number
@@ -899,4 +952,16 @@ export declare type mPrintLogs = {
   userName: string
   title: string
   floor: string
+}
+
+export type Settlements = {
+  settlementId: number
+  branchId: number
+  bankCode: string
+  bankName: string
+  account: string
+  holder: string
+  price: number
+  date: string
+  paymentJson: object
 }

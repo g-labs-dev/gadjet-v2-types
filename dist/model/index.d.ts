@@ -1,6 +1,6 @@
 import { Cashbill } from '../popbill/cash-bill';
 import { TaxInvoice } from '../popbill/tax-invoice';
-import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType } from '../type';
+import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType, ManagerStatus, GadjetServiceType, GadjetServiceStatus, GadjetServiceSubType, ContractInfo, GadjetServicePlan } from '../type';
 export declare type Images = {
     imageId: number;
     size: number;
@@ -65,9 +65,12 @@ export declare type Branches = {
     address: string;
     addressDetail: string;
     popbillId: string | null;
+    chargeNotice: number;
+    remainDate: number;
     hq?: Relation<Hqs>;
     business?: Relation<BranchBusinesses>;
     settlement?: Relation<BranchSettlements>;
+    cards?: Relation<BranchCards>;
     contractDocument?: Relation<BranchContractDocuments>;
     sublet?: Relation<BranchSublets>;
     rentee?: Relation<BranchRentees>;
@@ -75,6 +78,7 @@ export declare type Branches = {
     roles?: Relation<BranchRoles[]>;
     floors?: Relation<Floors[]>;
     spaceTypes?: Relation<SpaceTypes[]>;
+    gadjetService?: Relation<BranchGadjetService>;
 };
 export declare type BranchBusinesses = {
     branchBusinessId: number;
@@ -164,6 +168,35 @@ export declare type BranchAutomations = {
     billing: boolean;
     receipt: boolean;
 };
+export declare type BranchGadjetService = {
+    branchGadjetServiceId: number;
+    branchId: number;
+    branchCardId: number;
+    plan: GadjetServicePlan;
+    type: GadjetServiceType;
+    subType: GadjetServiceSubType;
+    status: GadjetServiceStatus;
+    startDate: string;
+    endDate: string;
+    suspendDate: string;
+    pendingDate: string;
+    isActive: boolean;
+    gadjetServiceLog?: Relation<BranchGadjetServiceLog>;
+};
+export declare type BranchGadjetServiceLog = {
+    branchGadjetServiceLogId: number;
+    branchId: number;
+    branchGadjetServiceId: number;
+    price: number;
+    contractsPrice: number;
+    branchCardId: number;
+    date: string;
+    approveJson: object;
+    approveDatetime: string;
+    contractInfos: ContractInfo[];
+    isPaid: boolean;
+    penaltyPrice: number;
+};
 export declare type Tenants = {
     tenantId: number;
     name: string;
@@ -189,6 +222,9 @@ export declare type Managers = {
     socialId: string;
     pushToken: string | null;
     profileImageId: number | null;
+    lastLogin: string;
+    status: ManagerStatus;
+    resetCode: string;
     profile?: Relation<Images>;
 };
 export declare type Users = {
@@ -203,6 +239,7 @@ export declare type Users = {
     code: string;
     status: UserStatus;
     device: null | Device;
+    lastLogin: string;
     profile?: Relation<Images>;
     tenantRoles?: Relation<TenantRoles[]>;
 };
@@ -216,6 +253,7 @@ export declare type HqRoles = {
     notice: Role;
     role: Role;
     config: Role;
+    branch: Role;
     hq?: Relation<Hqs>;
     manager?: Relation<Managers>;
 };
@@ -339,6 +377,7 @@ export declare type Contracts = {
     extendContractId: number | null;
     extendSinceDate: string;
     receiver: ContractReceiver;
+    gadjetServiceFlag: boolean;
     lang: Lang;
     tenant: ContractTenant;
     director: ContractDirector;
@@ -451,16 +490,18 @@ export declare type Payments = {
     bill?: Relation<Bills>;
     user?: Relation<Users>;
 };
-export declare type Settlements = {
-    settlementId: number;
+export declare type GadjetSettlements = {
+    gadjetSettlementId: number;
     branchId: number;
-    bankCode: string;
-    bankName: string;
-    account: string;
-    holder: string;
+    paymentInfo: object;
     price: number;
     date: string;
-    paymentJson: Payments[];
+    month: number;
+    settlementHistory: object;
+    isSuccess: boolean;
+    message: string;
+    isManual: boolean;
+    paymentUserInfo: object;
 };
 export declare type Credits = {
     creditId: number;
@@ -526,6 +567,7 @@ export declare type Rentals = {
     availableCreditType: CreditType[];
     weekendFlag: boolean;
     shareFlag: boolean;
+    colorInfo: string;
     imageId: number | null;
     branch?: Relation<Branches>;
     image?: Relation<Images>;
@@ -571,6 +613,7 @@ export declare type ProductSales = {
     usedCreditAmount: UsedCreditAmount;
     datetime: string;
     refundFlag: boolean;
+    isManual: boolean;
     product?: Relation<Products>;
     tenant?: Relation<Tenants>;
     user?: Relation<Users>;
@@ -599,6 +642,7 @@ export declare type ServiceSales = {
     usedCreditAmount: UsedCreditAmount;
     datetime: string;
     refundFlag: boolean;
+    isManual: boolean;
     service?: Relation<Services>;
     tenant?: Relation<Tenants>;
     user?: Relation<Users>;
@@ -664,6 +708,7 @@ export declare type BranchCards = {
     corporationFlag: boolean;
     lastUsedFlag: boolean;
     billingFlag: boolean;
+    gadjetService?: Relation<BranchGadjetService>;
 };
 export declare type TenantCards = {
     tenantCardId: number;
@@ -775,5 +820,16 @@ export declare type mPrintLogs = {
     userName: string;
     title: string;
     floor: string;
+};
+export declare type Settlements = {
+    settlementId: number;
+    branchId: number;
+    bankCode: string;
+    bankName: string;
+    account: string;
+    holder: string;
+    price: number;
+    date: string;
+    paymentJson: object;
 };
 //# sourceMappingURL=index.d.ts.map

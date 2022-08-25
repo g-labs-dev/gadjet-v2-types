@@ -2,15 +2,13 @@ import { Receipts } from '../../model';
 import { Cashbill } from '../../popbill/cash-bill';
 import { TaxInvoiceBasic, TaxInvoiceInvoicee, TaxInvoiceInvoicer } from '../../popbill/tax-invoice';
 import { Pagination, ReceiptSummary, Result } from '../../type';
+import { ReceiptSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-    requestDatetime: [string, string];
-};
+export declare type GET_LIST_QUERY = Pagination & ReceiptSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     receipts: Receipts[];

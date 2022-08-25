@@ -37,6 +37,7 @@ exports.contractExtendStatus = {
     asked: '확인 중',
     approval: '연장동의',
     refusal: '연장거절',
+    done: '연장완료',
 };
 exports.contractDepositStatus = {
     unpaid: '미납',
@@ -76,7 +77,10 @@ exports.receiptType = {
     'cash-receipt': '현금영수증',
 };
 exports.receiptStatus = {
-    none: '증빙 안함',
+    none: '발행 안함',
+    'before-receipt': '발행 전',
+    card: '카드 결제',
+    'seperately-receipt': '별도 증빙',
     'tax-invoice-request': '세금계산서 발행 요청',
     'tax-invoice-fail': '세금계산서 발행 실패',
     'tax-invoice-done': '세금계산서 발행 완료',

@@ -39,6 +39,7 @@ export const contractExtendStatus: Record<T.ContractExtendStatus, string> = {
   asked: '확인 중',
   approval: '연장동의',
   refusal: '연장거절',
+  done: '연장완료',
 }
 export const contractDepositStatus: Record<T.ContractDepositStatus, string> = {
   unpaid: '미납',
@@ -78,7 +79,10 @@ export const receiptType: Record<T.ReceiptType, string> = {
   'cash-receipt': '현금영수증',
 }
 export const receiptStatus: Record<T.ReceiptStatus, string> = {
-  none: '증빙 안함',
+  none: '발행 안함',
+  'before-receipt': '발행 전',
+  card: '카드 결제',
+  'seperately-receipt': '별도 증빙',
   'tax-invoice-request': '세금계산서 발행 요청',
   'tax-invoice-fail': '세금계산서 발행 실패',
   'tax-invoice-done': '세금계산서 발행 완료',

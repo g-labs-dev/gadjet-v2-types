@@ -5,13 +5,14 @@ export declare type ImageCategory = 'hq' | 'branch' | 'notice' | 'rental' | 'roo
 export declare type FileCategory = 'branch-terms' | 'branch-policy' | 'branch-etc' | 'sublet-consent' | 'sublet-document' | 'rentee-document' | 'contract-document';
 export declare type TenantType = 'sole-proprietor' | 'corporation-business' | 'local' | 'foreigner';
 export declare type ManagerJoinType = 'local' | 'google';
+export declare type ManagerStatus = 'inactive' | 'pending' | 'done';
 export declare type Role = 1 | 2 | 3;
 export declare type ContractBillingType = 'prepayment' | 'monthly';
 export declare type ContractBillingSplitType = 'A' | 'B';
 export declare type ContractLateFeeType = 'none' | 'fix' | 'rate';
 export declare type ContractStatus = 'before-started' | 'started' | 'expired' | 'suspended' | 'extended';
 export declare type ContractSignatureStatus = 'none' | 'waiting' | 'signed';
-export declare type ContractExtendStatus = 'none' | 'asked' | 'approval' | 'refusal';
+export declare type ContractExtendStatus = 'none' | 'asked' | 'approval' | 'refusal' | 'done';
 export declare type ContractCreditPolicy = 'weekly' | 'monthly';
 export declare type ContractTenant = {
     name: string;
@@ -45,7 +46,7 @@ export declare type Surcharges = {
     price: number;
 };
 export declare type BillType = 'deposit' | 'sales';
-export declare type ReceiptStatus = 'none' | 'tax-invoice-request' | 'tax-invoice-fail' | 'tax-invoice-done' | 'tax-invoice-update-request' | 'tax-invoice-updated' | 'tax-invoice-update-request-fail' | 'cash-receipt-request' | 'cash-receipt-fail' | 'cash-receipt-done' | 'cash-receipt-cancel' | 'cash-receipt-cancel-fail';
+export declare type ReceiptStatus = 'none' | 'before-receipt' | 'card' | 'seperately-receipt' | 'tax-invoice-request' | 'tax-invoice-fail' | 'tax-invoice-done' | 'tax-invoice-update-request' | 'tax-invoice-updated' | 'tax-invoice-update-request-fail' | 'cash-receipt-request' | 'cash-receipt-fail' | 'cash-receipt-done' | 'cash-receipt-cancel' | 'cash-receipt-cancel-fail';
 export declare type ContractDepositStatus = 'unpaid' | 'paid' | 'returned';
 export declare type PaymentType = 'card' | 'transfer' | 'direct' | 'oversea-card' | 'paypal' | 'alipay' | 'wechatpay' | 'cash';
 export declare type PaymentStatus = 'ready' | 'approve' | 'refund';
@@ -116,6 +117,7 @@ export declare type ContractReceiver = {
 };
 export declare type BranchDashboardEventSummary = {
     salePrice: number;
+    paymentPrice: number;
     expectSalePrice: number;
     unpaidPrice: number;
     expenditurePrice: number;
@@ -187,7 +189,7 @@ export declare type ApprovePayResponse = {
 }));
 export declare type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export declare type Lang = 'ko' | 'en';
-export declare type UserStatus = 'pending' | 'done';
+export declare type UserStatus = 'inactive' | 'pending' | 'done';
 export declare type Result = {
     isSuccess: boolean;
     message: string;
@@ -211,4 +213,34 @@ export declare type BillingCard = {
 export declare type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN';
 export declare type PrintColorType = 'color' | 'bnw';
 export declare type PrintSizeType = 'A4' | 'A3';
+export declare type GadjetServicePlan = 'essential' | 'advanced' | 'enterprise';
+export declare type GadjetServiceType = 'year' | 'yearByMonth' | 'month';
+export declare type GadjetServiceSubType = string;
+export declare type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate' | 'pending';
+export declare type ContractInfo = {
+    contractId: number;
+    tenant: ContractTenant;
+    startDate: string;
+    endDate: string;
+};
+export declare type BillingApproveResponseData = {
+    ResultCode: string;
+    ResultMsg: string;
+    TID: string;
+    Moid: string;
+    Amt: string;
+    AuthCode: string;
+    AuthDate: string;
+    AcquCardCode: string;
+    AcquCardName: string;
+    CardNo: string;
+    CardCode: string;
+    CardName: string;
+    CardQuota: string;
+    CardCl: string;
+    CardInterest: string;
+    CcPartCl: string;
+    MallReserved: string;
+};
+export declare type TerminationType = {};
 //# sourceMappingURL=index.d.ts.map

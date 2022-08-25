@@ -17,3 +17,12 @@ export type UPDATE_BODY = {
 }
 export type UPDATE_RESPONSE = [number]
 // ===========================
+
+// 운영사 추가
+// /hqs/
+export type ADD_PARAMS = PARAMS
+export type ADD_BODY = {
+  hq: Partial<Hqs>
+}
+export type ADD_RESPONSE = Hqs
+// ===========================

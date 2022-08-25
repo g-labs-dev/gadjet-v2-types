@@ -1,17 +1,13 @@
 import { Bills } from '../../model'
-import { BillSummary, BillType, ContractReceiver, Pagination, PaymentType, Result } from '../../type'
+import { BillSummary, ContractReceiver, Pagination, PaymentType, Result } from '../../type'
+import { BillSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 청구서 목록 검색
 // GET /hqs/0/branches/0/bills
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & {
-  query: string
-  startDate: [string, string] // startDate: ['YYYY-MM-DD', 'YYYY-MM-DD']
-  spaceTypes: number[]
-  type: BillType[]
-}
+export type GET_LIST_QUERY = Pagination & BillSearch
 export type GET_LIST_RESPONSE = { total: number; bills: Bills[] }
 // ===========================
 

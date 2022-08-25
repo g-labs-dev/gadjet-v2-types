@@ -33,7 +33,7 @@ export type TenantType =
   | 'foreigner' // 비사업자 외국인
 
 export type ManagerJoinType = 'local' | 'google'
-
+export type ManagerStatus = 'inactive' | 'pending' | 'done'
 export type Role =
   | 1 // 편집, 조회
   | 2 // 조회
@@ -69,6 +69,7 @@ export type ContractExtendStatus =
   | 'asked' // 연장할지 물어봄
   | 'approval' // 연장한다고 대답함
   | 'refusal' // 연장거절
+  | 'done'
 
 export type ContractCreditPolicy =
   | 'weekly' // 계약 크레딧 주 단위
@@ -113,7 +114,10 @@ export type BillType =
   | 'sales' // 매출 청구서
 
 export type ReceiptStatus =
-  | 'none' // 증빙 안함
+  | 'none' // 발행 안함
+  | 'before-receipt' // 발행 전
+  | 'card' // 카드 결제
+  | 'seperately-receipt' // 별도 증빙
   | 'tax-invoice-request' // 세금계산서 요청
   | 'tax-invoice-fail' // 세금계산서 실패
   | 'tax-invoice-done' // 세금계산서 완료
@@ -229,6 +233,7 @@ export type ContractReceiver = {
 
 export type BranchDashboardEventSummary = {
   salePrice: number // 매출 금액
+  paymentPrice: number // 결제 금액
   expectSalePrice: number // 예상매출 금액
   unpaidPrice: number // 미납 금액
   expenditurePrice: number // 지출 금액
@@ -297,7 +302,7 @@ export type BranchBuildingContractType = 'none' | 'rent' | 'sublet'
 
 export type Lang = 'ko' | 'en'
 
-export type UserStatus = 'pending' | 'done'
+export type UserStatus = 'inactive' | 'pending' | 'done'
 
 export type Result = { isSuccess: boolean; message: string }
 
@@ -319,8 +324,45 @@ export type BillingCard = {
   identityNumber: string // 생년월일(YYMMDD) or 사업자번호(10자리)
 }
 
-export declare type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN'
+export type PrintJobType = 'PRINT' | 'COPY' | 'FAX' | 'SCAN'
 
-export declare type PrintColorType = 'color' | 'bnw'
+export type PrintColorType = 'color' | 'bnw'
 
-export declare type PrintSizeType = 'A4' | 'A3'
+export type PrintSizeType = 'A4' | 'A3'
+
+export type GadjetServicePlan = 'essential' | 'advanced' | 'enterprise' // 연구독 | 연구독 월결제 | 월구독
+
+export type GadjetServiceType = 'year' | 'yearByMonth' | 'month' // 연구독 | 연구독 월결제 | 월구독
+
+export type GadjetServiceSubType = string // 정해져야 함. 추가 기능 id 배열로 들고있기? 기획 완료 필요.
+
+export type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate' | 'pending' // 사용중 | 해지요청 | 해지
+
+export type ContractInfo = {
+  contractId: number // 계약Id
+  tenant: ContractTenant // 계약 입주사 정보
+  startDate: string
+  endDate: string
+}
+
+export type BillingApproveResponseData = {
+  ResultCode: string // 결과코드 (3001: 성공 / 그 외 실패)
+  ResultMsg: string
+  TID: string
+  Moid: string
+  Amt: string // 결제금액
+  AuthCode: string // 승인번호
+  AuthDate: string // 승인일자
+  AcquCardCode: string // 매입카드사코드
+  AcquCardName: string // 매입카드사이름
+  CardNo: string // 카드번호
+  CardCode: string // 카드사 코드
+  CardName: string // 카드사 이름
+  CardQuota: string // 할부개월
+  CardCl: string // 카드타입 (0: 신용카드, 1: 체크카드)
+  CardInterest: string // 무이자 여부 (0: 이자, 1: 무이자)
+  CcPartCl: string // 부분취소 가능 여부 (0: 불가능, 1: 가능)
+  MallReserved: string // 정보 전달용 필드 (우리 마음대로 사용 가능)
+}
+
+export type TerminationType = {}

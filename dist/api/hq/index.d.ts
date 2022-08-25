@@ -9,5 +9,10 @@ export declare type UPDATE_BODY = {
     hq: Partial<Hqs>;
 };
 export declare type UPDATE_RESPONSE = [number];
+export declare type ADD_PARAMS = PARAMS;
+export declare type ADD_BODY = {
+    hq: Partial<Hqs>;
+};
+export declare type ADD_RESPONSE = Hqs;
 export {};
 //# sourceMappingURL=index.d.ts.map

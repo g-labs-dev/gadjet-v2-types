@@ -1,16 +1,13 @@
 /// <reference types="node" />
-import { Bills, Contracts } from '../../model';
+import { Bills, ContractInviteCodes, Contracts } from '../../model';
 import { ContractSignatureStatus, ContractStatus, Pagination } from '../../type';
+import { ContractSearch } from '../../type/search';
 declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
 export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & {
-    query: string;
-    spaceTypes: number[];
-    status: ContractStatus[];
-};
+export declare type GET_LIST_QUERY = Pagination & ContractSearch;
 export declare type GET_LIST_RESPONSE = {
     total: number;
     contracts: Contracts[];
@@ -59,7 +56,7 @@ export declare type SEND_INVITE_PARAMS = PARAMS & {
 export declare type SEND_INVITE_BODY = {
     contacts: string[];
 };
-export declare type SEND_INVITE_RESPONSE = boolean;
+export declare type SEND_INVITE_RESPONSE = ContractInviteCodes[];
 export declare type SEARCH_PARAMS = PARAMS;
 export declare type SEARCH_QUERY = {
     query: string;
@@ -68,6 +65,13 @@ export declare type SEARCH_QUERY = {
 export declare type SEARCH_RESPONSE = {
     contracts: Contracts[];
 };
+export declare type UPDATE_MEMO_PARAMS = PARAMS & {
+    contractId: number;
+};
+export declare type UPDATE_MEMO_BODY = {
+    contracts: Partial<Contracts>;
+};
+export declare type UPDATE_MEMO_RESPONSE = [number];
 export declare type UPDATE_SIGNATURE_STATUS_PARAMS = PARAMS & {
     contractId: number;
 };

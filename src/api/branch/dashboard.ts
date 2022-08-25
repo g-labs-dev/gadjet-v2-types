@@ -1,4 +1,5 @@
-import { BranchDashboardDayEvent, BranchDashboardDayEventDetail, BranchDashboardEventSummary } from '../../type'
+import { Tenants } from '../../model';
+import { BranchDashboardDayEvent, BranchDashboardDayEventDetail, BranchDashboardEventSummary, Pagination } from '../../type'
 
 type PARAMS = { hqId: number; branchId: number }
 
@@ -21,3 +22,8 @@ export type GET_EVENT_SUMMARY_RESPONSE = BranchDashboardEventSummary
 export type GET_EVENT_DETAIL_PARAMS = PARAMS & { date: string } // YYYY-MM-DD
 export type GET_EVENT_DETAIL_RESPONSE = BranchDashboardDayEventDetail
 // ===========================
+
+// 입주사 리스트 조회
+export type GET_TENANT_PARAMS = PARAMS
+export type GET_TENANT_QUERY = Pagination & {query:string}
+export type GET_TENANT_RESPONSE = { total: number; tenants: Tenants[] }

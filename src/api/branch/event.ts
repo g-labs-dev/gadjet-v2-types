@@ -1,12 +1,13 @@
 import { EventAttendees, Events } from '../../model'
 import { Pagination } from '../../type'
+import { EventSearch } from '../../type/search'
 
 type PARAMS = { hqId: number; branchId: number }
 
 // 이벤트 조회
 // GET /hqs/0/branches/0/events
 export type GET_LIST_PARAMS = PARAMS
-export type GET_LIST_QUERY = Pagination & { query: string } // @@@@ 이벤트 상태로 조회?? (모집 중, 모집 마감, 종료됨)
+export type GET_LIST_QUERY = Pagination & EventSearch
 export type GET_LIST_RESPONSE = { total: number; events: Events[] } // Events.content 빼고
 // ===========================
 

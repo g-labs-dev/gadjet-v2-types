@@ -3,14 +3,6 @@ import { Pagination } from '../../type';
 declare type PARAMS = {
     hqId: number;
 };
-export declare type GET_RECENT_CONTRACT_PARAMS = PARAMS;
-export declare type GET_RECENT_CONTRACT_QUERY = {
-    pageSize: number;
-};
-export declare type GET_RECENT_CONTRACT_RESPONSE = Contracts[];
-/**
- * order by createdAt desc
- */
 export declare type SEARCH_CONTRACT_PARAMS = PARAMS;
 export declare type SEARCH_CONTRACT_QUERY = Pagination & {
     query: string;
@@ -19,6 +11,11 @@ export declare type SEARCH_CONTRACT_RESPONSE = {
     total: number;
     contracts: Contracts[];
 };
+export declare type GET_BEFORE_STARTED_CONTRACT_PARAMS = PARAMS;
+export declare type GET_BEFORE_STARTED_CONTRACT_QUERY = {
+    date: string;
+};
+export declare type GET_BEFORE_STARTED_CONTRACT_RESPONSE = Contracts[];
 export declare type GET_START_CONTRACT_PARAMS = PARAMS;
 export declare type GET_START_CONTRACT_QUERY = {
     date: string;

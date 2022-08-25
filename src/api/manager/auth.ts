@@ -1,4 +1,4 @@
-import { Managers } from '../../model'
+import { Branches, Hqs, Managers } from '../../model'
 import {} from '../../type'
 
 type PARAMS = {}
@@ -110,3 +110,14 @@ export type RESET_PASSWORD_RESPONSE = boolean
   - 비밀번호 재설정 링크 발송 참고
 */
 // ===========================
+
+// 이메일 사용가능 확인
+// GET /managers/verify/code
+export type CODE_VERIFY_PARAMS = { code: string }
+export type CODE_VERIFY_QUERY = {}
+export type CODE_VERIFY_RESPONSE = Managers | null
+
+// 운영사 직접 생성
+// POST /managers/verify/code
+export type JOIN_WITH_HQ_BODY = { manager: Partial<Managers>; branch: Partial<Branches>; hq: Partial<Hqs> }
+export type JOIN_WITH_HQ_RESPONSE = { token: string; manager: Managers | null }

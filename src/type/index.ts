@@ -232,7 +232,6 @@ export type ContractReceiver = {
 }
 
 export type BranchDashboardEventSummary = {
-  salePrice: number // 매출 금액
   paymentPrice: number // 결제 금액
   expectSalePrice: number // 예상매출 금액
   unpaidPrice: number // 미납 금액

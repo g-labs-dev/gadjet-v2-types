@@ -1,1 +1,0 @@
-{"version":3,"file":"notification.d.ts","sourceRoot":"","sources":["../../../src/api/manager/notification.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,MAAM,aAAa,CAAA;AAGjD,aAAK,MAAM,GAAG;IAAE,SAAS,EAAE,MAAM,CAAA;CAAE,CAAA;AAInC,oBAAY,UAAU,GAAG,MAAM,CAAA;AAC/B,oBAAY,YAAY,GAAG,mBAAmB,EAAE,CAAA"}

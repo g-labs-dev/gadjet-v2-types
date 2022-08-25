@@ -1,1 +1,0 @@
-{"version":3,"file":"branchNotification.d.ts","sourceRoot":"","sources":["../../../src/api/manager/branchNotification.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,MAAM,aAAa,CAAA;AAGjD,aAAK,MAAM,GAAG;IAAE,SAAS,EAAE,MAAM,CAAC;IAAC,QAAQ,EAAE,MAAM,CAAA;CAAE,CAAA;AAIrD,oBAAY,UAAU,GAAG,MAAM,CAAA;AAC/B,oBAAY,YAAY,GAAG,mBAAmB,EAAE,CAAA"}

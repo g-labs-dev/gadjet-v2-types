@@ -128,6 +128,7 @@ export type ReceiptStatus =
   | 'cash-receipt-fail' // 현금영수증 실패
   | 'cash-receipt-done' // 현금영수증 완료
   | 'cash-receipt-cancel' // 현금영수증 취소
+  | 'cash-receipt-cancel-request' // 현금영수증 취소 발행 요청
   | 'cash-receipt-cancel-fail' // 현금영수증 취소 발행 실패
 
 export type ContractDepositStatus =

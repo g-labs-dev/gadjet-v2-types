@@ -46,7 +46,7 @@ export declare type Surcharges = {
     price: number;
 };
 export declare type BillType = 'deposit' | 'sales';
-export declare type ReceiptStatus = 'none' | 'before-receipt' | 'card' | 'seperately-receipt' | 'tax-invoice-request' | 'tax-invoice-fail' | 'tax-invoice-done' | 'tax-invoice-update-request' | 'tax-invoice-updated' | 'tax-invoice-update-request-fail' | 'cash-receipt-request' | 'cash-receipt-fail' | 'cash-receipt-done' | 'cash-receipt-cancel' | 'cash-receipt-cancel-fail';
+export declare type ReceiptStatus = 'none' | 'before-receipt' | 'card' | 'seperately-receipt' | 'tax-invoice-request' | 'tax-invoice-fail' | 'tax-invoice-done' | 'tax-invoice-update-request' | 'tax-invoice-updated' | 'tax-invoice-update-request-fail' | 'cash-receipt-request' | 'cash-receipt-fail' | 'cash-receipt-done' | 'cash-receipt-cancel' | 'cash-receipt-cancel-request' | 'cash-receipt-cancel-fail';
 export declare type ContractDepositStatus = 'unpaid' | 'paid' | 'returned';
 export declare type PaymentType = 'card' | 'transfer' | 'direct' | 'oversea-card' | 'paypal' | 'alipay' | 'wechatpay' | 'cash';
 export declare type PaymentStatus = 'ready' | 'approve' | 'refund';

@@ -9,7 +9,10 @@ export declare type GET_LIST_PARAMS = PARAMS & BranchRoleSearch;
 export declare type GET_LIST_QUERY = Pagination & {
     query: string;
 };
-export declare type GET_LIST_RESPONSE = BranchRoles[];
+export declare type GET_LIST_RESPONSE = {
+    total: number;
+    branchRoles: BranchRoles[];
+};
 export declare type GET_DETAIL_PARAMS = PARAMS & {
     branchRoleId: number;
 };

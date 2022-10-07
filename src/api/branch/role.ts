@@ -9,7 +9,7 @@ type PARAMS = { hqId: number; branchId: number }
 // GET /hqs/0/branches/0/roles
 export type GET_LIST_PARAMS = PARAMS & BranchRoleSearch
 export type GET_LIST_QUERY = Pagination & { query: string }
-export type GET_LIST_RESPONSE = BranchRoles[]
+export type GET_LIST_RESPONSE = { total: number; branchRoles: BranchRoles[] }
 // ===========================
 
 // 권한 조회

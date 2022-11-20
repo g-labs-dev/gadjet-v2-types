@@ -244,15 +244,33 @@ export type BranchGadjetServiceLog = {
   branchId: number
   branchGadjetServiceId: number
   price: number
-  contractsPrice: number
   branchCardId: number
   date: string
   approveJson: object
   approveDatetime: string
-  contractInfos: ContractInfo[]
   isPaid: boolean
   penaltyPrice: number
+
+  gadjetService?: Relation<BranchGadjetService>;
 }
+
+export type BranchGadjetServiceContractLog = {
+  branchGadjetServiceContractLogId: number;
+  branchGadjetServiceLogId: number;
+  branchId: number;
+  targetMonth: string;
+  price: number;
+  totalCount: number;
+  newCount: number;
+  startedCount: number;
+  extendedCount: number;
+  expiredCount: number;
+  suspendedCount: number;
+  contractInfos: ContractInfo[];
+
+  branch?: Relation<Branches>;
+  BranchGadjetServiceLog?: Relation<BranchGadjetServiceLog>;
+};
 
 export type Tenants = {
   tenantId: number

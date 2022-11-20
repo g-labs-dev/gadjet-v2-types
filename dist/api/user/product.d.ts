@@ -1,15 +1,15 @@
 import { Products, ProductSales } from '../../model';
 import { UsedCreditAmount } from '../../type';
-declare type PURCHASE_PRODUCT_ERROR = any;
-declare type PARAMS = {
+type PURCHASE_PRODUCT_ERROR = any;
+type PARAMS = {
     productId: number;
 };
-export declare type GET_PRODUCT_DETAIL_PARAMS = PARAMS;
-export declare type GET_PRODUCT_DETAIL_RESPONSE = {
+export type GET_PRODUCT_DETAIL_PARAMS = PARAMS;
+export type GET_PRODUCT_DETAIL_RESPONSE = {
     product: Products;
 };
-export declare type PURCHASE_PRODUCT_PARAMS = PARAMS;
-export declare type PURCHASE_PRODUCT_BODY = {
+export type PURCHASE_PRODUCT_PARAMS = PARAMS;
+export type PURCHASE_PRODUCT_BODY = {
     product: {
         branchId: number;
         tenantId: number;
@@ -18,7 +18,7 @@ export declare type PURCHASE_PRODUCT_BODY = {
         usedCreditAmount: UsedCreditAmount;
     };
 };
-export declare type PURCHASE_PRODUCT_RESPONSE = {
+export type PURCHASE_PRODUCT_RESPONSE = {
     productSales: ProductSales;
     error?: PURCHASE_PRODUCT_ERROR;
 };

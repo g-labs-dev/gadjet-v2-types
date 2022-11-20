@@ -1,4 +1,4 @@
-export declare type Cashbill = {
+export type Cashbill = {
     mgtKey: string;
     tradeType: '승인거래' | '취소거래';
     tradeUsage: '소득공제용' | '지출증빙용';
@@ -21,7 +21,7 @@ export declare type Cashbill = {
     isPartCancel?: number;
     cancelType?: number;
 };
-export declare type CashbillCancel = Cashbill & {
+export type CashbillCancel = Cashbill & {
     orgConfirmNum: string;
     orgTradeDate: string;
     cancelType: 1 | 2 | 3;

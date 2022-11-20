@@ -1,22 +1,22 @@
 import { Hqs } from '../../model';
-declare type PARAMS = {
+type PARAMS = {
     hqId: number;
 };
-export declare type GET_LIST_PARAMS = {};
-export declare type GET_LIST_RESPONSE = Hqs[];
-export declare type GET_DETAIL_PARAMS = PARAMS;
-export declare type GET_DETAIL_RESPONSE = Hqs;
-export declare type ADD_PARAMS = PARAMS;
-export declare type ADD_BODY = {
+export type GET_LIST_PARAMS = {};
+export type GET_LIST_RESPONSE = Hqs[];
+export type GET_DETAIL_PARAMS = PARAMS;
+export type GET_DETAIL_RESPONSE = Hqs;
+export type ADD_PARAMS = PARAMS;
+export type ADD_BODY = {
     hq: Partial<Hqs>;
 };
-export declare type ADD_RESPONSE = Hqs;
-export declare type UPDATE_PARAMS = PARAMS;
-export declare type UPDATE_BODY = {
+export type ADD_RESPONSE = Hqs;
+export type UPDATE_PARAMS = PARAMS;
+export type UPDATE_BODY = {
     hq: Partial<Hqs>;
 };
-export declare type UPDATE_RESPONSE = Hqs;
-export declare type DELETE_PARAMS = PARAMS;
-export declare type DELETE_RESPONSE = [number];
+export type UPDATE_RESPONSE = Hqs;
+export type DELETE_PARAMS = PARAMS;
+export type DELETE_RESPONSE = [number];
 export {};
 //# sourceMappingURL=hq.d.ts.map

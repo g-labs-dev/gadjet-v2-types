@@ -338,12 +338,49 @@ export type GadjetServiceSubType = string // 정해져야 함. 추가 기능 id 
 
 export type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate' | 'pending' // 사용중 | 해지요청 | 해지
 
+/**
+ * new: 신규 계약, started: 기존 계약, extended: 연장 계약, expired: 종료 계약, suspended: 조기 종료 계약
+ */
+export type GadjetServiceContractType = 'new' | 'started' | 'extended' | 'expired' | 'suspended';
+
+/**
+ * 가젯 서비스 관련 contract 정보
+ */
 export type ContractInfo = {
-  contractId: number // 계약Id
-  tenant: ContractTenant // 계약 입주사 정보
-  startDate: string
-  endDate: string
-}
+  contractId: number;
+  
+  type: GadjetServiceContractType;
+
+  /**
+   * 계약의 입주사 정보
+   */
+  tenant: ContractTenant;
+
+  /**
+   * 계약 시작일
+   */
+  startDate: string;
+
+  /**
+   * 계약 종료일
+   */
+  endDate: string;
+
+  /**
+   * 실제 계약 종료일
+   */
+  suspendDate: string;
+
+  /**
+   * 부모 계약 Id
+   */
+  extendContractId?: number;
+
+  /**
+   * 부모 계약의 실제 종료일. YYYY-MM-DD
+   */
+  extendSuspendDate?: string;
+};
 
 export type BillingApproveResponseData = {
   ResultCode: string // 결과코드 (3001: 성공 / 그 외 실패)

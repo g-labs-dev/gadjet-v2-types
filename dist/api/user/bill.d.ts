@@ -1,9 +1,9 @@
 import { Bills } from '../../model';
-declare type PARAMS = {
+type PARAMS = {
     billId: number;
 };
-export declare type GET_BILL_DETAIL_PARAMS = PARAMS;
-export declare type GET_BILL_DETAIL_RESPONSE = {
+export type GET_BILL_DETAIL_PARAMS = PARAMS;
+export type GET_BILL_DETAIL_RESPONSE = {
     bill: Bills;
 };
 export {};

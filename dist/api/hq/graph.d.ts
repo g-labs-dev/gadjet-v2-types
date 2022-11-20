@@ -1,11 +1,11 @@
-declare type PARAMS = {
+type PARAMS = {
     hqId: number;
 };
-export declare type GRAPH_PAYMENT_PARAMS = PARAMS;
-export declare type GRAPH_PAYMENT_QUERY = {
+export type GRAPH_PAYMENT_PARAMS = PARAMS;
+export type GRAPH_PAYMENT_QUERY = {
     date: [string, string];
 };
-export declare type GRAPH_PAYMENT_RESPONSE = {
+export type GRAPH_PAYMENT_RESPONSE = {
     payments: {
         month: string;
         price: number;
@@ -19,11 +19,11 @@ export declare type GRAPH_PAYMENT_RESPONSE = {
         price: number;
     }[];
 };
-export declare type GRAPH_EXPECT_PAYMENT_PARAMS = PARAMS;
-export declare type GRAPH_EXPECT_PAYMENT_QUERY = {
+export type GRAPH_EXPECT_PAYMENT_PARAMS = PARAMS;
+export type GRAPH_EXPECT_PAYMENT_QUERY = {
     date: [string, string];
 };
-export declare type GRAPH_EXPECT_PAYMENT_RESPONSE = {
+export type GRAPH_EXPECT_PAYMENT_RESPONSE = {
     "전 지점": {
         month: string;
         price: number;
@@ -33,11 +33,11 @@ export declare type GRAPH_EXPECT_PAYMENT_RESPONSE = {
         price: number;
     }[];
 };
-export declare type GRAPH_CONTRACT_PARAMS = PARAMS;
-export declare type GRAPH_CONTRACT_QUERY = {
+export type GRAPH_CONTRACT_PARAMS = PARAMS;
+export type GRAPH_CONTRACT_QUERY = {
     date: [string, string];
 };
-export declare type GRAPH_CONTRACT_RESPONSE = {
+export type GRAPH_CONTRACT_RESPONSE = {
     "전 지점": {
         month: string;
         start: number;
@@ -53,11 +53,11 @@ export declare type GRAPH_CONTRACT_RESPONSE = {
  *  start: 시작계약
  *  end: 종료계약
  */
-export declare type GRAPH_SPACE_TYPE_PARAMS = PARAMS;
-export declare type GRAPH_SPACE_TYPE_QUERY = {
+export type GRAPH_SPACE_TYPE_PARAMS = PARAMS;
+export type GRAPH_SPACE_TYPE_QUERY = {
     date: [string, string];
 };
-export declare type GRAPH_SPACE_TYPE_RESPONSE = {
+export type GRAPH_SPACE_TYPE_RESPONSE = {
     [branchName: string]: {
         [spaceTypeName: string]: {
             month: string;

@@ -2,86 +2,86 @@
 import { Contracts, CreditLogs, Credits, ProductSales, RentalReservations, Tenants, Users } from '../../model';
 import { CreditType, Pagination } from '../../type';
 import { TenantSearch } from '../../type/search';
-type PARAMS = {
+declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
-export type GET_LIST_PARAMS = PARAMS;
-export type GET_LIST_QUERY = Pagination & TenantSearch;
-export type GET_LIST_RESPONSE = {
+export declare type GET_LIST_PARAMS = PARAMS;
+export declare type GET_LIST_QUERY = Pagination & TenantSearch;
+export declare type GET_LIST_RESPONSE = {
     total: number;
     tenants: Tenants[];
 };
-export type GET_USERS_PARAMS = PARAMS & {
+export declare type GET_USERS_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type GET_USERS_QUERY = Pagination & {
+export declare type GET_USERS_QUERY = Pagination & {
     query: string;
 };
-export type GET_USERS_RESPONSE = {
+export declare type GET_USERS_RESPONSE = {
     total: number;
     users: Users[];
 };
-export type GET_CONTRACTS_PARAMS = PARAMS & {
+export declare type GET_CONTRACTS_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type GET_CONTRACTS_QUERY = Pagination & {
+export declare type GET_CONTRACTS_QUERY = Pagination & {
     query: string;
 };
-export type GET_CONTRACTS_RESPONSE = {
+export declare type GET_CONTRACTS_RESPONSE = {
     total: number;
     contracts: Contracts[];
 };
-export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS & {
+export declare type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type GET_RENTAL_RESERVATIONS_QUERY = Pagination & {
+export declare type GET_RENTAL_RESERVATIONS_QUERY = Pagination & {
     query: string;
 };
-export type GET_RENTAL_RESERVATIONS_RESPONSE = {
+export declare type GET_RENTAL_RESERVATIONS_RESPONSE = {
     total: number;
     rentalReservations: RentalReservations[];
 };
-export type GET_PRODUCT_SALES_PARAMS = PARAMS & {
+export declare type GET_PRODUCT_SALES_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type GET_PRODUCT_SALES_QUERY = Pagination & {
+export declare type GET_PRODUCT_SALES_QUERY = Pagination & {
     query: string;
 };
-export type GET_PRODUCT_SALES_RESPONSE = {
+export declare type GET_PRODUCT_SALES_RESPONSE = {
     total: number;
     productSales: ProductSales[];
 };
-export type GET_CREDITS_PARAMS = PARAMS & {
+export declare type GET_CREDITS_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type GET_CREDITS_QUERY = Pagination & {
+export declare type GET_CREDITS_QUERY = Pagination & {
     date: string;
     creditTypes: CreditType[];
 };
-export type GET_CREDITS_RESPONSE = {
+export declare type GET_CREDITS_RESPONSE = {
     total: number;
     credits: Credits[];
 };
-export type GET_CREDIT_LOGS_PARAMS = PARAMS & {
+export declare type GET_CREDIT_LOGS_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type GET_CREDIT_LOGS_QUERY = Pagination & {
+export declare type GET_CREDIT_LOGS_QUERY = Pagination & {
     datetime: [string, string];
 };
-export type GET_CREDIT_LOGS_RESPONSE = {
+export declare type GET_CREDIT_LOGS_RESPONSE = {
     total: number;
     creditLogs: CreditLogs[];
 };
-export type EXPORT_PARAMS = PARAMS;
-export type EXPORT_QUERY = {
+export declare type EXPORT_PARAMS = PARAMS;
+export declare type EXPORT_QUERY = {
     includeExpired: boolean;
 };
-export type EXPORT_RESPONSE = Buffer;
-export type ADD_CREDITS_PARAMS = PARAMS & {
+export declare type EXPORT_RESPONSE = Buffer;
+export declare type ADD_CREDITS_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type ADD_CREDITS_BODY = {
+export declare type ADD_CREDITS_BODY = {
     credit: {
         contract: {
             amount: number;
@@ -96,13 +96,13 @@ export type ADD_CREDITS_BODY = {
         memo: string;
     };
 };
-export type ADD_CREDITS_RESPONSE = boolean;
-export type INVITE_USERS_PARAMS = PARAMS & {
+export declare type ADD_CREDITS_RESPONSE = boolean;
+export declare type INVITE_USERS_PARAMS = PARAMS & {
     tenantId: number;
 };
-export type INVITE_USERS_BODY = {
+export declare type INVITE_USERS_BODY = {
     phone: string[];
 };
-export type INVITE_USERS_RESPONSE = boolean;
+export declare type INVITE_USERS_RESPONSE = boolean;
 export {};
 //# sourceMappingURL=tenant.d.ts.map

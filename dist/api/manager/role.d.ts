@@ -1,17 +1,17 @@
 import { Branches, Hqs } from '../../model';
-type PARAMS = {
+declare type PARAMS = {
     managerId: number;
 };
-export type GET_PARAMS = PARAMS;
-export type GET_RESPONSE = {
+export declare type GET_PARAMS = PARAMS;
+export declare type GET_RESPONSE = {
     hqs: Hqs[];
     branches: Branches[];
 };
-export type INVITE_ACCEPT_PARAMS = PARAMS;
-export type INVITE_ACCEPT_BODY = {
+export declare type INVITE_ACCEPT_PARAMS = PARAMS;
+export declare type INVITE_ACCEPT_BODY = {
     code: string;
 };
-export type INVITE_ACCEPT_RESPONSE = boolean;
+export declare type INVITE_ACCEPT_RESPONSE = boolean;
 export {};
 /**
  * ManagerInviteCodes.managerInviteCode ==== code

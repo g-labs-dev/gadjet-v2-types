@@ -357,17 +357,17 @@ export type ContractInfo = {
   tenant: ContractTenant;
 
   /**
-   * 계약 시작일
+   * 계약 시작일 YYYY-MM-DD
    */
   startDate: string;
 
   /**
-   * 계약 종료일
+   * 계약 종료일 YYYY-MM-DD
    */
   endDate: string;
 
   /**
-   * 실제 계약 종료일
+   * 실제 계약 종료일 YYYY-MM-DD
    */
   suspendDate: string;
 
@@ -380,6 +380,11 @@ export type ContractInfo = {
    * 부모 계약의 실제 종료일. YYYY-MM-DD
    */
   extendSuspendDate?: string;
+
+  /**
+   * 계약 삭제일
+   */
+  deletedAt?: Date;
 };
 
 export type BillingApproveResponseData = {

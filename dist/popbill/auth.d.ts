@@ -1,4 +1,4 @@
-export declare type PopbillJoinForm = {
+export type PopbillJoinForm = {
     ID: string;
     PWD: string;
     LinkID: "GADJET";

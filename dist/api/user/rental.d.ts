@@ -1,31 +1,31 @@
 import { RentalReservations, Rentals } from '../../model';
 import { UsedCreditAmount } from '../../type';
-declare type RENTAL_RESERVATION_ERROR = any;
-declare type PARAMS = {
+type RENTAL_RESERVATION_ERROR = any;
+type PARAMS = {
     rentalId: number;
 };
-export declare type GET_RENTAL_DETAIL_PARAMS = PARAMS;
-export declare type GET_RENTAL_DETAIL_RESPONSE = {
+export type GET_RENTAL_DETAIL_PARAMS = PARAMS;
+export type GET_RENTAL_DETAIL_RESPONSE = {
     rental: Rentals;
 };
-export declare type GET_RENTAL_RESERVATION_DETAIL_PARAMS = PARAMS & {
+export type GET_RENTAL_RESERVATION_DETAIL_PARAMS = PARAMS & {
     rentalReservationId: number;
 };
-export declare type GET_RENTAL_RESERVATION_DETAIL_RESPONSE = {
+export type GET_RENTAL_RESERVATION_DETAIL_RESPONSE = {
     rentalReservation: RentalReservations;
 };
-export declare type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;
-export declare type GET_RENTAL_RESERVATIONS_QUERY = {
+export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;
+export type GET_RENTAL_RESERVATIONS_QUERY = {
     date: string;
 };
-export declare type GET_RENTAL_RESERVATIONS_RESPONSE = {
+export type GET_RENTAL_RESERVATIONS_RESPONSE = {
     rentalReservations: RentalReservations[];
 };
 /**
  * 예약 없는날 빈 배열 채워서 전달
  */
-export declare type RESERVE_RENTAL_PARAMS = PARAMS;
-export declare type RESERVE_RENTAL_BODY = {
+export type RESERVE_RENTAL_PARAMS = PARAMS;
+export type RESERVE_RENTAL_BODY = {
     rentalReservation: {
         branchId: number;
         tenantId: number;
@@ -37,7 +37,7 @@ export declare type RESERVE_RENTAL_BODY = {
         usedCreditAmount: UsedCreditAmount;
     };
 };
-export declare type RESERVE_RENTAL_RESPONSE = {
+export type RESERVE_RENTAL_RESPONSE = {
     rentalReservations: RentalReservations;
     error?: RENTAL_RESERVATION_ERROR;
 };
@@ -46,10 +46,10 @@ export declare type RESERVE_RENTAL_RESPONSE = {
  * 2. 가능한지 서버에서 판단
  * 3. 사용 불가능 하면 에러
  */
-export declare type UPDATE_RENTAL_RESERVATION_PARAMS = PARAMS & {
+export type UPDATE_RENTAL_RESERVATION_PARAMS = PARAMS & {
     rentalReservationId: number;
 };
-export declare type UPDATE_RENTAL_RESERVATION_BODY = {
+export type UPDATE_RENTAL_RESERVATION_BODY = {
     rentalReservation: Partial<{
         date: string;
         startTime: string;
@@ -58,13 +58,13 @@ export declare type UPDATE_RENTAL_RESERVATION_BODY = {
         usedCreditAmount: UsedCreditAmount;
     }>;
 };
-export declare type UPDATE_RENTAL_RESERVATION_RESPONSE = {
+export type UPDATE_RENTAL_RESERVATION_RESPONSE = {
     rentalReservations: RentalReservations;
     error?: RENTAL_RESERVATION_ERROR;
 };
-export declare type CANCEL_RENTAL_RESERVATION_PARAMS = PARAMS & {
+export type CANCEL_RENTAL_RESERVATION_PARAMS = PARAMS & {
     rentalReservationId: number;
 };
-export declare type CANCEL_RENTAL_RESERVATION_RESPONSE = [number];
+export type CANCEL_RENTAL_RESERVATION_RESPONSE = [number];
 export {};
 //# sourceMappingURL=rental.d.ts.map

@@ -1,38 +1,38 @@
 import { BranchGadjetService, BranchGadjetServiceLog } from '../../model';
 import { Result } from '../../type';
-declare type PARAMS = {
+type PARAMS = {
     hqId: number;
     branchId: number;
 };
-export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = {};
-export declare type GET_LIST_RESPONSE = {
+export type GET_LIST_PARAMS = PARAMS;
+export type GET_LIST_QUERY = {};
+export type GET_LIST_RESPONSE = {
     total: number;
     branchGadjetService: BranchGadjetService[];
 };
-export declare type GET_LOG_LIST_PARAMS = PARAMS;
-export declare type GET_LOG_LIST_QUERY = {};
-export declare type GET_LOG_LIST_RESPONSE = {
+export type GET_LOG_LIST_PARAMS = PARAMS;
+export type GET_LOG_LIST_QUERY = {};
+export type GET_LOG_LIST_RESPONSE = {
     total: number;
     branchGadjetServiceLog: BranchGadjetServiceLog[];
 };
-export declare type DELETE_PARAMS = PARAMS & {
+export type DELETE_PARAMS = PARAMS & {
     branchGadjetServiceLogId: number;
 };
-export declare type DELETE_RESPONSE = BranchGadjetServiceLog;
-export declare type ADD_PARAMS = PARAMS;
-export declare type ADD_BODY = {
+export type DELETE_RESPONSE = BranchGadjetServiceLog;
+export type ADD_PARAMS = PARAMS;
+export type ADD_BODY = {
     branchGadjetService: Partial<BranchGadjetService>;
 };
-export declare type ADD_RESPONSE = {
+export type ADD_RESPONSE = {
     branchGadjetService: BranchGadjetService;
 } & Result;
-export declare type TERMINATE_PARAMS = PARAMS & {
+export type TERMINATE_PARAMS = PARAMS & {
     branchGadjetServiceId: number;
 };
-export declare type TERMINATE_BODY = {
+export type TERMINATE_BODY = {
     branchGadjetService: Partial<BranchGadjetService>;
 };
-export declare type TERMINATE_RESPONSE = Result;
+export type TERMINATE_RESPONSE = Result;
 export {};
 //# sourceMappingURL=branchGadjetService.d.ts.map

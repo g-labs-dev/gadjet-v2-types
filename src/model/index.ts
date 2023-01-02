@@ -627,6 +627,7 @@ export type Credits = {
   availableStartDate: string
   availableEndDate: string
   availableFlag: boolean
+  isDelete: boolean
 }
 
 export type CreditLogs = {

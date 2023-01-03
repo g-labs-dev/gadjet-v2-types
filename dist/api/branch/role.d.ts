@@ -1,43 +1,43 @@
 import { BranchRoles } from '../../model';
 import { Pagination } from '../../type';
 import { BranchRoleSearch } from '../../type/search';
-declare type PARAMS = {
+type PARAMS = {
     hqId: number;
     branchId: number;
 };
-export declare type GET_LIST_PARAMS = PARAMS & BranchRoleSearch;
-export declare type GET_LIST_QUERY = Pagination & {
+export type GET_LIST_PARAMS = PARAMS & BranchRoleSearch;
+export type GET_LIST_QUERY = Pagination & {
     query: string;
 };
-export declare type GET_LIST_RESPONSE = {
+export type GET_LIST_RESPONSE = {
     total: number;
     branchRoles: BranchRoles[];
 };
-export declare type GET_DETAIL_PARAMS = PARAMS & {
+export type GET_DETAIL_PARAMS = PARAMS & {
     branchRoleId: number;
 };
-export declare type GET_DETAIL_RESPONSE = BranchRoles;
-export declare type ADD_PARAMS = PARAMS;
-export declare type ADD_BODY = {
+export type GET_DETAIL_RESPONSE = BranchRoles;
+export type ADD_PARAMS = PARAMS;
+export type ADD_BODY = {
     role: BranchRoles;
 };
-export declare type ADD_RESPONSE = BranchRoles;
-export declare type UPDATE_PARAMS = PARAMS & {
+export type ADD_RESPONSE = BranchRoles;
+export type UPDATE_PARAMS = PARAMS & {
     branchRoleId: number;
 };
-export declare type UPDATE_BODY = {
+export type UPDATE_BODY = {
     role: BranchRoles;
 };
-export declare type UPDATE_RESPONSE = [number];
-export declare type DELETE_PARAMS = PARAMS & {
+export type UPDATE_RESPONSE = [number];
+export type DELETE_PARAMS = PARAMS & {
     branchRoleId: number;
 };
-export declare type DELETE_RESPONSE = [number];
-export declare type INVITE_PARAMS = PARAMS;
-export declare type INVITE_BODY = {
+export type DELETE_RESPONSE = [number];
+export type INVITE_PARAMS = PARAMS;
+export type INVITE_BODY = {
     email: string;
     branchRole: Partial<BranchRoles>;
 };
-export declare type INVITE_RESPONSE = boolean;
+export type INVITE_RESPONSE = boolean;
 export {};
 //# sourceMappingURL=role.d.ts.map

@@ -58,6 +58,7 @@ exports.paymentStatus = {
     ready: '결제준비',
     approve: '결제완료',
     refund: '결제취소(환불)',
+    unpaidCancel: '미입금취소'
 };
 exports.creditType = {
     contract: '계약',

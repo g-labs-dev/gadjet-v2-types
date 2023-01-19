@@ -60,6 +60,7 @@ export const paymentStatus: Record<T.PaymentStatus, string> = {
   ready: '결제준비',
   approve: '결제완료',
   refund: '결제취소(환불)',
+  unpaidCancel: '미입금취소'
 }
 export const creditType: Record<T.CreditType, string> = {
   contract: '계약',

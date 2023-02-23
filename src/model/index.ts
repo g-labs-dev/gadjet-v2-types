@@ -465,6 +465,7 @@ export type Contracts = {
   creditAmount: number
   publicMemo: string
   privateMemo: string
+  note: string
   status: ContractStatus
   signatureStatus: ContractSignatureStatus
   signatureImageId: number | null
@@ -549,6 +550,7 @@ export type Bills = {
   additions: BillPrice[]
   surcharges: BillPrice[]
   memo: string
+  note: string
   receiptStatus: ReceiptStatus
   gadjetPayFlag: boolean
   manualFlag: boolean
@@ -793,6 +795,8 @@ export type Receipts = {
   requestDatetime: string
   taxInvoiceJson: TaxInvoice
   cashBillJson: Cashbill
+  contractNote: string
+  invoiceNote: string
 }
 
 export type ReceiptsFailLogs = {

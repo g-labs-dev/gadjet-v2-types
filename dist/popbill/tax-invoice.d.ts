@@ -66,6 +66,8 @@ export type TaxInvoiceBasic = {
     addContactList?: TaxInvoiceAddContact[];
     modifyCode?: number;
     orgNTSConfirmNum?: string;
+    contractNote?: string;
+    invoiceNote?: string;
 };
 export type TaxInvoice = TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer & TaxInvoiceTrustee;
 export type TaxInvoiceModify = TaxInvoice & {

@@ -76,8 +76,7 @@ export type TaxInvoiceBasic = {
 
   modifyCode?: number
   orgNTSConfirmNum?: string
-  contractNote?: string
-  invoiceNote?: string
+  note?: string
 }
 
 export type TaxInvoice = TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer & TaxInvoiceTrustee

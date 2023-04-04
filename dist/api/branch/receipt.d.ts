@@ -24,6 +24,9 @@ export type GET_SUMMARY_QUERY = {
 };
 export type GET_SUMMARY_RESPONSE = ReceiptSummary;
 export type ADD_TAX_INVOICE_PARAMS = PARAMS;
+export type RESEND_TAX_INVOICE_BODY = {
+    email: string;
+};
 export type ADD_TAX_INVOICE_BODY = {
     billId: number;
     taxInvoice: TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer;

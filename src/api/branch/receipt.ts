@@ -29,6 +29,7 @@ export type GET_SUMMARY_RESPONSE = ReceiptSummary
 // 세금계산서 발행
 // POST /hqs/0/branches/0/receipts/tax-invoice
 export type ADD_TAX_INVOICE_PARAMS = PARAMS
+export type RESEND_TAX_INVOICE_BODY = { email : string }
 export type ADD_TAX_INVOICE_BODY = {
   billId: number
   taxInvoice: TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer

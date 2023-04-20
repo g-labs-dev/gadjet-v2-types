@@ -1,15 +1,15 @@
 import { Services, ServiceSales } from '../../model';
 import { UsedCreditAmount } from '../../type';
-type PURCHASE_SERVICE_ERROR = any;
-type PARAMS = {
+declare type PURCHASE_SERVICE_ERROR = any;
+declare type PARAMS = {
     serviceId: number;
 };
-export type GET_SERVICE_DETAIL_PARAMS = PARAMS;
-export type GET_SERVICE_DETAIL_RESPONSE = {
+export declare type GET_SERVICE_DETAIL_PARAMS = PARAMS;
+export declare type GET_SERVICE_DETAIL_RESPONSE = {
     service: Services;
 };
-export type PURCHASE_SERVICE_PARAMS = PARAMS;
-export type PURCHASE_SERVICE_BODY = {
+export declare type PURCHASE_SERVICE_PARAMS = PARAMS;
+export declare type PURCHASE_SERVICE_BODY = {
     service: {
         branchId: number;
         tenantId: number;
@@ -18,7 +18,7 @@ export type PURCHASE_SERVICE_BODY = {
         usedCreditAmount: UsedCreditAmount;
     };
 };
-export type PURCHASE_SERVICE_RESPONSE = {
+export declare type PURCHASE_SERVICE_RESPONSE = {
     serviceSales: ServiceSales;
     error?: PURCHASE_SERVICE_ERROR;
 };

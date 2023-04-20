@@ -1,35 +1,35 @@
 import { Notices } from '../../model';
 import { Pagination } from '../../type';
 import { NoticeSearch } from '../../type/search';
-type PARAMS = {
+declare type PARAMS = {
     hqId: number;
     branchId: number;
 };
-export type GET_LIST_PARAMS = PARAMS;
-export type GET_LIST_QUERY = Pagination & NoticeSearch;
-export type GET_LIST_RESPONSE = {
+export declare type GET_LIST_PARAMS = PARAMS;
+export declare type GET_LIST_QUERY = Pagination & NoticeSearch;
+export declare type GET_LIST_RESPONSE = {
     total: number;
     notices: Notices[];
 };
-export type GET_DETAIL_PARAMS = PARAMS & {
+export declare type GET_DETAIL_PARAMS = PARAMS & {
     noticeId: number;
 };
-export type GET_DETAIL_RESPONSE = Notices;
-export type ADD_PARAMS = PARAMS;
-export type ADD_BODY = {
+export declare type GET_DETAIL_RESPONSE = Notices;
+export declare type ADD_PARAMS = PARAMS;
+export declare type ADD_BODY = {
     notice: Partial<Notices>;
 };
-export type ADD_RESPONSE = Notices;
-export type UPDATE_PARAMS = PARAMS & {
+export declare type ADD_RESPONSE = Notices;
+export declare type UPDATE_PARAMS = PARAMS & {
     noticeId: number;
 };
-export type UPDATE_BODY = {
+export declare type UPDATE_BODY = {
     notice: Partial<Notices>;
 };
-export type UPDATE_RESPONSE = [number];
-export type DELETE_PARAMS = PARAMS & {
+export declare type UPDATE_RESPONSE = [number];
+export declare type DELETE_PARAMS = PARAMS & {
     noticeId: number;
 };
-export type DELETE_RESPONSE = [number];
+export declare type DELETE_RESPONSE = [number];
 export {};
 //# sourceMappingURL=notice.d.ts.map

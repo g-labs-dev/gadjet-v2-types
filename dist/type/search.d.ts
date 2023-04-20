@@ -2,80 +2,80 @@ import { BillType, ContractStatus, ExpenditureType, PaymentStatus, PaymentType }
 /**
  * 기본 Date Format YYYY-MM-DD
  */
-export type ContractSearch = {
+export declare type ContractSearch = {
     query: string;
     spaceTypes: number[];
     status: ContractStatus[];
 };
-export type BillSearch = {
+export declare type BillSearch = {
     query: string;
     startDate: [string, string];
     spaceTypes: number[];
     type: BillType[];
 };
-export type ReceiptSearch = {
+export declare type ReceiptSearch = {
     query: string;
     requestDatetime: [string, string];
 };
-export type SpaceSearch = {
+export declare type SpaceSearch = {
     query: string;
     emptyFlag: boolean;
 };
-export type RentalSearch = {
+export declare type RentalSearch = {
     query: string;
 };
-export type RentalReservationSearch = {
+export declare type RentalReservationSearch = {
     date: [string, string];
     rentalIds: number[];
 };
-export type TenantSearch = {
+export declare type TenantSearch = {
     query: string;
     contractStatus: ContractStatus[];
 };
-export type NoticeSearch = {
+export declare type NoticeSearch = {
     query: string;
     writeDate: [string, string];
 };
-export type AccessLogSearch = {
+export declare type AccessLogSearch = {
     query: string;
     datetime: [string, string];
 };
-export type ProductSearch = {
+export declare type ProductSearch = {
     query: string;
 };
-export type ProductSaleSearch = {
+export declare type ProductSaleSearch = {
     query: string;
     datetime: [string, string];
     productIds: number[];
 };
-export type ServiceSearch = {
+export declare type ServiceSearch = {
     query: string;
 };
-export type ServiceSaleSearch = {
+export declare type ServiceSaleSearch = {
     query: string;
     datetime: [string, string];
     serviceIds: number[];
 };
-export type ExpenditureSearch = {
+export declare type ExpenditureSearch = {
     query: string;
     expenditureTypes: ExpenditureType[];
     date: [string, string];
 };
-export type PaymentSearch = {
+export declare type PaymentSearch = {
     query: string;
     paymentType: PaymentType[];
     paymentStatus: PaymentStatus[];
     date: [string, string];
 };
-export type EventSearch = {
+export declare type EventSearch = {
     query: string;
 };
-export type AdditionSearch = {
+export declare type AdditionSearch = {
     query: string;
 };
-export type CashSearch = {
+export declare type CashSearch = {
     query: string;
     date: [string, string];
 };
-export type BranchRoleSearch = Record<string, unknown>;
+export declare type BranchRoleSearch = Record<string, unknown>;
 //# sourceMappingURL=search.d.ts.map

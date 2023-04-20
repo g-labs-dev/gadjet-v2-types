@@ -1,15 +1,15 @@
 import { Tenants, TenantRoles, Contracts, Users, Hqs, RentalReservations, Bills, Events, Notices } from '../../model';
 import { Pagination } from '../../type';
-type PARAMS = {
+declare type PARAMS = {
     tenantId: number;
 };
-export type GET_DETAIL_PARAMS = PARAMS;
-export type GET_DETAIL_RESPONSE = {
+export declare type GET_DETAIL_PARAMS = PARAMS;
+export declare type GET_DETAIL_RESPONSE = {
     tenant: Tenants;
 };
-export type GET_HQS_PARAMS = PARAMS;
-export type GET_HQS_QUERY = {};
-export type GET_HQS_RESPONSE = {
+export declare type GET_HQS_PARAMS = PARAMS;
+export declare type GET_HQS_QUERY = {};
+export declare type GET_HQS_RESPONSE = {
     hqs: Hqs[];
 };
 /**
@@ -29,48 +29,48 @@ export type GET_HQS_RESPONSE = {
  *      }
  *    ]
  */
-export type GET_CONTRACTS_PARAMS = PARAMS;
-export type GET_CONTRACTS_QUERY = Pagination & {};
-export type GET_CONTRACTS_RESPONSE = {
+export declare type GET_CONTRACTS_PARAMS = PARAMS;
+export declare type GET_CONTRACTS_QUERY = Pagination & {};
+export declare type GET_CONTRACTS_RESPONSE = {
     total: number;
     contracts: Contracts[];
 };
-export type GET_MEMBERS_PARAMS = PARAMS;
-export type GET_MEMBERS_QUERY = Pagination & {};
-export type GET_MEMBERS_RESPONSE = {
+export declare type GET_MEMBERS_PARAMS = PARAMS;
+export declare type GET_MEMBERS_QUERY = Pagination & {};
+export declare type GET_MEMBERS_RESPONSE = {
     total: number;
     members: Users[];
 };
 /**
  * Users.tenantRoles 포함
  */
-export type SEND_MEMBER_CODE_PARAMS = PARAMS;
-export type SEND_MEMBER_CODE_BODY = {
+export declare type SEND_MEMBER_CODE_PARAMS = PARAMS;
+export declare type SEND_MEMBER_CODE_BODY = {
     contacts: string[];
     contractId: number;
 };
-export type SEND_MEMBER_CODE_RESPONSE = boolean;
-export type UPDATE_MEMBER_ROLE_PARAMS = PARAMS & {
+export declare type SEND_MEMBER_CODE_RESPONSE = boolean;
+export declare type UPDATE_MEMBER_ROLE_PARAMS = PARAMS & {
     tenantRoleId: number;
 };
-export type UPDATE_MEMBER_ROLE_BODY = {
+export declare type UPDATE_MEMBER_ROLE_BODY = {
     role: Partial<TenantRoles>;
 };
-export type UPDATE_MEMBER_ROLE_RESPONSE = [number];
-export type DELETE_MEMBER_ROLE_PARAMS = PARAMS & {
+export declare type UPDATE_MEMBER_ROLE_RESPONSE = [number];
+export declare type DELETE_MEMBER_ROLE_PARAMS = PARAMS & {
     tenantRoleId: number;
 };
-export type DELETE_MEMBER_ROLE_RESPONSE = [number];
-export type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;
-export type GET_RENTAL_RESERVATIONS_QUERY = Pagination;
-export type GET_RENTAL_RESERVATIONS_RESPONSE = {
+export declare type DELETE_MEMBER_ROLE_RESPONSE = [number];
+export declare type GET_RENTAL_RESERVATIONS_PARAMS = PARAMS;
+export declare type GET_RENTAL_RESERVATIONS_QUERY = Pagination;
+export declare type GET_RENTAL_RESERVATIONS_RESPONSE = {
     total: number;
     rentalReservations: RentalReservations[];
 };
-export type GET_HOME_DASHBOARD_PARAMS = PARAMS & {
+export declare type GET_HOME_DASHBOARD_PARAMS = PARAMS & {
     branchId: number;
 };
-export type GET_HOME_DASHBOARD_RESPONSE = {
+export declare type GET_HOME_DASHBOARD_RESPONSE = {
     contracts: Contracts[];
     bills: Bills[];
     notices: Notices[];

@@ -29,7 +29,7 @@ export type GET_SUMMARY_RESPONSE = ReceiptSummary
 // 세금계산서 발행
 // POST /hqs/0/branches/0/receipts/tax-invoice
 export type ADD_TAX_INVOICE_PARAMS = PARAMS
-export type RESEND_TAX_INVOICE_BODY = { email : string }
+export type RESEND_TAX_INVOICE_BODY = { email: string }
 export type ADD_TAX_INVOICE_BODY = {
   billId: number
   taxInvoice: TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer
@@ -73,3 +73,9 @@ export type CANCEL_CASH_RECEIPT_BODY = {
 }
 export type CANCEL_CASH_RECEIPT_RESPONSE = Result
 // ===========================
+
+// 세금계산서/현금영수증 이메일 재전송
+// POST /hqs/0/branches/0/receipts/0/resend
+export type RESEND_RECEIPT_PARAMS = PARAMS & { receiptId: number }
+export type RESEND_RECEIPT_BODY = { email: string }
+export type RESEND_RECEIPT_RESPONSE = Result

@@ -68,5 +68,11 @@ export declare type RESEND_RECEIPT_BODY = {
     email: string;
 };
 export declare type RESEND_RECEIPT_RESPONSE = Result;
+export declare type GET_POPUP_VIEW_PARAMS = PARAMS & {
+    receiptId: number;
+};
+export declare type GET_POPUP_VIEW_RESPONSE = {
+    url: string;
+};
 export {};
 //# sourceMappingURL=receipt.d.ts.map

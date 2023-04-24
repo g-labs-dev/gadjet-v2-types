@@ -79,3 +79,9 @@ export type CANCEL_CASH_RECEIPT_RESPONSE = Result
 export type RESEND_RECEIPT_PARAMS = PARAMS & { receiptId: number }
 export type RESEND_RECEIPT_BODY = { email: string }
 export type RESEND_RECEIPT_RESPONSE = Result
+// ===========================
+
+// 세금계산서/현금영수증 팝업뷰 조회
+// GET /hqs/0/branches/0/receipts/0/popup
+export type GET_POPUP_VIEW_PARAMS = PARAMS & { receiptId: number }
+export type GET_POPUP_VIEW_RESPONSE = { url: string }

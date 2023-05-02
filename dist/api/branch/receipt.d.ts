@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Receipts } from '../../model';
 import { Cashbill } from '../../popbill/cash-bill';
 import { TaxInvoiceBasic, TaxInvoiceInvoicee, TaxInvoiceInvoicer } from '../../popbill/tax-invoice';
@@ -23,6 +24,10 @@ export declare type GET_SUMMARY_QUERY = {
     requestDatetime: [string, string];
 };
 export declare type GET_SUMMARY_RESPONSE = ReceiptSummary;
+export declare type EXPORT_RESPONSE = {
+    data: Buffer;
+    fileName: string;
+};
 export declare type ADD_TAX_INVOICE_PARAMS = PARAMS;
 export declare type RESEND_TAX_INVOICE_BODY = {
     email: string;

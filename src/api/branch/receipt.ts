@@ -26,6 +26,10 @@ export type GET_SUMMARY_QUERY = { query: string; requestDatetime: [string, strin
 export type GET_SUMMARY_RESPONSE = ReceiptSummary
 // ===========================
 
+// 증빙 내보내기
+// GET /hqs/0/branches/0/receipts/export
+export type EXPORT_RESPONSE = { data: Buffer; fileName: string }
+
 // 세금계산서 발행
 // POST /hqs/0/branches/0/receipts/tax-invoice
 export type ADD_TAX_INVOICE_PARAMS = PARAMS

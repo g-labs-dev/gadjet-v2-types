@@ -52,7 +52,7 @@ export type GET_SUMMARY_RESPONSE = PaymentSummary
 // GET /hqs/0/branches/0/payments/export
 export type EXPORT_PARAMS = PARAMS
 export type EXPORT_QUERY = PaymentSearch
-export type EXPORT_RESPONSE = Buffer
+export type EXPORT_RESPONSE = { fileName: string; data: Buffer }
 // ===========================
 
 // 결제내역 매출확정

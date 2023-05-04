@@ -41,7 +41,10 @@ export declare type GET_SUMMARY_QUERY = {
 export declare type GET_SUMMARY_RESPONSE = PaymentSummary;
 export declare type EXPORT_PARAMS = PARAMS;
 export declare type EXPORT_QUERY = PaymentSearch;
-export declare type EXPORT_RESPONSE = Buffer;
+export declare type EXPORT_RESPONSE = {
+    fileName: string;
+    data: Buffer;
+};
 export declare type CONFIRM_PARAMS = PARAMS & {
     paymentId: number;
 };

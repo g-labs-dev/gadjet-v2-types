@@ -47,7 +47,7 @@ export type TaxInvoiceTrustee = {
   trusteeCorpName: '주식회사 지랩스'
   trusteeCEOName: '백기민'
   trusteeAddr: '서울특별시 강남구 선릉로 578, 7층(삼성동)'
-  trusteeBizType: '부동산업 및 임대업, 서비스, 소매'
+  trusteeBizType: '소프트웨어 개발, 소매, 서비스'
   trusteeBizClass: '정보통신서비스업, 전자상거래업'
   trusteeContactName: '남호석'
   trusteeDeptName: 'GADJET'

@@ -1,7 +1,7 @@
 import { Cashbill } from '../popbill/cash-bill';
 import { TaxInvoice } from '../popbill/tax-invoice';
 import { BillPrice, BillType, BranchBuildingContractType, ContractBillingSplitType, ContractBillingType, ContractContractor, ContractCreditPolicy, ContractDepositStatus, ContractDirector, ContractExtendStatus, ContractLateFeeType, ContractReceiver, ContractSignatureStatus, ContractStatus, ContractTenant, CreditType, CreditUsage, DayIndex, Device, ExpenditureType, FileCategory, ImageCategory, Lang, ManagerJoinType, NotificationTemplate, NotificationType, PaymentStatus, PaymentType, ReceiptStatus, ReceiptType, Relation, Role, TenantType, UsedCreditAmount, UserStatus, PrintJobType, PrintColorType, PrintSizeType, ManagerStatus, GadjetServiceType, GadjetServiceStatus, GadjetServiceSubType, ContractInfo, GadjetServicePlan } from '../type';
-export declare type Images = {
+export type Images = {
     imageId: number;
     size: number;
     width: number;
@@ -10,18 +10,18 @@ export declare type Images = {
     path: string;
     uri: string;
 };
-export declare type Files = {
+export type Files = {
     fileId: number;
     size: number;
     category: FileCategory;
     path: string;
     uri: string;
 };
-export declare type Banks = {
+export type Banks = {
     bankCode: string;
     name: string;
 };
-export declare type Gics = {
+export type Gics = {
     code: number;
     parentCode: number | null;
     depth: number;
@@ -29,7 +29,7 @@ export declare type Gics = {
     en: string;
     children?: Relation<Gics[]>;
 };
-export declare type Dates = {
+export type Dates = {
     yyyymmdd: number;
     year: number;
     month: number;
@@ -40,13 +40,13 @@ export declare type Dates = {
     holidayFlag: boolean;
     nextBusinessDate: string;
 };
-export declare type Months = {
+export type Months = {
     yyyymm: number;
     year: number;
     month: number;
     monthString: string;
 };
-export declare type Hqs = {
+export type Hqs = {
     hqId: number;
     name: string;
     email: string;
@@ -55,7 +55,7 @@ export declare type Hqs = {
     branches?: Relation<Branches[]>;
     roles?: Relation<HqRoles[]>;
 };
-export declare type Branches = {
+export type Branches = {
     branchId: number;
     hqId: number;
     name: string;
@@ -80,7 +80,7 @@ export declare type Branches = {
     spaceTypes?: Relation<SpaceTypes[]>;
     gadjetService?: Relation<BranchGadjetService>;
 };
-export declare type BranchBusinesses = {
+export type BranchBusinesses = {
     branchBusinessId: number;
     branchId: number;
     director: string;
@@ -108,7 +108,7 @@ export declare type BranchBusinesses = {
         }
     ];
 };
-export declare type BranchSettlements = {
+export type BranchSettlements = {
     branchSettlementId: number;
     branchId: number;
     bankCode: string;
@@ -117,7 +117,7 @@ export declare type BranchSettlements = {
     holder: string;
     bank?: Relation<Banks>;
 };
-export declare type BranchContractDocuments = {
+export type BranchContractDocuments = {
     branchContractDocumentId: number;
     branchId: number;
     zipcode: string;
@@ -138,7 +138,7 @@ export declare type BranchContractDocuments = {
     policyFile?: Relation<Files>;
     etcFile?: Relation<Files>;
 };
-export declare type BranchSublets = {
+export type BranchSublets = {
     branchSubletId: number;
     branchId: number;
     name: string;
@@ -151,7 +151,7 @@ export declare type BranchSublets = {
     signatureImage?: Relation<Images>;
     consentFile?: Relation<Files>;
 };
-export declare type BranchRentees = {
+export type BranchRentees = {
     branchRenteeId: number;
     branchId: number;
     name: string;
@@ -162,13 +162,13 @@ export declare type BranchRentees = {
     signatureImageId: number | null;
     signatureImage?: Relation<Images>;
 };
-export declare type BranchAutomations = {
+export type BranchAutomations = {
     branchAutomationId: number;
     branchId: number;
     billing: boolean;
     receipt: boolean;
 };
-export declare type BranchGadjetService = {
+export type BranchGadjetService = {
     branchGadjetServiceId: number;
     branchId: number;
     branchCardId: number;
@@ -183,7 +183,7 @@ export declare type BranchGadjetService = {
     isActive: boolean;
     gadjetServiceLog?: Relation<BranchGadjetServiceLog>;
 };
-export declare type BranchGadjetServiceLog = {
+export type BranchGadjetServiceLog = {
     branchGadjetServiceLogId: number;
     branchId: number;
     branchGadjetServiceId: number;
@@ -196,7 +196,7 @@ export declare type BranchGadjetServiceLog = {
     penaltyPrice: number;
     gadjetService?: Relation<BranchGadjetService>;
 };
-export declare type BranchGadjetServiceContractLog = {
+export type BranchGadjetServiceContractLog = {
     branchGadjetServiceContractLogId: number;
     branchGadjetServiceLogId: number;
     branchId: number;
@@ -212,7 +212,7 @@ export declare type BranchGadjetServiceContractLog = {
     branch?: Relation<Branches>;
     BranchGadjetServiceLog?: Relation<BranchGadjetServiceLog>;
 };
-export declare type Tenants = {
+export type Tenants = {
     tenantId: number;
     name: string;
     contact: string;
@@ -227,7 +227,7 @@ export declare type Tenants = {
     gics?: Relation<Gics>;
     users?: Relation<Users[]>;
 };
-export declare type Managers = {
+export type Managers = {
     managerId: number;
     legacyManagerId: string;
     email: string;
@@ -242,7 +242,7 @@ export declare type Managers = {
     resetCode: string;
     profile?: Relation<Images>;
 };
-export declare type Users = {
+export type Users = {
     userId: number;
     legacyUserId: string;
     contact: string;
@@ -258,7 +258,7 @@ export declare type Users = {
     profile?: Relation<Images>;
     tenantRoles?: Relation<TenantRoles[]>;
 };
-export declare type HqRoles = {
+export type HqRoles = {
     hqRoleId: number;
     hqId: number;
     managerId: number;
@@ -272,7 +272,7 @@ export declare type HqRoles = {
     hq?: Relation<Hqs>;
     manager?: Relation<Managers>;
 };
-export declare type BranchRoles = {
+export type BranchRoles = {
     branchRoleId: number;
     hqId: number;
     branchId: number;
@@ -299,7 +299,7 @@ export declare type BranchRoles = {
     branch?: Relation<Branches>;
     manager?: Relation<Managers>;
 };
-export declare type TenantRoles = {
+export type TenantRoles = {
     tenantRoleId: number;
     tenantId: number;
     userId: number;
@@ -314,13 +314,13 @@ export declare type TenantRoles = {
     tenant?: Relation<Tenants>;
     user?: Relation<Users>;
 };
-export declare type RoleCodes = {
+export type RoleCodes = {
     code: string;
     hqId: number | null;
     branchId: number | null;
     to: string;
 };
-export declare type Notices = {
+export type Notices = {
     noticeId: number;
     hqId: number;
     branchId: number;
@@ -331,12 +331,12 @@ export declare type Notices = {
     hq?: Relation<Hqs>;
     branch?: Relation<Branches>;
 };
-export declare type Floors = {
+export type Floors = {
     floorId: number;
     branchId: number;
     name: string;
 };
-export declare type SpaceTypes = {
+export type SpaceTypes = {
     spaceTypeId: number;
     branchId: number;
     name: string;
@@ -344,7 +344,7 @@ export declare type SpaceTypes = {
     branch?: Relation<Branches>;
     spaces?: Relation<Spaces[]>;
 };
-export declare type Spaces = {
+export type Spaces = {
     spaceId: number;
     spaceTypeId: number;
     branchId: number;
@@ -357,14 +357,14 @@ export declare type Spaces = {
     image?: Relation<Images>;
     contractSpaces?: Relation<ContractSpaces[]>;
 };
-export declare type Additions = {
+export type Additions = {
     additionId: number;
     branchId: number;
     name: string;
     price: number;
     contractAdditions?: Relation<ContractAdditions[]>;
 };
-export declare type Contracts = {
+export type Contracts = {
     contractId: number;
     branchId: number;
     tenantId: number | null;
@@ -407,7 +407,7 @@ export declare type Contracts = {
     parentContract?: Relation<Contracts>;
     bills?: Relation<Bills[]>;
 };
-export declare type ContractSpaces = {
+export type ContractSpaces = {
     contractSpaceId: number;
     contractId: number;
     spaceId: number;
@@ -416,7 +416,7 @@ export declare type ContractSpaces = {
     space?: Relation<Spaces>;
     contract?: Relation<Contracts>;
 };
-export declare type ContractAdditions = {
+export type ContractAdditions = {
     contractAdditionId: number;
     contractId: number;
     additionId: number;
@@ -425,12 +425,12 @@ export declare type ContractAdditions = {
     addition?: Relation<Additions>;
     contract?: Relation<Contracts>;
 };
-export declare type ContractQueries = {
+export type ContractQueries = {
     contractQueryId: number;
     contractId: number;
     query: string;
 };
-export declare type ContractInviteCodes = {
+export type ContractInviteCodes = {
     inviteCode: string;
     contractId: number;
     managerId: number;
@@ -438,7 +438,7 @@ export declare type ContractInviteCodes = {
     receivedFlag: boolean;
     manager?: Relation<Managers>;
 };
-export declare type Bills = {
+export type Bills = {
     billId: number;
     branchId: number;
     contractId: number | null;
@@ -469,7 +469,7 @@ export declare type Bills = {
     receipts?: Relation<Receipts[]>;
     branch?: Relation<Branches>;
 };
-export declare type ContractDeposits = {
+export type ContractDeposits = {
     contractDepositId: number;
     branchId: number;
     contractId: number;
@@ -480,7 +480,7 @@ export declare type ContractDeposits = {
     account: string;
     status: ContractDepositStatus;
 };
-export declare type Payments = {
+export type Payments = {
     paymentId: number;
     branchId: number;
     billId: number;
@@ -507,7 +507,7 @@ export declare type Payments = {
     bill?: Relation<Bills>;
     user?: Relation<Users>;
 };
-export declare type GadjetSettlements = {
+export type GadjetSettlements = {
     gadjetSettlementId: number;
     branchId: number;
     paymentInfo: object;
@@ -520,7 +520,7 @@ export declare type GadjetSettlements = {
     isManual: boolean;
     paymentUserInfo: object;
 };
-export declare type Credits = {
+export type Credits = {
     creditId: number;
     hqId: number;
     tenantId: number | null;
@@ -533,7 +533,7 @@ export declare type Credits = {
     availableFlag: boolean;
     isDelete: boolean;
 };
-export declare type CreditLogs = {
+export type CreditLogs = {
     creditLogId: number;
     creditId: number;
     creditType: CreditType;
@@ -542,7 +542,7 @@ export declare type CreditLogs = {
     datetime: string;
     memo: string;
 };
-export declare type Events = {
+export type Events = {
     eventId: number;
     branchId: number;
     title: string;
@@ -566,7 +566,7 @@ export declare type Events = {
     bannerImage?: Relation<Images>;
     eventAttendees?: Relation<EventAttendees[]>;
 };
-export declare type EventAttendees = {
+export type EventAttendees = {
     eventAttendeeId: number;
     eventId: number;
     userId: number;
@@ -574,7 +574,7 @@ export declare type EventAttendees = {
     usedCreditAmount: UsedCreditAmount;
     user?: Relation<Users>;
 };
-export declare type Rentals = {
+export type Rentals = {
     rentalId: number;
     branchId: number;
     price: number;
@@ -590,7 +590,7 @@ export declare type Rentals = {
     branch?: Relation<Branches>;
     image?: Relation<Images>;
 };
-export declare type RentalReservations = {
+export type RentalReservations = {
     rentalReservationId: number;
     branchId: number;
     rentalId: number;
@@ -607,7 +607,7 @@ export declare type RentalReservations = {
     tenant?: Relation<Tenants>;
     user?: Relation<Users>;
 };
-export declare type Products = {
+export type Products = {
     productId: number;
     branchId: number;
     name: string;
@@ -619,7 +619,7 @@ export declare type Products = {
     imageId: number | null;
     image?: Relation<Images>;
 };
-export declare type ProductSales = {
+export type ProductSales = {
     productSaleId: number;
     branchId: number;
     productId: number;
@@ -636,7 +636,7 @@ export declare type ProductSales = {
     tenant?: Relation<Tenants>;
     user?: Relation<Users>;
 };
-export declare type Services = {
+export type Services = {
     serviceId: number;
     branchId: number;
     name: string;
@@ -648,7 +648,7 @@ export declare type Services = {
     imageId: number | null;
     image?: Relation<Images>;
 };
-export declare type ServiceSales = {
+export type ServiceSales = {
     serviceSaleId: number;
     branchId: number;
     serviceId: number;
@@ -665,7 +665,7 @@ export declare type ServiceSales = {
     tenant?: Relation<Tenants>;
     user?: Relation<Users>;
 };
-export declare type Receipts = {
+export type Receipts = {
     receiptId: number;
     parentReceiptId: number | null;
     branchId: number;
@@ -681,7 +681,7 @@ export declare type Receipts = {
     cashBillJson: Cashbill;
     note?: string;
 };
-export declare type ReceiptsFailLogs = {
+export type ReceiptsFailLogs = {
     receiptsFailLogId: number;
     branchId: number;
     billId: number;
@@ -697,7 +697,7 @@ export declare type ReceiptsFailLogs = {
     taxInvoiceJson: TaxInvoice;
     cashBillJson: Cashbill;
 };
-export declare type BranchNotifications = {
+export type BranchNotifications = {
     branchNotificationId: number;
     branchId: number;
     title: string;
@@ -705,7 +705,7 @@ export declare type BranchNotifications = {
     sendDatetime: string;
     link: string;
 };
-export declare type UserNotifications = {
+export type UserNotifications = {
     userNotificationId: number;
     userId: number;
     title: string;
@@ -714,7 +714,7 @@ export declare type UserNotifications = {
     link: string;
     readFlag: boolean;
 };
-export declare type BranchCards = {
+export type BranchCards = {
     branchCardId: number;
     branchId: number;
     billKey: string;
@@ -729,7 +729,7 @@ export declare type BranchCards = {
     billingFlag: boolean;
     gadjetService?: Relation<BranchGadjetService>;
 };
-export declare type TenantCards = {
+export type TenantCards = {
     tenantCardId: number;
     tenantId: number;
     billKey: string;
@@ -743,7 +743,7 @@ export declare type TenantCards = {
     lastUsedFlag: boolean;
     billingFlag: boolean;
 };
-export declare type UserCards = {
+export type UserCards = {
     userCardId: number;
     userId: number;
     billKey: string;
@@ -757,7 +757,7 @@ export declare type UserCards = {
     lastUsedFlag: boolean;
     billingFlag: boolean;
 };
-export declare type Expenditures = {
+export type Expenditures = {
     expenditureId: number;
     branchId: number;
     managerId: number | null;
@@ -768,7 +768,7 @@ export declare type Expenditures = {
     memo: string;
     manager?: Relation<Managers>;
 };
-export declare type Cash = {
+export type Cash = {
     cashId: number;
     branchId: number;
     managerId: number | null;
@@ -779,7 +779,7 @@ export declare type Cash = {
     reserve: number;
     manager?: Relation<Managers>;
 };
-export declare type AccessLogs = {
+export type AccessLogs = {
     accessLogId: number;
     hqId: number;
     branchId: number;
@@ -793,7 +793,7 @@ export declare type AccessLogs = {
     datetime: string;
     manager?: Relation<Managers>;
 };
-export declare type ManagerInviteCodes = {
+export type ManagerInviteCodes = {
     managerInviteCode: string;
     hqId: number | null;
     branchId: number | null;
@@ -804,7 +804,7 @@ export declare type ManagerInviteCodes = {
     receivedFlag: boolean;
     manager?: Relation<Managers>;
 };
-export declare type NotificationSendLogs = {
+export type NotificationSendLogs = {
     notificationSendLogId: number;
     hqId: number | null;
     branchId: number | null;
@@ -816,7 +816,7 @@ export declare type NotificationSendLogs = {
     datetime: string;
     manager?: Relation<Managers>;
 };
-export declare type NotificationLogs = {
+export type NotificationLogs = {
     notificationLogId: number;
     type: string;
     resultCode: number;
@@ -824,7 +824,7 @@ export declare type NotificationLogs = {
     isSuccessful: boolean;
     data: object;
 };
-export declare type mPrintLogs = {
+export type mPrintLogs = {
     mPrintLogId: number;
     deptId: number;
     parentDeptId: number;
@@ -840,7 +840,7 @@ export declare type mPrintLogs = {
     title: string;
     floor: string;
 };
-export declare type Settlements = {
+export type Settlements = {
     settlementId: number;
     branchId: number;
     bankCode: string;

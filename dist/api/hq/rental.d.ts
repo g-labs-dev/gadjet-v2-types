@@ -1,11 +1,11 @@
 import { Rentals } from '../../model';
 import { Pagination } from '../../type';
-declare type PARAMS = {
+type PARAMS = {
     hqId: number;
 };
-export declare type GET_RENTALS_PARAMS = PARAMS;
-export declare type GET_RENTALS_QUERY = Pagination & {};
-export declare type GET_RENTALS_RESPONSE = {
+export type GET_RENTALS_PARAMS = PARAMS;
+export type GET_RENTALS_QUERY = Pagination & {};
+export type GET_RENTALS_RESPONSE = {
     total: number;
     rentals: Rentals[];
 };

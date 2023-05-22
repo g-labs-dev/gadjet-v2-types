@@ -1,4 +1,4 @@
-export declare type TaxInvoiceInvoicer = {
+export type TaxInvoiceInvoicer = {
     invoicerMgtKey?: string;
     invoicerCorpNum: string;
     invoicerTaxRegID?: string;
@@ -13,7 +13,7 @@ export declare type TaxInvoiceInvoicer = {
     invoicerHP?: string;
     invoicerEmail?: string;
 };
-export declare type TaxInvoiceInvoicee = {
+export type TaxInvoiceInvoicee = {
     invoiceeType: '사업자' | '개인' | '외국인';
     invoiceeCorpNum: string;
     invoiceeTaxRegID?: string;
@@ -33,14 +33,14 @@ export declare type TaxInvoiceInvoicee = {
     invoiceeHP2?: string;
     invoiceeEmail2?: string;
 };
-export declare type TaxInvoiceTrustee = {
+export type TaxInvoiceTrustee = {
     trusteeMgtKey: string;
     trusteeCorpNum: '3788700388';
     trusteeTaxRegID?: string;
     trusteeCorpName: '주식회사 지랩스';
     trusteeCEOName: '백기민';
     trusteeAddr: '서울특별시 강남구 선릉로 578, 7층(삼성동)';
-    trusteeBizType: '부동산업 및 임대업, 서비스, 소매';
+    trusteeBizType: '소프트웨어 개발, 소매, 서비스';
     trusteeBizClass: '정보통신서비스업, 전자상거래업';
     trusteeContactName: '남호석';
     trusteeDeptName: 'GADJET';
@@ -48,7 +48,7 @@ export declare type TaxInvoiceTrustee = {
     trusteeHP: '025874025';
     trusteeEmail: 'support@gadjet.io';
 };
-export declare type TaxInvoiceBasic = {
+export type TaxInvoiceBasic = {
     ntsconfirmNum?: string;
     issueType: '위수탁';
     taxType: '과세' | '영세' | '면세';
@@ -68,17 +68,17 @@ export declare type TaxInvoiceBasic = {
     orgNTSConfirmNum?: string;
     note?: string;
 };
-export declare type TaxInvoice = TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer & TaxInvoiceTrustee;
-export declare type TaxInvoiceModify = TaxInvoice & {
+export type TaxInvoice = TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer & TaxInvoiceTrustee;
+export type TaxInvoiceModify = TaxInvoice & {
     modifyCode: number;
     orgNTSConfirmNum: string;
 };
-export declare type TaxInvoiceAddContact = {
+export type TaxInvoiceAddContact = {
     serialNum: number;
     contactName: string;
     email: string;
 };
-export declare type TaxInvoiceDetail = {
+export type TaxInvoiceDetail = {
     serialNum: number;
     purchaseDT?: string;
     itemName?: string;

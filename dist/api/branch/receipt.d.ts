@@ -4,57 +4,57 @@ import { Cashbill } from '../../popbill/cash-bill';
 import { TaxInvoiceBasic, TaxInvoiceInvoicee, TaxInvoiceInvoicer } from '../../popbill/tax-invoice';
 import { Pagination, ReceiptSummary, Result } from '../../type';
 import { ReceiptSearch } from '../../type/search';
-declare type PARAMS = {
+type PARAMS = {
     hqId: number;
     branchId: number;
 };
-export declare type GET_LIST_PARAMS = PARAMS;
-export declare type GET_LIST_QUERY = Pagination & ReceiptSearch;
-export declare type GET_LIST_RESPONSE = {
+export type GET_LIST_PARAMS = PARAMS;
+export type GET_LIST_QUERY = Pagination & ReceiptSearch;
+export type GET_LIST_RESPONSE = {
     total: number;
     receipts: Receipts[];
 };
-export declare type GET_DETAIL_PARAMS = PARAMS & {
+export type GET_DETAIL_PARAMS = PARAMS & {
     receiptId: number;
 };
-export declare type GET_DETAIL_RESPONSE = Receipts;
-export declare type GET_SUMMARY_PARAMS = PARAMS;
-export declare type GET_SUMMARY_QUERY = {
+export type GET_DETAIL_RESPONSE = Receipts;
+export type GET_SUMMARY_PARAMS = PARAMS;
+export type GET_SUMMARY_QUERY = {
     query: string;
     requestDatetime: [string, string];
 };
-export declare type GET_SUMMARY_RESPONSE = ReceiptSummary;
-export declare type EXPORT_RESPONSE = {
+export type GET_SUMMARY_RESPONSE = ReceiptSummary;
+export type EXPORT_RESPONSE = {
     data: Buffer;
     fileName: string;
 };
-export declare type ADD_TAX_INVOICE_PARAMS = PARAMS;
-export declare type RESEND_TAX_INVOICE_BODY = {
+export type ADD_TAX_INVOICE_PARAMS = PARAMS;
+export type RESEND_TAX_INVOICE_BODY = {
     email: string;
 };
-export declare type ADD_TAX_INVOICE_BODY = {
+export type ADD_TAX_INVOICE_BODY = {
     billId: number;
     taxInvoice: TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer;
 };
-export declare type ADD_TAX_INVOICE_RESPONSE = Result;
-export declare type UPDATE_TAX_INVOICE_PARAMS = PARAMS & {
+export type ADD_TAX_INVOICE_RESPONSE = Result;
+export type UPDATE_TAX_INVOICE_PARAMS = PARAMS & {
     receiptId: number;
 };
-export declare type UPDATE_TAX_INOVICE_BODY = {
+export type UPDATE_TAX_INOVICE_BODY = {
     billId: number;
     taxInvoice: TaxInvoiceBasic & TaxInvoiceInvoicee & TaxInvoiceInvoicer;
 };
-export declare type UPDATE_TAX_INVOICE_RESPONSE = Result;
-export declare type ADD_CASH_RECEIPT_PARAMS = PARAMS;
-export declare type ADD_CASH_RECEIPT_BODY = {
+export type UPDATE_TAX_INVOICE_RESPONSE = Result;
+export type ADD_CASH_RECEIPT_PARAMS = PARAMS;
+export type ADD_CASH_RECEIPT_BODY = {
     billId: number;
     cashReceipt: Cashbill;
 };
-export declare type ADD_CASH_RECEIPT_RESPONSE = Result;
-export declare type CANCEL_CASH_RECEIPT_PARAMS = PARAMS & {
+export type ADD_CASH_RECEIPT_RESPONSE = Result;
+export type CANCEL_CASH_RECEIPT_PARAMS = PARAMS & {
     receiptId: number;
 };
-export declare type CANCEL_CASH_RECEIPT_BODY = {
+export type CANCEL_CASH_RECEIPT_BODY = {
     billId: number;
     cashReceipt: {
         cancelType: 1 | 2 | 3;
@@ -65,18 +65,18 @@ export declare type CANCEL_CASH_RECEIPT_BODY = {
         totalAmount?: string;
     };
 };
-export declare type CANCEL_CASH_RECEIPT_RESPONSE = Result;
-export declare type RESEND_RECEIPT_PARAMS = PARAMS & {
+export type CANCEL_CASH_RECEIPT_RESPONSE = Result;
+export type RESEND_RECEIPT_PARAMS = PARAMS & {
     receiptId: number;
 };
-export declare type RESEND_RECEIPT_BODY = {
+export type RESEND_RECEIPT_BODY = {
     email: string;
 };
-export declare type RESEND_RECEIPT_RESPONSE = Result;
-export declare type GET_POPUP_VIEW_PARAMS = PARAMS & {
+export type RESEND_RECEIPT_RESPONSE = Result;
+export type GET_POPUP_VIEW_PARAMS = PARAMS & {
     receiptId: number;
 };
-export declare type GET_POPUP_VIEW_RESPONSE = {
+export type GET_POPUP_VIEW_RESPONSE = {
     url: string;
 };
 export {};

@@ -1,53 +1,53 @@
 import { Branches, Contracts, EventAttendees, Events, Hqs, TenantRoles, Tenants, Users } from '../../model';
 import { Device, Pagination, Result, UsedCreditAmount } from '../../type';
-declare type PARAMS = {
+type PARAMS = {
     userId: number;
 };
-export declare type UPDATE_PASSWORD_PARAMS = PARAMS;
-export declare type UPDATE_PASSWORD_BODY = {
+export type UPDATE_PASSWORD_PARAMS = PARAMS;
+export type UPDATE_PASSWORD_BODY = {
     user: {
         password: string;
     };
 };
-export declare type UPDATE_PASSWORD_RESPONSE = [number];
-export declare type UPDATE_PARAMS = PARAMS;
-export declare type UPDATE_BODY = {
+export type UPDATE_PASSWORD_RESPONSE = [number];
+export type UPDATE_PARAMS = PARAMS;
+export type UPDATE_BODY = {
     user: Partial<Users>;
 };
-export declare type UPDATE_RESPONSE = [number];
-export declare type GET_ROLE_PARAMS = PARAMS;
-export declare type GET_ROLE_RESPONSE = {
+export type UPDATE_RESPONSE = [number];
+export type GET_ROLE_PARAMS = PARAMS;
+export type GET_ROLE_RESPONSE = {
     roles: TenantRoles[];
 };
-export declare type GET_EVENTS_PARAMS = PARAMS;
-export declare type GET_EVENTS_QUERY = Pagination;
-export declare type GET_EVENTS_RESPONSE = {
+export type GET_EVENTS_PARAMS = PARAMS;
+export type GET_EVENTS_QUERY = Pagination;
+export type GET_EVENTS_RESPONSE = {
     total: number;
     events: Events[];
 };
-export declare type ATTEND_EVENT_PARAMS = PARAMS & {
+export type ATTEND_EVENT_PARAMS = PARAMS & {
     eventId: number;
 };
-export declare type ATTEND_EVENT_BODY = {
+export type ATTEND_EVENT_BODY = {
     tenantId: number;
     usedCreditAmount: UsedCreditAmount;
 };
-export declare type ATTEND_EVENT_RESPONSE = {
+export type ATTEND_EVENT_RESPONSE = {
     eventAttendee: EventAttendees;
 };
-export declare type CANCEL_ATTEND_EVENT_PARAMS = PARAMS & {
+export type CANCEL_ATTEND_EVENT_PARAMS = PARAMS & {
     eventId: number;
     eventAttendeeId: number;
 };
-export declare type CANCEL_ATTEND_EVENT_RESPONSE = [number];
-export declare type GET_TENANTS_PARAMS = PARAMS;
-export declare type GET_TENANTS_QUERY = Pagination;
-export declare type GET_TENANTS_RESPONSE = {
+export type CANCEL_ATTEND_EVENT_RESPONSE = [number];
+export type GET_TENANTS_PARAMS = PARAMS;
+export type GET_TENANTS_QUERY = Pagination;
+export type GET_TENANTS_RESPONSE = {
     total: number;
     tenants: Tenants[];
 };
-export declare type GET_STATE_PARAMS = PARAMS;
-export declare type GET_STATE_RESPONSE = {
+export type GET_STATE_PARAMS = PARAMS;
+export type GET_STATE_RESPONSE = {
     state: {
         contracts: Contracts[];
         tenants: Tenants[];
@@ -55,22 +55,22 @@ export declare type GET_STATE_RESPONSE = {
         hqs: Hqs[];
     };
 };
-export declare type RECEIVE_INVITE_PARAMS = PARAMS;
-export declare type RECEIVE_INVITE_BODY = {
+export type RECEIVE_INVITE_PARAMS = PARAMS;
+export type RECEIVE_INVITE_BODY = {
     code: string;
 };
-export declare type RECEIVE_INVITE_RESPONSE = {
+export type RECEIVE_INVITE_RESPONSE = {
     tenantRole: TenantRoles;
 } & Result;
-export declare type UPDATE_PUSH_TOKEN_PARAMS = PARAMS;
-export declare type UPDATE_PUSH_TOKEN_BODY = {
+export type UPDATE_PUSH_TOKEN_PARAMS = PARAMS;
+export type UPDATE_PUSH_TOKEN_BODY = {
     pushToken: string;
 };
-export declare type UPDATE_PUSH_TOKEN_RESPONSE = [number];
-export declare type UPDATE_DEVICE_PARAMS = PARAMS;
-export declare type UPDATE_DEVICE_BODY = {
+export type UPDATE_PUSH_TOKEN_RESPONSE = [number];
+export type UPDATE_DEVICE_PARAMS = PARAMS;
+export type UPDATE_DEVICE_BODY = {
     device: Device;
 };
-export declare type UPDATE_DEVICE_RESPONSE = [number];
+export type UPDATE_DEVICE_RESPONSE = [number];
 export {};
 //# sourceMappingURL=index.d.ts.map

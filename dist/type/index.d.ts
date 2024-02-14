@@ -12,7 +12,7 @@ export type ContractBillingSplitType = 'A' | 'B';
 export type ContractLateFeeType = 'none' | 'fix' | 'rate';
 export type ContractStatus = 'before-started' | 'started' | 'expired' | 'suspended' | 'extended';
 export type ContractSignatureStatus = 'none' | 'waiting' | 'signed';
-export type ContractExtendStatus = 'none' | 'asked' | 'approval' | 'refusal' | 'done';
+export type ContractExtendStatus = 'none' | 'asked' | 'approval' | 'refusal' | 'done' | 'cancel';
 export type ContractCreditPolicy = 'weekly' | 'monthly';
 export type ContractTenant = {
     name: string;

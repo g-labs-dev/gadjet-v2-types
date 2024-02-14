@@ -40,6 +40,7 @@ export const contractExtendStatus: Record<T.ContractExtendStatus, string> = {
   approval: '연장동의',
   refusal: '연장거절',
   done: '연장완료',
+  cancel: '연장취소'
 }
 export const contractDepositStatus: Record<T.ContractDepositStatus, string> = {
   unpaid: '미납',

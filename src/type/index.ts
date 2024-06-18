@@ -33,7 +33,7 @@ export type TenantType =
   | 'foreigner' // 비사업자 외국인
 
 export type ManagerJoinType = 'local' | 'google'
-export type ManagerStatus = 'inactive' | 'pending' | 'done'
+export type ManagerStatus = 'inactive' | 'pending' | 'done' | 'withdraw'
 export type Role =
   | 1 // 편집, 조회
   | 2 // 조회

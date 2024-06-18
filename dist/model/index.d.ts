@@ -257,7 +257,7 @@ export type Users = {
     lastLogin: string;
     profile?: Relation<Images>;
     tenantRoles?: Relation<TenantRoles[]>;
-    isWithdraw: boolean;
+    isWithdraw?: boolean;
 };
 export type HqRoles = {
     hqRoleId: number;

@@ -321,7 +321,6 @@ export type Users = {
 
   profile?: Relation<Images>
   tenantRoles?: Relation<TenantRoles[]>
-  isWithdraw?: boolean
 }
 
 export type HqRoles = {

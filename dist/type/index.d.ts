@@ -188,7 +188,7 @@ export type ApprovePayResponse = {
 }));
 export type BranchBuildingContractType = 'none' | 'rent' | 'sublet';
 export type Lang = 'ko' | 'en';
-export type UserStatus = 'inactive' | 'pending' | 'done';
+export type UserStatus = 'inactive' | 'pending' | 'done' | 'withdraw';
 export type Result = {
     isSuccess: boolean;
     message: string;

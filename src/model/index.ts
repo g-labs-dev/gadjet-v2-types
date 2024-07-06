@@ -694,6 +694,7 @@ export type Rentals = {
 
   branch?: Relation<Branches>
   image?: Relation<Images>
+  isActive?: boolean
 }
 
 export type RentalReservations = {

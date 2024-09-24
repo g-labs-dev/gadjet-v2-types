@@ -759,8 +759,9 @@ export type Services = {
   salesAmount: number
   availableCreditType: CreditType[]
   imageId: number | null
-
+  
   image?: Relation<Images>
+  isActive?: boolean
 }
 
 export type ServiceSales = {

@@ -619,6 +619,7 @@ export type Products = {
     availableCreditType: CreditType[];
     imageId: number | null;
     image?: Relation<Images>;
+    isActive?: boolean;
 };
 export type ProductSales = {
     productSaleId: number;

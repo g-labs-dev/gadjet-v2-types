@@ -728,6 +728,7 @@ export type Products = {
   imageId: number | null
 
   image?: Relation<Images>
+  isActive?: boolean
 }
 
 export type ProductSales = {

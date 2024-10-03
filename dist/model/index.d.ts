@@ -356,6 +356,7 @@ export type Spaces = {
     spaceType?: Relation<SpaceTypes>;
     image?: Relation<Images>;
     contractSpaces?: Relation<ContractSpaces[]>;
+    isActive?: boolean;
 };
 export type Additions = {
     additionId: number;

@@ -15,7 +15,7 @@ export type ReceiptSearch = {
   query: string
   requestDatetime: [string, string] // YYYY-MM-DD HH:mm:ss
 }
-export type SpaceSearch = { query: string; emptyFlag: boolean, isActive: boolean }
+export type SpaceSearch = { query: string; emptyFlag: boolean, isActive?: boolean }
 export type RentalSearch = { query: string }
 export type RentalReservationSearch = { date: [string, string]; rentalIds: number[] }
 export type TenantSearch = { query: string; contractStatus: ContractStatus[] }

@@ -20,7 +20,7 @@ export type ReceiptSearch = {
 export type SpaceSearch = {
     query: string;
     emptyFlag: boolean;
-    isActive: boolean;
+    isActive?: boolean;
 };
 export type RentalSearch = {
     query: string;

@@ -364,6 +364,7 @@ export type Additions = {
     name: string;
     price: number;
     contractAdditions?: Relation<ContractAdditions[]>;
+    isActive?: boolean;
 };
 export type Contracts = {
     contractId: number;

@@ -445,6 +445,7 @@ export type Additions = {
   price: number
 
   contractAdditions?: Relation<ContractAdditions[]>
+  isActive?: boolean
 }
 
 export type Contracts = {

@@ -73,6 +73,7 @@ export type EventSearch = {
 };
 export type AdditionSearch = {
     query: string;
+    isActive: boolean;
 };
 export type CashSearch = {
     query: string;

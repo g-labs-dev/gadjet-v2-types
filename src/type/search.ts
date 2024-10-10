@@ -33,7 +33,7 @@ export type PaymentSearch = {
   date: [string, string]
 }
 export type EventSearch = { query: string }
-export type AdditionSearch = { query: string, isActive: boolean }
+export type AdditionSearch = { query: string, isActive?: boolean }
 export type CashSearch = { query: string; date: [string, string] }
 
 export type BranchRoleSearch = Record<string, unknown>

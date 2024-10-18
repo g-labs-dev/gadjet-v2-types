@@ -350,6 +350,7 @@ export type Spaces = {
     branchId: number;
     name: string;
     price: number;
+    priceType: string;
     area: string;
     capacity: number;
     imageId: number | null;

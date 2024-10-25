@@ -364,6 +364,7 @@ export type Additions = {
     branchId: number;
     name: string;
     price: number;
+    priceType?: string;
     contractAdditions?: Relation<ContractAdditions[]>;
     isActive?: boolean;
 };

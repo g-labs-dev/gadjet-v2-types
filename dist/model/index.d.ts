@@ -417,6 +417,7 @@ export type ContractSpaces = {
     spaceId: number;
     name: string;
     price: number;
+    priceType?: string;
     space?: Relation<Spaces>;
     contract?: Relation<Contracts>;
 };
@@ -426,6 +427,7 @@ export type ContractAdditions = {
     additionId: number;
     name: string;
     price: number;
+    priceType?: string;
     addition?: Relation<Additions>;
     contract?: Relation<Contracts>;
 };

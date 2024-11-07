@@ -595,7 +595,7 @@ export type Rentals = {
     imageId: number | null;
     branch?: Relation<Branches>;
     image?: Relation<Images>;
-    order?: Number;
+    order?: number;
     isActive?: boolean;
 };
 export type RentalReservations = {

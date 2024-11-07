@@ -700,6 +700,7 @@ export type Rentals = {
 
   branch?: Relation<Branches>
   image?: Relation<Images>
+  order?: Number
   isActive?: boolean
 }
 

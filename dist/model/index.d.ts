@@ -626,6 +626,7 @@ export type Products = {
     availableCreditType: CreditType[];
     imageId: number | null;
     image?: Relation<Images>;
+    order?: number;
     isActive?: boolean;
 };
 export type ProductSales = {
@@ -656,6 +657,7 @@ export type Services = {
     availableCreditType: CreditType[];
     imageId: number | null;
     image?: Relation<Images>;
+    order?: number;
     isActive?: boolean;
 };
 export type ServiceSales = {

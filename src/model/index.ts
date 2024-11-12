@@ -735,6 +735,7 @@ export type Products = {
   imageId: number | null
 
   image?: Relation<Images>
+  order?: number
   isActive?: boolean
 }
 
@@ -769,6 +770,7 @@ export type Services = {
   imageId: number | null
   
   image?: Relation<Images>
+  order?: number
   isActive?: boolean
 }
 

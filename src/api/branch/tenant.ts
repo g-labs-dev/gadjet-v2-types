@@ -18,6 +18,11 @@ export type GET_USERS_QUERY = Pagination & { query: string }
 export type GET_USERS_RESPONSE = { total: number; users: Users[] } // password 제외
 // ===========================
 
+// 입주사 멤버 삭제
+// DELETE /hqs/0/branches/0/tenants/0/users/0
+export type DELETE_USER_FROM_TENANT_PARAMS = PARAMS & { tenantId: number; userId: number }
+export type DELETE_USER_FROM_TENANT_RESPONSE = boolean
+
 // 입주사 계약 조회
 // GET /hqs/0/branches/0/tenants/0/contracts
 export type GET_CONTRACTS_PARAMS = PARAMS & { tenantId: number }

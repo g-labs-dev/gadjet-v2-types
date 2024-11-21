@@ -22,6 +22,11 @@ export type GET_USERS_RESPONSE = {
     total: number;
     users: Users[];
 };
+export type DELETE_USER_FROM_TENANT_PARAMS = PARAMS & {
+    tenantId: number;
+    userId: number;
+};
+export type DELETE_USER_FROM_TENANT_RESPONSE = boolean;
 export type GET_CONTRACTS_PARAMS = PARAMS & {
     tenantId: number;
 };

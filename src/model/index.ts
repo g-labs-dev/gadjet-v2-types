@@ -714,6 +714,7 @@ export type RentalReservations = {
   startTime: string
   endTime: string
   memo: string
+  additionalMemo?: string
   usedCreditAmount: UsedCreditAmount
   managerFlag: boolean
 

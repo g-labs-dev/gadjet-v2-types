@@ -45,6 +45,11 @@ export type ADD_RESERVATION_BODY = {
     rentalReservation: Partial<RentalReservations>;
 };
 export type ADD_RESERVATION_RESPONSE = RentalReservations;
+export type UPDATE_RENTAL_RESERVATION_ADDITIONAL_MEMO_BODY = {
+    rentalReservation: {
+        additionalMemo: string;
+    };
+};
 export type UPDATE_RESERVATION_PARAMS = PARAMS & {
     rentalId: number;
     rentalReservationId: number;

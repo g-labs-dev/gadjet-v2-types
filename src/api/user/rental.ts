@@ -50,6 +50,13 @@ export type RESERVE_RENTAL_RESPONSE = { rentalReservations: RentalReservations; 
  */
 // ===========================
 
+// PUT /rentals/0/rental-reservations/0/additional-memo
+export type UPDATE_RENTAL_RESERVATION_ADDITIONAL_MEMO_BODY = {
+  rentalReservation: {
+    additionalMemo: string
+  }
+}
+
 // 대관/대여 예약 수정
 // PUT /rentals/0/rental-reservations/0
 export type UPDATE_RENTAL_RESERVATION_PARAMS = PARAMS & { rentalReservationId: number }

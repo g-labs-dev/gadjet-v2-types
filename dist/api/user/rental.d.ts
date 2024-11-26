@@ -46,6 +46,11 @@ export type RESERVE_RENTAL_RESPONSE = {
  * 2. 가능한지 서버에서 판단
  * 3. 사용 불가능 하면 에러
  */
+export type UPDATE_RENTAL_RESERVATION_ADDITIONAL_MEMO_BODY = {
+    rentalReservation: {
+        additionalMemo: string;
+    };
+};
 export type UPDATE_RENTAL_RESERVATION_PARAMS = PARAMS & {
     rentalReservationId: number;
 };

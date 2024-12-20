@@ -779,6 +779,7 @@ export type Expenditures = {
     type: ExpenditureType;
     price: number;
     memo: string;
+    cashId: number | null;
     manager?: Relation<Managers>;
 };
 export type Cash = {
@@ -790,6 +791,7 @@ export type Cash = {
     price: number;
     memo: string;
     reserve: number;
+    expenditureId: number | null;
     manager?: Relation<Managers>;
 };
 export type AccessLogs = {

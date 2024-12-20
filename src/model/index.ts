@@ -251,26 +251,26 @@ export type BranchGadjetServiceLog = {
   isPaid: boolean
   penaltyPrice: number
 
-  gadjetService?: Relation<BranchGadjetService>;
+  gadjetService?: Relation<BranchGadjetService>
 }
 
 export type BranchGadjetServiceContractLog = {
-  branchGadjetServiceContractLogId: number;
-  branchGadjetServiceLogId: number;
-  branchId: number;
-  targetMonth: string;
-  price: number;
-  totalCount: number;
-  newCount: number;
-  startedCount: number;
-  extendedCount: number;
-  expiredCount: number;
-  suspendedCount: number;
-  contractInfos: ContractInfo[];
+  branchGadjetServiceContractLogId: number
+  branchGadjetServiceLogId: number
+  branchId: number
+  targetMonth: string
+  price: number
+  totalCount: number
+  newCount: number
+  startedCount: number
+  extendedCount: number
+  expiredCount: number
+  suspendedCount: number
+  contractInfos: ContractInfo[]
 
-  branch?: Relation<Branches>;
-  BranchGadjetServiceLog?: Relation<BranchGadjetServiceLog>;
-};
+  branch?: Relation<Branches>
+  BranchGadjetServiceLog?: Relation<BranchGadjetServiceLog>
+}
 
 export type Tenants = {
   tenantId: number
@@ -769,7 +769,7 @@ export type Services = {
   salesAmount: number
   availableCreditType: CreditType[]
   imageId: number | null
-  
+
   image?: Relation<Images>
   order?: number
   isActive?: boolean
@@ -903,6 +903,7 @@ export type Expenditures = {
   type: ExpenditureType
   price: number
   memo: string
+  cashId: number | null
 
   manager?: Relation<Managers>
 }
@@ -916,6 +917,7 @@ export type Cash = {
   price: number
   memo: string
   reserve: number
+  expenditureId: number | null
 
   manager?: Relation<Managers>
 }

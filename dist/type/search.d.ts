@@ -6,6 +6,7 @@ export type ContractSearch = {
     query: string;
     spaceTypes: number[];
     status: ContractStatus[];
+    startDate: [string, string];
 };
 export type BillSearch = {
     query: string;

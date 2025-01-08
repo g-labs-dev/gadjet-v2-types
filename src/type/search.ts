@@ -4,7 +4,12 @@ import { BillType, ContractStatus, ExpenditureType, PaymentStatus, PaymentType }
  * 기본 Date Format YYYY-MM-DD
  */
 
-export type ContractSearch = { query: string; spaceTypes: number[]; status: ContractStatus[] }
+export type ContractSearch = {
+  query: string
+  spaceTypes: number[]
+  status: ContractStatus[]
+  startDate: [string, string]
+}
 export type BillSearch = {
   query: string
   startDate: [string, string]
@@ -15,7 +20,7 @@ export type ReceiptSearch = {
   query: string
   requestDatetime: [string, string] // YYYY-MM-DD HH:mm:ss
 }
-export type SpaceSearch = { query: string; emptyFlag: boolean, isActive?: boolean }
+export type SpaceSearch = { query: string; emptyFlag: boolean; isActive?: boolean }
 export type RentalSearch = { query: string }
 export type RentalReservationSearch = { date: [string, string]; rentalIds: number[] }
 export type TenantSearch = { query: string; contractStatus: ContractStatus[] }
@@ -33,7 +38,7 @@ export type PaymentSearch = {
   date: [string, string]
 }
 export type EventSearch = { query: string }
-export type AdditionSearch = { query: string, isActive?: boolean }
+export type AdditionSearch = { query: string; isActive?: boolean }
 export type CashSearch = { query: string; date: [string, string] }
 
 export type BranchRoleSearch = Record<string, unknown>

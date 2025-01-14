@@ -8,6 +8,8 @@ export type ContractSearch = {
   query: string
   spaceTypes: number[]
   status: ContractStatus[]
+  date?: [string, string]
+  dateType?: string
 }
 export type BillSearch = {
   query: string

@@ -1,4 +1,4 @@
-import { BillType, ContractStatus, ExpenditureType, PaymentStatus, PaymentType } from '.'
+import { BillType, ContractStatus, ExpenditureType, PaymentStatus, PaymentType, ReceiptStatus } from '.'
 
 /**
  * 기본 Date Format YYYY-MM-DD
@@ -16,6 +16,7 @@ export type BillSearch = {
   startDate: [string, string]
   spaceTypes: number[]
   type: BillType[]
+  receiptStatus: ReceiptStatus[]
 }
 export type ReceiptSearch = {
   query: string

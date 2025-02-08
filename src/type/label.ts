@@ -40,7 +40,7 @@ export const contractExtendStatus: Record<T.ContractExtendStatus, string> = {
   approval: '연장동의',
   refusal: '연장거절',
   done: '연장완료',
-  cancel: '연장취소'
+  cancel: '연장취소',
 }
 export const contractDepositStatus: Record<T.ContractDepositStatus, string> = {
   unpaid: '미납',
@@ -61,7 +61,7 @@ export const paymentStatus: Record<T.PaymentStatus, string> = {
   ready: '결제준비',
   approve: '결제완료',
   refund: '결제취소(환불)',
-  unpaidCancel: '미입금취소'
+  unpaidCancel: '미입금취소',
 }
 export const creditType: Record<T.CreditType, string> = {
   contract: '계약',
@@ -97,6 +97,7 @@ export const receiptStatus: Record<T.ReceiptStatus, string> = {
   'cash-receipt-cancel': '현금영수증 취소 발행 됨',
   'cash-receipt-cancel-request': '현금영수증 취소 발행 요청',
   'cash-receipt-cancel-fail': '현금영수증 취소 발행 실패',
+  etc: '기타',
 }
 export const expenditureType: Record<T.ExpenditureType, string> = {
   card: '카드',

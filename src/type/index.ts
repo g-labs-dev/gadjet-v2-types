@@ -131,6 +131,7 @@ export type ReceiptStatus =
   | 'cash-receipt-cancel' // 현금영수증 취소
   | 'cash-receipt-cancel-request' // 현금영수증 취소 발행 요청
   | 'cash-receipt-cancel-fail' // 현금영수증 취소 발행 실패
+  | 'etc' // 기타
 
 export type ContractDepositStatus =
   | 'unpaid' // 미납
@@ -343,51 +344,51 @@ export type GadjetServiceStatus = 'used' | 'request-terminate' | 'terminate' | '
 /**
  * new: 신규 계약, started: 기존 계약, extended: 연장 계약, expired: 종료 계약, suspended: 조기 종료 계약
  */
-export type GadjetServiceContractType = 'new' | 'started' | 'extended' | 'expired' | 'suspended';
+export type GadjetServiceContractType = 'new' | 'started' | 'extended' | 'expired' | 'suspended'
 
 /**
  * 가젯 서비스 관련 contract 정보
  */
 export type ContractInfo = {
-  contractId: number;
-  
-  type: GadjetServiceContractType;
+  contractId: number
+
+  type: GadjetServiceContractType
 
   /**
    * 계약의 입주사 정보
    */
-  tenant: ContractTenant;
+  tenant: ContractTenant
 
   /**
    * 계약 시작일 YYYY-MM-DD
    */
-  startDate: string;
+  startDate: string
 
   /**
    * 계약 종료일 YYYY-MM-DD
    */
-  endDate: string;
+  endDate: string
 
   /**
    * 실제 계약 종료일 YYYY-MM-DD
    */
-  suspendDate: string;
+  suspendDate: string
 
   /**
    * 부모 계약 Id
    */
-  extendContractId?: number;
+  extendContractId?: number
 
   /**
    * 부모 계약의 실제 종료일. YYYY-MM-DD
    */
-  extendSuspendDate?: string;
+  extendSuspendDate?: string
 
   /**
    * 계약 삭제일
    */
-  deletedAt?: Date;
-};
+  deletedAt?: Date
+}
 
 export type BillingApproveResponseData = {
   ResultCode: string // 결과코드 (3001: 성공 / 그 외 실패)

@@ -181,6 +181,11 @@ export type BranchContractDocuments = {
   termsFileId: number | null
   policyFileId: number | null
   etcFileId: number | null
+  // Article 3 additional clauses configuration
+  article3Clause1Enabled: boolean
+  article3Clause2Enabled: boolean
+  article3Clause1Text: string | null
+  article3Clause2Text: string | null
 
   signatureImage?: Relation<Images>
   termsFile?: Relation<Files>

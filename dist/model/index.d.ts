@@ -133,6 +133,10 @@ export type BranchContractDocuments = {
     termsFileId: number | null;
     policyFileId: number | null;
     etcFileId: number | null;
+    article3Clause1Enabled: boolean;
+    article3Clause2Enabled: boolean;
+    article3Clause1Text: string | null;
+    article3Clause2Text: string | null;
     signatureImage?: Relation<Images>;
     termsFile?: Relation<Files>;
     policyFile?: Relation<Files>;

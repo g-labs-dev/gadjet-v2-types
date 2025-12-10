@@ -71,5 +71,12 @@ export type CANCEL_RENTAL_RESERVATION_PARAMS = PARAMS & {
     rentalReservationId: number;
 };
 export type CANCEL_RENTAL_RESERVATION_RESPONSE = [number];
+export type CHECK_RENTAL_PERMISSION_PARAMS = {
+    branchId: number;
+};
+export type CHECK_RENTAL_PERMISSION_RESPONSE = {
+    hasPermission: boolean;
+    message?: string;
+};
 export {};
 //# sourceMappingURL=rental.d.ts.map

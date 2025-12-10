@@ -133,7 +133,6 @@ export type BranchContractDocuments = {
     termsFileId: number | null;
     policyFileId: number | null;
     etcFileId: number | null;
-    article3ClauseEnabled: boolean;
     signatureImage?: Relation<Images>;
     termsFile?: Relation<Files>;
     policyFile?: Relation<Files>;
@@ -342,6 +341,7 @@ export type SpaceTypes = {
     branchId: number;
     name: string;
     virtualFlag: boolean;
+    meetingRoomRentalEnabled: boolean;
     branch?: Relation<Branches>;
     spaces?: Relation<Spaces[]>;
 };

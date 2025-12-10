@@ -182,7 +182,7 @@ export type BranchContractDocuments = {
   policyFileId: number | null
   etcFileId: number | null
   // Article 3 additional clause configuration for 직권폐업 고지
-  article3ClauseEnabled: boolean
+  // article3ClauseEnabled: boolean
 
   signatureImage?: Relation<Images>
   termsFile?: Relation<Files>
@@ -419,6 +419,7 @@ export type SpaceTypes = {
   branchId: number
   name: string
   virtualFlag: boolean
+  meetingRoomRentalEnabled: boolean
 
   branch?: Relation<Branches>
   spaces?: Relation<Spaces[]>

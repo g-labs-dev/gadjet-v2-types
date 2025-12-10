@@ -80,3 +80,12 @@ export type UPDATE_RENTAL_RESERVATION_RESPONSE = {
 export type CANCEL_RENTAL_RESERVATION_PARAMS = PARAMS & { rentalReservationId: number }
 export type CANCEL_RENTAL_RESERVATION_RESPONSE = [number]
 // ===========================
+
+// 대관/대여 예약 권한 확인
+// GET /branches/:branchId/check-rental-permission
+export type CHECK_RENTAL_PERMISSION_PARAMS = { branchId: number }
+export type CHECK_RENTAL_PERMISSION_RESPONSE = { 
+  hasPermission: boolean
+  message?: string
+}
+// ===========================

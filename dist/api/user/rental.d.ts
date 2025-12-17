@@ -74,9 +74,12 @@ export type CANCEL_RENTAL_RESERVATION_RESPONSE = [number];
 export type CHECK_RENTAL_PERMISSION_PARAMS = {
     branchId: number;
 };
+export type CHECK_RENTAL_PERMISSION_QUERY = {
+    spaceTypeId: number;
+};
 export type CHECK_RENTAL_PERMISSION_RESPONSE = {
-    hasPermission: boolean;
-    message?: string;
+    meetingRoomRental: boolean;
+    virtualOffice: boolean;
 };
 export {};
 //# sourceMappingURL=rental.d.ts.map

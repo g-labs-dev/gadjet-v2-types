@@ -36,6 +36,7 @@ export type EXPORT_PARAMS = PARAMS;
 export type EXPORT_QUERY = {
     startDate?: [string, string];
     suspendDate?: [string, string];
+    status?: ContractStatus[];
 };
 export type EXPORT_RESPONSE = Buffer;
 export type UPLOAD_PARAMS = PARAMS;

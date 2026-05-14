@@ -65,5 +65,11 @@ export type EXPORT_DEPOSIT_PAYMENTS_QUERY = {
     contractRange: [string, string];
 };
 export type EXPORT_DEPOSIT_PAYMENTS_RESPONSE = Buffer;
+export type EXPORT_DEPOSIT_SUMMARY_PARAMS = PARAMS;
+export type EXPORT_DEPOSIT_SUMMARY_QUERY = {
+    criteria: 'today' | 'month' | 'quarter';
+    period: string;
+};
+export type EXPORT_DEPOSIT_SUMMARY_RESPONSE = Buffer;
 export {};
 //# sourceMappingURL=payment.d.ts.map

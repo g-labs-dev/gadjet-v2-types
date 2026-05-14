@@ -76,3 +76,10 @@ export type EXPORT_DEPOSIT_PAYMENTS_PARAMS = PARAMS
 export type EXPORT_DEPOSIT_PAYMENTS_QUERY = { contractRange: [string, string] }
 export type EXPORT_DEPOSIT_PAYMENTS_RESPONSE = Buffer
 // ===========================
+
+// 보증금 요약 내보내기
+// GET /hqs/0/branches/0/payments/deposit/summary-export
+export type EXPORT_DEPOSIT_SUMMARY_PARAMS = PARAMS
+export type EXPORT_DEPOSIT_SUMMARY_QUERY = { criteria: 'today' | 'month' | 'quarter'; period: string }
+export type EXPORT_DEPOSIT_SUMMARY_RESPONSE = Buffer
+// ===========================

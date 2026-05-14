@@ -42,10 +42,10 @@ export type DELETE_RESPONSE = [number]
 // 계약 내보내기
 // GET /hqs/0/branches/0/contracts/export
 export type EXPORT_PARAMS = PARAMS
-export type EXPORT_QUERY = { 
-  startDate?: [string, string]; 
-  suspendDate?: [string, string];
-  status?: ContractStatus[];
+export type EXPORT_QUERY = {
+  startDate?: [string, string]
+  suspendDate?: [string, string]
+  status?: ContractStatus[]
 } // ['YYYY-MM-DD', 'YYYY-MM-DD']
 export type EXPORT_RESPONSE = Buffer
 // ===========================
@@ -81,7 +81,7 @@ export type SEARCH_RESPONSE = { contracts: Contracts[] }
 // 계약 메모 수정
 // PUT /hqs/0/branches/0/contracts/0/memo
 export type UPDATE_MEMO_PARAMS = PARAMS & { contractId: number }
-export type UPDATE_MEMO_BODY = {  contracts: Partial<Contracts> }
+export type UPDATE_MEMO_BODY = { contracts: Partial<Contracts> }
 export type UPDATE_MEMO_RESPONSE = [number]
 // ===========================
 

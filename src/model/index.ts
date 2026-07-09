@@ -122,6 +122,7 @@ export type Branches = {
   popbillId: string | null
   chargeNotice: number
   remainDate: number
+  order: number
 
   hq?: Relation<Hqs>
   business?: Relation<BranchBusinesses>
